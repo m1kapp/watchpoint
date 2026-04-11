@@ -175,8 +175,10 @@ const LEAGUE_META = {
   KBL:  { label: "KBL",  sub: "한국 남자 프로농구", color: "#0B3D91" },
 } as const;
 
-export function RosterTab() {
-  const [selectedTeam, setSelectedTeam] = useState<WKBLTeam | null>(null);
+export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
+  const [selectedTeam, setSelectedTeam] = useState<WKBLTeam | null>(
+    () => initialTeamId ? (TEAMS.find((t) => t.id === initialTeamId) ?? null) : null
+  );
   const [league, setLeague] = useState<"WKBL" | "KBL">("WKBL");
 
   if (selectedTeam) {

@@ -18,7 +18,18 @@ type TabKey = "explore" | "players";
 
 export default function Home() {
   const [tab, setTab] = useState<TabKey>("explore");
+  const [rosterTeamId, setRosterTeamId] = useState<string | undefined>(undefined);
   const [isDark, setIsDark] = useState(false);
+
+  function viewRoster(teamId: string) {
+    setRosterTeamId(teamId);
+    setTab("players");
+  }
+
+  function handleTabChange(t: TabKey) {
+    setTab(t);
+    if (t !== "players") setRosterTeamId(undefined);
+  }
 
   useEffect(() => {
     setIsDark(document.documentElement.classList.contains("dark"));
@@ -75,13 +86,16 @@ export default function Home() {
         </AppShellHeader>
 
         <AppShellContent>
-          {tab === "explore" ? <ExploreTab /> : <RosterTab />}
+          {tab === "explore"
+            ? <ExploreTab onViewRoster={viewRoster} />
+            : <RosterTab initialTeamId={rosterTeamId} />
+          }
         </AppShellContent>
 
         <TabBar>
           <Tab
             active={tab === "explore"}
-            onClick={() => setTab("explore")}
+            onClick={() => handleTabChange("explore")}
             activeColor={HANA_GREEN}
             label="탐색"
             icon={
@@ -94,7 +108,7 @@ export default function Home() {
           />
           <Tab
             active={tab === "players"}
-            onClick={() => setTab("players")}
+            onClick={() => handleTabChange("players")}
             activeColor={HANA_GREEN}
             label="로스터"
             icon={

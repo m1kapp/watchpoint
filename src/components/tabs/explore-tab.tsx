@@ -123,7 +123,23 @@ function buildWatchPoints(match: MatchWithId) {
   return points;
 }
 
-function MatchDetail({ match, onBack }: { match: MatchWithId; onBack: () => void }) {
+// 경기 팀명 → 로스터 teamId 매핑
+const TEAM_NAME_TO_ID: Record<string, string> = {
+  "하나은행": "hana",
+  "삼성생명": "samsung",
+  "고양 소노": "sono",
+  "원주 DB": "db",
+  "우리은행": "woori",
+  "BNK": "bnk",
+  "KB": "kb",
+  "신한은행": "shinhan",
+};
+
+function MatchDetail({ match, onBack, onViewRoster }: {
+  match: MatchWithId;
+  onBack: () => void;
+  onViewRoster?: (teamId: string) => void;
+}) {
   const [selectedPlayer, setSelectedPlayer] = useState<MatchPlayer | null>(null);
   const { match: m, teams } = match;
   const homeColors = TEAM_COLORS[m.home] ?? { bg: "#333", light: "#f4f4f5" };
@@ -169,6 +185,15 @@ function MatchDetail({ match, onBack }: { match: MatchWithId; onBack: () => void
               )}
               <p className="text-sm font-black text-zinc-900 dark:text-white">{m.home}</p>
               <p className="text-[10px] text-zinc-500 dark:text-zinc-400">{home?.summary}</p>
+              {onViewRoster && TEAM_NAME_TO_ID[m.home] && (
+                <button
+                  onClick={() => onViewRoster(TEAM_NAME_TO_ID[m.home])}
+                  className="mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full"
+                  style={{ color: homeColors.bg, backgroundColor: `${homeColors.bg}15` }}
+                >
+                  로스터 보기 →
+                </button>
+              )}
             </div>
             {/* 중앙 */}
             <div className="flex flex-col items-center justify-center px-3 py-4 bg-white dark:bg-zinc-900 gap-1 shrink-0">
@@ -185,6 +210,15 @@ function MatchDetail({ match, onBack }: { match: MatchWithId; onBack: () => void
               )}
               <p className="text-sm font-black text-zinc-900 dark:text-white text-right">{m.away}</p>
               <p className="text-[10px] text-zinc-500 dark:text-zinc-400 text-right">{away?.summary}</p>
+              {onViewRoster && TEAM_NAME_TO_ID[m.away] && (
+                <button
+                  onClick={() => onViewRoster(TEAM_NAME_TO_ID[m.away])}
+                  className="mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full"
+                  style={{ color: awayColors.bg, backgroundColor: `${awayColors.bg}15` }}
+                >
+                  로스터 보기 →
+                </button>
+              )}
             </div>
           </div>
           <div className="bg-zinc-50 dark:bg-zinc-800/60 px-4 py-2 flex items-center justify-center gap-1.5 border-t border-zinc-100 dark:border-zinc-800">
@@ -313,12 +347,12 @@ const LEAGUE_COLORS = {
 
 // ─── 탐색 탭 (진입점) ────────────────────────────────────────
 
-export function ExploreTab() {
+export function ExploreTab({ onViewRoster }: { onViewRoster?: (teamId: string) => void }) {
   const [selected, setSelected] = useState<MatchWithId | null>(null);
   const [league, setLeague] = useState<"WKBL" | "KBL">("WKBL");
 
   if (selected) {
-    return <MatchDetail match={selected} onBack={() => setSelected(null)} />;
+    return <MatchDetail match={selected} onBack={() => setSelected(null)} onViewRoster={onViewRoster} />;
   }
 
   const filtered = MATCHES.filter((m) => (m.match.league ?? "WKBL") === league);
