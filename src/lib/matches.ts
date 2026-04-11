@@ -41,7 +41,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         evidence: [
           { label: "하나 1쿼터 득점 평균", value: "22.1점", highlight: true },
           { label: "삼성 1쿼터 피실점", value: "리그 3위" },
-          { label: "하나 vs 삼성 (정규)", value: "2전 2승", highlight: true },
+          { label: "정규시즌 하나 vs 삼성 전적", value: "2전 2승", highlight: true },
         ],
       },
       {
@@ -53,7 +53,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         watch_point: "수비 전술 변화",
         watch_reason: "정규시즌 전술이 통하지 않았다. 포스트시즌에서 달라져야 한다.",
         evidence: [
-          { label: "정규시즌 대하나 전적", value: "0승 2패", highlight: true },
+          { label: "정규시즌 삼성 vs 하나 전적", value: "0승 2패", highlight: true },
           { label: "삼성 평균 실점", value: "63.4점" },
           { label: "하나 공격 효율", value: "리그 2위" },
         ],
@@ -107,7 +107,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         evidence: [
           { label: "시즌 평균 파울", value: "4.2개", highlight: true },
           { label: "3파울 이후 팀 리바운드", value: "–18%" },
-          { label: "vs 배혜윤 파울 유도", value: "평균 3.5개" },
+          { label: "배혜윤 상대 파울 피유도", value: "평균 3.5개" },
         ],
       },
       {
@@ -129,7 +129,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         watch_reason: "이 선수가 터지는 날 하나은행이 이긴다. 삼성 상대 전적도 좋다.",
         evidence: [
           { label: "20점↑ 경기 팀 승률", value: "100%", highlight: true },
-          { label: "vs 삼성 시즌 평균", value: "18.5점" },
+          { label: "삼성전 시즌 평균 득점", value: "18.5점" },
           { label: "최근 5경기 득점", value: "↑상승세", highlight: true },
         ],
       },
@@ -185,7 +185,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
           { label: "리그 득점 순위", value: "2위 (17.5점)", highlight: true },
           { label: "15점↑ 시 팀 승률", value: "80%" },
           { label: "15점↓ 시 팀 승률", value: "20%", highlight: true },
-          { label: "vs 하나 시즌 평균", value: "19.0점" },
+          { label: "하나전 시즌 평균 득점", value: "19.0점" },
         ],
       },
       {
@@ -298,7 +298,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         evidence: [
           { label: "집중마크 경기 득점 평균", value: "12.3점" },
           { label: "집중마크 경기 어시스트", value: "+2.1개↑", highlight: true },
-          { label: "vs 삼성 통산 야투율", value: "61.5%" },
+          { label: "삼성전 통산 야투율", value: "61.5%" },
         ],
       },
       {
@@ -344,7 +344,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         evidence: [
           { label: "팀 생존 경기 평균 득점", value: "21.3점", highlight: true },
           { label: "배수진 경기 팀 승률", value: "70%", highlight: true },
-          { label: "vs 하나 시즌 평균", value: "19.0점" },
+          { label: "하나전 시즌 평균 득점", value: "19.0점" },
         ],
       },
       {
@@ -496,7 +496,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         evidence: [
           { label: "3점슛 성공률", value: "39.5%", highlight: true },
           { label: "20점↑ 경기 DB 승률", value: "78%", highlight: true },
-          { label: "vs 소노 시즌 평균", value: "22.5점" },
+          { label: "소노전 시즌 평균 득점", value: "22.5점" },
         ],
       },
       {
