@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { usePathname, useRouter } from "next/navigation";
+import { toast } from "sonner";
 import {
   Watermark,
   AppShell,
@@ -13,6 +15,99 @@ import {
 import Link from "next/link";
 
 const ACCENT = "#007B5F";
+
+function ShareButton() {
+  const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [canShare, setCanShare] = useState(false);
+
+  useEffect(() => {
+    setCanShare(typeof navigator !== "undefined" && !!navigator.share);
+  }, []);
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    toast.success("링크 복사됨");
+    setTimeout(() => { setCopied(false); setOpen(false); }, 1500);
+  }
+
+  async function handleShare() {
+    setOpen(false);
+    try { await navigator.share({ url: window.location.href }); } catch {}
+  }
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-black/10 dark:hover:bg-white/10"
+        aria-label="공유"
+      >
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+        </svg>
+      </button>
+
+      {open && createPortal(
+        <div className="fixed inset-0 z-50 flex items-end justify-center pb-6 px-4" onClick={() => setOpen(false)}>
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          <div
+            className="relative w-full max-w-sm bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="px-5 pt-5 pb-2">
+              <p className="text-sm font-black text-zinc-900 dark:text-white">공유하기</p>
+              <p className="text-[11px] text-zinc-400 mt-0.5 break-all">{typeof window !== "undefined" ? window.location.href : ""}</p>
+            </div>
+            <div className="p-3 flex flex-col gap-1">
+              <button
+                onClick={handleCopy}
+                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-left"
+              >
+                <span className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                  {copied ? (
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={ACCENT} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  ) : (
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                  )}
+                </span>
+                <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{copied ? "복사됨!" : "링크 복사"}</span>
+              </button>
+
+              {canShare && (
+                <button
+                  onClick={handleShare}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-left"
+                >
+                  <span className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">더 보내기</span>
+                </button>
+              )}
+            </div>
+            <div className="px-3 pb-3">
+              <button
+                onClick={() => setOpen(false)}
+                className="w-full py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-sm font-bold text-zinc-500 dark:text-zinc-400"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+      , document.body)}
+    </>
+  );
+}
 
 export function Shell({
   children,
@@ -80,7 +175,8 @@ export function Shell({
             <a href="https://m1k.app/gg" target="_blank" rel="noopener noreferrer" className="flex items-center opacity-70 hover:opacity-100 transition-opacity">
               <img alt="Hits" src="https://m1k.app/badge/gg.svg" style={{ filter: isDark ? "invert(1)" : undefined }} />
             </a>
-            {darkBtn}
+            <ShareButton />
+            <span className="hidden">{darkBtn}</span>
           </div>
         </AppShellHeader>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Section } from "@m1kapp/ui";
 import { PLAYERS, TEAMS, TAG_COLORS, getRosterId, type WKBLTeam } from "@/lib/data";
 import { TEAM_LOGOS } from "@/lib/matches";
@@ -176,10 +176,25 @@ const WKBL_SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
 
 export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; season?: string }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [league, setLeague] = useState<LeagueKey>("WKBL");
   const [season, setSeason] = useState(seasonProp ?? "2025-26");
   const [view, setView] = useState<"team" | "player">(teamId ? "team" : "team");
-  const [sortKey, setSortKey] = useState<SortKey>("tags");
+
+  const validSortKeys = SORT_OPTIONS.map((o) => o.key);
+  const paramSort = searchParams.get("sort") as SortKey | null;
+  const [sortKey, setSortKey] = useState<SortKey>(
+    paramSort && validSortKeys.includes(paramSort) ? paramSort : "tags"
+  );
+
+  function updateSort(key: SortKey) {
+    setSortKey(key);
+    const params = new URLSearchParams(searchParams.toString());
+    if (key === "tags") params.delete("sort");
+    else params.set("sort", key);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  }
 
   const isNat = league === "NAT_W";
   const accentColor = LEAGUE_META[league].color;
@@ -204,7 +219,7 @@ export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; sea
         <div className="px-4 pt-3 pb-0 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
           <p className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest shrink-0 mr-0.5">정렬</p>
           {SORT_OPTIONS.map(({ key, label }) => (
-            <button key={key} onClick={() => setSortKey(key)}
+            <button key={key} onClick={() => updateSort(key)}
               className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold transition-all"
               style={sortKey === key ? { backgroundColor: selectedTeam.color, color: "white" } : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
               {label}
@@ -256,11 +271,10 @@ export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; sea
               </button>
             ))}
           </div>
-
           {view === "player" && (
             <div className="flex gap-1.5 overflow-x-auto scrollbar-none">
               {SORT_OPTIONS.map(({ key, label }) => (
-                <button key={key} onClick={() => setSortKey(key)}
+                <button key={key} onClick={() => updateSort(key)}
                   className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold transition-all"
                   style={sortKey === key ? { backgroundColor: accentColor, color: "white" } : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
                   {label}

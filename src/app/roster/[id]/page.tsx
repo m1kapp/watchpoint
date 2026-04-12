@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Shell, BackHeader } from "@/components/shell";
 import { RosterTab } from "@/components/tabs/roster-tab";
 import { getRosterById, TEAMS } from "@/lib/data";
@@ -13,7 +14,9 @@ export default async function RosterPage({ params }: { params: Promise<{ id: str
 
   return (
     <Shell headerLeft={<BackHeader label="팀 목록" href="/roster" />}>
-      <RosterTab teamId={roster.teamId} season={roster.season} />
+      <Suspense>
+        <RosterTab teamId={roster.teamId} season={roster.season} />
+      </Suspense>
     </Shell>
   );
 }
