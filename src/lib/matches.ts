@@ -31,6 +31,10 @@ export const MATCHES: (MatchData & { id: string })[] = (matchesJson as any[])
 
 export const MATCH = MATCHES[0];
 
+export function getMatchById(id: string) {
+  return MATCHES.find((m) => m.id === id) ?? null;
+}
+
 // ─── 스타일 상수 (데이터 아님, 여기서만 관리) ──────────────────────────────────
 
 export const TAG_COLORS: Record<string, string> = {

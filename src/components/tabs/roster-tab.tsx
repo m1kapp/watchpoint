@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Section } from "@m1kapp/ui";
-import { PLAYERS, TEAMS, TAG_COLORS, type WKBLTeam } from "@/lib/data";
+import { PLAYERS, TEAMS, TAG_COLORS, getRosterId, type WKBLTeam } from "@/lib/data";
 import { TEAM_LOGOS } from "@/lib/matches";
 import type { Player } from "@/lib/types";
 import { PlayerCard } from "@/components/player-card";
@@ -173,19 +174,18 @@ type LeagueKey = keyof typeof LEAGUE_META;
 
 const WKBL_SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
 
-export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
+export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; season?: string }) {
+  const router = useRouter();
   const [league, setLeague] = useState<LeagueKey>("WKBL");
-  const [season, setSeason] = useState("2025-26");
-  const [view, setView] = useState<"team" | "player">("team");
-  const [selectedTeamId, setSelectedTeamId] = useState<string | null>(initialTeamId ?? null);
+  const [season, setSeason] = useState(seasonProp ?? "2025-26");
+  const [view, setView] = useState<"team" | "player">(teamId ? "team" : "team");
   const [sortKey, setSortKey] = useState<SortKey>("tags");
-  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
   const isNat = league === "NAT_W";
   const accentColor = LEAGUE_META[league].color;
 
   const leagueTeams = TEAMS.filter((t) => t.league === "WKBL" && PLAYERS.some((p) => p.teamId === t.id));
-  const selectedTeam = leagueTeams.find((t) => t.id === selectedTeamId) ?? null;
+  const selectedTeam = leagueTeams.find((t) => t.id === teamId) ?? null;
   const leagueOptions = (Object.keys(LEAGUE_META) as LeagueKey[]).map((k) => ({
     key: k, label: LEAGUE_META[k].label,
   }));
@@ -194,23 +194,10 @@ export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
   const teamPlayers = selectedTeam ? PLAYERS.filter((p) => p.teamId === selectedTeam.id) : PLAYERS.filter((p) => leagueTeams.some((t) => t.id === p.teamId));
   const sorted = sortPlayers(teamPlayers, sortKey);
 
-  // 팀 상세 뷰 (팀 탭에서 팀 카드 클릭 시)
-  if (!isNat && view === "team" && selectedTeam) {
+  // 팀 상세 뷰
+  if (!isNat && selectedTeam) {
     return (
       <>
-        {/* 뒤로 버튼 */}
-        <div className="px-4 pt-3 pb-1">
-          <button
-            onClick={() => setSelectedTeamId(null)}
-            className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 active:text-zinc-900 dark:active:text-white transition-colors"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 12H5M12 5l-7 7 7 7" />
-            </svg>
-            팀 목록
-          </button>
-        </div>
-
         <TeamCompactHeader team={selectedTeam} />
 
         {/* 정렬 칩 */}
@@ -228,12 +215,10 @@ export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
         <Section>
           <div className="flex flex-col gap-2 pt-3">
             {sorted.map((player) => (
-              <PlayerCard key={player.id} player={player} onClick={() => setSelectedPlayer(player)} />
+              <PlayerCard key={player.id} player={player} onClick={() => router.push(`/players/${player.id}`)} />
             ))}
           </div>
         </Section>
-
-        {selectedPlayer && <PlayerDetail player={selectedPlayer} onClose={() => setSelectedPlayer(null)} />}
       </>
     );
   }
@@ -246,7 +231,7 @@ export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
           label="구분"
           value={LEAGUE_META[league].label}
           options={leagueOptions}
-          onSelect={(k) => { setLeague(k as LeagueKey); setSelectedTeamId(null); }}
+          onSelect={(k) => setLeague(k as LeagueKey)}
           accentColor={accentColor}
         />
         <DropdownSelector
@@ -295,7 +280,10 @@ export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
           <Section>
             <div className="flex flex-col gap-2.5">
               {leagueTeams.map((team) => (
-                <TeamListCard key={team.id} team={team} onClick={() => setSelectedTeamId(team.id)} />
+                <TeamListCard key={team.id} team={team} onClick={() => {
+                  const rid = getRosterId(team.id, season);
+                  if (rid) router.push(`/roster/${rid}`);
+                }} />
               ))}
             </div>
           </Section>
@@ -307,14 +295,10 @@ export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
         <Section>
           <div className="flex flex-col gap-2 pt-3">
             {sorted.map((player) => (
-              <PlayerCard key={player.id} player={player} onClick={() => setSelectedPlayer(player)} />
+              <PlayerCard key={player.id} player={player} onClick={() => router.push(`/players/${player.id}`)} />
             ))}
           </div>
         </Section>
-      )}
-
-      {selectedPlayer && (
-        <PlayerDetail player={selectedPlayer} onClose={() => setSelectedPlayer(null)} />
       )}
     </>
   );

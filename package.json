@@ -19,7 +19,7 @@
     "generate": "npm run utils:tags && npm run generate:players"
   },
   "dependencies": {
-    "@m1kapp/ui": "file:./packages/m1kapp-ui-0.1.13.tgz",
+    "@m1kapp/ui": "^0.1.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.7.0",

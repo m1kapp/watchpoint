@@ -25,6 +25,9 @@ interface NationalPlayer {
   wkblTeamId: string | null;
   captain?: boolean;
   overseas?: string;
+  number?: number;
+  position?: string;
+  height?: string;
 }
 
 interface TournamentRecord {
@@ -162,7 +165,7 @@ function NationalTeamDetail({
     .filter((p): p is Player => p !== undefined);
   const overseasPlayers = roster.filter((nat) => nat.wkblTeamId === null);
 
-  const allHeights = [...players.map((p) => parseFloat(p.height) || 0), ...overseasPlayers.map((p) => parseFloat(p.height) || 0)].filter(Boolean);
+  const allHeights = [...players.map((p) => parseFloat(p.height) || 0), ...overseasPlayers.map((p) => parseFloat(p.height ?? "") || 0)].filter(Boolean);
   const avgHeight = allHeights.length ? Math.round(allHeights.reduce((s, h) => s + h, 0) / allHeights.length * 10) / 10 : 0;
   const avgAge = players.length
     ? Math.round(players.reduce((s, p) => s + p.bio.age, 0) / players.length * 10) / 10

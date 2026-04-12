@@ -1,4 +1,21 @@
 import type { Player } from "./types";
+import rostersJson from "../../data/wkbl/rosters.json";
+
+export interface RosterEntry {
+  id: string;
+  teamId: string;
+  season: string;
+}
+
+export const ROSTERS: RosterEntry[] = rostersJson;
+
+export function getRosterById(id: string): RosterEntry | null {
+  return ROSTERS.find((r) => r.id === id) ?? null;
+}
+
+export function getRosterId(teamId: string, season: string): string | null {
+  return ROSTERS.find((r) => r.teamId === teamId && r.season === season)?.id ?? null;
+}
 
 export interface WKBLTeam {
   id: string;
