@@ -26,6 +26,13 @@ export interface Evidence {
   highlight?: boolean; // 강조 여부
 }
 
+export type ReviewResult = "적중" | "부분적중" | "빗나감";
+
+export interface WatchReview {
+  result: ReviewResult;
+  summary: string;
+}
+
 export interface Coach {
   name: string;
   team: string;
@@ -35,6 +42,7 @@ export interface Coach {
   watch_point: string;
   watch_reason: string;
   evidence: Evidence[];
+  review?: WatchReview;
 }
 
 export interface StatLine {
@@ -49,26 +57,8 @@ export interface StatDiff {
   assists: number;
 }
 
-export interface CareerHighlight {
-  type: "record" | "award";
-  label: string;
-}
-
-export interface DraftInfo {
-  year: number;   // 드래프트 연도
-  round: number;  // 라운드
-  pick: number;   // 전체 순번
-}
-
-export interface CareerSeason {
-  season: string;  // "2024-25"
-  team: string;
-  games: number;
-  points: number;
-  rebounds: number;
-  assists: number;
-  note?: string;   // "신인왕", "MVP" 등 특이사항
-}
+import type { CareerHighlight, DraftInfo, CareerSeason } from "@/lib/types";
+export type { CareerHighlight, DraftInfo, CareerSeason };
 
 export interface NationalTeamInfo {
   is_national: boolean;
@@ -97,13 +87,12 @@ export interface MatchPlayer {
   };
   stat_diff?: StatDiff;
   career_highlights?: CareerHighlight[];
-  draft?: DraftInfo;
-  career_seasons?: CareerSeason[];
   tags: string[];
   description?: string;
   watch_point?: string;
   watch_reason?: string;
   evidence?: Evidence[];
+  review?: WatchReview;
 }
 
 export interface MatchData {
@@ -111,4 +100,6 @@ export interface MatchData {
   teams: TeamInfo[];
   coaches: Coach[];
   players: MatchPlayer[];
+  cancelled?: boolean;       // 시리즈 조기 종료로 취소된 경기
+  cancelReason?: string;     // 취소 사유 (예: "KB 3-0 시리즈 클로즈")
 }

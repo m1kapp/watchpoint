@@ -4,14 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "www.hanafnbasketball.com",
-        pathname: "/html/upload/Player/**",
-      },
-      {
-        protocol: "http",
-        hostname: "www.samsungblueminx.com",
-        pathname: "/function/**",
+        protocol: "https",
+        hostname: "www.wkbl.or.kr",
       },
     ],
   },

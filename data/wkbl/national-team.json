@@ -1,22 +1,49 @@
 {
-  "_source": "대한민국 여자농구 국가대표 명단 (KBA / FIBA)",
-  "_updated": "2025-10",
-  "_note": "pno는 WKBL 선수등록번호 (이적해도 불변, 동명이인 구분용)",
-  "roster": [
-    { "name": "강이슬",   "pno": "095263", "level": "A대표팀",       "wkblTeamId": "kb",      "captain": true },
-    { "name": "이해란",   "pno": "095778", "level": "A대표팀",       "wkblTeamId": "samsung" },
-    { "name": "김소니아", "pno": "095248", "level": "A대표팀",       "wkblTeamId": "bnk"     },
-    { "name": "안혜지",   "pno": "095484", "level": "A대표팀",       "wkblTeamId": "bnk"     },
-    { "name": "허예은",   "pno": "095710", "level": "A대표팀",       "wkblTeamId": "kb"      },
-    { "name": "진안",     "pno": "095499", "level": "A대표팀",       "wkblTeamId": "hana"    },
-    { "name": "박혜진",   "pno": "095186", "level": "A대표팀",       "wkblTeamId": "bnk"     },
-    { "name": "이소희",   "pno": "095636", "level": "A대표팀",       "wkblTeamId": "bnk"     },
-    { "name": "김단비",   "pno": "095104", "level": "A대표팀",       "wkblTeamId": "woori"   },
-    { "name": "양인영",   "pno": "095259", "level": "A대표팀",       "wkblTeamId": "hana"    },
-    { "name": "임규리",   "pno": "095779", "level": "A대표팀",       "wkblTeamId": "samsung" },
-    { "name": "박지수",   "pno": "095533", "level": "A대표팀",       "wkblTeamId": "kb"      },
-    { "name": "박소희",   "pno": "095788", "level": "국가대표 후보", "wkblTeamId": "hana"    },
-    { "name": "조수아",   "pno": "095749", "level": "국가대표 후보", "wkblTeamId": "samsung" },
-    { "name": "이채은",   "pno": "095637", "level": "국가대표 후보", "wkblTeamId": "kb"      }
+  "_note": "pno는 WKBL 선수등록번호. current: true인 엔트리가 태깅 기준. 해외 선수는 pno/wkblTeamId null.",
+  "rosters": [
+    {
+      "tournament": "2026 FIBA 여자농구 월드컵 최종예선",
+      "date": "2026-03",
+      "dateRange": "2026.03.12 ~ 03.18",
+      "venue": "빌뢰르반, 프랑스",
+      "current": true,
+      "result": "월드컵 진출 (3승 2패)",
+      "players": [
+        { "number": 3,  "name": "강이슬",   "pno": "095263", "position": "F", "height": "180cm", "wkblTeamId": "kb",      "captain": true },
+        { "number": 2,  "name": "허예은",   "pno": "095710", "position": "G", "height": "167cm", "wkblTeamId": "kb"      },
+        { "number": 7,  "name": "박지수",   "pno": "095533", "position": "C", "height": "198cm", "wkblTeamId": "kb"      },
+        { "number": 12, "name": "이해란",   "pno": "095778", "position": "F", "height": "182cm", "wkblTeamId": "samsung" },
+        { "number": 10, "name": "강유림",   "pno": "095713", "position": "F", "height": "175cm", "wkblTeamId": "samsung" },
+        { "number": 5,  "name": "안혜지",   "pno": "095484", "position": "G", "height": "164cm", "wkblTeamId": "bnk"     },
+        { "number": 9,  "name": "이소희",   "pno": "095636", "position": "G", "height": "171cm", "wkblTeamId": "bnk"     },
+        { "number": 77, "name": "진안",     "pno": "095499", "position": "C", "height": "181cm", "wkblTeamId": "hana"    },
+        { "number": 11, "name": "박소희",   "pno": "095788", "position": "G", "height": "177cm", "wkblTeamId": "hana"    },
+        { "number": 6,  "name": "최이샘",   "pno": "095261", "position": "F", "height": "182cm", "wkblTeamId": "shinhan" },
+        { "number": 39, "name": "홍유순",   "pno": "095972", "position": "F", "height": "179cm", "wkblTeamId": "shinhan" },
+        { "number": 1,  "name": "박지현",   "pno": null,     "position": "G", "height": "183cm", "wkblTeamId": null      }
+      ]
+    },
+    {
+      "tournament": "2025 FIBA 여자농구 아시아컵",
+      "date": "2025-07",
+      "dateRange": "2025.07.13 ~ 07.20",
+      "venue": "선전만 스포츠센터, 선전, 중국",
+      "current": false,
+      "result": "4위 (3승 3패)",
+      "players": [
+        { "number": 3,  "name": "강이슬",   "pno": "095263", "position": "F", "height": "180cm", "wkblTeamId": "kb",      "captain": true },
+        { "number": 5,  "name": "허예은",   "pno": "095710", "position": "G", "height": "167cm", "wkblTeamId": "kb"      },
+        { "number": 7,  "name": "박지수",   "pno": "095533", "position": "C", "height": "198cm", "wkblTeamId": "kb"      },
+        { "number": 12, "name": "이해란",   "pno": "095778", "position": "F", "height": "182cm", "wkblTeamId": "samsung" },
+        { "number": 8,  "name": "이주연",   "pno": "095524", "position": "G", "height": "171cm", "wkblTeamId": "samsung" },
+        { "number": 10, "name": "강유림",   "pno": "095713", "position": "F", "height": "175cm", "wkblTeamId": "samsung" },
+        { "number": 20, "name": "이명관",   "pno": "095703", "position": "F", "height": "173cm", "wkblTeamId": "woori"   },
+        { "number": 2,  "name": "안혜지",   "pno": "095484", "position": "G", "height": "164cm", "wkblTeamId": "bnk"     },
+        { "number": 1,  "name": "신지현",   "pno": "095441", "position": "G", "height": "174cm", "wkblTeamId": "shinhan" },
+        { "number": 6,  "name": "최이샘",   "pno": "095261", "position": "F", "height": "182cm", "wkblTeamId": "shinhan" },
+        { "number": 39, "name": "홍유순",   "pno": "095972", "position": "F", "height": "179cm", "wkblTeamId": "shinhan" },
+        { "number": 9,  "name": "박지현",   "pno": null,     "position": "G", "height": "183cm", "wkblTeamId": null      }
+      ]
+    }
   ]
 }

@@ -16,19 +16,31 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096001.png?ver=241016",
-    "seasonStats": {
-      "games": 20,
-      "mpg": 8.9,
-      "ppg": 1.75,
-      "rpg": 1.7,
-      "apg": 0.2,
-      "spg": 0.2,
-      "bpg": 0.6,
-      "fgPct": 28.3,
-      "threePct": 0,
-      "ftPct": 56.3
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 20,
+        "points": 1.75,
+        "rebounds": 1.7,
+        "assists": 0.2,
+        "spg": 0.2,
+        "bpg": 0.6,
+        "fgPct": 28.3,
+        "threePct": 0,
+        "ftPct": 56.3,
+        "mpg": 8.9
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 7,
+        "points": 3.1,
+        "rebounds": 2.6,
+        "assists": 0.4
+      }
+    ]
   },
   {
     "pno": "095834",
@@ -47,19 +59,47 @@
     "draftRound": 2,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095834.png?ver=241016",
-    "seasonStats": {
-      "games": 12,
-      "mpg": 3.1,
-      "ppg": 0.58,
-      "rpg": 0.3,
-      "apg": 0.3,
-      "spg": 0.2,
-      "bpg": 0,
-      "fgPct": 28.6,
-      "threePct": 25,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 12,
+        "points": 0.58,
+        "rebounds": 0.3,
+        "assists": 0.3,
+        "spg": 0.2,
+        "bpg": 0,
+        "fgPct": 28.6,
+        "threePct": 25,
+        "ftPct": 0,
+        "mpg": 3.1
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 21,
+        "points": 2.5,
+        "rebounds": 1.2,
+        "assists": 0.4
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 16,
+        "points": 1.6,
+        "rebounds": 0.8,
+        "assists": 0.6
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 20,
+        "points": 2.8,
+        "rebounds": 1.2,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "096000",
@@ -78,19 +118,17 @@
     "draftRound": 2,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096000.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 1,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095248",
@@ -109,25 +147,138 @@
     "draftRound": null,
     "draftPick": null,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095248.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 32.6,
-      "ppg": 14.87,
-      "rpg": 9.1,
-      "apg": 2.6,
-      "spg": 1.2,
-      "bpg": 0.4,
-      "fgPct": 46.6,
-      "threePct": 23,
-      "ftPct": 83.2
-    },
     "tags": [
-      "국가대표",
       "에이스",
       "폭발력",
       "수비형",
       "리바운더",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 14.87,
+        "rebounds": 9.1,
+        "assists": 2.6,
+        "spg": 1.2,
+        "bpg": 0.4,
+        "fgPct": 46.6,
+        "threePct": 23,
+        "ftPct": 83.2,
+        "mpg": 32.6
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 29,
+        "points": 16.5,
+        "rebounds": 9.5,
+        "assists": 3
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 28,
+        "points": 16.5,
+        "rebounds": 9.1,
+        "assists": 2.1
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 30,
+        "points": 18.9,
+        "rebounds": 9.4,
+        "assists": 2.4
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 28,
+        "points": 16.8,
+        "rebounds": 8.2,
+        "assists": 3.2
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 30,
+        "points": 17.2,
+        "rebounds": 9.9,
+        "assists": 3.3
+      },
+      {
+        "season": "2019-20",
+        "team": "우리은행",
+        "games": 27,
+        "points": 8.6,
+        "rebounds": 6.9,
+        "assists": 2.5
+      },
+      {
+        "season": "2018-19",
+        "team": "우리은행",
+        "games": 35,
+        "points": 5.7,
+        "rebounds": 6.7,
+        "assists": 1.2
+      },
+      {
+        "season": "2013-14",
+        "team": "우리은행",
+        "games": 5,
+        "points": 2.2,
+        "rebounds": 1.6,
+        "assists": 0.6
+      },
+      {
+        "season": "2012-13",
+        "team": "우리은행",
+        "games": 4,
+        "points": 2,
+        "rebounds": 1.3,
+        "assists": 0.3
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "18-19 식스우먼상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 포카리스웨트 MIP"
+      },
+      {
+        "type": "award",
+        "label": "20-21 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "20-21 포카리스웨트 MIP"
+      },
+      {
+        "type": "award",
+        "label": "22-23 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "22-23 득점상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 자유투상"
+      }
     ]
   },
   {
@@ -147,20 +298,40 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095899.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 15.8,
-      "ppg": 3.6,
-      "rpg": 2.2,
-      "apg": 0.7,
-      "spg": 0.2,
-      "bpg": 0.2,
-      "fgPct": 39.1,
-      "threePct": 32.5,
-      "ftPct": 62.5
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 3.6,
+        "rebounds": 2.2,
+        "assists": 0.7,
+        "spg": 0.2,
+        "bpg": 0.2,
+        "fgPct": 39.1,
+        "threePct": 32.5,
+        "ftPct": 62.5,
+        "mpg": 15.8
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 12,
+        "points": 0.8,
+        "rebounds": 0.4,
+        "assists": 0.1
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 3.7,
+        "rebounds": 1.6,
+        "assists": 0.4
+      }
     ]
   },
   {
@@ -180,19 +351,39 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095900.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 1.3,
-      "ppg": 0,
-      "rpg": 1,
-      "apg": 1,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 1,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 1,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.3
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 2,
+        "points": 1,
+        "rebounds": 1.5,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 7,
+        "points": 0.7,
+        "rebounds": 0.3,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095833",
@@ -211,19 +402,47 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095833.png?ver=241016",
-    "seasonStats": {
-      "games": 21,
-      "mpg": 7.6,
-      "ppg": 0.81,
-      "rpg": 1.3,
-      "apg": 0.2,
-      "spg": 0.3,
-      "bpg": 0.2,
-      "fgPct": 28,
-      "threePct": 0,
-      "ftPct": 100
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 21,
+        "points": 0.81,
+        "rebounds": 1.3,
+        "assists": 0.2,
+        "spg": 0.3,
+        "bpg": 0.2,
+        "fgPct": 28,
+        "threePct": 0,
+        "ftPct": 100,
+        "mpg": 7.6
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 1.9,
+        "rebounds": 2.5,
+        "assists": 0.5
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 25,
+        "points": 2,
+        "rebounds": 2.4,
+        "assists": 0.4
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 13,
+        "points": 1.5,
+        "rebounds": 1,
+        "assists": 0.3
+      }
+    ]
   },
   {
     "pno": "096136",
@@ -242,19 +461,23 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096136.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 0.6,
-      "ppg": 0,
-      "rpg": 0,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 0.6
+      }
+    ]
   },
   {
     "pno": "095186",
@@ -273,25 +496,282 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095186.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 35,
-      "ppg": 9.8,
-      "rpg": 6.5,
-      "apg": 2.5,
-      "spg": 1.2,
-      "bpg": 0.5,
-      "fgPct": 37.2,
-      "threePct": 37.4,
-      "ftPct": 87.1
-    },
     "tags": [
       "베테랑",
-      "국가대표",
       "1옵션",
       "수비형",
       "슈터",
       "리바운더"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 9.8,
+        "rebounds": 6.5,
+        "assists": 2.5,
+        "spg": 1.2,
+        "bpg": 0.5,
+        "fgPct": 37.2,
+        "threePct": 37.4,
+        "ftPct": 87.1,
+        "mpg": 35
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 21,
+        "points": 9.4,
+        "rebounds": 8.4,
+        "assists": 3
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 17,
+        "points": 9.1,
+        "rebounds": 6.5,
+        "assists": 4.2
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 26,
+        "points": 12.8,
+        "rebounds": 6.2,
+        "assists": 3.8
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 26,
+        "points": 16.1,
+        "rebounds": 7.1,
+        "assists": 4.3
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 19,
+        "points": 17.4,
+        "rebounds": 4.5,
+        "assists": 2.6
+      },
+      {
+        "season": "2019-20",
+        "team": "우리은행",
+        "games": 27,
+        "points": 14.7,
+        "rebounds": 5.1,
+        "assists": 5.4
+      },
+      {
+        "season": "2018-19",
+        "team": "우리은행",
+        "games": 33,
+        "points": 13.2,
+        "rebounds": 5.6,
+        "assists": 4.9
+      },
+      {
+        "season": "2017-18",
+        "team": "우리은행",
+        "games": 35,
+        "points": 14.5,
+        "rebounds": 5.2,
+        "assists": 5.1
+      },
+      {
+        "season": "2016-17",
+        "team": "우리은행",
+        "games": 35,
+        "points": 13.5,
+        "rebounds": 5.7,
+        "assists": 5.1
+      },
+      {
+        "season": "2015-16",
+        "team": "우리은행",
+        "games": 35,
+        "points": 10.1,
+        "rebounds": 5.9,
+        "assists": 3
+      },
+      {
+        "season": "2014-15",
+        "team": "우리은행",
+        "games": 35,
+        "points": 10.5,
+        "rebounds": 5.5,
+        "assists": 3.1
+      },
+      {
+        "season": "2013-14",
+        "team": "우리은행",
+        "games": 35,
+        "points": 12.6,
+        "rebounds": 4.9,
+        "assists": 3.7
+      },
+      {
+        "season": "2012-13",
+        "team": "우리은행",
+        "games": 35,
+        "points": 10.4,
+        "rebounds": 5.9,
+        "assists": 3.6
+      },
+      {
+        "season": "2011-12",
+        "team": "우리은행",
+        "games": 34,
+        "points": 8,
+        "rebounds": 3.4,
+        "assists": 2.5
+      },
+      {
+        "season": "2010-11",
+        "team": "우리은행",
+        "games": 34,
+        "points": 10.4,
+        "rebounds": 4.6,
+        "assists": 3.6
+      },
+      {
+        "season": "2009-10",
+        "team": "우리은행",
+        "games": 34,
+        "points": 5.4,
+        "rebounds": 2.4,
+        "assists": 2.6
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "08-09 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "10-11 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "12-13 모범선수 상"
+      },
+      {
+        "type": "award",
+        "label": "12-13 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "12-13 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "13-14 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "13-14 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "13-14 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "13-14 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "14-15 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "14-15 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "14-15 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "15-16 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "15-16 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "16-17 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "16-17 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "16-17 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "16-17 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "17-18 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "17-18 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "19-20 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "19-20 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "19-20 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "21-22 자유투상"
+      }
     ]
   },
   {
@@ -311,20 +791,56 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095780.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 23.3,
-      "ppg": 5.03,
-      "rpg": 3.3,
-      "apg": 0.7,
-      "spg": 0.4,
-      "bpg": 0.3,
-      "fgPct": 46.5,
-      "threePct": 31.6,
-      "ftPct": 59.1
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 5.03,
+        "rebounds": 3.3,
+        "assists": 0.7,
+        "spg": 0.4,
+        "bpg": 0.3,
+        "fgPct": 46.5,
+        "threePct": 31.6,
+        "ftPct": 59.1,
+        "mpg": 23.3
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 28,
+        "points": 2.8,
+        "rebounds": 2.2,
+        "assists": 0.2
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 1,
+        "points": 2,
+        "rebounds": 7,
+        "assists": 0
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 20,
+        "points": 3.1,
+        "rebounds": 1.9,
+        "assists": 0.3
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 11,
+        "points": 1.3,
+        "rebounds": 1,
+        "assists": 0.1
+      }
     ]
   },
   {
@@ -344,20 +860,32 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095919.png?ver=241016",
-    "seasonStats": {
-      "games": 25,
-      "mpg": 8.2,
-      "ppg": 2.88,
-      "rpg": 1.4,
-      "apg": 0.3,
-      "spg": 0.3,
-      "bpg": 0,
-      "fgPct": 36.1,
-      "threePct": 38.7,
-      "ftPct": 90.9
-    },
     "tags": [
       "슈터"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 25,
+        "points": 2.88,
+        "rebounds": 1.4,
+        "assists": 0.3,
+        "spg": 0.3,
+        "bpg": 0,
+        "fgPct": 36.1,
+        "threePct": 38.7,
+        "ftPct": 90.9,
+        "mpg": 8.2
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 29,
+        "points": 6.4,
+        "rebounds": 2.5,
+        "assists": 3
+      }
     ]
   },
   {
@@ -377,19 +905,47 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095825.png?ver=241016",
-    "seasonStats": {
-      "games": 17,
-      "mpg": 3.3,
-      "ppg": 0.47,
-      "rpg": 0.6,
-      "apg": 0.2,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 12.5,
-      "threePct": 0,
-      "ftPct": 66.7
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 17,
+        "points": 0.47,
+        "rebounds": 0.6,
+        "assists": 0.2,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 12.5,
+        "threePct": 0,
+        "ftPct": 66.7,
+        "mpg": 3.3
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 5.6,
+        "rebounds": 2.3,
+        "assists": 1.2
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 18,
+        "points": 1.2,
+        "rebounds": 0.2,
+        "assists": 0.4
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 11,
+        "points": 1.2,
+        "rebounds": 0.6,
+        "assists": 0.4
+      }
+    ]
   },
   {
     "pno": "095484",
@@ -408,24 +964,142 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095484.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 37.1,
-      "ppg": 11.17,
-      "rpg": 3.5,
-      "apg": 6.1,
-      "spg": 0.8,
-      "bpg": 0,
-      "fgPct": 35.4,
-      "threePct": 28.9,
-      "ftPct": 69.7
-    },
     "tags": [
       "베테랑",
       "국가대표",
       "1옵션",
       "폭발력",
       "플레이메이커"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 11.17,
+        "rebounds": 3.5,
+        "assists": 6.1,
+        "spg": 0.8,
+        "bpg": 0,
+        "fgPct": 35.4,
+        "threePct": 28.9,
+        "ftPct": 69.7,
+        "mpg": 37.1
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 10,
+        "rebounds": 3.6,
+        "assists": 5.6
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 11.7,
+        "rebounds": 4.6,
+        "assists": 7.7
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 10.5,
+        "rebounds": 3.7,
+        "assists": 9
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 8.2,
+        "rebounds": 2.8,
+        "assists": 6.3
+      },
+      {
+        "season": "2020-21",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 8.9,
+        "rebounds": 3,
+        "assists": 5.4
+      },
+      {
+        "season": "2019-20",
+        "team": "BNK 썸",
+        "games": 27,
+        "points": 10.3,
+        "rebounds": 3.2,
+        "assists": 7.7
+      },
+      {
+        "season": "2018-19",
+        "team": "OK저축은행",
+        "games": 35,
+        "points": 6.5,
+        "rebounds": 3,
+        "assists": 6.4
+      },
+      {
+        "season": "2017-18",
+        "team": "KDB생명",
+        "games": 19,
+        "points": 1.6,
+        "rebounds": 1.6,
+        "assists": 1.6
+      },
+      {
+        "season": "2016-17",
+        "team": "KDB생명",
+        "games": 25,
+        "points": 2.3,
+        "rebounds": 1.2,
+        "assists": 1.8
+      },
+      {
+        "season": "2015-16",
+        "team": "KDB생명",
+        "games": 18,
+        "points": 0.9,
+        "rebounds": 0.6,
+        "assists": 0.7
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "18-19 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 포카리스웨트 MIP"
+      },
+      {
+        "type": "award",
+        "label": "19-20 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "19-20 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 어시스트상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 챔피언전 MVP"
+      }
     ]
   },
   {
@@ -445,22 +1119,100 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095636.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 35.2,
-      "ppg": 12.93,
-      "rpg": 3.8,
-      "apg": 2.3,
-      "spg": 0.6,
-      "bpg": 0.1,
-      "fgPct": 38.9,
-      "threePct": 34.9,
-      "ftPct": 86
-    },
     "tags": [
       "국가대표",
       "1옵션",
       "폭발력"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 12.93,
+        "rebounds": 3.8,
+        "assists": 2.3,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "fgPct": 38.9,
+        "threePct": 34.9,
+        "ftPct": 86,
+        "mpg": 35.2
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 18,
+        "points": 12.2,
+        "rebounds": 3.5,
+        "assists": 1.5
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 29,
+        "points": 14,
+        "rebounds": 4.9,
+        "assists": 2.6
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 16.9,
+        "rebounds": 4.4,
+        "assists": 2.4
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 14.4,
+        "rebounds": 4.1,
+        "assists": 1.7
+      },
+      {
+        "season": "2020-21",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 11,
+        "rebounds": 4.6,
+        "assists": 2.2
+      },
+      {
+        "season": "2019-20",
+        "team": "BNK 썸",
+        "games": 9,
+        "points": 3.7,
+        "rebounds": 3.4,
+        "assists": 1.3
+      },
+      {
+        "season": "2018-19",
+        "team": "OK저축은행",
+        "games": 15,
+        "points": 7.3,
+        "rebounds": 2,
+        "assists": 0.8
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "21-22 포카리스웨트 MIP"
+      },
+      {
+        "type": "award",
+        "label": "22-23 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "22-23 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 자유투상"
+      }
     ]
   },
   {
@@ -480,19 +1232,23 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096135.png?ver=241016",
-    "seasonStats": {
-      "games": 17,
-      "mpg": 6.7,
-      "ppg": 1.12,
-      "rpg": 0.9,
-      "apg": 0.2,
-      "spg": 0.1,
-      "bpg": 0.1,
-      "fgPct": 33.3,
-      "threePct": 0,
-      "ftPct": 100
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 17,
+        "points": 1.12,
+        "rebounds": 0.9,
+        "assists": 0.2,
+        "spg": 0.1,
+        "bpg": 0.1,
+        "fgPct": 33.3,
+        "threePct": 0,
+        "ftPct": 100,
+        "mpg": 6.7
+      }
+    ]
   },
   {
     "pno": "095784",
@@ -511,19 +1267,55 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095784.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 1.9,
-      "ppg": 2,
-      "rpg": 2,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 100,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "BNK 썸",
+        "games": 1,
+        "points": 2,
+        "rebounds": 2,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 100,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.9
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 7,
+        "points": 0.6,
+        "rebounds": 0.7,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 13,
+        "points": 0.6,
+        "rebounds": 1,
+        "assists": 0.1
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 6,
+        "points": 0.3,
+        "rebounds": 0.8,
+        "assists": 0
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 5,
+        "points": 0.6,
+        "rebounds": 1.2,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095716",
@@ -542,24 +1334,54 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095716.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 5,
+        "points": 1,
+        "rebounds": 0.4,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 10,
+        "points": 1.9,
+        "rebounds": 0.1,
+        "assists": 0.1
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 6,
+        "points": 0.5,
+        "rebounds": 1.3,
+        "assists": 1
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 8,
+        "points": 0.3,
+        "rebounds": 0.1,
+        "assists": 0.3
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 2,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "096027",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "가와무라 미유키",
     "nameEn": "KAWAMURA M.",
     "number": 45,
@@ -573,26 +1395,30 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096027.png?ver=241016",
-    "seasonStats": {
-      "games": 24,
-      "mpg": 14.7,
-      "ppg": 4.5,
-      "rpg": 1.7,
-      "apg": 0.7,
-      "spg": 0.3,
-      "bpg": 0.1,
-      "fgPct": 43.9,
-      "threePct": 12.5,
-      "ftPct": 61.3
-    },
     "tags": [
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 24,
+        "points": 4.5,
+        "rebounds": 1.7,
+        "assists": 0.7,
+        "spg": 0.3,
+        "bpg": 0.1,
+        "fgPct": 43.9,
+        "threePct": 12.5,
+        "ftPct": 61.3,
+        "mpg": 14.7
+      }
     ]
   },
   {
     "pno": "095713",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "강유림",
     "nameEn": "KANG YOO RIM",
     "number": 7,
@@ -606,27 +1432,82 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095713.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 33.4,
-      "ppg": 10,
-      "rpg": 4.6,
-      "apg": 1.5,
-      "spg": 1,
-      "bpg": 1,
-      "fgPct": 47.7,
-      "threePct": 23.6,
-      "ftPct": 86.8
-    },
     "tags": [
+      "국가대표",
       "1옵션",
       "폭발력"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 10,
+        "rebounds": 4.6,
+        "assists": 1.5,
+        "spg": 1,
+        "bpg": 1,
+        "fgPct": 47.7,
+        "threePct": 23.6,
+        "ftPct": 86.8,
+        "mpg": 33.4
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 8.2,
+        "rebounds": 3.6,
+        "assists": 1.4
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 8.7,
+        "rebounds": 3.5,
+        "assists": 1.8
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 12.8,
+        "rebounds": 5.6,
+        "assists": 2.4
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 7.9,
+        "rebounds": 4.1,
+        "assists": 1.1
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 30,
+        "points": 7.3,
+        "rebounds": 4,
+        "assists": 0.7
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "20-21 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 포카리스웨트 MIP"
+      }
     ]
   },
   {
     "pno": "095226",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "김단비",
     "nameEn": "KIM DAN BI",
     "number": 13,
@@ -640,24 +1521,140 @@
     "draftRound": null,
     "draftPick": null,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095226.png?ver=241016",
-    "seasonStats": {
-      "games": 7,
-      "mpg": 4.8,
-      "ppg": 0.43,
-      "rpg": 0.7,
-      "apg": 0.9,
-      "spg": 0.3,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 33.3,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 7,
+        "points": 0.43,
+        "rebounds": 0.7,
+        "assists": 0.9,
+        "spg": 0.3,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 33.3,
+        "ftPct": 0,
+        "mpg": 4.8
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 17,
+        "points": 1.5,
+        "rebounds": 1.5,
+        "assists": 0.8
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 16,
+        "points": 3.5,
+        "rebounds": 2.6,
+        "assists": 0.9
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 6.4,
+        "rebounds": 4.3,
+        "assists": 1.8
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 6.5,
+        "rebounds": 4.5,
+        "assists": 1.6
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 8.1,
+        "rebounds": 5.2,
+        "assists": 1.1
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 23,
+        "points": 2.1,
+        "rebounds": 1.6,
+        "assists": 0.4
+      },
+      {
+        "season": "2018-19",
+        "team": "KEB하나",
+        "games": 34,
+        "points": 5.7,
+        "rebounds": 3.1,
+        "assists": 1.2
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 5.9,
+        "rebounds": 3.2,
+        "assists": 1.3
+      },
+      {
+        "season": "2016-17",
+        "team": "우리은행",
+        "games": 35,
+        "points": 3.4,
+        "rebounds": 2.2,
+        "assists": 0.4
+      },
+      {
+        "season": "2015-16",
+        "team": "우리은행",
+        "games": 33,
+        "points": 3.2,
+        "rebounds": 1.3,
+        "assists": 0.2
+      },
+      {
+        "season": "2014-15",
+        "team": "우리은행",
+        "games": 23,
+        "points": 1.9,
+        "rebounds": 1.4,
+        "assists": 0.2
+      },
+      {
+        "season": "2013-14",
+        "team": "우리은행",
+        "games": 9,
+        "points": 0.2,
+        "rebounds": 0.9,
+        "assists": 0
+      },
+      {
+        "season": "2012-13",
+        "team": "우리은행",
+        "games": 6,
+        "points": 0.3,
+        "rebounds": 0.7,
+        "assists": 0.2
+      },
+      {
+        "season": "2011-12",
+        "team": "우리은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095477",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "김아름",
     "nameEn": "KIM AH REUM",
     "number": 6,
@@ -671,28 +1668,104 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095477.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 22.5,
-      "ppg": 5.33,
-      "rpg": 3.8,
-      "apg": 1,
-      "spg": 0.6,
-      "bpg": 0.1,
-      "fgPct": 32.4,
-      "threePct": 35,
-      "ftPct": 73.7
-    },
     "tags": [
       "베테랑",
       "슈터",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 5.33,
+        "rebounds": 3.8,
+        "assists": 1,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "fgPct": 32.4,
+        "threePct": 35,
+        "ftPct": 73.7,
+        "mpg": 22.5
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 4.6,
+        "rebounds": 3.6,
+        "assists": 1
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 29,
+        "points": 5.2,
+        "rebounds": 3.4,
+        "assists": 0.5
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 30,
+        "points": 7.3,
+        "rebounds": 4.2,
+        "assists": 1
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 30,
+        "points": 10.2,
+        "rebounds": 4.4,
+        "assists": 1.6
+      },
+      {
+        "season": "2019-20",
+        "team": "신한은행",
+        "games": 14,
+        "points": 4.4,
+        "rebounds": 1.9,
+        "assists": 0.8
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 28,
+        "points": 8,
+        "rebounds": 3.5,
+        "assists": 1
+      },
+      {
+        "season": "2017-18",
+        "team": "신한은행",
+        "games": 33,
+        "points": 3,
+        "rebounds": 1.1,
+        "assists": 0.5
+      },
+      {
+        "season": "2016-17",
+        "team": "신한은행",
+        "games": 26,
+        "points": 2.9,
+        "rebounds": 1.9,
+        "assists": 0.4
+      }
     ]
   },
   {
     "pno": "095782",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "방지온",
     "nameEn": "BANG JI ON",
     "number": 43,
@@ -706,24 +1779,60 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095782.png?ver=241016",
-    "seasonStats": {
-      "games": 3,
-      "mpg": 2.7,
-      "ppg": 0,
-      "rpg": 0.3,
-      "apg": 0,
-      "spg": 0.3,
-      "bpg": 0.3,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 3,
+        "points": 0,
+        "rebounds": 0.3,
+        "assists": 0,
+        "spg": 0.3,
+        "bpg": 0.3,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 2.7
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 4,
+        "points": 0.5,
+        "rebounds": 0.5,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 3,
+        "points": 2,
+        "rebounds": 1,
+        "assists": 0.3
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 3,
+        "points": 1.3,
+        "rebounds": 1,
+        "assists": 0
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 10,
+        "points": 0.7,
+        "rebounds": 0.9,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "095115",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "배혜윤",
     "nameEn": "BAE HYE YOON",
     "number": 25,
@@ -737,27 +1846,181 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095115.png?ver=241016",
-    "seasonStats": {
-      "games": 26,
-      "mpg": 24,
-      "ppg": 7.31,
-      "rpg": 3.8,
-      "apg": 3.4,
-      "spg": 0.5,
-      "bpg": 0.3,
-      "fgPct": 45.8,
-      "threePct": 0,
-      "ftPct": 90.6
-    },
     "tags": [
       "베테랑",
       "1옵션"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 7.31,
+        "rebounds": 3.8,
+        "assists": 3.4,
+        "spg": 0.5,
+        "bpg": 0.3,
+        "fgPct": 45.8,
+        "threePct": 0,
+        "ftPct": 90.6,
+        "mpg": 24
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 12.7,
+        "rebounds": 7.2,
+        "assists": 4.7
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 27,
+        "points": 12,
+        "rebounds": 6.5,
+        "assists": 4.9
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 25,
+        "points": 16.3,
+        "rebounds": 6.3,
+        "assists": 4
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 15.5,
+        "rebounds": 8,
+        "assists": 5.1
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 14.6,
+        "rebounds": 7.3,
+        "assists": 4.2
+      },
+      {
+        "season": "2019-20",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 16,
+        "rebounds": 6.5,
+        "assists": 3.8
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 34,
+        "points": 12.4,
+        "rebounds": 5.7,
+        "assists": 4
+      },
+      {
+        "season": "2017-18",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 6.9,
+        "rebounds": 3.4,
+        "assists": 1.6
+      },
+      {
+        "season": "2016-17",
+        "team": "삼성생명",
+        "games": 35,
+        "points": 10.1,
+        "rebounds": 4.9,
+        "assists": 3.1
+      },
+      {
+        "season": "2015-16",
+        "team": "삼성생명",
+        "games": 35,
+        "points": 8.4,
+        "rebounds": 3.8,
+        "assists": 1.8
+      },
+      {
+        "season": "2014-15",
+        "team": "삼성생명",
+        "games": 33,
+        "points": 8.2,
+        "rebounds": 4.9,
+        "assists": 2.2
+      },
+      {
+        "season": "2013-14",
+        "team": "삼성생명",
+        "games": 35,
+        "points": 9.2,
+        "rebounds": 5,
+        "assists": 1.7
+      },
+      {
+        "season": "2012-13",
+        "team": "우리은행",
+        "games": 32,
+        "points": 6.3,
+        "rebounds": 3.6,
+        "assists": 1.2
+      },
+      {
+        "season": "2011-12",
+        "team": "우리은행",
+        "games": 39,
+        "points": 12.6,
+        "rebounds": 6.7,
+        "assists": 1.9
+      },
+      {
+        "season": "2010-11",
+        "team": "우리은행",
+        "games": 31,
+        "points": 11.7,
+        "rebounds": 5.6,
+        "assists": 1.3
+      },
+      {
+        "season": "2009-10",
+        "team": "신세계",
+        "games": 30,
+        "points": 3.5,
+        "rebounds": 2.7,
+        "assists": 0.6
+      },
+      {
+        "season": "2008-09",
+        "team": "신세계",
+        "games": 36,
+        "points": 4.2,
+        "rebounds": 3.2,
+        "assists": 0.4
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "07-08 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "24-25 BEST 5 - 센터"
+      }
     ]
   },
   {
     "pno": "096140",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "양혜은",
     "nameEn": "YANG HYE EUN",
     "number": 10,
@@ -771,24 +2034,28 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096140.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 1.9,
-      "ppg": 2,
-      "rpg": 1,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 100,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 1,
+        "points": 2,
+        "rebounds": 1,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 100,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.9
+      }
+    ]
   },
   {
     "pno": "096003",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "유하은",
     "nameEn": "YOO HA EUN",
     "number": 9,
@@ -802,24 +2069,36 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096003.png?ver=241016",
-    "seasonStats": {
-      "games": 18,
-      "mpg": 5.8,
-      "ppg": 0.83,
-      "rpg": 1.1,
-      "apg": 0.1,
-      "spg": 0.1,
-      "bpg": 0.1,
-      "fgPct": 37.5,
-      "threePct": 9.1,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 18,
+        "points": 0.83,
+        "rebounds": 1.1,
+        "assists": 0.1,
+        "spg": 0.1,
+        "bpg": 0.1,
+        "fgPct": 37.5,
+        "threePct": 9.1,
+        "ftPct": 0,
+        "mpg": 5.8
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 17,
+        "points": 0.8,
+        "rebounds": 0.8,
+        "assists": 0.1
+      }
+    ]
   },
   {
     "pno": "095497",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "윤예빈",
     "nameEn": "YOON YE BIN",
     "number": 32,
@@ -833,26 +2112,100 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095497.png?ver=241016",
-    "seasonStats": {
-      "games": 26,
-      "mpg": 18.7,
-      "ppg": 5.08,
-      "rpg": 3.5,
-      "apg": 1.6,
-      "spg": 1,
-      "bpg": 0.4,
-      "fgPct": 45.9,
-      "threePct": 22.4,
-      "ftPct": 42.9
-    },
     "tags": [
       "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 5.08,
+        "rebounds": 3.5,
+        "assists": 1.6,
+        "spg": 1,
+        "bpg": 0.4,
+        "fgPct": 45.9,
+        "threePct": 22.4,
+        "ftPct": 42.9,
+        "mpg": 18.7
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 8,
+        "points": 0.4,
+        "rebounds": 0.6,
+        "assists": 0.1
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 4,
+        "points": 5,
+        "rebounds": 2,
+        "assists": 1.3
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 10.9,
+        "rebounds": 5,
+        "assists": 2.9
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 10.6,
+        "rebounds": 6.2,
+        "assists": 2.7
+      },
+      {
+        "season": "2019-20",
+        "team": "삼성생명",
+        "games": 21,
+        "points": 9.3,
+        "rebounds": 3.4,
+        "assists": 2.5
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 35,
+        "points": 6.9,
+        "rebounds": 3.2,
+        "assists": 1.6
+      },
+      {
+        "season": "2017-18",
+        "team": "삼성생명",
+        "games": 13,
+        "points": 2.2,
+        "rebounds": 0.5,
+        "assists": 0.2
+      },
+      {
+        "season": "2016-17",
+        "team": "삼성생명",
+        "games": 1,
+        "points": 0,
+        "rebounds": 2,
+        "assists": 0
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "19-20 스틸상"
+      }
     ]
   },
   {
     "pno": "095904",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "이예나",
     "nameEn": "LEE YE NA",
     "number": 23,
@@ -866,24 +2219,44 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095904.png?ver=241016",
-    "seasonStats": {
-      "games": 11,
-      "mpg": 6.2,
-      "ppg": 1.73,
-      "rpg": 0.9,
-      "apg": 0.2,
-      "spg": 0.2,
-      "bpg": 0,
-      "fgPct": 33.3,
-      "threePct": 20,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 11,
+        "points": 1.73,
+        "rebounds": 0.9,
+        "assists": 0.2,
+        "spg": 0.2,
+        "bpg": 0,
+        "fgPct": 33.3,
+        "threePct": 20,
+        "ftPct": 0,
+        "mpg": 6.2
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 12,
+        "points": 0.7,
+        "rebounds": 0.4,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 7,
+        "points": 0.3,
+        "rebounds": 0.7,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095524",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "이주연",
     "nameEn": "LEE JU YEON",
     "number": 8,
@@ -897,27 +2270,101 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095524.png?ver=241016",
-    "seasonStats": {
-      "games": 19,
-      "mpg": 22.7,
-      "ppg": 6.37,
-      "rpg": 2.4,
-      "apg": 2.9,
-      "spg": 1,
-      "bpg": 0.2,
-      "fgPct": 44,
-      "threePct": 25.5,
-      "ftPct": 78.6
-    },
     "tags": [
       "식스맨",
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 19,
+        "points": 6.37,
+        "rebounds": 2.4,
+        "assists": 2.9,
+        "spg": 1,
+        "bpg": 0.2,
+        "fgPct": 44,
+        "threePct": 25.5,
+        "ftPct": 78.6,
+        "mpg": 22.7
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 10,
+        "points": 7.6,
+        "rebounds": 3.1,
+        "assists": 2.9
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 7.7,
+        "rebounds": 5,
+        "assists": 3.2
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 14,
+        "points": 4.9,
+        "rebounds": 4.8,
+        "assists": 2.4
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 10.7,
+        "rebounds": 4.8,
+        "assists": 3.4
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 22,
+        "points": 2.6,
+        "rebounds": 1.4,
+        "assists": 1.2
+      },
+      {
+        "season": "2019-20",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 5.5,
+        "rebounds": 2.5,
+        "assists": 2
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 4.8,
+        "rebounds": 1.6,
+        "assists": 1.2
+      },
+      {
+        "season": "2017-18",
+        "team": "삼성생명",
+        "games": 22,
+        "points": 3.1,
+        "rebounds": 1.2,
+        "assists": 1.1
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "17-18 신인선수상"
+      }
     ]
   },
   {
     "pno": "095778",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "이해란",
     "nameEn": "LEE HAE RAN",
     "number": 2,
@@ -931,32 +2378,77 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095778.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 34.9,
-      "ppg": 17.4,
-      "rpg": 7.6,
-      "apg": 1.5,
-      "spg": 1.6,
-      "bpg": 1,
-      "fgPct": 48.5,
-      "threePct": 22.6,
-      "ftPct": 69.6
-    },
     "tags": [
-      "MVP",
       "국가대표",
       "에이스",
       "폭발력",
       "수비형",
       "리바운더",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 17.4,
+        "rebounds": 7.6,
+        "assists": 1.5,
+        "spg": 1.6,
+        "bpg": 1,
+        "fgPct": 48.5,
+        "threePct": 22.6,
+        "ftPct": 69.6,
+        "mpg": 34.9
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 12.9,
+        "rebounds": 7.1,
+        "assists": 1
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 13.4,
+        "rebounds": 6.4,
+        "assists": 0.9
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 9.1,
+        "rebounds": 4.4,
+        "assists": 0.8
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 5.8,
+        "rebounds": 3.1,
+        "assists": 0.8
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "21-22 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 포카리스웨트 MIP"
+      }
     ]
   },
   {
     "pno": "095779",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "임규리",
     "nameEn": "LIM KYU RI",
     "number": 16,
@@ -970,26 +2462,60 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095779.png?ver=241016",
-    "seasonStats": {
-      "games": 3,
-      "mpg": 3.1,
-      "ppg": 1.33,
-      "rpg": 1,
-      "apg": 0,
-      "spg": 0.7,
-      "bpg": 0,
-      "fgPct": 66.7,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": [
-      "국가대표"
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 3,
+        "points": 1.33,
+        "rebounds": 1,
+        "assists": 0,
+        "spg": 0.7,
+        "bpg": 0,
+        "fgPct": 66.7,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 3.1
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 9,
+        "points": 0.6,
+        "rebounds": 0.1,
+        "assists": 0.2
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 11,
+        "points": 1,
+        "rebounds": 0.9,
+        "assists": 0
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 8,
+        "points": 2,
+        "rebounds": 0.8,
+        "assists": 0.3
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 4,
+        "points": 0.5,
+        "rebounds": 0,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095749",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "조수아",
     "nameEn": "CHO SOO AH",
     "number": 3,
@@ -1003,27 +2529,76 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095749.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 19.2,
-      "ppg": 5.14,
-      "rpg": 2.7,
-      "apg": 2.7,
-      "spg": 0.6,
-      "bpg": 0.1,
-      "fgPct": 33,
-      "threePct": 23.4,
-      "ftPct": 80.5
-    },
     "tags": [
-      "국가대표",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 5.14,
+        "rebounds": 2.7,
+        "assists": 2.7,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "fgPct": 33,
+        "threePct": 23.4,
+        "ftPct": 80.5,
+        "mpg": 19.2
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 6.1,
+        "rebounds": 2.9,
+        "assists": 1.9
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 4.4,
+        "rebounds": 2,
+        "assists": 1.5
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 4.8,
+        "rebounds": 3.2,
+        "assists": 2.5
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 23,
+        "points": 2.1,
+        "rebounds": 1.2,
+        "assists": 0.6
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 14,
+        "points": 3.9,
+        "rebounds": 2,
+        "assists": 1.2
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "24-25 식스우먼상"
+      }
     ]
   },
   {
     "pno": "096002",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "최예슬",
     "nameEn": "CHOI YE SEUL",
     "number": 21,
@@ -1037,24 +2612,36 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096002.png?ver=241016",
-    "seasonStats": {
-      "games": 23,
-      "mpg": 11.4,
-      "ppg": 2.17,
-      "rpg": 1.6,
-      "apg": 0.6,
-      "spg": 0.3,
-      "bpg": 0,
-      "fgPct": 48.5,
-      "threePct": 21.4,
-      "ftPct": 90
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 23,
+        "points": 2.17,
+        "rebounds": 1.6,
+        "assists": 0.6,
+        "spg": 0.3,
+        "bpg": 0,
+        "fgPct": 48.5,
+        "threePct": 21.4,
+        "ftPct": 90,
+        "mpg": 11.4
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 25,
+        "points": 1.6,
+        "rebounds": 1.4,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "096028",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "하마니시 나나미",
     "nameEn": "HAMANISHI N.",
     "number": 1,
@@ -1068,26 +2655,30 @@
     "draftRound": 2,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096028.png?ver=241016",
-    "seasonStats": {
-      "games": 27,
-      "mpg": 14.2,
-      "ppg": 3.41,
-      "rpg": 1.6,
-      "apg": 1.8,
-      "spg": 0.6,
-      "bpg": 0.1,
-      "fgPct": 39.3,
-      "threePct": 17.1,
-      "ftPct": 78.8
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 27,
+        "points": 3.41,
+        "rebounds": 1.6,
+        "assists": 1.8,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "fgPct": 39.3,
+        "threePct": 17.1,
+        "ftPct": 78.8,
+        "mpg": 14.2
+      }
     ]
   },
   {
     "pno": "096139",
     "teamId": "samsung",
-    "teamName": "삼성생명 블루밍스",
+    "teamName": "삼성생명",
     "name": "한지민",
     "nameEn": "HAN JI MIN",
     "number": 12,
@@ -1101,24 +2692,28 @@
     "draftRound": 2,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096139.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 1.6,
-      "ppg": 0,
-      "rpg": 0,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "삼성생명",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.6
+      }
+    ]
   },
   {
     "pno": "095700",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "고나연",
     "nameEn": "KO NA YEON",
     "number": 9,
@@ -1132,24 +2727,68 @@
     "draftRound": 2,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095700.png?ver=241016",
-    "seasonStats": {
-      "games": 24,
-      "mpg": 11.9,
-      "ppg": 2.79,
-      "rpg": 1.3,
-      "apg": 0.6,
-      "spg": 0.2,
-      "bpg": 0,
-      "fgPct": 22.6,
-      "threePct": 29.1,
-      "ftPct": 83.3
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 24,
+        "points": 2.79,
+        "rebounds": 1.3,
+        "assists": 0.6,
+        "spg": 0.2,
+        "bpg": 0,
+        "fgPct": 22.6,
+        "threePct": 29.1,
+        "ftPct": 83.3,
+        "mpg": 11.9
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 11,
+        "points": 1.1,
+        "rebounds": 1,
+        "assists": 0.4
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 15,
+        "points": 2.2,
+        "rebounds": 0.7,
+        "assists": 0.3
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 11,
+        "points": 1.1,
+        "rebounds": 0.5,
+        "assists": 0.1
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 5,
+        "points": 1,
+        "rebounds": 0.8,
+        "assists": 0.2
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 4,
+        "points": 1.3,
+        "rebounds": 1,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095503",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "김지영",
     "nameEn": "KIM JI YOUNG",
     "number": 8,
@@ -1163,29 +2802,105 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095503.png?ver=241016",
-    "seasonStats": {
-      "games": 21,
-      "mpg": 27.1,
-      "ppg": 5.05,
-      "rpg": 4.6,
-      "apg": 4.5,
-      "spg": 0.3,
-      "bpg": 0.3,
-      "fgPct": 34.2,
-      "threePct": 17.3,
-      "ftPct": 67.6
-    },
     "tags": [
       "베테랑",
       "식스맨",
       "플레이메이커",
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 21,
+        "points": 5.05,
+        "rebounds": 4.6,
+        "assists": 4.5,
+        "spg": 0.3,
+        "bpg": 0.3,
+        "fgPct": 34.2,
+        "threePct": 17.3,
+        "ftPct": 67.6,
+        "mpg": 27.1
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 29,
+        "points": 4.7,
+        "rebounds": 2.4,
+        "assists": 2.9
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 30,
+        "points": 3.9,
+        "rebounds": 2.3,
+        "assists": 2.8
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 30,
+        "points": 6.8,
+        "rebounds": 3.2,
+        "assists": 3.9
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 28,
+        "points": 6.9,
+        "rebounds": 2.9,
+        "assists": 4.4
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 26,
+        "points": 4.6,
+        "rebounds": 1.5,
+        "assists": 1.7
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 27,
+        "points": 4.5,
+        "rebounds": 1.4,
+        "assists": 1.3
+      },
+      {
+        "season": "2018-19",
+        "team": "KEB하나",
+        "games": 31,
+        "points": 2.1,
+        "rebounds": 1.3,
+        "assists": 1
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 31,
+        "points": 3.2,
+        "rebounds": 1,
+        "assists": 1.3
+      },
+      {
+        "season": "2016-17",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 5.9,
+        "rebounds": 1.5,
+        "assists": 1.8
+      }
     ]
   },
   {
     "pno": "095482",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "김진영",
     "nameEn": "KIM JIN YOUNG",
     "number": 21,
@@ -1199,27 +2914,111 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095482.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 23.3,
-      "ppg": 6.24,
-      "rpg": 5.6,
-      "apg": 1.8,
-      "spg": 0.5,
-      "bpg": 0.4,
-      "fgPct": 42,
-      "threePct": 29.7,
-      "ftPct": 39.5
-    },
     "tags": [
       "베테랑",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 29,
+        "points": 6.24,
+        "rebounds": 5.6,
+        "assists": 1.8,
+        "spg": 0.5,
+        "bpg": 0.4,
+        "fgPct": 42,
+        "threePct": 29.7,
+        "ftPct": 39.5,
+        "mpg": 23.3
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 12,
+        "points": 7.6,
+        "rebounds": 5.8,
+        "assists": 1.7
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 30,
+        "points": 7.7,
+        "rebounds": 5.5,
+        "assists": 2.4
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 30,
+        "points": 12,
+        "rebounds": 6.1,
+        "assists": 2.7
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 8.7,
+        "rebounds": 7,
+        "assists": 1.4
+      },
+      {
+        "season": "2020-21",
+        "team": "BNK 썸",
+        "games": 29,
+        "points": 8.7,
+        "rebounds": 5.5,
+        "assists": 1.5
+      },
+      {
+        "season": "2019-20",
+        "team": "BNK 썸",
+        "games": 22,
+        "points": 4.9,
+        "rebounds": 2.9,
+        "assists": 1.1
+      },
+      {
+        "season": "2018-19",
+        "team": "KB스타즈",
+        "games": 27,
+        "points": 1.9,
+        "rebounds": 1,
+        "assists": 0.2
+      },
+      {
+        "season": "2017-18",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 2.5,
+        "rebounds": 1.6,
+        "assists": 0.6
+      },
+      {
+        "season": "2016-17",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 1.7,
+        "rebounds": 1.5,
+        "assists": 0.5
+      },
+      {
+        "season": "2015-16",
+        "team": "KB스타즈",
+        "games": 10,
+        "points": 2.6,
+        "rebounds": 2.7,
+        "assists": 0.9
+      }
     ]
   },
   {
     "pno": "096004",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "김채은",
     "nameEn": "KIM CHAE EUN",
     "number": 88,
@@ -1233,24 +3032,36 @@
     "draftRound": 2,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096004.png?ver=241016",
-    "seasonStats": {
-      "games": 6,
-      "mpg": 2.5,
-      "ppg": 2,
-      "rpg": 0.8,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0.2,
-      "fgPct": 83.3,
-      "threePct": 0,
-      "ftPct": 100
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 6,
+        "points": 2,
+        "rebounds": 0.8,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0.2,
+        "fgPct": 83.3,
+        "threePct": 0,
+        "ftPct": 100,
+        "mpg": 2.5
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 3,
+        "points": 3,
+        "rebounds": 1,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "096029",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "미마 루이",
     "nameEn": "MIMA R.",
     "number": 25,
@@ -1264,28 +3075,32 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096029.png?ver=241016",
-    "seasonStats": {
-      "games": 27,
-      "mpg": 24.4,
-      "ppg": 10.48,
-      "rpg": 5.3,
-      "apg": 1.1,
-      "spg": 0.8,
-      "bpg": 0.1,
-      "fgPct": 64.2,
-      "threePct": 24.6,
-      "ftPct": 68.1
-    },
     "tags": [
       "1옵션",
       "폭발력",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 27,
+        "points": 10.48,
+        "rebounds": 5.3,
+        "assists": 1.1,
+        "spg": 0.8,
+        "bpg": 0.1,
+        "fgPct": 64.2,
+        "threePct": 24.6,
+        "ftPct": 68.1,
+        "mpg": 24.4
+      }
     ]
   },
   {
     "pno": "095633",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "신이슬",
     "nameEn": "SHIN LEE SEUL",
     "number": 1,
@@ -1299,28 +3114,88 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095633.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 34.4,
-      "ppg": 12.73,
-      "rpg": 5.1,
-      "apg": 2.6,
-      "spg": 1.3,
-      "bpg": 0.4,
-      "fgPct": 41.6,
-      "threePct": 30.6,
-      "ftPct": 76.7
-    },
     "tags": [
       "에이스",
       "폭발력",
       "수비형"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 30,
+        "points": 12.73,
+        "rebounds": 5.1,
+        "assists": 2.6,
+        "spg": 1.3,
+        "bpg": 0.4,
+        "fgPct": 41.6,
+        "threePct": 30.6,
+        "ftPct": 76.7,
+        "mpg": 34.4
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 30,
+        "points": 5.2,
+        "rebounds": 2,
+        "assists": 1.7
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 7.2,
+        "rebounds": 3.7,
+        "assists": 3.9
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 5.6,
+        "rebounds": 2.8,
+        "assists": 3.2
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 3.8,
+        "rebounds": 1.5,
+        "assists": 1.5
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 25,
+        "points": 3.4,
+        "rebounds": 1.1,
+        "assists": 0.8
+      },
+      {
+        "season": "2019-20",
+        "team": "삼성생명",
+        "games": 3,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0.3
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 3,
+        "points": 2.3,
+        "rebounds": 1,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095441",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "신지현",
     "nameEn": "SHIN JI HYUN",
     "number": 7,
@@ -1334,28 +3209,122 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095441.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 26.4,
-      "ppg": 9.57,
-      "rpg": 3.8,
-      "apg": 3.8,
-      "spg": 0.6,
-      "bpg": 0.2,
-      "fgPct": 38.6,
-      "threePct": 26.5,
-      "ftPct": 84.7
-    },
     "tags": [
       "베테랑",
       "1옵션",
       "플레이메이커"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 30,
+        "points": 9.57,
+        "rebounds": 3.8,
+        "assists": 3.8,
+        "spg": 0.6,
+        "bpg": 0.2,
+        "fgPct": 38.6,
+        "threePct": 26.5,
+        "ftPct": 84.7,
+        "mpg": 26.4
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 30,
+        "points": 8.6,
+        "rebounds": 3.1,
+        "assists": 4.5
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 29,
+        "points": 12.1,
+        "rebounds": 3.9,
+        "assists": 3.9
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 25,
+        "points": 15.3,
+        "rebounds": 3.6,
+        "assists": 4.6
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 30,
+        "points": 17.8,
+        "rebounds": 3.8,
+        "assists": 5.2
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 30,
+        "points": 12.8,
+        "rebounds": 3.2,
+        "assists": 5
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 27,
+        "points": 7,
+        "rebounds": 2.2,
+        "assists": 2.6
+      },
+      {
+        "season": "2018-19",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 8.1,
+        "rebounds": 2.3,
+        "assists": 3.3
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 17,
+        "points": 2.9,
+        "rebounds": 1.1,
+        "assists": 1.5
+      },
+      {
+        "season": "2014-15",
+        "team": "KEB하나",
+        "games": 34,
+        "points": 5,
+        "rebounds": 1.9,
+        "assists": 2.7
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "14-15 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "21-22 모범선수 상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 BEST 5 - 가드"
+      }
     ]
   },
   {
     "pno": "096143",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "이가현",
     "nameEn": "LEE GA HYUN",
     "number": 17,
@@ -1369,24 +3338,28 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096143.png?ver=241016",
-    "seasonStats": {
-      "games": 11,
-      "mpg": 3.2,
-      "ppg": 0.91,
-      "rpg": 0.3,
-      "apg": 0.1,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 60,
-      "threePct": 25,
-      "ftPct": 33.3
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 11,
+        "points": 0.91,
+        "rebounds": 0.3,
+        "assists": 0.1,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 60,
+        "threePct": 25,
+        "ftPct": 33.3,
+        "mpg": 3.2
+      }
+    ]
   },
   {
     "pno": "095826",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "이두나",
     "nameEn": "LEE DU NA",
     "number": 10,
@@ -1400,24 +3373,44 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095826.png?ver=241016",
-    "seasonStats": {
-      "games": 5,
-      "mpg": 8.1,
-      "ppg": 1,
-      "rpg": 0.8,
-      "apg": 0.2,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 25,
-      "threePct": 0,
-      "ftPct": 50
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 5,
+        "points": 1,
+        "rebounds": 0.8,
+        "assists": 0.2,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 25,
+        "threePct": 0,
+        "ftPct": 50,
+        "mpg": 8.1
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 25,
+        "points": 4.1,
+        "rebounds": 2.8,
+        "assists": 0.2
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 8,
+        "points": 2.9,
+        "rebounds": 1.8,
+        "assists": 0.8
+      }
+    ]
   },
   {
     "pno": "095527",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "이혜미",
     "nameEn": "LEE HYE MI",
     "number": 4,
@@ -1431,24 +3424,76 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095527.png?ver=241016",
-    "seasonStats": {
-      "games": 16,
-      "mpg": 8.7,
-      "ppg": 2.5,
-      "rpg": 1.4,
-      "apg": 0.3,
-      "spg": 0.3,
-      "bpg": 0.1,
-      "fgPct": 57.1,
-      "threePct": 29.6,
-      "ftPct": 88.9
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 16,
+        "points": 2.5,
+        "rebounds": 1.4,
+        "assists": 0.3,
+        "spg": 0.3,
+        "bpg": 0.1,
+        "fgPct": 57.1,
+        "threePct": 29.6,
+        "ftPct": 88.9,
+        "mpg": 8.7
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 20,
+        "points": 2.9,
+        "rebounds": 1.1,
+        "assists": 0.7
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 23,
+        "points": 3.5,
+        "rebounds": 1.4,
+        "assists": 1.3
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 12,
+        "points": 2.1,
+        "rebounds": 0.7,
+        "assists": 0.3
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 4,
+        "points": 2,
+        "rebounds": 1,
+        "assists": 0
+      },
+      {
+        "season": "2019-20",
+        "team": "신한은행",
+        "games": 7,
+        "points": 1.1,
+        "rebounds": 0.3,
+        "assists": 0.3
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 14,
+        "points": 1.4,
+        "rebounds": 0.6,
+        "assists": 0.4
+      }
+    ]
   },
   {
     "pno": "096141",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "정채련",
     "nameEn": "JUNG CHAE RYEON",
     "number": 2,
@@ -1462,24 +3507,28 @@
     "draftRound": 3,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096141.png?ver=241016",
-    "seasonStats": {
-      "games": 7,
-      "mpg": 1.8,
-      "ppg": 0.57,
-      "rpg": 0.4,
-      "apg": 0.7,
-      "spg": 0.3,
-      "bpg": 0,
-      "fgPct": 40,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 7,
+        "points": 0.57,
+        "rebounds": 0.4,
+        "assists": 0.7,
+        "spg": 0.3,
+        "bpg": 0,
+        "fgPct": 40,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.8
+      }
+    ]
   },
   {
     "pno": "095261",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "최이샘",
     "nameEn": "CHOI I SAEM",
     "number": 6,
@@ -1493,27 +3542,126 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095261.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 20.3,
-      "ppg": 4.66,
-      "rpg": 5.2,
-      "apg": 1.3,
-      "spg": 0.3,
-      "bpg": 0.2,
-      "fgPct": 32,
-      "threePct": 31.7,
-      "ftPct": 100
-    },
     "tags": [
       "베테랑",
+      "국가대표",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 29,
+        "points": 4.66,
+        "rebounds": 5.2,
+        "assists": 1.3,
+        "spg": 0.3,
+        "bpg": 0.2,
+        "fgPct": 32,
+        "threePct": 31.7,
+        "ftPct": 100,
+        "mpg": 20.3
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 17,
+        "points": 8.3,
+        "rebounds": 5.4,
+        "assists": 1.1
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 28,
+        "points": 11.3,
+        "rebounds": 5.8,
+        "assists": 1.6
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 27,
+        "points": 8.6,
+        "rebounds": 4.7,
+        "assists": 1.3
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 29,
+        "points": 10.4,
+        "rebounds": 5.8,
+        "assists": 1.4
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 20,
+        "points": 10.5,
+        "rebounds": 5.2,
+        "assists": 0.8
+      },
+      {
+        "season": "2019-20",
+        "team": "우리은행",
+        "games": 23,
+        "points": 5.6,
+        "rebounds": 3.3,
+        "assists": 0.9
+      },
+      {
+        "season": "2018-19",
+        "team": "우리은행",
+        "games": 35,
+        "points": 8.9,
+        "rebounds": 4.5,
+        "assists": 1.1
+      },
+      {
+        "season": "2017-18",
+        "team": "우리은행",
+        "games": 34,
+        "points": 4.4,
+        "rebounds": 3.3,
+        "assists": 0.4
+      },
+      {
+        "season": "2016-17",
+        "team": "우리은행",
+        "games": 34,
+        "points": 6.1,
+        "rebounds": 3.4,
+        "assists": 0.5
+      },
+      {
+        "season": "2015-16",
+        "team": "우리은행",
+        "games": 8,
+        "points": 1.3,
+        "rebounds": 2.5,
+        "assists": 0.6
+      },
+      {
+        "season": "2013-14",
+        "team": "우리은행",
+        "games": 4,
+        "points": 0,
+        "rebounds": 0.3,
+        "assists": 0
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "16-17 식스우먼상"
+      }
     ]
   },
   {
     "pno": "095905",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "허유정",
     "nameEn": "HEO YOO JUNG",
     "number": 11,
@@ -1527,24 +3675,44 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095905.png?ver=241016",
-    "seasonStats": {
-      "games": 2,
-      "mpg": 3.1,
-      "ppg": 0,
-      "rpg": 1,
-      "apg": 0.5,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 2,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 0.5,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 3.1
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 10,
+        "points": 1.8,
+        "rebounds": 0.8,
+        "assists": 0.6
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 14,
+        "points": 2.4,
+        "rebounds": 1.1,
+        "assists": 1.1
+      }
+    ]
   },
   {
     "pno": "095972",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "홍유순",
     "nameEn": "HONG YU SOON",
     "number": 23,
@@ -1558,26 +3726,45 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095972.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 31.6,
-      "ppg": 9.3,
-      "rpg": 6.1,
-      "apg": 1.9,
-      "spg": 0.8,
-      "bpg": 0.3,
-      "fgPct": 46.4,
-      "threePct": 30,
-      "ftPct": 71.8
-    },
     "tags": [
+      "국가대표",
       "1옵션"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 30,
+        "points": 9.3,
+        "rebounds": 6.1,
+        "assists": 1.9,
+        "spg": 0.8,
+        "bpg": 0.3,
+        "fgPct": 46.4,
+        "threePct": 30,
+        "ftPct": 71.8,
+        "mpg": 31.6
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 29,
+        "points": 8.1,
+        "rebounds": 5.7,
+        "assists": 1.4
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "24-25 신인선수상"
+      }
     ]
   },
   {
     "pno": "096142",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "황현정",
     "nameEn": "HWANG HYEON JEONG",
     "number": 5,
@@ -1591,24 +3778,12 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096142.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
     "tags": []
   },
   {
     "pno": "095915",
     "teamId": "shinhan",
-    "teamName": "신한은행 에스버드",
+    "teamName": "신한은행",
     "name": "히라노 미츠키",
     "nameEn": "HIRANO M.",
     "number": 33,
@@ -1622,26 +3797,38 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095915.png?ver=241016",
-    "seasonStats": {
-      "games": 20,
-      "mpg": 14.1,
-      "ppg": 4.2,
-      "rpg": 1.7,
-      "apg": 2.4,
-      "spg": 0.5,
-      "bpg": 0,
-      "fgPct": 41.7,
-      "threePct": 22.2,
-      "ftPct": 66.7
-    },
     "tags": [
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "신한은행",
+        "games": 20,
+        "points": 4.2,
+        "rebounds": 1.7,
+        "assists": 2.4,
+        "spg": 0.5,
+        "bpg": 0,
+        "fgPct": 41.7,
+        "threePct": 22.2,
+        "ftPct": 66.7,
+        "mpg": 14.1
+      },
+      {
+        "season": "2024-25",
+        "team": "삼성생명",
+        "games": 28,
+        "points": 4,
+        "rebounds": 2.2,
+        "assists": 2.1
+      }
     ]
   },
   {
     "pno": "095450",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "강계리",
     "nameEn": "KANG KYE LEE",
     "number": 1,
@@ -1655,27 +3842,127 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095450.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 21.3,
-      "ppg": 4.8,
-      "rpg": 2.8,
-      "apg": 2.5,
-      "spg": 0.7,
-      "bpg": 0.1,
-      "fgPct": 44.4,
-      "threePct": 21.1,
-      "ftPct": 51.7
-    },
     "tags": [
       "베테랑",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 30,
+        "points": 4.8,
+        "rebounds": 2.8,
+        "assists": 2.5,
+        "spg": 0.7,
+        "bpg": 0.1,
+        "fgPct": 44.4,
+        "threePct": 21.1,
+        "ftPct": 51.7,
+        "mpg": 21.3
+      },
+      {
+        "season": "2024-25",
+        "team": "신한은행",
+        "games": 25,
+        "points": 1.6,
+        "rebounds": 1.4,
+        "assists": 1.3
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 24,
+        "points": 7.1,
+        "rebounds": 3.6,
+        "assists": 3.6
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 19,
+        "points": 1.6,
+        "rebounds": 1.4,
+        "assists": 1.7
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 30,
+        "points": 7.7,
+        "rebounds": 3.1,
+        "assists": 2.5
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 27,
+        "points": 5,
+        "rebounds": 2.2,
+        "assists": 2.7
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 27,
+        "points": 4.4,
+        "rebounds": 2,
+        "assists": 2.6
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 11,
+        "points": 1.9,
+        "rebounds": 1.4,
+        "assists": 0.6
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 13,
+        "points": 7.1,
+        "rebounds": 2.2,
+        "assists": 3.3
+      },
+      {
+        "season": "2017-18",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 4.1,
+        "rebounds": 1.3,
+        "assists": 1.1
+      },
+      {
+        "season": "2016-17",
+        "team": "삼성생명",
+        "games": 31,
+        "points": 2.5,
+        "rebounds": 1.2,
+        "assists": 1.2
+      },
+      {
+        "season": "2015-16",
+        "team": "삼성생명",
+        "games": 21,
+        "points": 1.5,
+        "rebounds": 0.9,
+        "assists": 0.7
+      },
+      {
+        "season": "2014-15",
+        "team": "삼성생명",
+        "games": 1,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095104",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "김단비",
     "nameEn": "KIM DAN BI",
     "number": 23,
@@ -1689,34 +3976,310 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095104.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 34.7,
-      "ppg": 18.33,
-      "rpg": 11.1,
-      "apg": 4.4,
-      "spg": 1.3,
-      "bpg": 1.1,
-      "fgPct": 41.8,
-      "threePct": 27,
-      "ftPct": 67.2
-    },
     "tags": [
       "베테랑",
-      "MVP",
-      "국가대표",
       "에이스",
       "폭발력",
       "수비형",
       "플레이메이커",
       "리바운더",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 30,
+        "points": 18.33,
+        "rebounds": 11.1,
+        "assists": 4.4,
+        "spg": 1.3,
+        "bpg": 1.1,
+        "fgPct": 41.8,
+        "threePct": 27,
+        "ftPct": 67.2,
+        "mpg": 34.7
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 29,
+        "points": 21.1,
+        "rebounds": 10.9,
+        "assists": 3.6
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 29,
+        "points": 18.4,
+        "rebounds": 9,
+        "assists": 5
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 30,
+        "points": 17.2,
+        "rebounds": 8.8,
+        "assists": 6.1
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 24,
+        "points": 19.3,
+        "rebounds": 8.8,
+        "assists": 4.1
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 30,
+        "points": 18.5,
+        "rebounds": 9.2,
+        "assists": 4.8
+      },
+      {
+        "season": "2019-20",
+        "team": "신한은행",
+        "games": 27,
+        "points": 12.3,
+        "rebounds": 5.6,
+        "assists": 4.7
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 28,
+        "points": 15.3,
+        "rebounds": 6.3,
+        "assists": 5.9
+      },
+      {
+        "season": "2017-18",
+        "team": "신한은행",
+        "games": 35,
+        "points": 11.6,
+        "rebounds": 5.5,
+        "assists": 4.9
+      },
+      {
+        "season": "2016-17",
+        "team": "신한은행",
+        "games": 35,
+        "points": 14.7,
+        "rebounds": 6.5,
+        "assists": 4.2
+      },
+      {
+        "season": "2015-16",
+        "team": "신한은행",
+        "games": 35,
+        "points": 12.3,
+        "rebounds": 4.5,
+        "assists": 3.6
+      },
+      {
+        "season": "2014-15",
+        "team": "신한은행",
+        "games": 35,
+        "points": 13.4,
+        "rebounds": 6.6,
+        "assists": 2.9
+      },
+      {
+        "season": "2013-14",
+        "team": "신한은행",
+        "games": 33,
+        "points": 10.4,
+        "rebounds": 4.7,
+        "assists": 2.5
+      },
+      {
+        "season": "2012-13",
+        "team": "신한은행",
+        "games": 35,
+        "points": 12.7,
+        "rebounds": 5.5,
+        "assists": 3.3
+      },
+      {
+        "season": "2011-12",
+        "team": "신한은행",
+        "games": 39,
+        "points": 16,
+        "rebounds": 5.7,
+        "assists": 3.6
+      },
+      {
+        "season": "2010-11",
+        "team": "신한은행",
+        "games": 28,
+        "points": 13.5,
+        "rebounds": 5.6,
+        "assists": 2.6
+      },
+      {
+        "season": "2009-10",
+        "team": "신한은행",
+        "games": 34,
+        "points": 6.9,
+        "rebounds": 3.5,
+        "assists": 2.2
+      },
+      {
+        "season": "2008-09",
+        "team": "신한은행",
+        "games": 31,
+        "points": 3.5,
+        "rebounds": 1.8,
+        "assists": 0.5
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "10-11 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "11-12 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "14-15 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "14-15 득점상"
+      },
+      {
+        "type": "award",
+        "label": "14-15 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "14-15 블록상"
+      },
+      {
+        "type": "award",
+        "label": "14-15 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "16-17 득점상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 스틸상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 블록상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 스틸상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 득점상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "21-22 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "21-22 블록상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "22-23 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "22-23 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "22-23 블록상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "23-24 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "24-25 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 득점상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 스틸상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 블록상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 윤덕주상"
+      }
     ]
   },
   {
     "pno": "095909",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "김솔",
     "nameEn": "KIM SOL",
     "number": 21,
@@ -1730,24 +4293,30 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095909.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 12,
+        "points": 0.8,
+        "rebounds": 0.8,
+        "assists": 0.7
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 11,
+        "points": 0.8,
+        "rebounds": 0.5,
+        "assists": 0.1
+      }
+    ]
   },
   {
     "pno": "095504",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "김예진",
     "nameEn": "KIM YE JIN",
     "number": 4,
@@ -1761,26 +4330,100 @@
     "draftRound": 3,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095504.png?ver=241016",
-    "seasonStats": {
-      "games": 23,
-      "mpg": 14.8,
-      "ppg": 0.78,
-      "rpg": 2,
-      "apg": 0.3,
-      "spg": 0.4,
-      "bpg": 0.1,
-      "fgPct": 30,
-      "threePct": 13,
-      "ftPct": 50
-    },
     "tags": [
       "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 23,
+        "points": 0.78,
+        "rebounds": 2,
+        "assists": 0.3,
+        "spg": 0.4,
+        "bpg": 0.1,
+        "fgPct": 30,
+        "threePct": 13,
+        "ftPct": 50,
+        "mpg": 14.8
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 24,
+        "points": 3,
+        "rebounds": 2.4,
+        "assists": 0.4
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 4.3,
+        "rebounds": 3,
+        "assists": 1.1
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 28,
+        "points": 4.2,
+        "rebounds": 3.8,
+        "assists": 1.4
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 16,
+        "points": 4.4,
+        "rebounds": 2.3,
+        "assists": 1.8
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 15,
+        "points": 1.9,
+        "rebounds": 0.8,
+        "assists": 0.5
+      },
+      {
+        "season": "2018-19",
+        "team": "KEB하나",
+        "games": 25,
+        "points": 1.8,
+        "rebounds": 0.8,
+        "assists": 0.3
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 12,
+        "points": 1,
+        "rebounds": 0.8,
+        "assists": 0.3
+      },
+      {
+        "season": "2016-17",
+        "team": "KEB하나",
+        "games": 11,
+        "points": 0.4,
+        "rebounds": 0.3,
+        "assists": 0
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "22-23 스틸상"
+      }
     ]
   },
   {
     "pno": "096145",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "박소영",
     "nameEn": "PARK SO YOUNG",
     "number": 6,
@@ -1794,24 +4437,28 @@
     "draftRound": 2,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096145.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 2,
-      "ppg": 2,
-      "rpg": 0,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 100
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 1,
+        "points": 2,
+        "rebounds": 0,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 100,
+        "mpg": 2
+      }
+    ]
   },
   {
     "pno": "095444",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "박혜미",
     "nameEn": "PARK HYE MI",
     "number": 10,
@@ -1825,26 +4472,110 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095444.png?ver=241016",
-    "seasonStats": {
-      "games": 20,
-      "mpg": 11.6,
-      "ppg": 1.35,
-      "rpg": 1.5,
-      "apg": 0.2,
-      "spg": 0.1,
-      "bpg": 0.1,
-      "fgPct": 31.6,
-      "threePct": 13.8,
-      "ftPct": 37.5
-    },
     "tags": [
       "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 20,
+        "points": 1.35,
+        "rebounds": 1.5,
+        "assists": 0.2,
+        "spg": 0.1,
+        "bpg": 0.1,
+        "fgPct": 31.6,
+        "threePct": 13.8,
+        "ftPct": 37.5,
+        "mpg": 11.6
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 22,
+        "points": 2.2,
+        "rebounds": 2.5,
+        "assists": 0.4
+      },
+      {
+        "season": "2023-24",
+        "team": "삼성생명",
+        "games": 26,
+        "points": 3.2,
+        "rebounds": 1.5,
+        "assists": 0.2
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 20,
+        "points": 2.5,
+        "rebounds": 1.4,
+        "assists": 0.1
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 27,
+        "points": 3.8,
+        "rebounds": 1.5,
+        "assists": 0.5
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 10,
+        "points": 1.9,
+        "rebounds": 1.5,
+        "assists": 0.6
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 8,
+        "points": 1.4,
+        "rebounds": 0.8,
+        "assists": 0
+      },
+      {
+        "season": "2017-18",
+        "team": "신한은행",
+        "games": 8,
+        "points": 1.8,
+        "rebounds": 1.4,
+        "assists": 0
+      },
+      {
+        "season": "2016-17",
+        "team": "신한은행",
+        "games": 17,
+        "points": 1.9,
+        "rebounds": 1.2,
+        "assists": 0.2
+      },
+      {
+        "season": "2015-16",
+        "team": "신한은행",
+        "games": 4,
+        "points": 2.3,
+        "rebounds": 0.5,
+        "assists": 0
+      },
+      {
+        "season": "2014-15",
+        "team": "신한은행",
+        "games": 5,
+        "points": 1.4,
+        "rebounds": 1.2,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095908",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "변하정",
     "nameEn": "BYUN HA JUNG",
     "number": 13,
@@ -1858,26 +4589,46 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095908.png?ver=241016",
-    "seasonStats": {
-      "games": 28,
-      "mpg": 23.7,
-      "ppg": 3.11,
-      "rpg": 3.3,
-      "apg": 0.5,
-      "spg": 0.9,
-      "bpg": 0.4,
-      "fgPct": 44.4,
-      "threePct": 27.9,
-      "ftPct": 75
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 28,
+        "points": 3.11,
+        "rebounds": 3.3,
+        "assists": 0.5,
+        "spg": 0.9,
+        "bpg": 0.4,
+        "fgPct": 44.4,
+        "threePct": 27.9,
+        "ftPct": 75,
+        "mpg": 23.7
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 29,
+        "points": 1.6,
+        "rebounds": 2.9,
+        "assists": 0.4
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 16,
+        "points": 1.3,
+        "rebounds": 1.6,
+        "assists": 0.1
+      }
     ]
   },
   {
     "pno": "096030",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "세키 나나미",
     "nameEn": "SEKI N.",
     "number": 77,
@@ -1891,26 +4642,30 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096030.png?ver=241016",
-    "seasonStats": {
-      "games": 13,
-      "mpg": 21.7,
-      "ppg": 4.62,
-      "rpg": 2.6,
-      "apg": 1.7,
-      "spg": 0.5,
-      "bpg": 0.1,
-      "fgPct": 30.6,
-      "threePct": 17.4,
-      "ftPct": 46.2
-    },
     "tags": [
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 13,
+        "points": 4.62,
+        "rebounds": 2.6,
+        "assists": 1.7,
+        "spg": 0.5,
+        "bpg": 0.1,
+        "fgPct": 30.6,
+        "threePct": 17.4,
+        "ftPct": 46.2,
+        "mpg": 21.7
+      }
     ]
   },
   {
     "pno": "095210",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "심성영",
     "nameEn": "SIM SUNG YOUNG",
     "number": 5,
@@ -1924,27 +4679,143 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095210.png?ver=241016",
-    "seasonStats": {
-      "games": 23,
-      "mpg": 18,
-      "ppg": 4.96,
-      "rpg": 2,
-      "apg": 1.5,
-      "spg": 0.4,
-      "bpg": 0,
-      "fgPct": 40,
-      "threePct": 26.2,
-      "ftPct": 83.3
-    },
     "tags": [
       "베테랑",
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 23,
+        "points": 4.96,
+        "rebounds": 2,
+        "assists": 1.5,
+        "spg": 0.4,
+        "bpg": 0,
+        "fgPct": 40,
+        "threePct": 26.2,
+        "ftPct": 83.3,
+        "mpg": 18
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 28,
+        "points": 4.9,
+        "rebounds": 1.5,
+        "assists": 1
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 23,
+        "points": 3.4,
+        "rebounds": 0.7,
+        "assists": 1.3
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 7.2,
+        "rebounds": 2.6,
+        "assists": 1.7
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 6.2,
+        "rebounds": 1.6,
+        "assists": 1.5
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 10.8,
+        "rebounds": 2.7,
+        "assists": 4.3
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 9.6,
+        "rebounds": 2,
+        "assists": 3.3
+      },
+      {
+        "season": "2018-19",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 7.1,
+        "rebounds": 2.5,
+        "assists": 2.2
+      },
+      {
+        "season": "2017-18",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 6.7,
+        "rebounds": 2.3,
+        "assists": 2.6
+      },
+      {
+        "season": "2016-17",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 7.1,
+        "rebounds": 2.2,
+        "assists": 2
+      },
+      {
+        "season": "2015-16",
+        "team": "KB스타즈",
+        "games": 34,
+        "points": 4.1,
+        "rebounds": 0.9,
+        "assists": 1.3
+      },
+      {
+        "season": "2014-15",
+        "team": "KB스타즈",
+        "games": 21,
+        "points": 3.3,
+        "rebounds": 1.5,
+        "assists": 0.9
+      },
+      {
+        "season": "2013-14",
+        "team": "KB스타즈",
+        "games": 32,
+        "points": 2.8,
+        "rebounds": 0.7,
+        "assists": 1
+      },
+      {
+        "season": "2012-13",
+        "team": "KB스타즈",
+        "games": 4,
+        "points": 1,
+        "rebounds": 1.3,
+        "assists": 1.3
+      },
+      {
+        "season": "2011-12",
+        "team": "KB스타즈",
+        "games": 4,
+        "points": 1,
+        "rebounds": 0,
+        "assists": 0.3
+      }
     ]
   },
   {
     "pno": "096031",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "오니즈카 아야노",
     "nameEn": "ONIZUKA A.",
     "number": 12,
@@ -1958,27 +4829,31 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096031.png?ver=241016",
-    "seasonStats": {
-      "games": 25,
-      "mpg": 23.6,
-      "ppg": 9.92,
-      "rpg": 2.4,
-      "apg": 0.8,
-      "spg": 1,
-      "bpg": 0.4,
-      "fgPct": 44.6,
-      "threePct": 38,
-      "ftPct": 62.5
-    },
     "tags": [
       "1옵션",
       "슈터"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 25,
+        "points": 9.92,
+        "rebounds": 2.4,
+        "assists": 0.8,
+        "spg": 1,
+        "bpg": 0.4,
+        "fgPct": 44.6,
+        "threePct": 38,
+        "ftPct": 62.5,
+        "mpg": 23.6
+      }
     ]
   },
   {
     "pno": "095707",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "오승인",
     "nameEn": "OH SEUNG IN",
     "number": 8,
@@ -1992,24 +4867,52 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095707.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 2.1,
-      "ppg": 0,
-      "rpg": 1,
-      "apg": 1,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 1,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 2.1
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 4,
+        "points": 1,
+        "rebounds": 2.8,
+        "assists": 0.3
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 15,
+        "points": 0.4,
+        "rebounds": 0.9,
+        "assists": 0.1
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 11,
+        "points": 0.9,
+        "rebounds": 1.2,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "095254",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "유승희",
     "nameEn": "YOU SEUNG HEE",
     "number": 11,
@@ -2023,26 +4926,110 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095254.png?ver=241016",
-    "seasonStats": {
-      "games": 12,
-      "mpg": 11,
-      "ppg": 0.83,
-      "rpg": 1.9,
-      "apg": 0.8,
-      "spg": 0.6,
-      "bpg": 0,
-      "fgPct": 14.3,
-      "threePct": 13.3,
-      "ftPct": 100
-    },
     "tags": [
       "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 12,
+        "points": 0.83,
+        "rebounds": 1.9,
+        "assists": 0.8,
+        "spg": 0.6,
+        "bpg": 0,
+        "fgPct": 14.3,
+        "threePct": 13.3,
+        "ftPct": 100,
+        "mpg": 11
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 1,
+        "points": 5,
+        "rebounds": 6,
+        "assists": 1
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 18,
+        "points": 9,
+        "rebounds": 3.9,
+        "assists": 2.6
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 30,
+        "points": 12,
+        "rebounds": 5.5,
+        "assists": 3.3
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 30,
+        "points": 6,
+        "rebounds": 2.6,
+        "assists": 1.7
+      },
+      {
+        "season": "2017-18",
+        "team": "신한은행",
+        "games": 35,
+        "points": 3.9,
+        "rebounds": 1.5,
+        "assists": 1.5
+      },
+      {
+        "season": "2016-17",
+        "team": "신한은행",
+        "games": 23,
+        "points": 3,
+        "rebounds": 1.7,
+        "assists": 1.3
+      },
+      {
+        "season": "2015-16",
+        "team": "삼성생명",
+        "games": 30,
+        "points": 2.7,
+        "rebounds": 1.2,
+        "assists": 0.7
+      },
+      {
+        "season": "2014-15",
+        "team": "삼성생명",
+        "games": 29,
+        "points": 2.8,
+        "rebounds": 1.3,
+        "assists": 0.6
+      },
+      {
+        "season": "2013-14",
+        "team": "삼성생명",
+        "games": 11,
+        "points": 1.2,
+        "rebounds": 0.9,
+        "assists": 0.5
+      }
     ]
   },
   {
     "pno": "095742",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "이다연",
     "nameEn": "LEE DA YEON",
     "number": 24,
@@ -2056,26 +5043,62 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095742.png?ver=241016",
-    "seasonStats": {
-      "games": 17,
-      "mpg": 22.6,
-      "ppg": 4.82,
-      "rpg": 4.2,
-      "apg": 0.5,
-      "spg": 0.6,
-      "bpg": 0.1,
-      "fgPct": 48.9,
-      "threePct": 20.5,
-      "ftPct": 100
-    },
     "tags": [
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 17,
+        "points": 4.82,
+        "rebounds": 4.2,
+        "assists": 0.5,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "fgPct": 48.9,
+        "threePct": 20.5,
+        "ftPct": 100,
+        "mpg": 22.6
+      },
+      {
+        "season": "2023-24",
+        "team": "신한은행",
+        "games": 29,
+        "points": 6.2,
+        "rebounds": 2.1,
+        "assists": 0.9
+      },
+      {
+        "season": "2022-23",
+        "team": "신한은행",
+        "games": 15,
+        "points": 1.7,
+        "rebounds": 0.9,
+        "assists": 0.5
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 10,
+        "points": 3.2,
+        "rebounds": 1,
+        "assists": 0.6
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 5,
+        "points": 4.6,
+        "rebounds": 1.8,
+        "assists": 0.2
+      }
     ]
   },
   {
     "pno": "095703",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "이명관",
     "nameEn": "LEE MYUNG KUWAN",
     "number": 20,
@@ -2089,28 +5112,72 @@
     "draftRound": 3,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095703.png?ver=241016",
-    "seasonStats": {
-      "games": 23,
-      "mpg": 35.6,
-      "ppg": 11.57,
-      "rpg": 6.3,
-      "apg": 1.6,
-      "spg": 0.9,
-      "bpg": 0.1,
-      "fgPct": 35.8,
-      "threePct": 36.8,
-      "ftPct": 81
-    },
     "tags": [
       "1옵션",
       "폭발력",
       "슈터"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 23,
+        "points": 11.57,
+        "rebounds": 6.3,
+        "assists": 1.6,
+        "spg": 0.9,
+        "bpg": 0.1,
+        "fgPct": 35.8,
+        "threePct": 36.8,
+        "ftPct": 81,
+        "mpg": 35.6
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 30,
+        "points": 7.3,
+        "rebounds": 4.4,
+        "assists": 1.1
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 28,
+        "points": 7.4,
+        "rebounds": 3.6,
+        "assists": 1.4
+      },
+      {
+        "season": "2022-23",
+        "team": "삼성생명",
+        "games": 27,
+        "points": 4.6,
+        "rebounds": 2.7,
+        "assists": 1
+      },
+      {
+        "season": "2021-22",
+        "team": "삼성생명",
+        "games": 23,
+        "points": 5.6,
+        "rebounds": 1.3,
+        "assists": 1.2
+      },
+      {
+        "season": "2020-21",
+        "team": "삼성생명",
+        "games": 15,
+        "points": 3.8,
+        "rebounds": 1.4,
+        "assists": 0.3
+      }
     ]
   },
   {
     "pno": "096005",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "이민지",
     "nameEn": "LEE MIN JI",
     "number": 7,
@@ -2124,26 +5191,38 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096005.png?ver=241016",
-    "seasonStats": {
-      "games": 24,
-      "mpg": 18.9,
-      "ppg": 7.46,
-      "rpg": 2.5,
-      "apg": 0.5,
-      "spg": 0.7,
-      "bpg": 0.2,
-      "fgPct": 34.3,
-      "threePct": 32.7,
-      "ftPct": 68.8
-    },
     "tags": [
       "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 24,
+        "points": 7.46,
+        "rebounds": 2.5,
+        "assists": 0.5,
+        "spg": 0.7,
+        "bpg": 0.2,
+        "fgPct": 34.3,
+        "threePct": 32.7,
+        "ftPct": 68.8,
+        "mpg": 18.9
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 21,
+        "points": 7.1,
+        "rebounds": 1.8,
+        "assists": 0.5
+      }
     ]
   },
   {
     "pno": "096144",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "최예원",
     "nameEn": "CHOI YE WON",
     "number": 3,
@@ -2157,24 +5236,28 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096144.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 2,
-      "ppg": 1,
-      "rpg": 2,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 50
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 1,
+        "points": 1,
+        "rebounds": 2,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 50,
+        "mpg": 2
+      }
+    ]
   },
   {
     "pno": "095740",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "편선우",
     "nameEn": "PYUN SEON WOO",
     "number": 22,
@@ -2188,24 +5271,60 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095740.png?ver=241016",
-    "seasonStats": {
-      "games": 1,
-      "mpg": 1.4,
-      "ppg": 0,
-      "rpg": 0,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 1,
-      "fgPct": 0,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 0,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 1,
+        "fgPct": 0,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.4
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 1,
+        "points": 10,
+        "rebounds": 5,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 9,
+        "points": 0,
+        "rebounds": 0.3,
+        "assists": 0
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 20,
+        "points": 0.5,
+        "rebounds": 0.9,
+        "assists": 0.1
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 10,
+        "points": 1.2,
+        "rebounds": 1.5,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095528",
     "teamId": "woori",
-    "teamName": "우리은행 우리WON",
+    "teamName": "우리은행",
     "name": "한엄지",
     "nameEn": "HAN EOM JI",
     "number": 9,
@@ -2219,24 +5338,92 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095528.png?ver=241016",
-    "seasonStats": {
-      "games": 2,
-      "mpg": 11.9,
-      "ppg": 3,
-      "rpg": 5,
-      "apg": 0.5,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 50,
-      "threePct": 0,
-      "ftPct": 100
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "우리은행",
+        "games": 2,
+        "points": 3,
+        "rebounds": 5,
+        "assists": 0.5,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 50,
+        "threePct": 0,
+        "ftPct": 100,
+        "mpg": 11.9
+      },
+      {
+        "season": "2024-25",
+        "team": "우리은행",
+        "games": 22,
+        "points": 8.4,
+        "rebounds": 5.8,
+        "assists": 1.2
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 6.4,
+        "rebounds": 5.2,
+        "assists": 0.8
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 8.7,
+        "rebounds": 5.8,
+        "assists": 0.5
+      },
+      {
+        "season": "2021-22",
+        "team": "신한은행",
+        "games": 3,
+        "points": 5.3,
+        "rebounds": 4.3,
+        "assists": 0
+      },
+      {
+        "season": "2020-21",
+        "team": "신한은행",
+        "games": 30,
+        "points": 10.7,
+        "rebounds": 4.2,
+        "assists": 1.3
+      },
+      {
+        "season": "2019-20",
+        "team": "신한은행",
+        "games": 26,
+        "points": 7.4,
+        "rebounds": 4,
+        "assists": 0.9
+      },
+      {
+        "season": "2018-19",
+        "team": "신한은행",
+        "games": 34,
+        "points": 5.5,
+        "rebounds": 3.5,
+        "assists": 0.9
+      },
+      {
+        "season": "2017-18",
+        "team": "신한은행",
+        "games": 8,
+        "points": 1.4,
+        "rebounds": 1.8,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095830",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "고서연",
     "nameEn": "KO SEO YEON",
     "number": 5,
@@ -2250,24 +5437,52 @@
     "draftRound": 2,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095830.png?ver=241016",
-    "seasonStats": {
-      "games": 27,
-      "mpg": 15.4,
-      "ppg": 2.93,
-      "rpg": 2,
-      "apg": 1.7,
-      "spg": 0.4,
-      "bpg": 0,
-      "fgPct": 44.8,
-      "threePct": 15.1,
-      "ftPct": 50
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 27,
+        "points": 2.93,
+        "rebounds": 2,
+        "assists": 1.7,
+        "spg": 0.4,
+        "bpg": 0,
+        "fgPct": 44.8,
+        "threePct": 15.1,
+        "ftPct": 50,
+        "mpg": 15.4
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 17,
+        "points": 4.6,
+        "rebounds": 2.1,
+        "assists": 1.7
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 21,
+        "points": 2.7,
+        "rebounds": 1.8,
+        "assists": 0.3
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 19,
+        "points": 3.8,
+        "rebounds": 1.4,
+        "assists": 0.8
+      }
+    ]
   },
   {
     "pno": "095442",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "김시온",
     "nameEn": "KIM SI ON",
     "number": 9,
@@ -2281,26 +5496,97 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095442.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
     "tags": [
-      "베테랑"
+      "베테랑",
+      "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 28,
+        "points": 7.9,
+        "rebounds": 3.4,
+        "assists": 2.1
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 29,
+        "points": 5.6,
+        "rebounds": 3.6,
+        "assists": 2.5
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 4.9,
+        "rebounds": 2.4,
+        "assists": 1.3
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 15,
+        "points": 1.8,
+        "rebounds": 1.3,
+        "assists": 0.8
+      },
+      {
+        "season": "2020-21",
+        "team": "BNK 썸",
+        "games": 24,
+        "points": 3.6,
+        "rebounds": 1.9,
+        "assists": 1
+      },
+      {
+        "season": "2019-20",
+        "team": "BNK 썸",
+        "games": 16,
+        "points": 0.8,
+        "rebounds": 1.8,
+        "assists": 1
+      },
+      {
+        "season": "2017-18",
+        "team": "KDB생명",
+        "games": 34,
+        "points": 3.1,
+        "rebounds": 1.7,
+        "assists": 2
+      },
+      {
+        "season": "2016-17",
+        "team": "KDB생명",
+        "games": 29,
+        "points": 1.1,
+        "rebounds": 0.6,
+        "assists": 0.9
+      },
+      {
+        "season": "2015-16",
+        "team": "KDB생명",
+        "games": 6,
+        "points": 0.7,
+        "rebounds": 1.3,
+        "assists": 0.7
+      },
+      {
+        "season": "2014-15",
+        "team": "KDB생명",
+        "games": 23,
+        "points": 0.8,
+        "rebounds": 0.7,
+        "assists": 1
+      }
     ]
   },
   {
     "pno": "096148",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "김연진",
     "nameEn": "KIM YEON JIN",
     "number": 12,
@@ -2314,24 +5600,12 @@
     "draftRound": 3,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096148.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
     "tags": []
   },
   {
     "pno": "095041",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "김정은",
     "nameEn": "KIM JUNG EUN",
     "number": 13,
@@ -2345,27 +5619,233 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095041.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 18.2,
-      "ppg": 4.77,
-      "rpg": 4.5,
-      "apg": 1.7,
-      "spg": 0.3,
-      "bpg": 0.6,
-      "fgPct": 33.3,
-      "threePct": 20.3,
-      "ftPct": 51.7
-    },
     "tags": [
       "베테랑",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 30,
+        "points": 4.77,
+        "rebounds": 4.5,
+        "assists": 1.7,
+        "spg": 0.3,
+        "bpg": 0.6,
+        "fgPct": 33.3,
+        "threePct": 20.3,
+        "ftPct": 51.7,
+        "mpg": 18.2
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 27,
+        "points": 9.3,
+        "rebounds": 6.9,
+        "assists": 2.4
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 27,
+        "points": 10.4,
+        "rebounds": 5.1,
+        "assists": 2.4
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 30,
+        "points": 8.3,
+        "rebounds": 3.9,
+        "assists": 2.4
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 28,
+        "points": 10.1,
+        "rebounds": 4.9,
+        "assists": 1.9
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 17,
+        "points": 13.4,
+        "rebounds": 5.5,
+        "assists": 2.8
+      },
+      {
+        "season": "2019-20",
+        "team": "우리은행",
+        "games": 25,
+        "points": 11,
+        "rebounds": 3.6,
+        "assists": 2.5
+      },
+      {
+        "season": "2018-19",
+        "team": "우리은행",
+        "games": 35,
+        "points": 13.2,
+        "rebounds": 5,
+        "assists": 2.3
+      },
+      {
+        "season": "2017-18",
+        "team": "우리은행",
+        "games": 34,
+        "points": 12.8,
+        "rebounds": 4.5,
+        "assists": 2.9
+      },
+      {
+        "season": "2016-17",
+        "team": "KEB하나",
+        "games": 16,
+        "points": 5.1,
+        "rebounds": 2.6,
+        "assists": 1.8
+      },
+      {
+        "season": "2015-16",
+        "team": "KEB하나",
+        "games": 19,
+        "points": 6.5,
+        "rebounds": 2.8,
+        "assists": 1.8
+      },
+      {
+        "season": "2014-15",
+        "team": "KEB하나",
+        "games": 28,
+        "points": 13.9,
+        "rebounds": 5.1,
+        "assists": 2.4
+      },
+      {
+        "season": "2013-14",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 15.2,
+        "rebounds": 4.9,
+        "assists": 3.9
+      },
+      {
+        "season": "2012-13",
+        "team": "KEB하나",
+        "games": 34,
+        "points": 17.4,
+        "rebounds": 5.3,
+        "assists": 3.3
+      },
+      {
+        "season": "2011-12",
+        "team": "신세계",
+        "games": 40,
+        "points": 17.7,
+        "rebounds": 5.4,
+        "assists": 2.9
+      },
+      {
+        "season": "2010-11",
+        "team": "신세계",
+        "games": 26,
+        "points": 18.4,
+        "rebounds": 6,
+        "assists": 2.3
+      },
+      {
+        "season": "2009-10",
+        "team": "신세계",
+        "games": 39,
+        "points": 20,
+        "rebounds": 6.9,
+        "assists": 2.3
+      },
+      {
+        "season": "2008-09",
+        "team": "신세계",
+        "games": 40,
+        "points": 18.6,
+        "rebounds": 4.6,
+        "assists": 2.1
+      },
+      {
+        "season": "2007-08",
+        "team": "신세계",
+        "games": 35,
+        "points": 18.1,
+        "rebounds": 5.3,
+        "assists": 2.3
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "2006겨울 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "2006여름 모범선수 상"
+      },
+      {
+        "type": "award",
+        "label": "2006여름 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "2007겨울 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "10-11 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "10-11 득점상"
+      },
+      {
+        "type": "award",
+        "label": "11-12 득점상"
+      },
+      {
+        "type": "award",
+        "label": "13-14 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "13-14 득점상"
+      },
+      {
+        "type": "award",
+        "label": "14-15 득점상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "17-18 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "18-19 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 모범선수 상"
+      }
     ]
   },
   {
     "pno": "095788",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "박소희",
     "nameEn": "PARK SO HEE",
     "number": 1,
@@ -2379,29 +5859,71 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095788.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 29.4,
-      "ppg": 10.1,
-      "rpg": 3.6,
-      "apg": 3.5,
-      "spg": 0.4,
-      "bpg": 0.1,
-      "fgPct": 36.8,
-      "threePct": 29.8,
-      "ftPct": 84.7
-    },
     "tags": [
       "국가대표",
       "1옵션",
       "폭발력",
       "플레이메이커"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 30,
+        "points": 10.1,
+        "rebounds": 3.6,
+        "assists": 3.5,
+        "spg": 0.4,
+        "bpg": 0.1,
+        "fgPct": 36.8,
+        "threePct": 29.8,
+        "ftPct": 84.7,
+        "mpg": 29.4
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 24,
+        "points": 5.1,
+        "rebounds": 2.9,
+        "assists": 2
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 14,
+        "points": 6.6,
+        "rebounds": 3.4,
+        "assists": 1.6
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 26,
+        "points": 4.4,
+        "rebounds": 1.9,
+        "assists": 1
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 8,
+        "points": 2.3,
+        "rebounds": 1.8,
+        "assists": 0.8
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "22-23 신인선수상"
+      }
     ]
   },
   {
     "pno": "095832",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "박진영",
     "nameEn": "PARK JIN YOUNG",
     "number": 23,
@@ -2415,26 +5937,54 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095832.png?ver=241016",
-    "seasonStats": {
-      "games": 28,
-      "mpg": 16.1,
-      "ppg": 4.86,
-      "rpg": 2.1,
-      "apg": 0.6,
-      "spg": 0.3,
-      "bpg": 0.2,
-      "fgPct": 42.4,
-      "threePct": 34.4,
-      "ftPct": 70.4
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 28,
+        "points": 4.86,
+        "rebounds": 2.1,
+        "assists": 0.6,
+        "spg": 0.3,
+        "bpg": 0.2,
+        "fgPct": 42.4,
+        "threePct": 34.4,
+        "ftPct": 70.4,
+        "mpg": 16.1
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 29,
+        "points": 3.2,
+        "rebounds": 1.9,
+        "assists": 1.2
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 7,
+        "points": 6.1,
+        "rebounds": 2,
+        "assists": 1.1
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 14,
+        "points": 1.2,
+        "rebounds": 1.2,
+        "assists": 0.4
+      }
     ]
   },
   {
     "pno": "095259",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "양인영",
     "nameEn": "YANG IN YOUNG",
     "number": 11,
@@ -2448,27 +5998,134 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095259.png?ver=241016",
-    "seasonStats": {
-      "games": 21,
-      "mpg": 10.8,
-      "ppg": 2.67,
-      "rpg": 2.4,
-      "apg": 0.9,
-      "spg": 0.5,
-      "bpg": 0.3,
-      "fgPct": 31.9,
-      "threePct": 0,
-      "ftPct": 83.3
-    },
     "tags": [
-      "베테랑",
-      "국가대표"
+      "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 21,
+        "points": 2.67,
+        "rebounds": 2.4,
+        "assists": 0.9,
+        "spg": 0.5,
+        "bpg": 0.3,
+        "fgPct": 31.9,
+        "threePct": 0,
+        "ftPct": 83.3,
+        "mpg": 10.8
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 27,
+        "points": 10.4,
+        "rebounds": 7.3,
+        "assists": 2.5
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 29,
+        "points": 12.8,
+        "rebounds": 7.8,
+        "assists": 2.7
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 25,
+        "points": 9.1,
+        "rebounds": 7.7,
+        "assists": 2
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 30,
+        "points": 13.2,
+        "rebounds": 7,
+        "assists": 1.8
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 30,
+        "points": 9.2,
+        "rebounds": 5.9,
+        "assists": 1.5
+      },
+      {
+        "season": "2019-20",
+        "team": "삼성생명",
+        "games": 25,
+        "points": 4.9,
+        "rebounds": 2.2,
+        "assists": 0.5
+      },
+      {
+        "season": "2018-19",
+        "team": "삼성생명",
+        "games": 25,
+        "points": 3.6,
+        "rebounds": 2.6,
+        "assists": 0.5
+      },
+      {
+        "season": "2017-18",
+        "team": "삼성생명",
+        "games": 15,
+        "points": 2.8,
+        "rebounds": 0.9,
+        "assists": 0.2
+      },
+      {
+        "season": "2016-17",
+        "team": "삼성생명",
+        "games": 5,
+        "points": 1.4,
+        "rebounds": 1.8,
+        "assists": 0
+      },
+      {
+        "season": "2016-17",
+        "team": "신한은행",
+        "games": 7,
+        "points": 0.7,
+        "rebounds": 1.9,
+        "assists": 0
+      },
+      {
+        "season": "2015-16",
+        "team": "신한은행",
+        "games": 7,
+        "points": 1.6,
+        "rebounds": 1,
+        "assists": 0.1
+      },
+      {
+        "season": "2014-15",
+        "team": "신한은행",
+        "games": 9,
+        "points": 1.6,
+        "rebounds": 1.8,
+        "assists": 0.1
+      },
+      {
+        "season": "2013-14",
+        "team": "신한은행",
+        "games": 5,
+        "points": 1.6,
+        "rebounds": 1.4,
+        "assists": 0.4
+      }
     ]
   },
   {
     "pno": "095831",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "이다현",
     "nameEn": "LEE DA HYUN",
     "number": 22,
@@ -2482,24 +6139,52 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095831.png?ver=241016",
-    "seasonStats": {
-      "games": 11,
-      "mpg": 6.1,
-      "ppg": 2,
-      "rpg": 1.1,
-      "apg": 0.2,
-      "spg": 0,
-      "bpg": 0.3,
-      "fgPct": 45.5,
-      "threePct": 18.2,
-      "ftPct": 66.7
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 11,
+        "points": 2,
+        "rebounds": 1.1,
+        "assists": 0.2,
+        "spg": 0,
+        "bpg": 0.3,
+        "fgPct": 45.5,
+        "threePct": 18.2,
+        "ftPct": 66.7,
+        "mpg": 6.1
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 9,
+        "points": 0.4,
+        "rebounds": 1,
+        "assists": 0.1
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 15,
+        "points": 3,
+        "rebounds": 1.9,
+        "assists": 0.1
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 18,
+        "points": 0.7,
+        "rebounds": 0.9,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "096147",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "이은서",
     "nameEn": "LEE EUN SEO",
     "number": 6,
@@ -2513,24 +6198,28 @@
     "draftRound": 2,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096147.png?ver=241016",
-    "seasonStats": {
-      "games": 3,
-      "mpg": 5.8,
-      "ppg": 2,
-      "rpg": 1,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 100,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 3,
+        "points": 2,
+        "rebounds": 1,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 100,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 5.8
+      }
+    ]
   },
   {
     "pno": "095912",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "이이지마 사키",
     "nameEn": "IIJIMA S.",
     "number": 21,
@@ -2544,29 +6233,41 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095912.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 32.5,
-      "ppg": 15.03,
-      "rpg": 6.3,
-      "apg": 2.3,
-      "spg": 1.5,
-      "bpg": 0.7,
-      "fgPct": 50.8,
-      "threePct": 35.3,
-      "ftPct": 80.4
-    },
     "tags": [
       "에이스",
       "폭발력",
       "수비형",
       "슈터"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 29,
+        "points": 15.03,
+        "rebounds": 6.3,
+        "assists": 2.3,
+        "spg": 1.5,
+        "bpg": 0.7,
+        "fgPct": 50.8,
+        "threePct": 35.3,
+        "ftPct": 80.4,
+        "mpg": 32.5
+      },
+      {
+        "season": "2024-25",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 9.6,
+        "rebounds": 5.3,
+        "assists": 1.5
+      }
     ]
   },
   {
     "pno": "095715",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "정예림",
     "nameEn": "JUNG YE RIM",
     "number": 7,
@@ -2580,26 +6281,70 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095715.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 23.9,
-      "ppg": 3.9,
-      "rpg": 4.3,
-      "apg": 1.8,
-      "spg": 0.7,
-      "bpg": 0.7,
-      "fgPct": 42,
-      "threePct": 28.9,
-      "ftPct": 81.5
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 29,
+        "points": 3.9,
+        "rebounds": 4.3,
+        "assists": 1.8,
+        "spg": 0.7,
+        "bpg": 0.7,
+        "fgPct": 42,
+        "threePct": 28.9,
+        "ftPct": 81.5,
+        "mpg": 23.9
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 21,
+        "points": 4.8,
+        "rebounds": 3.6,
+        "assists": 2.1
+      },
+      {
+        "season": "2023-24",
+        "team": "하나은행",
+        "games": 24,
+        "points": 6.7,
+        "rebounds": 3.7,
+        "assists": 1.9
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 29,
+        "points": 11.5,
+        "rebounds": 6.4,
+        "assists": 1.8
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 30,
+        "points": 5.8,
+        "rebounds": 4.7,
+        "assists": 1.2
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 15,
+        "points": 2.2,
+        "rebounds": 2.2,
+        "assists": 1.3
+      }
     ]
   },
   {
     "pno": "096008",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "정현",
     "nameEn": "JEONG HYUN",
     "number": 3,
@@ -2613,26 +6358,38 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096008.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 27.3,
-      "ppg": 6.33,
-      "rpg": 3.4,
-      "apg": 1,
-      "spg": 0.6,
-      "bpg": 0.5,
-      "fgPct": 33,
-      "threePct": 33,
-      "ftPct": 62.9
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 30,
+        "points": 6.33,
+        "rebounds": 3.4,
+        "assists": 1,
+        "spg": 0.6,
+        "bpg": 0.5,
+        "fgPct": 33,
+        "threePct": 33,
+        "ftPct": 62.9,
+        "mpg": 27.3
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 22,
+        "points": 2.4,
+        "rebounds": 1.4,
+        "assists": 0.2
+      }
     ]
   },
   {
     "pno": "095499",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "진안",
     "nameEn": "JIN AN",
     "number": 31,
@@ -2646,18 +6403,6 @@
     "draftRound": 1,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095499.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 30.9,
-      "ppg": 14.83,
-      "rpg": 9.3,
-      "apg": 2.7,
-      "spg": 0.7,
-      "bpg": 0.6,
-      "fgPct": 49.6,
-      "threePct": 0,
-      "ftPct": 60.2
-    },
     "tags": [
       "베테랑",
       "국가대표",
@@ -2665,12 +6410,106 @@
       "폭발력",
       "리바운더",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 30,
+        "points": 14.83,
+        "rebounds": 9.3,
+        "assists": 2.7,
+        "spg": 0.7,
+        "bpg": 0.6,
+        "fgPct": 49.6,
+        "threePct": 0,
+        "ftPct": 60.2,
+        "mpg": 30.9
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 23,
+        "points": 10.3,
+        "rebounds": 8.1,
+        "assists": 1.7
+      },
+      {
+        "season": "2023-24",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 17.5,
+        "rebounds": 10.4,
+        "assists": 2.7
+      },
+      {
+        "season": "2022-23",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 13.2,
+        "rebounds": 10.6,
+        "assists": 1.2
+      },
+      {
+        "season": "2021-22",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 17.1,
+        "rebounds": 9.4,
+        "assists": 1.8
+      },
+      {
+        "season": "2020-21",
+        "team": "BNK 썸",
+        "games": 30,
+        "points": 16.7,
+        "rebounds": 9.9,
+        "assists": 2.3
+      },
+      {
+        "season": "2019-20",
+        "team": "BNK 썸",
+        "games": 23,
+        "points": 9.2,
+        "rebounds": 5.4,
+        "assists": 1.2
+      },
+      {
+        "season": "2018-19",
+        "team": "OK저축은행",
+        "games": 33,
+        "points": 8.6,
+        "rebounds": 4.4,
+        "assists": 0.9
+      },
+      {
+        "season": "2017-18",
+        "team": "KDB생명",
+        "games": 25,
+        "points": 3.5,
+        "rebounds": 1.7,
+        "assists": 0.5
+      },
+      {
+        "season": "2016-17",
+        "team": "KDB생명",
+        "games": 26,
+        "points": 4.1,
+        "rebounds": 2.8,
+        "assists": 0.5
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "22-23 리바운드상"
+      }
     ]
   },
   {
     "pno": "096007",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "하지윤",
     "nameEn": "HA JI YOON",
     "number": 0,
@@ -2684,24 +6523,36 @@
     "draftRound": 2,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096007.png?ver=241016",
-    "seasonStats": {
-      "games": 4,
-      "mpg": 5.5,
-      "ppg": 2,
-      "rpg": 0.8,
-      "apg": 1.3,
-      "spg": 1,
-      "bpg": 0.3,
-      "fgPct": 50,
-      "threePct": 50,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 4,
+        "points": 2,
+        "rebounds": 0.8,
+        "assists": 1.3,
+        "spg": 1,
+        "bpg": 0.3,
+        "fgPct": 50,
+        "threePct": 50,
+        "ftPct": 0,
+        "mpg": 5.5
+      },
+      {
+        "season": "2024-25",
+        "team": "하나은행",
+        "games": 4,
+        "points": 0.8,
+        "rebounds": 0.3,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "096146",
     "teamId": "hana",
-    "teamName": "하나원큐",
+    "teamName": "하나은행",
     "name": "황윤서",
     "nameEn": "HWANG YOON SEO",
     "number": 2,
@@ -2715,24 +6566,28 @@
     "draftRound": 1,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096146.png?ver=241016",
-    "seasonStats": {
-      "games": 5,
-      "mpg": 4,
-      "ppg": 1.2,
-      "rpg": 0.2,
-      "apg": 0.2,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 66.7,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "하나은행",
+        "games": 5,
+        "points": 1.2,
+        "rebounds": 0.2,
+        "assists": 0.2,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 66.7,
+        "ftPct": 0,
+        "mpg": 4
+      }
+    ]
   },
   {
     "pno": "095263",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "강이슬",
     "nameEn": "KANG LEE SEUL",
     "number": 11,
@@ -2746,18 +6601,6 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095263.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 32.9,
-      "ppg": 15.55,
-      "rpg": 6.6,
-      "apg": 3.1,
-      "spg": 0.9,
-      "bpg": 0.3,
-      "fgPct": 49.2,
-      "threePct": 35.8,
-      "ftPct": 68.2
-    },
     "tags": [
       "베테랑",
       "국가대표",
@@ -2765,12 +6608,186 @@
       "폭발력",
       "슈터",
       "리바운더"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 15.55,
+        "rebounds": 6.6,
+        "assists": 3.1,
+        "spg": 0.9,
+        "bpg": 0.3,
+        "fgPct": 49.2,
+        "threePct": 35.8,
+        "ftPct": 68.2,
+        "mpg": 32.9
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 14.1,
+        "rebounds": 7.4,
+        "assists": 1.7
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 14.9,
+        "rebounds": 5.7,
+        "assists": 2.2
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 15.2,
+        "rebounds": 6.6,
+        "assists": 2.7
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 18,
+        "rebounds": 5.3,
+        "assists": 2.9
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 26,
+        "points": 18.2,
+        "rebounds": 7.1,
+        "assists": 2.4
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 26,
+        "points": 16.9,
+        "rebounds": 4.6,
+        "assists": 2.3
+      },
+      {
+        "season": "2018-19",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 13.9,
+        "rebounds": 4.5,
+        "assists": 1.5
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 15.9,
+        "rebounds": 3.7,
+        "assists": 2
+      },
+      {
+        "season": "2016-17",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 13.3,
+        "rebounds": 4.3,
+        "assists": 2.5
+      },
+      {
+        "season": "2015-16",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 9,
+        "rebounds": 3.4,
+        "assists": 1
+      },
+      {
+        "season": "2014-15",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 11.3,
+        "rebounds": 3.6,
+        "assists": 0.5
+      },
+      {
+        "season": "2013-14",
+        "team": "KEB하나",
+        "games": 24,
+        "points": 2.3,
+        "rebounds": 1.5,
+        "assists": 0.3
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "14-15 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "16-17 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "17-18 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "17-18 득점상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "19-20 득점상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 BEST 5 - 포워드"
+      },
+      {
+        "type": "award",
+        "label": "21-22 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "22-23 자유투상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 3득점상"
+      },
+      {
+        "type": "award",
+        "label": "24-25 3득점상"
+      }
     ]
   },
   {
     "pno": "096138",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "고리미",
     "nameEn": "KOH LI MI",
     "number": 24,
@@ -2784,24 +6801,28 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096138.png?ver=241016",
-    "seasonStats": {
-      "games": 8,
-      "mpg": 2,
-      "ppg": 0.75,
-      "rpg": 0.4,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 42.9,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 8,
+        "points": 0.75,
+        "rebounds": 0.4,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 42.9,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 2
+      }
+    ]
   },
   {
     "pno": "095901",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "고현지",
     "nameEn": "KO HYEON JI",
     "number": 17,
@@ -2815,24 +6836,44 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095901.png?ver=241016",
-    "seasonStats": {
-      "games": 10,
-      "mpg": 2.5,
-      "ppg": 0.7,
-      "rpg": 0.8,
-      "apg": 0.2,
-      "spg": 0.1,
-      "bpg": 0.1,
-      "fgPct": 25,
-      "threePct": 25,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 10,
+        "points": 0.7,
+        "rebounds": 0.8,
+        "assists": 0.2,
+        "spg": 0.1,
+        "bpg": 0.1,
+        "fgPct": 25,
+        "threePct": 25,
+        "ftPct": 0,
+        "mpg": 2.5
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 9,
+        "points": 0.1,
+        "rebounds": 0.4,
+        "assists": 0.3
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 5,
+        "points": 2,
+        "rebounds": 1,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "096137",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "김민경",
     "nameEn": "KIM MIN KYUNG",
     "number": 15,
@@ -2846,24 +6887,12 @@
     "draftRound": 2,
     "draftPick": 4,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096137.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
     "tags": []
   },
   {
     "pno": "095251",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "김민정",
     "nameEn": "KIM MIN JEONG",
     "number": 8,
@@ -2877,26 +6906,132 @@
     "draftRound": 2,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095251.png?ver=241016",
-    "seasonStats": {
-      "games": 2,
-      "mpg": 4,
-      "ppg": 1,
-      "rpg": 1.5,
-      "apg": 0.5,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 33.3,
-      "threePct": 0,
-      "ftPct": 0
-    },
     "tags": [
       "베테랑"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 2,
+        "points": 1,
+        "rebounds": 1.5,
+        "assists": 0.5,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 33.3,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 4
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 20,
+        "points": 2.1,
+        "rebounds": 1.1,
+        "assists": 0.3
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 8.5,
+        "rebounds": 2.8,
+        "assists": 0.9
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 14.3,
+        "rebounds": 4.7,
+        "assists": 1.6
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 26,
+        "points": 11,
+        "rebounds": 4.5,
+        "assists": 2.3
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 12.5,
+        "rebounds": 5.6,
+        "assists": 2.8
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 6.5,
+        "rebounds": 3.4,
+        "assists": 1.2
+      },
+      {
+        "season": "2018-19",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 6.2,
+        "rebounds": 3.5,
+        "assists": 1
+      },
+      {
+        "season": "2017-18",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 3.1,
+        "rebounds": 1.4,
+        "assists": 0.3
+      },
+      {
+        "season": "2016-17",
+        "team": "KB스타즈",
+        "games": 14,
+        "points": 0.6,
+        "rebounds": 1.1,
+        "assists": 0.2
+      },
+      {
+        "season": "2015-16",
+        "team": "KB스타즈",
+        "games": 9,
+        "points": 1.3,
+        "rebounds": 1,
+        "assists": 0.1
+      },
+      {
+        "season": "2014-15",
+        "team": "KB스타즈",
+        "games": 18,
+        "points": 1.4,
+        "rebounds": 1.7,
+        "assists": 0.3
+      },
+      {
+        "season": "2013-14",
+        "team": "KB스타즈",
+        "games": 2,
+        "points": 0,
+        "rebounds": 0.5,
+        "assists": 0
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "19-20 식스우먼상"
+      }
     ]
   },
   {
     "pno": "095781",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "김은선",
     "nameEn": "KIM EUN SEON",
     "number": 1,
@@ -2910,24 +7045,32 @@
     "draftRound": 2,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095781.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
-    "tags": []
+    "tags": [
+      "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 16,
+        "points": 4.2,
+        "rebounds": 1.1,
+        "assists": 0.8
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 15,
+        "points": 4.6,
+        "rebounds": 0.2,
+        "assists": 0.7
+      }
+    ]
   },
   {
     "pno": "095543",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "나윤정",
     "nameEn": "NA YUN JEONG",
     "number": 38,
@@ -2941,26 +7084,94 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095543.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 15.6,
-      "ppg": 5,
-      "rpg": 1.8,
-      "apg": 0.7,
-      "spg": 0.5,
-      "bpg": 0.1,
-      "fgPct": 42.6,
-      "threePct": 24.6,
-      "ftPct": 85.7
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 5,
+        "rebounds": 1.8,
+        "assists": 0.7,
+        "spg": 0.5,
+        "bpg": 0.1,
+        "fgPct": 42.6,
+        "threePct": 24.6,
+        "ftPct": 85.7,
+        "mpg": 15.6
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 20,
+        "points": 7.2,
+        "rebounds": 2.5,
+        "assists": 0.7
+      },
+      {
+        "season": "2023-24",
+        "team": "우리은행",
+        "games": 26,
+        "points": 7.2,
+        "rebounds": 1.7,
+        "assists": 1.3
+      },
+      {
+        "season": "2022-23",
+        "team": "우리은행",
+        "games": 27,
+        "points": 4.2,
+        "rebounds": 1.3,
+        "assists": 1
+      },
+      {
+        "season": "2021-22",
+        "team": "우리은행",
+        "games": 18,
+        "points": 2.8,
+        "rebounds": 1.1,
+        "assists": 0.6
+      },
+      {
+        "season": "2020-21",
+        "team": "우리은행",
+        "games": 12,
+        "points": 2,
+        "rebounds": 1.1,
+        "assists": 0.1
+      },
+      {
+        "season": "2019-20",
+        "team": "우리은행",
+        "games": 24,
+        "points": 4.2,
+        "rebounds": 1,
+        "assists": 0.5
+      },
+      {
+        "season": "2018-19",
+        "team": "우리은행",
+        "games": 12,
+        "points": 3,
+        "rebounds": 0.5,
+        "assists": 0.1
+      },
+      {
+        "season": "2017-18",
+        "team": "우리은행",
+        "games": 12,
+        "points": 0.3,
+        "rebounds": 0.4,
+        "assists": 0.3
+      }
     ]
   },
   {
     "pno": "095836",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "노혜경",
     "nameEn": "LO HYE KYUNG",
     "number": 9,
@@ -2974,24 +7185,38 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095836.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 1,
+        "points": 2,
+        "rebounds": 0,
+        "assists": 0
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 16,
+        "points": 0.5,
+        "rebounds": 0.5,
+        "assists": 0.3
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 13,
+        "points": 0.6,
+        "rebounds": 0.5,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095533",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "박지수",
     "nameEn": "PARK JI SU",
     "number": 7,
@@ -3005,31 +7230,242 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095533.png?ver=241016",
-    "seasonStats": {
-      "games": 24,
-      "mpg": 23.4,
-      "ppg": 16.54,
-      "rpg": 10.1,
-      "apg": 2.6,
-      "spg": 0.7,
-      "bpg": 1.7,
-      "fgPct": 60.2,
-      "threePct": 46.2,
-      "ftPct": 64
-    },
     "tags": [
+      "MVP",
       "국가대표",
       "에이스",
       "폭발력",
       "슈터",
       "리바운더",
       "골밑 핵심"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 24,
+        "points": 16.54,
+        "rebounds": 10.1,
+        "assists": 2.6,
+        "spg": 0.7,
+        "bpg": 1.7,
+        "fgPct": 60.2,
+        "threePct": 46.2,
+        "ftPct": 64,
+        "mpg": 23.4
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 20.3,
+        "rebounds": 15.2,
+        "assists": 5.4
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 9,
+        "points": 13.8,
+        "rebounds": 8.1,
+        "assists": 2.7
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 26,
+        "points": 21.2,
+        "rebounds": 14.4,
+        "assists": 4.8
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 22.3,
+        "rebounds": 15.2,
+        "assists": 4
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 21,
+        "points": 13.8,
+        "rebounds": 11,
+        "assists": 4.3
+      },
+      {
+        "season": "2018-19",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 13.1,
+        "rebounds": 11.1,
+        "assists": 3
+      },
+      {
+        "season": "2017-18",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 14.2,
+        "rebounds": 12.9,
+        "assists": 3.3
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "16-17 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "17-18 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 블록상"
+      },
+      {
+        "type": "award",
+        "label": "17-18 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "18-19 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "18-19 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "18-19 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 블록상"
+      },
+      {
+        "type": "award",
+        "label": "18-19 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "19-20 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "19-20 블록상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "20-21 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "20-21 득점상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 블록상"
+      },
+      {
+        "type": "award",
+        "label": "20-21 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "21-22 챔피언전 MVP"
+      },
+      {
+        "type": "award",
+        "label": "21-22 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "21-22 득점상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "21-22 윤덕주상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 정규리그 MVP"
+      },
+      {
+        "type": "award",
+        "label": "23-24 우수수비상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 BEST 5 - 센터"
+      },
+      {
+        "type": "award",
+        "label": "23-24 득점상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 리바운드상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 블록상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 윤덕주상"
+      }
     ]
   },
   {
     "pno": "096033",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "사카이 사라",
     "nameEn": "SAKAI SARA",
     "number": 55,
@@ -3043,27 +7479,31 @@
     "draftRound": 1,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096033.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 29.1,
-      "ppg": 7.03,
-      "rpg": 3.4,
-      "apg": 2.7,
-      "spg": 1.3,
-      "bpg": 0,
-      "fgPct": 34.2,
-      "threePct": 31,
-      "ftPct": 88.9
-    },
     "tags": [
       "수비형",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 7.03,
+        "rebounds": 3.4,
+        "assists": 2.7,
+        "spg": 1.3,
+        "bpg": 0,
+        "fgPct": 34.2,
+        "threePct": 31,
+        "ftPct": 88.9,
+        "mpg": 29.1
+      }
     ]
   },
   {
     "pno": "095902",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "성수연",
     "nameEn": "SUNG SU YEON",
     "number": 22,
@@ -3077,24 +7517,44 @@
     "draftRound": 2,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095902.png?ver=241016",
-    "seasonStats": {
-      "games": 29,
-      "mpg": 9.7,
-      "ppg": 1.62,
-      "rpg": 1.3,
-      "apg": 1.3,
-      "spg": 0.3,
-      "bpg": 0.2,
-      "fgPct": 34.9,
-      "threePct": 10,
-      "ftPct": 47.1
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 1.62,
+        "rebounds": 1.3,
+        "assists": 1.3,
+        "spg": 0.3,
+        "bpg": 0.2,
+        "fgPct": 34.9,
+        "threePct": 10,
+        "ftPct": 47.1,
+        "mpg": 9.7
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 5,
+        "points": 0.4,
+        "rebounds": 0,
+        "assists": 0.2
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 11,
+        "points": 0.6,
+        "rebounds": 0.5,
+        "assists": 1.1
+      }
+    ]
   },
   {
     "pno": "095999",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "송윤하",
     "nameEn": "SONG YUN HA",
     "number": 14,
@@ -3108,26 +7568,38 @@
     "draftRound": 1,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095999.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 19.6,
-      "ppg": 7.03,
-      "rpg": 4.1,
-      "apg": 1.1,
-      "spg": 0.6,
-      "bpg": 1.1,
-      "fgPct": 47.5,
-      "threePct": 31.3,
-      "ftPct": 96
-    },
     "tags": [
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 7.03,
+        "rebounds": 4.1,
+        "assists": 1.1,
+        "spg": 0.6,
+        "bpg": 1.1,
+        "fgPct": 47.5,
+        "threePct": 31.3,
+        "ftPct": 96,
+        "mpg": 19.6
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 7.8,
+        "rebounds": 5.5,
+        "assists": 1.3
+      }
     ]
   },
   {
     "pno": "095746",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "양지수",
     "nameEn": "YANG JI SU",
     "number": 5,
@@ -3141,26 +7613,70 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095746.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 12.9,
-      "ppg": 2.17,
-      "rpg": 1.6,
-      "apg": 0.4,
-      "spg": 0.5,
-      "bpg": 0,
-      "fgPct": 29,
-      "threePct": 35,
-      "ftPct": 55.6
-    },
     "tags": [
       "슈터"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 2.17,
+        "rebounds": 1.6,
+        "assists": 0.4,
+        "spg": 0.5,
+        "bpg": 0,
+        "fgPct": 29,
+        "threePct": 35,
+        "ftPct": 55.6,
+        "mpg": 12.9
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 1,
+        "rebounds": 0.8,
+        "assists": 0.1
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 29,
+        "points": 2,
+        "rebounds": 1.4,
+        "assists": 0.4
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 25,
+        "points": 2.9,
+        "rebounds": 1.4,
+        "assists": 0.6
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 7,
+        "points": 2.1,
+        "rebounds": 0.6,
+        "assists": 0
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 5,
+        "points": 0,
+        "rebounds": 0.8,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095037",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "염윤아",
     "nameEn": "YOUM YUN AH",
     "number": 4,
@@ -3174,26 +7690,153 @@
     "draftRound": 2,
     "draftPick": 5,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095037.png?ver=241016",
-    "seasonStats": {
-      "games": null,
-      "mpg": null,
-      "ppg": null,
-      "rpg": null,
-      "apg": null,
-      "spg": null,
-      "bpg": null,
-      "fgPct": null,
-      "threePct": null,
-      "ftPct": null
-    },
     "tags": [
-      "베테랑"
+      "베테랑",
+      "흐름 체인저"
+    ],
+    "career_seasons": [
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 17,
+        "points": 4.2,
+        "rebounds": 3.9,
+        "assists": 1.9
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 25,
+        "points": 6.8,
+        "rebounds": 4.1,
+        "assists": 2.2
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 18,
+        "points": 6.6,
+        "rebounds": 4.6,
+        "assists": 1.4
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 16,
+        "points": 7.9,
+        "rebounds": 3.6,
+        "assists": 2.9
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 24,
+        "points": 6.9,
+        "rebounds": 3.6,
+        "assists": 3
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 23,
+        "points": 6.5,
+        "rebounds": 4.3,
+        "assists": 3.6
+      },
+      {
+        "season": "2018-19",
+        "team": "KB스타즈",
+        "games": 35,
+        "points": 8.9,
+        "rebounds": 5.2,
+        "assists": 3.5
+      },
+      {
+        "season": "2017-18",
+        "team": "KEB하나",
+        "games": 34,
+        "points": 8.1,
+        "rebounds": 4.1,
+        "assists": 3.8
+      },
+      {
+        "season": "2016-17",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 4.3,
+        "rebounds": 4,
+        "assists": 2.8
+      },
+      {
+        "season": "2015-16",
+        "team": "KEB하나",
+        "games": 35,
+        "points": 5.1,
+        "rebounds": 4,
+        "assists": 2
+      },
+      {
+        "season": "2014-15",
+        "team": "KEB하나",
+        "games": 33,
+        "points": 2.5,
+        "rebounds": 1.7,
+        "assists": 0.7
+      },
+      {
+        "season": "2013-14",
+        "team": "KEB하나",
+        "games": 10,
+        "points": 0.4,
+        "rebounds": 1,
+        "assists": 0.2
+      },
+      {
+        "season": "2012-13",
+        "team": "KEB하나",
+        "games": 14,
+        "points": 0.9,
+        "rebounds": 1,
+        "assists": 0.1
+      },
+      {
+        "season": "2011-12",
+        "team": "신세계",
+        "games": 13,
+        "points": 0.6,
+        "rebounds": 0.5,
+        "assists": 0.1
+      },
+      {
+        "season": "2010-11",
+        "team": "신세계",
+        "games": 11,
+        "points": 0.2,
+        "rebounds": 0.4,
+        "assists": 0
+      },
+      {
+        "season": "2009-10",
+        "team": "신세계",
+        "games": 21,
+        "points": 1.1,
+        "rebounds": 0.9,
+        "assists": 0.1
+      },
+      {
+        "season": "2007-08",
+        "team": "우리은행",
+        "games": 26,
+        "points": 1.9,
+        "rebounds": 1.3,
+        "assists": 0.2
+      }
     ]
   },
   {
     "pno": "095978",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "이여명",
     "nameEn": "LEE YEO MYONG",
     "number": 19,
@@ -3207,24 +7850,36 @@
     "draftRound": 2,
     "draftPick": 2,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095978.png?ver=241016",
-    "seasonStats": {
-      "games": 10,
-      "mpg": 1.9,
-      "ppg": 0.4,
-      "rpg": 0.1,
-      "apg": 0.2,
-      "spg": 0.2,
-      "bpg": 0,
-      "fgPct": 28.6,
-      "threePct": 0,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 10,
+        "points": 0.4,
+        "rebounds": 0.1,
+        "assists": 0.2,
+        "spg": 0.2,
+        "bpg": 0,
+        "fgPct": 28.6,
+        "threePct": 0,
+        "ftPct": 0,
+        "mpg": 1.9
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 5,
+        "points": 2.2,
+        "rebounds": 0.2,
+        "assists": 0.2
+      }
+    ]
   },
   {
     "pno": "095642",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "이윤미",
     "nameEn": "LEE YUN MI",
     "number": 6,
@@ -3238,24 +7893,76 @@
     "draftRound": 1,
     "draftPick": 6,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095642.png?ver=241016",
-    "seasonStats": {
-      "games": 3,
-      "mpg": 4.8,
-      "ppg": 1,
-      "rpg": 1.3,
-      "apg": 0,
-      "spg": 0,
-      "bpg": 0,
-      "fgPct": 0,
-      "threePct": 50,
-      "ftPct": 0
-    },
-    "tags": []
+    "tags": [],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 3,
+        "points": 1,
+        "rebounds": 1.3,
+        "assists": 0,
+        "spg": 0,
+        "bpg": 0,
+        "fgPct": 0,
+        "threePct": 50,
+        "ftPct": 0,
+        "mpg": 4.8
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 1.6,
+        "rebounds": 1.1,
+        "assists": 0.3
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 2.3,
+        "rebounds": 1.6,
+        "assists": 0.4
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 18,
+        "points": 3.2,
+        "rebounds": 1.4,
+        "assists": 0.5
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 1.3,
+        "rebounds": 0.6,
+        "assists": 0.3
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 8,
+        "points": 1.3,
+        "rebounds": 0.6,
+        "assists": 0.1
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 3,
+        "points": 1,
+        "rebounds": 0.3,
+        "assists": 0
+      }
+    ]
   },
   {
     "pno": "095637",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "이채은",
     "nameEn": "LEE CHAE EUN",
     "number": 3,
@@ -3269,29 +7976,80 @@
     "draftRound": 2,
     "draftPick": 3,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095637.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 27.2,
-      "ppg": 8.43,
-      "rpg": 2.9,
-      "apg": 1.4,
-      "spg": 1.3,
-      "bpg": 0.1,
-      "fgPct": 48.5,
-      "threePct": 38.6,
-      "ftPct": 90
-    },
     "tags": [
-      "국가대표",
       "수비형",
       "슈터",
       "안정감"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 8.43,
+        "rebounds": 2.9,
+        "assists": 1.4,
+        "spg": 1.3,
+        "bpg": 0.1,
+        "fgPct": 48.5,
+        "threePct": 38.6,
+        "ftPct": 90,
+        "mpg": 27.2
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 22,
+        "points": 2,
+        "rebounds": 1.3,
+        "assists": 0.3
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 23,
+        "points": 2.1,
+        "rebounds": 1.1,
+        "assists": 0.3
+      },
+      {
+        "season": "2022-23",
+        "team": "하나은행",
+        "games": 14,
+        "points": 0.9,
+        "rebounds": 0.4,
+        "assists": 0
+      },
+      {
+        "season": "2021-22",
+        "team": "하나은행",
+        "games": 20,
+        "points": 1.5,
+        "rebounds": 0.5,
+        "assists": 0.1
+      },
+      {
+        "season": "2020-21",
+        "team": "하나은행",
+        "games": 2,
+        "points": 3,
+        "rebounds": 0,
+        "assists": 0
+      },
+      {
+        "season": "2019-20",
+        "team": "하나은행",
+        "games": 1,
+        "points": 0,
+        "rebounds": 1,
+        "assists": 0
+      }
     ]
   },
   {
     "pno": "095710",
     "teamId": "kb",
-    "teamName": "KB 스타즈",
+    "teamName": "KB스타즈",
     "name": "허예은",
     "nameEn": "HEO YE EUN",
     "number": 2,
@@ -3305,18 +8063,6 @@
     "draftRound": 1,
     "draftPick": 1,
     "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095710.png?ver=241016",
-    "seasonStats": {
-      "games": 30,
-      "mpg": 33.5,
-      "ppg": 11.6,
-      "rpg": 4.4,
-      "apg": 6.7,
-      "spg": 1.3,
-      "bpg": 0.1,
-      "fgPct": 45,
-      "threePct": 37.3,
-      "ftPct": 87.8
-    },
     "tags": [
       "국가대표",
       "1옵션",
@@ -3324,6 +8070,88 @@
       "수비형",
       "슈터",
       "플레이메이커"
+    ],
+    "career_seasons": [
+      {
+        "season": "2025-26",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 11.6,
+        "rebounds": 4.4,
+        "assists": 6.7,
+        "spg": 1.3,
+        "bpg": 0.1,
+        "fgPct": 45,
+        "threePct": 37.3,
+        "ftPct": 87.8,
+        "mpg": 33.5
+      },
+      {
+        "season": "2024-25",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 10,
+        "rebounds": 4.8,
+        "assists": 7
+      },
+      {
+        "season": "2023-24",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 11.2,
+        "rebounds": 4.7,
+        "assists": 6.2
+      },
+      {
+        "season": "2022-23",
+        "team": "KB스타즈",
+        "games": 30,
+        "points": 9.1,
+        "rebounds": 4.2,
+        "assists": 5.2
+      },
+      {
+        "season": "2021-22",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 8.5,
+        "rebounds": 2.8,
+        "assists": 5.6
+      },
+      {
+        "season": "2020-21",
+        "team": "KB스타즈",
+        "games": 28,
+        "points": 2.7,
+        "rebounds": 0.9,
+        "assists": 1.6
+      },
+      {
+        "season": "2019-20",
+        "team": "KB스타즈",
+        "games": 9,
+        "points": 3.3,
+        "rebounds": 1,
+        "assists": 1.6
+      }
+    ],
+    "career_highlights": [
+      {
+        "type": "award",
+        "label": "19-20 신인선수상"
+      },
+      {
+        "type": "award",
+        "label": "23-24 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 BEST 5 - 가드"
+      },
+      {
+        "type": "award",
+        "label": "24-25 어시스트상"
+      }
     ]
   }
 ]

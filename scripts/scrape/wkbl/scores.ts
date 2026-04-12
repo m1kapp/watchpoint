@@ -119,7 +119,9 @@ async function main() {
     });
   }
 
-  const outputPath = path.resolve(process.cwd(), "data/wkbl/scores.json");
+  const dataDir = process.env.WKBL_DATA_DIR ?? "data/wkbl";
+  await fs.mkdir(path.resolve(process.cwd(), dataDir), { recursive: true });
+  const outputPath = path.resolve(process.cwd(), `${dataDir}/scores.json`);
   await fs.writeFile(outputPath, JSON.stringify(entries, null, 2), "utf-8");
   console.log(`\n✅ 저장 완료 → ${outputPath}`);
 }

@@ -349,7 +349,9 @@ async function main() {
   }
 
   // 3단계: 저장
-  const outputPath = path.resolve(process.cwd(), "data/wkbl/players.json");
+  const dataDir = process.env.WKBL_DATA_DIR ?? "data/wkbl";
+  await fs.mkdir(path.resolve(process.cwd(), dataDir), { recursive: true });
+  const outputPath = path.resolve(process.cwd(), `${dataDir}/players.json`);
   await fs.writeFile(outputPath, JSON.stringify(players, null, 2), "utf-8");
 
   console.log(`\n✅ ${players.length}명 저장 → ${outputPath}`);

@@ -47,13 +47,14 @@ export default function Home() {
   return (
     <Watermark
       color={HANA_GREEN}
-      sponsor={{ name: "하나은행 여자농구단", url: "http://www.hanafnbasketball.com/" }}
+      speed={20}
+      sponsor={{ name: "🏀 WKBL", url: "https://www.wkbl.or.kr/" }}
     >
       <AppShell className="m-0">
         <AppShellHeader>
-          <span className="text-base font-black tracking-tight" style={{ color: HANA_GREEN }}>
+          <button onClick={() => { setTab("explore"); setRosterTeamId(undefined); }} className="text-base font-black tracking-tight cursor-pointer" style={{ color: HANA_GREEN }}>
             Watchpoint
-          </span>
+          </button>
           <div className="flex items-center gap-1.5">
             <a href="https://m1k.app/gg" target="_blank" rel="noopener noreferrer" className="flex items-center opacity-70 hover:opacity-100 transition-opacity">
               <img alt="Hits" src="https://m1k.app/badge/gg.svg" style={{ filter: isDark ? "invert(1)" : undefined }} />
@@ -98,12 +99,16 @@ export default function Home() {
             active={tab === "explore"}
             onClick={() => handleTabChange("explore")}
             activeColor={HANA_GREEN}
-            label="탐색"
+            label="매치"
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 strokeWidth={tab === "explore" ? 2.5 : 2} strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
+                {/* 농구공 */}
+                <circle cx="12" cy="12" r="9" />
+                <path d="M5.5 5.5a9 9 0 0 1 13 13" />
+                <path d="M18.5 5.5a9 9 0 0 0-13 13" />
+                <line x1="12" y1="3" x2="12" y2="21" />
+                <line x1="3" y1="12" x2="21" y2="12" />
               </svg>
             }
           />

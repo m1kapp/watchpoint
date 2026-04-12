@@ -11,8 +11,10 @@ import path from "path";
 import nationalTeamJson from "../../data/wkbl/national-team.json" with { type: "json" };
 import awardsJson from "../../data/wkbl/awards.json" with { type: "json" };
 
+// current: true인 가장 최근 대회 엔트리 사용
+const currentRoster = nationalTeamJson.rosters.find((r) => r.current)?.players ?? [];
 const NATIONAL_TEAM = Object.fromEntries(
-  nationalTeamJson.roster.map((p) => [`${p.name}:${p.pno}`, p.level])
+  currentRoster.map((p) => [`${p.name}:${p.pno}`, "A대표팀" as const])
 ) as Record<string, "A대표팀" | "국가대표 후보">;
 
 const MVP_PLAYERS  = new Set<string>(awardsJson.mvp);
@@ -26,16 +28,16 @@ type PlayerTag =
   | "클러치" | "흐름 체인저" | "안정감" | "폭발력"
   | "국가대표" | "신인왕" | "MVP" | "베테랑";
 
-interface Stats {
-  games: number | null;
-  ppg: number | null;
-  rpg: number | null;
-  apg: number | null;
-  spg: number | null;
-  bpg: number | null;
-  fgPct: number | null;
-  threePct: number | null;
-  ftPct: number | null;
+interface CareerSeasonEntry {
+  season: string;
+  games: number;
+  points: number;
+  rebounds: number;
+  assists: number;
+  spg?: number | null;
+  bpg?: number | null;
+  fgPct?: number | null;
+  threePct?: number | null;
 }
 
 interface Player {
@@ -44,9 +46,7 @@ interface Player {
   name: string;
   position: string | null;
   height: string | null;
-  seasonStats: Stats | null;
-  bio?: { career_year?: number; birth_year?: number };
-  // from JSON
+  career_seasons?: CareerSeasonEntry[];
   draftYear: number | null;
   birthYear: number | null;
 }
@@ -55,7 +55,8 @@ const CURRENT_YEAR = 2026;
 
 function assignTags(player: Player, teamPlayers: Player[]): PlayerTag[] {
   const tags = new Set<PlayerTag>();
-  const s = player.seasonStats;
+  // 현재 시즌 스탯은 career_seasons[0]
+  const s = player.career_seasons?.[0] ?? null;
   const name = player.name;
   const pos = player.position ?? "";
   const careerYear = player.draftYear ? CURRENT_YEAR - player.draftYear : 1;
@@ -74,15 +75,15 @@ function assignTags(player: Player, teamPlayers: Player[]): PlayerTag[] {
   // 스탯 없으면 여기서 종료
   if (!s || games < 5) return [...tags];
 
-  const ppg  = s.ppg  ?? 0;
-  const rpg  = s.rpg  ?? 0;
-  const apg  = s.apg  ?? 0;
-  const spg  = s.spg  ?? 0;
+  const ppg   = s.points   ?? 0;
+  const rpg   = s.rebounds ?? 0;
+  const apg   = s.assists  ?? 0;
+  const spg   = s.spg      ?? 0;
   const thPct = s.threePct ?? 0;
 
   // ── 팀내 순위 ─────────────────────────────────────────────────
-  const teamWithStats = teamPlayers.filter(p => (p.seasonStats?.games ?? 0) >= 5);
-  const teamByPpg = [...teamWithStats].sort((a, b) => (b.seasonStats?.ppg ?? 0) - (a.seasonStats?.ppg ?? 0));
+  const teamWithStats = teamPlayers.filter(p => (p.career_seasons?.[0]?.games ?? 0) >= 5);
+  const teamByPpg = [...teamWithStats].sort((a, b) => (b.career_seasons?.[0]?.points ?? 0) - (a.career_seasons?.[0]?.points ?? 0));
   const ppgRank = teamByPpg.findIndex(p => p.pno === player.pno) + 1;
 
   // ── 공격 역할 ──────────────────────────────────────────────────

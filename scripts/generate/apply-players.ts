@@ -15,14 +15,22 @@ import playersJson from "../../data/wkbl/players.json" with { type: "json" };
 import nationalTeamJson from "../../data/wkbl/national-team.json" with { type: "json" };
 import teamsJson from "../../data/wkbl/teams.json" with { type: "json" };
 
+// current: true인 가장 최근 대회 엔트리 사용
+const currentRoster = nationalTeamJson.rosters.find((r) => r.current)?.players ?? [];
 const NATIONAL_TEAM = Object.fromEntries(
-  nationalTeamJson.roster.map((p) => [`${p.name}:${p.pno}`, p.level as "A대표팀" | "국가대표 후보"])
+  currentRoster.map((p) => [`${p.name}:${p.pno}`, "A대표팀" as "A대표팀" | "국가대표 후보"])
 );
 
 const CURRENT_YEAR = 2026;
 const DATA_TS_PATH = path.resolve(process.cwd(), "src/lib/data.ts");
 
 // ─── Player 객체 → TS 코드 문자열 ───────────────────────────────────────────
+
+function buildCareerSeasons(p: (typeof playersJson)[0]): string {
+  const seasons = (p as any).career_seasons as any[] | undefined;
+  if (!seasons?.length) return "";
+  return `\n    career_seasons: ${JSON.stringify(seasons)},`;
+}
 
 function playerToTs(p: (typeof playersJson)[0], tags: string[]): string {
   const birthYear = p.birthYear ?? CURRENT_YEAR - 25;
@@ -51,8 +59,9 @@ function playerToTs(p: (typeof playersJson)[0], tags: string[]): string {
       career_year: ${careerYear},
       national_team: { is_national: ${isNational}, level: "${natLevelStr}" },
     },
-    tags: [${tagsStr}],
-    seasonStats: ${p.seasonStats ? JSON.stringify(p.seasonStats) : "null"},
+    tags: [${tagsStr}],${p.draftYear != null ? `
+    draft: { year: ${p.draftYear}, round: ${p.draftRound ?? 1}, pick: ${p.draftPick ?? 0} },` : ""}${buildCareerSeasons(p)}${(p as any).career_highlights?.length ? `
+    career_highlights: ${JSON.stringify((p as any).career_highlights)},` : ""}
   }`;
 }
 

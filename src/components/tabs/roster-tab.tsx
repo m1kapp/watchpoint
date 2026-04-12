@@ -1,16 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { toast } from "sonner";
-import Image from "next/image";
 import { Section } from "@m1kapp/ui";
-import { SourceChip } from "@/components/source-chip";
 import { PLAYERS, TEAMS, TAG_COLORS, type WKBLTeam } from "@/lib/data";
 import { TEAM_LOGOS } from "@/lib/matches";
 import type { Player } from "@/lib/types";
 import { PlayerCard } from "@/components/player-card";
 import { PlayerDetail } from "@/components/player-detail";
-import { NationalTab, NATIONAL_YEARS } from "@/components/tabs/national-tab";
+import { NationalTab } from "@/components/tabs/national-tab";
+import { DropdownSelector } from "@/components/dropdown-selector";
 
 // ─── 리그 팀 목록 ─────────────────────────────────────────────
 
@@ -18,11 +16,11 @@ function TeamListCard({ team, onClick }: { team: WKBLTeam; onClick: () => void }
   const players = PLAYERS.filter((p) => p.teamId === team.id);
   const nationalCount = players.filter((p) => p.bio.national_team.is_national).length;
   const hasData = players.length > 0;
-  const logo = TEAM_LOGOS[team.name];
+  const logo = TEAM_LOGOS[team.shortName];
 
-  const playersWithStats = players.filter((p) => p.seasonStats && (p.seasonStats.games ?? 0) >= 5);
+  const playersWithStats = players.filter((p) => (p.career_seasons?.[0]?.games ?? 0) >= 5);
   const teamPpg = playersWithStats.length
-    ? Math.round(playersWithStats.reduce((s, p) => s + (p.seasonStats?.ppg ?? 0), 0) * 10) / 10
+    ? Math.round(playersWithStats.reduce((s, p) => s + (p.career_seasons?.[0]?.points ?? 0), 0) * 10) / 10
     : null;
 
   return (
@@ -89,15 +87,46 @@ function TeamListCard({ team, onClick }: { team: WKBLTeam; onClick: () => void }
   );
 }
 
+// ─── 팀 컴팩트 헤더 ───────────────────────────────────────────
+
+function TeamCompactHeader({ team }: { team: WKBLTeam }) {
+  const logo = TEAM_LOGOS[team.shortName];
+  const players = PLAYERS.filter((p) => p.teamId === team.id);
+  const avgHeight = players.length
+    ? Math.round(players.reduce((s, p) => s + (parseFloat(p.height) || 0), 0) / players.length * 10) / 10
+    : 0;
+  const avgCareer = players.length
+    ? Math.round(players.reduce((s, p) => s + p.bio.career_year, 0) / players.length * 10) / 10
+    : 0;
+
+  return (
+    <div className="mx-4 mt-3 mb-1 rounded-xl px-4 py-3 flex items-center gap-3"
+      style={{ backgroundColor: `${team.color}10` }}>
+      {logo && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={logo} alt={team.name} className="w-10 h-10 object-contain shrink-0" />
+      )}
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-black text-zinc-900 dark:text-white leading-tight truncate">{team.name}</p>
+        <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-0.5 tabular-nums">
+          리그 <span className="font-black" style={{ color: team.color }}>{team.rank}위</span>
+          {" · "}{players.length}명{" · "}평균 {avgHeight}cm · {avgCareer}년차
+        </p>
+      </div>
+    </div>
+  );
+}
+
 // ─── 팀 로스터 상세 ────────────────────────────────────────────
 
-export type SortKey = "tags" | "career" | "age" | "height" | "position";
+export type SortKey = "tags" | "career" | "age" | "height" | "position" | "number";
 
 export const SORT_OPTIONS: { key: SortKey; label: string }[] = [
-  { key: "tags",     label: "칩많은순" },
+  { key: "tags",     label: "태그순" },
   { key: "career",   label: "경력순" },
   { key: "age",      label: "나이순" },
   { key: "height",   label: "신장순" },
+  { key: "number",   label: "번호순" },
   { key: "position", label: "포지션" },
 ];
 
@@ -108,6 +137,7 @@ export function sortPlayers(players: Player[], key: SortKey): Player[] {
   const byCareer = (a: Player, b: Player) => b.bio.career_year - a.bio.career_year;
   const byAge    = (a: Player, b: Player) => a.bio.birth_year - b.bio.birth_year; // 출생년도 작을수록 연장자
   const byHeight = (a: Player, b: Player) => (parseInt(b.height) || 0) - (parseInt(a.height) || 0);
+  const byNumber = (a: Player, b: Player) => (a.number ?? 99) - (b.number ?? 99);
   const byPos    = (a: Player, b: Player) => (posOrder[a.position] ?? 9) - (posOrder[b.position] ?? 9);
 
   const chain = (...fns: ((a: Player, b: Player) => number)[]) =>
@@ -124,144 +154,19 @@ export function sortPlayers(players: Player[], key: SortKey): Player[] {
     career:   chain(byCareer, byTags, byAge),
     age:      chain(byAge, byTags, byCareer),
     height:   chain(byHeight, byTags, byCareer),
+    number:   chain(byNumber),
     position: chain(byPos, byTags, byCareer),
   }[key];
 
   return [...players].sort(comparator);
 }
 
-function TeamRosterView({
-  team,
-  onBack,
-}: {
-  team: WKBLTeam;
-  onBack: () => void;
-}) {
-  const [selected, setSelected] = useState<Player | null>(null);
-  const [sortKey, setSortKey] = useState<SortKey>("tags");
-  const players = PLAYERS.filter((p) => p.teamId === team.id);
-  const nationalCount = players.filter((p) => p.bio.national_team.is_national).length;
-  const logo = TEAM_LOGOS[team.name];
 
-  const avgHeight = players.length
-    ? Math.round(players.reduce((s, p) => s + (parseFloat(p.height) || 0), 0) / players.length * 10) / 10
-    : 0;
-  const avgAge = players.length
-    ? Math.round(players.reduce((s, p) => s + p.bio.age, 0) / players.length * 10) / 10
-    : 0;
-  const avgCareer = players.length
-    ? Math.round(players.reduce((s, p) => s + p.bio.career_year, 0) / players.length * 10) / 10
-    : 0;
-
-  const sorted = sortPlayers(players, sortKey);
-
-  return (
-    <>
-      {/* 뒤로 버튼 */}
-      <div className="px-4 pt-3 pb-1">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 active:text-zinc-900 dark:active:text-white transition-colors"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-            <path d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-          WKBL 리그
-        </button>
-      </div>
-
-      {/* 팀 헤더 */}
-      <div className="px-4 pt-2 pb-4">
-        <div className="rounded-xl overflow-hidden border border-zinc-100 dark:border-zinc-800">
-          {/* 로고 배너 */}
-          <div className="px-6 pt-6 pb-4 flex flex-col items-center gap-3"
-            style={{ backgroundColor: `${team.color}10` }}>
-            {logo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={logo} alt={team.name} className="w-24 h-24 object-contain drop-shadow-sm" />
-            ) : (
-              <div className="w-24 h-24 rounded-3xl flex items-center justify-center text-white text-4xl font-black"
-                style={{ backgroundColor: team.color }}>
-                {team.rank}
-              </div>
-            )}
-            <div className="text-center">
-              <p className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-0.5">
-                {team.league} 2025-26 · {team.rank}위
-              </p>
-              <h2 className="text-xl font-black text-zinc-900 dark:text-white leading-tight">{team.name}</h2>
-              <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-0.5">{team.summary}</p>
-            </div>
-          </div>
-          <div className="flex border-t border-zinc-100 dark:border-zinc-800">
-            <div className="flex-1 px-3 py-2.5 text-center">
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500">등록선수</p>
-              <p className="text-base font-black text-zinc-900 dark:text-white tabular-nums">{players.length}명</p>
-            </div>
-            <div className="w-px bg-zinc-100 dark:bg-zinc-800" />
-            <div className="flex-1 px-3 py-2.5 text-center">
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500">평균신장</p>
-              <p className="text-base font-black text-zinc-900 dark:text-white tabular-nums">{avgHeight}cm</p>
-            </div>
-            <div className="w-px bg-zinc-100 dark:bg-zinc-800" />
-            <div className="flex-1 px-3 py-2.5 text-center">
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500">평균나이</p>
-              <p className="text-base font-black text-zinc-900 dark:text-white tabular-nums tracking-tighter">만 {avgAge}세</p>
-            </div>
-            <div className="w-px bg-zinc-100 dark:bg-zinc-800" />
-            <div className="flex-1 px-3 py-2.5 text-center">
-              <p className="text-[10px] text-zinc-400 dark:text-zinc-500">평균경력</p>
-              <p className="text-base font-black tabular-nums" style={{ color: team.color }}>{avgCareer}년</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 정렬 */}
-      <div className="px-4 mb-2 flex items-center gap-2">
-        <p className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest shrink-0">로스터</p>
-        <div className="flex gap-1.5 overflow-x-auto scrollbar-none">
-          {SORT_OPTIONS.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setSortKey(key)}
-              className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold transition-all"
-              style={
-                sortKey === key
-                  ? { backgroundColor: team.color, color: "white" }
-                  : { backgroundColor: "#f4f4f5", color: "#71717a" }
-              }
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-      <Section>
-        {sorted.length === 0 ? (
-          <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center py-12">선수 정보 준비 중입니다</p>
-        ) : (
-          <div className="flex flex-col gap-2">
-            {sorted.map((player) => (
-              <PlayerCard key={player.id} player={player} onClick={() => setSelected(player)} />
-            ))}
-          </div>
-        )}
-      </Section>
-
-      {selected && (
-        <PlayerDetail player={selected} onClose={() => setSelected(null)} />
-      )}
-    </>
-  );
-}
-
-// ─── 로스터 탭 (진입점) ────────────────────────────────────────
+// ─── 로스터 탭 ───────────────────────────────────────────────
 
 const LEAGUE_META = {
-  WKBL:  { label: "WKBL 여자",   sub: "한국 여자 프로농구",          color: "#007B5F" },
-  NAT_W: { label: "🇰🇷 여자대표", sub: "대한민국 여자농구 국가대표팀", color: "#CD2E3A" },
+  WKBL:  { label: "WKBL 여자",   color: "#007B5F" },
+  NAT_W: { label: "🇰🇷 여자대표", color: "#CD2E3A" },
 } as const;
 
 type LeagueKey = keyof typeof LEAGUE_META;
@@ -269,100 +174,148 @@ type LeagueKey = keyof typeof LEAGUE_META;
 const WKBL_SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
 
 export function RosterTab({ initialTeamId }: { initialTeamId?: string }) {
-  const [selectedTeam, setSelectedTeam] = useState<WKBLTeam | null>(
-    () => initialTeamId ? (TEAMS.find((t) => t.id === initialTeamId) ?? null) : null
-  );
   const [league, setLeague] = useState<LeagueKey>("WKBL");
   const [season, setSeason] = useState("2025-26");
-  const [natYear, setNatYear] = useState(2025);
-
-  if (selectedTeam) {
-    return <TeamRosterView team={selectedTeam} onBack={() => setSelectedTeam(null)} />;
-  }
+  const [view, setView] = useState<"team" | "player">("team");
+  const [selectedTeamId, setSelectedTeamId] = useState<string | null>(initialTeamId ?? null);
+  const [sortKey, setSortKey] = useState<SortKey>("tags");
+  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
   const isNat = league === "NAT_W";
+  const accentColor = LEAGUE_META[league].color;
 
-  // 시즌/연도 탭 (리그에 따라 다른 데이터)
-  const SeasonTabs = () => isNat ? (
-    <div className="px-4 pt-4 pb-0 flex gap-1.5 overflow-x-auto scrollbar-none">
-      {NATIONAL_YEARS.map((y) => {
-        const active = natYear === y;
-        const hasData = y === 2025;
-        return (
-          <button key={y}
-            onClick={() => { if (hasData) setNatYear(y); else toast.info("준비중입니다"); }}
-            className="shrink-0 px-3 py-1 rounded-full text-[11px] font-black transition-all"
-            style={active
-              ? { backgroundColor: "#18181b", color: "white" }
-              : { backgroundColor: "#f4f4f5", color: hasData ? "#71717a" : "#d4d4d8" }}>
-            {y}
-          </button>
-        );
-      })}
-    </div>
-  ) : (
-    <div className="px-4 pt-4 pb-0 flex gap-1.5 overflow-x-auto scrollbar-none">
-      {WKBL_SEASONS.map((s) => {
-        const active = season === s;
-        const hasData = s === "2025-26";
-        return (
-          <button key={s}
-            onClick={() => { if (hasData) setSeason(s); else toast.info("준비중입니다"); }}
-            className="shrink-0 px-3 py-1 rounded-full text-[11px] font-black transition-all"
-            style={active
-              ? { backgroundColor: "#18181b", color: "white" }
-              : { backgroundColor: "#f4f4f5", color: hasData ? "#71717a" : "#d4d4d8" }}>
-            {s}
-          </button>
-        );
-      })}
-    </div>
-  );
+  const leagueTeams = TEAMS.filter((t) => t.league === "WKBL" && PLAYERS.some((p) => p.teamId === t.id));
+  const selectedTeam = leagueTeams.find((t) => t.id === selectedTeamId) ?? null;
+  const leagueOptions = (Object.keys(LEAGUE_META) as LeagueKey[]).map((k) => ({
+    key: k, label: LEAGUE_META[k].label,
+  }));
+  const seasonOptions = WKBL_SEASONS.map((s) => ({ key: s, label: s, disabled: s !== "2025-26" }));
 
-  // 리그 탭
-  const LeagueTabs = () => (
-    <div className="px-4 pt-3 pb-0 flex gap-2 overflow-x-auto scrollbar-none">
-      {(Object.keys(LEAGUE_META) as LeagueKey[]).map((lg) => {
-        const m = LEAGUE_META[lg];
-        const active = league === lg;
-        return (
-          <button key={lg} onClick={() => setLeague(lg)}
-            className="shrink-0 px-4 py-2 rounded-full text-[12px] font-black transition-all"
-            style={active ? { backgroundColor: m.color, color: "white" } : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
-            {m.label}
-          </button>
-        );
-      })}
-    </div>
-  );
+  const teamPlayers = selectedTeam ? PLAYERS.filter((p) => p.teamId === selectedTeam.id) : PLAYERS.filter((p) => leagueTeams.some((t) => t.id === p.teamId));
+  const sorted = sortPlayers(teamPlayers, sortKey);
 
-  if (isNat) {
+  // 팀 상세 뷰 (팀 탭에서 팀 카드 클릭 시)
+  if (!isNat && view === "team" && selectedTeam) {
     return (
       <>
-        <SeasonTabs />
-        <LeagueTabs />
-        <NationalTab gender="w" />
+        {/* 뒤로 버튼 */}
+        <div className="px-4 pt-3 pb-1">
+          <button
+            onClick={() => setSelectedTeamId(null)}
+            className="flex items-center gap-1.5 text-xs font-semibold text-zinc-500 active:text-zinc-900 dark:active:text-white transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+            팀 목록
+          </button>
+        </div>
+
+        <TeamCompactHeader team={selectedTeam} />
+
+        {/* 정렬 칩 */}
+        <div className="px-4 pt-3 pb-0 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
+          <p className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest shrink-0 mr-0.5">정렬</p>
+          {SORT_OPTIONS.map(({ key, label }) => (
+            <button key={key} onClick={() => setSortKey(key)}
+              className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold transition-all"
+              style={sortKey === key ? { backgroundColor: selectedTeam.color, color: "white" } : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
+              {label}
+            </button>
+          ))}
+        </div>
+
+        <Section>
+          <div className="flex flex-col gap-2 pt-3">
+            {sorted.map((player) => (
+              <PlayerCard key={player.id} player={player} onClick={() => setSelectedPlayer(player)} />
+            ))}
+          </div>
+        </Section>
+
+        {selectedPlayer && <PlayerDetail player={selectedPlayer} onClose={() => setSelectedPlayer(null)} />}
       </>
     );
   }
 
-  const leagueTeams = TEAMS.filter((t) => t.league === league && PLAYERS.some((p) => p.teamId === t.id));
-
   return (
     <>
-      <SeasonTabs />
-      <LeagueTabs />
+      {/* 셀렉터 바 — 구분 + 시즌 */}
+      <div className="px-4 pt-4 pb-0 flex items-stretch gap-2">
+        <DropdownSelector
+          label="구분"
+          value={LEAGUE_META[league].label}
+          options={leagueOptions}
+          onSelect={(k) => { setLeague(k as LeagueKey); setSelectedTeamId(null); }}
+          accentColor={accentColor}
+        />
+        <DropdownSelector
+          label="시즌"
+          value={season}
+          options={seasonOptions}
+          onSelect={setSeason}
+        />
+      </div>
 
-      {/* 팀 목록 */}
-      <div className="pt-3">
+      {/* 팀 | 선수 세그먼트 + 정렬 칩 (선수일 때만) */}
+      {!isNat && (
+        <div className="px-4 pt-3 pb-0 flex items-center gap-2">
+          <div className="flex items-center gap-0.5 bg-zinc-100 dark:bg-zinc-800 rounded-full p-0.5 shrink-0">
+            {(["team", "player"] as const).map((v) => (
+              <button key={v} onClick={() => setView(v)}
+                className="px-3 py-1 rounded-full text-[11px] font-bold transition-all"
+                style={view === v
+                  ? { backgroundColor: "white", color: "#18181b", boxShadow: "0 1px 3px rgba(0,0,0,0.1)" }
+                  : { color: "#71717a" }}>
+                {v === "team" ? "팀" : "선수"}
+              </button>
+            ))}
+          </div>
+
+          {view === "player" && (
+            <div className="flex gap-1.5 overflow-x-auto scrollbar-none">
+              {SORT_OPTIONS.map(({ key, label }) => (
+                <button key={key} onClick={() => setSortKey(key)}
+                  className="shrink-0 px-2.5 py-1 rounded-full text-[11px] font-bold transition-all"
+                  style={sortKey === key ? { backgroundColor: accentColor, color: "white" } : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 국가대표 */}
+      {isNat && <NationalTab gender="w" />}
+
+      {/* 팀 뷰 — 팀 목록 */}
+      {!isNat && view === "team" && (
+        <div className="pt-3">
+          <Section>
+            <div className="flex flex-col gap-2.5">
+              {leagueTeams.map((team) => (
+                <TeamListCard key={team.id} team={team} onClick={() => setSelectedTeamId(team.id)} />
+              ))}
+            </div>
+          </Section>
+        </div>
+      )}
+
+      {/* 선수 뷰 */}
+      {!isNat && view === "player" && (
         <Section>
-          <div className="flex flex-col gap-2.5">
-            {leagueTeams.map((team) => (
-              <TeamListCard key={team.id} team={team} onClick={() => setSelectedTeam(team)} />
+          <div className="flex flex-col gap-2 pt-3">
+            {sorted.map((player) => (
+              <PlayerCard key={player.id} player={player} onClick={() => setSelectedPlayer(player)} />
             ))}
           </div>
         </Section>
-      </div>
+      )}
+
+      {selectedPlayer && (
+        <PlayerDetail player={selectedPlayer} onClose={() => setSelectedPlayer(null)} />
+      )}
     </>
   );
 }

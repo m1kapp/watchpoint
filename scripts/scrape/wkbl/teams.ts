@@ -42,7 +42,8 @@ function resolveTeamMeta(teamName: string): { teamId: string; nameEn: string } |
 // ─── WKBL 팀 상세 페이지 → 풀네임 파싱 ─────────────────────────────────────
 
 async function fetchFullTeamName(tcode: string): Promise<string | null> {
-  const url = `${WKBL_BASE}/team/intro.asp?tcode=${tcode}`;
+  // WKBL 팀 상세 페이지: /team/teaminfo.asp?team_code={tcode}
+  const url = `${WKBL_BASE}/team/teaminfo.asp?team_code=${tcode}`;
   try {
     const res = await fetch(url, {
       headers: {
@@ -53,12 +54,11 @@ async function fetchFullTeamName(tcode: string): Promise<string | null> {
     if (!res.ok) return null;
     const html = await res.text();
     const $ = cheerio.load(html);
-    // 팀 소개 페이지의 팀명 (h2, h3 등에서 추출)
-    const name =
-      $("h2.tit_team").first().text().trim() ||
-      $(".team_name").first().text().trim() ||
-      $("h2").first().text().trim() ||
-      null;
+    // <h3>신한은행 에스버드</h3> 패턴
+    const name = $("h3").filter((_, el) => {
+      const t = $(el).text().trim();
+      return t.length > 2 && /[가-힣]/.test(t);
+    }).first().text().trim();
     return name || null;
   } catch {
     return null;
@@ -170,7 +170,9 @@ async function main() {
     };
   });
 
-  const outputPath = path.resolve(process.cwd(), "data/wkbl/teams.json");
+  const dataDir = process.env.WKBL_DATA_DIR ?? "data/wkbl";
+  await fs.mkdir(path.resolve(process.cwd(), dataDir), { recursive: true });
+  const outputPath = path.resolve(process.cwd(), `${dataDir}/teams.json`);
   await fs.writeFile(outputPath, JSON.stringify(result, null, 2), "utf-8");
 
   console.log("✅ teams.json 저장 완료:");

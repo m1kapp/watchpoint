@@ -23,17 +23,32 @@ export type CareerTag = "국가대표" | "신인왕" | "MVP" | "베테랑";
 
 export type PlayerTag = RoleTag | StyleTag | ImpactTag | CareerTag;
 
-export interface SeasonStats {
-  games: number | null;
-  mpg: number | null;
-  ppg: number | null;
-  rpg: number | null;
-  apg: number | null;
-  spg: number | null;
-  bpg: number | null;
-  fgPct: number | null;
-  threePct: number | null;
-  ftPct: number | null;
+export interface DraftInfo {
+  year: number;
+  round: number;
+  pick: number;
+}
+
+export interface CareerHighlight {
+  type: "record" | "award";
+  label: string;
+}
+
+export interface CareerSeason {
+  season: string;
+  team: string;
+  games: number;
+  points: number;    // PPG
+  rebounds: number;  // RPG
+  assists: number;   // APG
+  // 상세 스탯 — 현재 시즌에만 채워짐 (이전 시즌은 sumUp 기준 집계 없음)
+  spg?: number | null;
+  bpg?: number | null;
+  fgPct?: number | null;
+  threePct?: number | null;
+  ftPct?: number | null;
+  mpg?: number | null;
+  note?: string;
 }
 
 export interface Player {
@@ -47,5 +62,7 @@ export interface Player {
   imageUrl: string | null;
   bio: PlayerBio;
   tags: PlayerTag[];
-  seasonStats?: SeasonStats | null;
+  draft?: DraftInfo;
+  career_seasons?: CareerSeason[];
+  career_highlights?: CareerHighlight[];
 }

@@ -2,43 +2,49 @@
   {
     "teamId": "samsung",
     "tcode": "03",
-    "teamName": "삼성생명",
+    "teamName": "삼성생명 블루밍스",
     "nameEn": "SAMSUNG LIFE",
-    "naverName": "삼성생명"
+    "naverName": "삼성생명",
+    "stadium": "용인실내체육관"
   },
   {
     "teamId": "shinhan",
     "tcode": "07",
-    "teamName": "신한은행",
+    "teamName": "신한은행 에스버드",
     "nameEn": "SHINHAN BANK",
-    "naverName": "신한은행"
+    "naverName": "신한은행",
+    "stadium": "인천도원체육관"
   },
   {
     "teamId": "woori",
     "tcode": "05",
-    "teamName": "우리은행",
+    "teamName": "우리은행 우리WON",
     "nameEn": "WOORI BANK",
-    "naverName": "우리은행"
+    "naverName": "우리은행",
+    "stadium": "아산이순신체육관"
   },
   {
     "teamId": "hana",
     "tcode": "09",
     "teamName": "하나은행",
     "nameEn": "HANA BANK",
-    "naverName": "하나은행"
+    "naverName": "하나은행",
+    "stadium": "부천체육관"
   },
   {
     "teamId": "bnk",
     "tcode": "11",
     "teamName": "BNK 썸",
     "nameEn": "BNK SUM",
-    "naverName": "BNK 썸"
+    "naverName": "BNK 썸",
+    "stadium": "부산사직실내체육관"
   },
   {
     "teamId": "kb",
     "tcode": "01",
     "teamName": "KB스타즈",
     "nameEn": "KB STARS",
-    "naverName": "KB스타즈"
+    "naverName": "KB스타즈",
+    "stadium": "청주체육관"
   }
 ]

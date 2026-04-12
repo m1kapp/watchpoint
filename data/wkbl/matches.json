@@ -1,222 +1,1300 @@
 [
   {
-    "stage": "플레이오프 1차전",
-    "gameNo": 1,
+    "id": "po-kb-g1",
+    "stage": "플레이오프 1차전 (KB·우리)",
     "date": "2026-04-08",
     "time": "18:59",
     "location": "청주체육관",
-    "leftTeam": {
-      "teamId": "kb",
-      "teamName": "KB스타즈"
-    },
-    "rightTeam": {
-      "teamId": "woori",
-      "teamName": "우리은행"
-    },
+    "leftTeamId": "kb",
+    "rightTeamId": "woori",
     "leftScore": 73,
     "rightScore": 46,
-    "leftWin": true,
-    "rightWin": false,
     "isFinished": true,
+    "gameNo": 1,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=1&ym=202604",
-    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52778"
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52778",
+    "teams": [
+      {
+        "name": "KB스타즈",
+        "rank": 1,
+        "summary": "재건 중인 전통 강호"
+      },
+      {
+        "name": "우리은행",
+        "rank": 4,
+        "summary": "리그 최강 수비 조직력"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 2차전",
-    "gameNo": 2,
+    "id": "po-hs-g1",
+    "stage": "플레이오프 1차전 (하나·삼성)",
     "date": "2026-04-09",
     "time": "19:00",
     "location": "부천체육관",
-    "leftTeam": {
-      "teamId": "hana",
-      "teamName": "하나은행"
-    },
-    "rightTeam": {
-      "teamId": "samsung",
-      "teamName": "삼성생명"
-    },
+    "leftTeamId": "hana",
+    "rightTeamId": "samsung",
     "leftScore": 61,
     "rightScore": 56,
-    "leftWin": true,
-    "rightWin": false,
     "isFinished": true,
+    "gameNo": 2,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=2&ym=202604",
-    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52798"
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52798",
+    "teams": [
+      {
+        "name": "하나은행",
+        "rank": 2,
+        "summary": "공격 밸런스 좋은 상승세 팀"
+      },
+      {
+        "name": "삼성생명",
+        "rank": 3,
+        "summary": "수비 중심 조직력 팀"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 3차전",
-    "gameNo": 3,
+    "id": "po-kb-g2",
+    "stage": "플레이오프 2차전 (KB·우리)",
     "date": "2026-04-10",
     "time": "19:00",
     "location": "청주체육관",
-    "leftTeam": {
-      "teamId": "kb",
-      "teamName": "KB스타즈"
-    },
-    "rightTeam": {
-      "teamId": "woori",
-      "teamName": "우리은행"
-    },
+    "leftTeamId": "kb",
+    "rightTeamId": "woori",
     "leftScore": 78,
     "rightScore": 54,
-    "leftWin": true,
-    "rightWin": false,
     "isFinished": true,
+    "gameNo": 3,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=3&ym=202604",
-    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52845"
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52845",
+    "teams": [
+      {
+        "name": "KB스타즈",
+        "rank": 1,
+        "summary": "재건 중인 전통 강호"
+      },
+      {
+        "name": "우리은행",
+        "rank": 4,
+        "summary": "리그 최강 수비 조직력"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 4차전",
-    "gameNo": 4,
+    "id": "po-hs-g2",
+    "stage": "플레이오프 2차전 (하나·삼성)",
     "date": "2026-04-11",
     "time": "16:00",
     "location": "부천체육관",
-    "leftTeam": {
-      "teamId": "hana",
-      "teamName": "하나은행"
-    },
-    "rightTeam": {
-      "teamId": "samsung",
-      "teamName": "삼성생명"
-    },
+    "leftTeamId": "hana",
+    "rightTeamId": "samsung",
     "leftScore": 74,
     "rightScore": 83,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": true,
+    "gameNo": 4,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=4&ym=202604",
-    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52858"
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52858",
+    "teams": [
+      {
+        "name": "하나은행",
+        "rank": 2,
+        "summary": "공격 밸런스 좋은 상승세 팀"
+      },
+      {
+        "name": "삼성생명",
+        "rank": 3,
+        "summary": "수비 중심 조직력 팀"
+      }
+    ],
+    "coaches": [
+      {
+        "name": "이상범",
+        "team": "하나은행",
+        "career_year": 3,
+        "style": [
+          "빠른 템포",
+          "공격 밸런스"
+        ],
+        "story": "하위권 팀을 플레이오프 진출팀으로 끌어올린 리빌딩 성공 사례",
+        "watch_point": "초반 템포 싸움",
+        "watch_reason": "하나은행은 1쿼터를 잡으면 이긴다. 삼성생명은 1쿼터 실점이 가장 많다.",
+        "evidence": [
+          {
+            "label": "하나 1쿼터 득점 평균",
+            "value": "22.1점",
+            "highlight": true
+          },
+          {
+            "label": "삼성 1쿼터 피실점",
+            "value": "리그 3위"
+          },
+          {
+            "label": "정규시즌 하나 vs 삼성 전적",
+            "value": "2전 2승",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "삼성이 역전승(74-83). 이상범 감독이 직접 \"제가 플랜을 잘못 짰다\"고 인정했다. 1쿼터 우위 여부와 무관하게 삼성 수비 전술에 하나 공격이 무너졌다."
+        }
+      },
+      {
+        "name": "하상윤",
+        "team": "삼성생명",
+        "career_year": 5,
+        "style": [
+          "수비 중심",
+          "조직력"
+        ],
+        "story": "수비 조직력을 기반으로 꾸준히 상위권 유지",
+        "watch_point": "수비 전술 변화",
+        "watch_reason": "정규시즌 전술이 통하지 않았다. 포스트시즌에서 달라져야 한다.",
+        "evidence": [
+          {
+            "label": "정규시즌 삼성 vs 하나 전적",
+            "value": "0승 2패",
+            "highlight": true
+          },
+          {
+            "label": "삼성 평균 실점",
+            "value": "63.4점"
+          },
+          {
+            "label": "하나 공격 효율",
+            "value": "리그 2위"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "삼성 83점 폭발하며 역전승. 하상윤 감독 \"원하는 대로 수비가 이뤄졌다\" 직접 언급. 정규시즌과 다른 집중 수비로 하나 공격을 봉쇄했다."
+        }
+      }
+    ],
+    "players": [
+      {
+        "team": "하나은행",
+        "name": "김정은",
+        "featured": true,
+        "position": "F",
+        "height": "179cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095041.png?ver=241016",
+        "bio": {
+          "birth_year": 1987,
+          "age": 39,
+          "career_year": 20,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "9.3득점 · 6.8리바운드",
+        "stats": {
+          "current_season": {
+            "points": 9.3,
+            "rebounds": 6.8,
+            "assists": 2.4
+          },
+          "previous_season": {
+            "points": 10.1,
+            "rebounds": 6.2,
+            "assists": 2.1
+          }
+        },
+        "stat_diff": {
+          "points": -0.8,
+          "rebounds": 0.6,
+          "assists": 0.3
+        },
+        "career_highlights": [
+          {
+            "type": "record",
+            "label": "WKBL 통산 득점 1위"
+          },
+          {
+            "type": "award",
+            "label": "MVP 수상"
+          }
+        ],
+        "tags": [
+          "레전드",
+          "국가대표",
+          "클러치"
+        ],
+        "description": "리그를 대표하는 베테랑 포워드",
+        "watch_point": "출전 시 분위기 변화",
+        "watch_reason": "이 선수가 10분 이상 출전하는 경기 하나은행 승률이 압도적이다.",
+        "evidence": [
+          {
+            "label": "출전 시 팀 승률",
+            "value": "75%",
+            "highlight": true
+          },
+          {
+            "label": "4Q 출전 시 팀 득점",
+            "value": "+4.0점"
+          },
+          {
+            "label": "빅게임 출전율",
+            "value": "92%"
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "하나은행 74-83 패배. 베테랑의 경험이 이해란의 34점 폭발 앞에서 역부족이었다. 분위기 전환에 실패했다."
+        }
+      },
+      {
+        "team": "하나은행",
+        "name": "진안",
+        "featured": true,
+        "position": "C",
+        "height": "185cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095499.png?ver=241016",
+        "bio": {
+          "birth_year": 1996,
+          "age": 30,
+          "career_year": 6,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "14.8득점 · 8.0리바운드",
+        "stats": {
+          "current_season": {
+            "points": 14.8,
+            "rebounds": 8.0,
+            "assists": 2.0
+          },
+          "previous_season": {
+            "points": 12.5,
+            "rebounds": 7.1,
+            "assists": 1.6
+          }
+        },
+        "stat_diff": {
+          "points": 2.3,
+          "rebounds": 0.9,
+          "assists": 0.4
+        },
+        "career_highlights": [
+          {
+            "type": "record",
+            "label": "리바운드 팀 1위"
+          }
+        ],
+        "tags": [
+          "국가대표",
+          "골밑 핵심",
+          "리바운더"
+        ],
+        "description": "골밑에서 버티는 핵심 센터",
+        "watch_point": "파울 관리",
+        "watch_reason": "파울이 쌓이면 팀 리바운드가 무너진다. 배혜윤이 파울을 끌어내는 선수다.",
+        "evidence": [
+          {
+            "label": "시즌 평균 파울",
+            "value": "4.2개",
+            "highlight": true
+          },
+          {
+            "label": "3파울 이후 팀 리바운드",
+            "value": "–18%"
+          },
+          {
+            "label": "배혜윤 상대 파울 피유도",
+            "value": "평균 3.5개"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "이해란이 8리바운드를 쓸어담으며 삼성이 내선을 장악했다. 파울 누적으로 진안의 리바운드 영향력이 줄어든 것이 하나 패인 중 하나였다."
+        }
+      },
+      {
+        "team": "하나은행",
+        "name": "이이지마 사키",
+        "featured": true,
+        "position": "F",
+        "height": "178cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095912.png?ver=241016",
+        "bio": {
+          "birth_year": 1998,
+          "age": 28,
+          "career_year": 3,
+          "national_team": {
+            "is_national": false
+          }
+        },
+        "stat_summary": "15.0득점 · 6.5리바운드",
+        "stats": {
+          "current_season": {
+            "points": 15.0,
+            "rebounds": 6.5,
+            "assists": 3.0
+          },
+          "previous_season": {
+            "points": 13.2,
+            "rebounds": 5.8,
+            "assists": 2.5
+          }
+        },
+        "stat_diff": {
+          "points": 1.8,
+          "rebounds": 0.7,
+          "assists": 0.5
+        },
+        "tags": [
+          "에이스",
+          "득점원"
+        ],
+        "description": "팀 공격을 책임지는 1옵션",
+        "watch_point": "득점 폭발 여부",
+        "watch_reason": "이 선수가 터지는 날 하나은행이 이긴다. 삼성 상대 전적도 좋다.",
+        "evidence": [
+          {
+            "label": "20점↑ 경기 팀 승률",
+            "value": "100%",
+            "highlight": true
+          },
+          {
+            "label": "삼성전 시즌 평균 득점",
+            "value": "18.5점"
+          },
+          {
+            "label": "최근 5경기 득점",
+            "value": "↑상승세",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "부분적중",
+          "summary": "18점-1리바운드로 분전했지만 20점 마지노선을 넘지 못했다. 삼성 집중마크에 33분을 소화했음에도 팀은 패했다. 예측의 논리(20점 임계점)는 정확했다."
+        }
+      },
+      {
+        "team": "하나은행",
+        "name": "박소희",
+        "featured": true,
+        "position": "G",
+        "height": "170cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095788.png?ver=241016",
+        "bio": {
+          "birth_year": 1998,
+          "age": 28,
+          "career_year": 4,
+          "national_team": {
+            "is_national": false
+          }
+        },
+        "stat_summary": "10.1득점 · 3.5리바운드",
+        "stats": {
+          "current_season": {
+            "points": 10.1,
+            "rebounds": 3.5,
+            "assists": 2.8
+          },
+          "previous_season": {
+            "points": 8.0,
+            "rebounds": 3.0,
+            "assists": 2.2
+          }
+        },
+        "stat_diff": {
+          "points": 2.1,
+          "rebounds": 0.5,
+          "assists": 0.6
+        },
+        "tags": [
+          "식스맨",
+          "흐름 체인저"
+        ],
+        "description": "경기 흐름을 바꾸는 가드",
+        "watch_point": "3점슛",
+        "watch_reason": "외곽이 살면 삼성 수비가 흔들린다.",
+        "evidence": [
+          {
+            "label": "3점슛 성공률",
+            "value": "38.2%",
+            "highlight": true
+          },
+          {
+            "label": "시도 수 (전년 대비)",
+            "value": "+2배↑"
+          },
+          {
+            "label": "연속 2개↑ 시 팀 득점 런",
+            "value": "+9점"
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "삼성 집중 수비가 하나 외곽을 봉쇄했다. 3점슛 찬스가 줄며 흐름을 바꾸지 못했고, 하나는 결국 패배했다."
+        }
+      },
+      {
+        "team": "하나은행",
+        "name": "정예림",
+        "featured": false,
+        "position": "G",
+        "height": "168cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095715.png?ver=241016",
+        "stat_summary": "6.5득점",
+        "tags": [
+          "슈터"
+        ]
+      },
+      {
+        "team": "삼성생명",
+        "name": "이해란",
+        "featured": true,
+        "position": "F",
+        "height": "180cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095778.png?ver=241016",
+        "bio": {
+          "birth_year": 2001,
+          "age": 25,
+          "career_year": 4,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "17.5득점 · 7.0리바운드",
+        "stats": {
+          "current_season": {
+            "points": 17.5,
+            "rebounds": 7.0,
+            "assists": 3.0
+          },
+          "previous_season": {
+            "points": 14.0,
+            "rebounds": 6.2,
+            "assists": 2.5
+          }
+        },
+        "stat_diff": {
+          "points": 3.5,
+          "rebounds": 0.8,
+          "assists": 0.5
+        },
+        "career_highlights": [
+          {
+            "type": "award",
+            "label": "신인왕"
+          }
+        ],
+        "tags": [
+          "에이스",
+          "국가대표",
+          "득점원"
+        ],
+        "description": "리그 득점 상위권 에이스",
+        "watch_point": "득점 흐름",
+        "watch_reason": "이 선수 득점이 삼성 승패를 결정한다.",
+        "evidence": [
+          {
+            "label": "리그 득점 순위",
+            "value": "2위 (17.5점)",
+            "highlight": true
+          },
+          {
+            "label": "15점↑ 시 팀 승률",
+            "value": "80%"
+          },
+          {
+            "label": "15점↓ 시 팀 승률",
+            "value": "20%",
+            "highlight": true
+          },
+          {
+            "label": "하나전 시즌 평균 득점",
+            "value": "19.0점"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "34점-8리바운드 압도적인 퍼포먼스로 삼성 역전승을 이끌었다. 시즌 평균(17.5점)의 두 배 가까운 득점으로 basketkorea 경기 주역에 선정됐다."
+        }
+      },
+      {
+        "team": "삼성생명",
+        "name": "배혜윤",
+        "featured": true,
+        "position": "C",
+        "height": "183cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095115.png?ver=241016",
+        "bio": {
+          "birth_year": 1989,
+          "age": 37,
+          "career_year": 14,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "12.0득점 · 6.5리바운드",
+        "tags": [
+          "베테랑",
+          "골밑 핵심"
+        ],
+        "description": "경험 많은 베테랑 센터",
+        "watch_point": "골밑 싸움",
+        "watch_reason": "진안(6년차) 대 배혜윤(14년차). 리바운드 격차가 승부를 가른다.",
+        "evidence": [
+          {
+            "label": "포스트시즌 경험",
+            "value": "14년 vs 6년",
+            "highlight": true
+          },
+          {
+            "label": "리바운드 격차 시 승률",
+            "value": "+5개 팀이 70% 승"
+          },
+          {
+            "label": "배혜윤 파울 유도",
+            "value": "경기당 3.8개"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "이해란(8리바)과 배혜윤이 내선을 장악하며 삼성이 골밑 싸움을 지배했다. 14년 포스트시즌 경험이 6년차 진안 상대 파울 유도로 이어졌다."
+        }
+      },
+      {
+        "team": "삼성생명",
+        "name": "윤예빈",
+        "featured": true,
+        "position": "G",
+        "height": "173cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095497.png?ver=241016",
+        "bio": {
+          "birth_year": 1998,
+          "age": 28,
+          "career_year": 6
+        },
+        "stat_summary": "11.2득점 · 3.5어시스트",
+        "tags": [
+          "핸들러",
+          "공격 전개"
+        ],
+        "description": "공격을 풀어주는 가드",
+        "watch_point": "경기 조율",
+        "watch_reason": "어시스트 숫자가 삼성의 공격 분산 여부를 보여준다.",
+        "evidence": [
+          {
+            "label": "어시스트 4개↑ 시 공격 효율",
+            "value": "+12%"
+          },
+          {
+            "label": "어시스트 2개↓ 시 패배율",
+            "value": "68%",
+            "highlight": true
+          },
+          {
+            "label": "시즌 평균 어시스트",
+            "value": "3.5개"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "삼성이 83점을 폭발하며 역전승. 이해란 집중마크를 역이용해 공격을 분산시킨 윤예빈의 조율이 삼성 공격 다양성의 핵심이었다."
+        }
+      },
+      {
+        "team": "삼성생명",
+        "name": "강유림",
+        "featured": false,
+        "position": "F",
+        "height": "175cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095713.png?ver=241016",
+        "stat_summary": "수비 역할",
+        "tags": [
+          "수비형"
+        ]
+      }
+    ]
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-kb-g3",
+    "stage": "플레이오프 3차전 (KB·우리)",
     "date": "2026-04-12",
     "time": "16:00",
     "location": "아산이순신체육관",
-    "leftTeam": {
-      "teamId": "woori",
-      "teamName": "우리은행"
-    },
-    "rightTeam": {
-      "teamId": "kb",
-      "teamName": "KB스타즈"
-    },
-    "leftScore": null,
-    "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
-    "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "leftTeamId": "woori",
+    "rightTeamId": "kb",
+    "leftScore": 55,
+    "rightScore": 81,
+    "isFinished": true,
+    "gameNo": 5,
+    "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=5&ym=202604",
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52895",
+    "teams": [
+      {
+        "name": "우리은행",
+        "rank": 4,
+        "summary": "리그 최강 수비 조직력"
+      },
+      {
+        "name": "KB스타즈",
+        "rank": 1,
+        "summary": "재건 중인 전통 강호"
+      }
+    ],
+    "coaches": [
+      {
+        "name": "위성우",
+        "team": "우리은행",
+        "career_year": 8,
+        "style": [
+          "수비 중심",
+          "조직력"
+        ],
+        "story": "2연패 후 원정에서 시리즈 생존을 반드시 만들어야 하는 배수진",
+        "watch_point": "배수진 전술 변화",
+        "watch_reason": "2경기 연속 20점 이상 대패. 같은 전술로는 승산이 없다. 에이스 김단비의 컨디션과 수비 조직 재편이 생존의 열쇠다.",
+        "evidence": [
+          {
+            "label": "1·2차전 평균 실점",
+            "value": "75.5점",
+            "highlight": true
+          },
+          {
+            "label": "정규시즌 KB전 전적",
+            "value": "0승 4패"
+          },
+          {
+            "label": "역대 PO 0-2 후 시리즈 역전 성공",
+            "value": "리그 역사상 0건",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "우리은행 55점에 그치며 3차전도 대패, 0-3 스윕 당했다. 위성우 감독은 경기 후 '모든 건 내 잘못, 좋은 경험이 된 시즌'이라고 말했다."
+        }
+      },
+      {
+        "name": "김완수",
+        "team": "KB스타즈",
+        "career_year": 4,
+        "style": [
+          "공격 템포",
+          "트랜지션"
+        ],
+        "story": "2연승 후 스윕 클로징 기회. 선수들이 완벽하다는 자신감으로 임하는 경기",
+        "watch_point": "스윕 클로징 집중력",
+        "watch_reason": "3전 전승 클로징은 방심이 최대 적이다. 2차전 3쿼터처럼 강한 집중력을 초반부터 유지할 수 있냐가 관건.",
+        "evidence": [
+          {
+            "label": "1·2차전 평균 득실마진",
+            "value": "+28점",
+            "highlight": true
+          },
+          {
+            "label": "2차전 3쿼터 득점",
+            "value": "21점 (상대 11점)"
+          },
+          {
+            "label": "감독 코멘트",
+            "value": "선수들은 완벽, 나만 더 잘하면 돼",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "KB 81-55 대승으로 3-0 스윕 완성. 2경기 연속 압도적 퍼포먼스를 이어가며 챔피언 결정전에 진출했다."
+        }
+      }
+    ],
+    "players": [
+      {
+        "team": "KB스타즈",
+        "name": "박지수",
+        "featured": true,
+        "position": "C",
+        "height": "198cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095533.png?ver=241016",
+        "bio": {
+          "birth_year": 1997,
+          "age": 29,
+          "career_year": 5,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "22.3득점 · 9.1리바운드",
+        "tags": [
+          "에이스",
+          "국가대표",
+          "골밑 핵심"
+        ],
+        "description": "리그 최정상 센터, 국가대표 주전",
+        "watch_point": "내선 완전 장악",
+        "watch_reason": "1·2차전 모두 우리은행 내선을 압도했다. 3차전에도 골밑 지배가 이어지면 KB 스윕은 시간 문제다.",
+        "evidence": [
+          {
+            "label": "시리즈 평균 득점",
+            "value": "24.5점",
+            "highlight": true
+          },
+          {
+            "label": "시리즈 평균 리바운드",
+            "value": "10.5개"
+          },
+          {
+            "label": "1·2차전 우리 내선 실점",
+            "value": "경기당 34점↑",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "3차전에도 골밑을 장악하며 KB가 81점을 폭발시켰다. 3경기 연속 우리은행 내선 압도, 스윕의 핵심이었다."
+        }
+      },
+      {
+        "team": "KB스타즈",
+        "name": "강이슬",
+        "featured": true,
+        "position": "F",
+        "height": "180cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095263.png?ver=241016",
+        "bio": {
+          "birth_year": 1993,
+          "age": 33,
+          "career_year": 11,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "14.2득점 · 5.8리바운드",
+        "tags": [
+          "국가대표",
+          "에이스",
+          "베테랑"
+        ],
+        "description": "국가대표 주장, KB 외곽 공격의 핵심",
+        "watch_point": "외곽 폭발로 쐐기",
+        "watch_reason": "내선(박지수)이 열리면 강이슬의 미드레인지·3점이 터진다. 2차전처럼 외곽이 살면 우리은행 수비는 사방이 뚫린다.",
+        "evidence": [
+          {
+            "label": "박지수 20점↑ 경기 강이슬 평균 득점",
+            "value": "16.8점",
+            "highlight": true
+          },
+          {
+            "label": "시즌 3점슛 성공률",
+            "value": "36.4%"
+          },
+          {
+            "label": "포스트시즌 경력",
+            "value": "11년차 베테랑",
+            "highlight": true
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "박지수 내선 우위 속에 강이슬도 외곽에서 가담해 KB 81점 폭발. 우리은행 수비는 박-강 동시 견제에 완전히 무너졌다."
+        }
+      },
+      {
+        "team": "우리은행",
+        "name": "김단비",
+        "featured": true,
+        "position": "G",
+        "height": "173cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095104.png?ver=241016",
+        "bio": {
+          "birth_year": 1990,
+          "age": 36,
+          "career_year": 14,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "16.1득점 · 4.2어시스트",
+        "tags": [
+          "에이스",
+          "국가대표",
+          "베테랑"
+        ],
+        "description": "우리은행 공격의 절대적 핵심",
+        "watch_point": "에이스 부상 변수",
+        "watch_reason": "김단비의 컨디션이 우리은행 생존의 전부다. 부상 상태로 얼마나 뛸 수 있냐에 따라 경기 양상 자체가 달라진다.",
+        "evidence": [
+          {
+            "label": "김단비 출전 시 우리은행 승률",
+            "value": "71%",
+            "highlight": true
+          },
+          {
+            "label": "김단비 결장 시 우리은행 평균 득점",
+            "value": "52.3점↓",
+            "highlight": true
+          },
+          {
+            "label": "시즌 평균 득점",
+            "value": "16.1점"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "김단비 부상 영향으로 우리은행 공격이 55점에 그쳤다. 에이스의 공백이 그대로 팀 득점 붕괴로 이어지며 예측이 정확히 맞았다."
+        }
+      }
+    ]
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-hs-g3",
+    "stage": "플레이오프 3차전 (하나·삼성)",
     "date": "2026-04-13",
     "time": "19:00",
     "location": "용인실내체육관",
-    "leftTeam": {
-      "teamId": "samsung",
-      "teamName": "삼성생명"
-    },
-    "rightTeam": {
-      "teamId": "hana",
-      "teamName": "하나은행"
-    },
+    "leftTeamId": "samsung",
+    "rightTeamId": "hana",
     "leftScore": null,
     "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "gameNo": null,
+    "gameRecordUrl": null,
+    "photoUrl": null,
+    "teams": [
+      {
+        "name": "하나은행",
+        "rank": 2,
+        "summary": "시리즈 주도권 유지 노린다"
+      },
+      {
+        "name": "삼성생명",
+        "rank": 3,
+        "summary": "1차전 분석 후 반격 예고"
+      }
+    ],
+    "coaches": [
+      {
+        "name": "이상범",
+        "team": "하나은행",
+        "career_year": 3,
+        "style": [
+          "원정 위기관리",
+          "교체 타이밍"
+        ],
+        "story": "2차전 4쿼터에서 역전을 허용하며 무너진 하나. 용인 원정 3차전에서 후반 집중력 회복이 과제",
+        "watch_point": "4쿼터 버팀목",
+        "watch_reason": "2차전은 4쿼터 삼성이 26점을 퍼부으며 역전됐다. 원정 관중 압박이 더해지는 3차전, 타임아웃 타이밍과 교체 운용이 하나 승패를 가른다. 후반 파울 관리도 핵심.",
+        "evidence": [
+          {
+            "label": "2차전 4쿼터 실점",
+            "value": "26점",
+            "highlight": true
+          },
+          {
+            "label": "하나 4쿼터 평균 실점 (정규)",
+            "value": "리그 3위권"
+          },
+          {
+            "label": "정예림 투입 타이밍",
+            "value": "1차전 분수령"
+          }
+        ]
+      },
+      {
+        "name": "하상윤",
+        "team": "삼성생명",
+        "career_year": 5,
+        "style": [
+          "홈 이점",
+          "이해란 중심 공격"
+        ],
+        "story": "이해란 34점 기세를 홈 용인에서 연결. 역대 1승 1패 시리즈에서 3차전 홈팀이 주도권 잡는 경우가 많다",
+        "watch_point": "홈코트 기세 연결",
+        "watch_reason": "이해란 34점 인생경기로 시리즈를 원점으로 돌렸다. 용인 홈에서 열리는 3차전은 삼성에게 절호의 기회. 나나미와 배혜윤이 이해란 부담을 얼마나 분담하느냐가 승부처.",
+        "evidence": [
+          {
+            "label": "이해란 2차전 득점",
+            "value": "34점 (PO 최고)"
+          },
+          {
+            "label": "삼성 홈 정규시즌 승률",
+            "value": "14승 1패",
+            "highlight": true
+          },
+          {
+            "label": "이해란+나나미 합산 2차전",
+            "value": "47점 8어시"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "team": "하나은행",
+        "name": "이이지마 사키",
+        "featured": true,
+        "position": "F",
+        "height": "178cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095912.png?ver=241016",
+        "bio": {
+          "birth_year": 1998,
+          "age": 28,
+          "career_year": 3,
+          "national_team": {
+            "is_national": false
+          }
+        },
+        "stat_summary": "15.0득점 · 6.3리바운드",
+        "tags": [
+          "에이스",
+          "득점원"
+        ],
+        "description": "팀 공격을 책임지는 1옵션",
+        "watch_point": "삼성 집중마크 돌파",
+        "watch_reason": "2차전 18점으로 상대적으로 조용했지만 삼성의 집중마크 때문이었다. 3차전 하나 공격 다양성이 살아나려면 사키가 집중마크를 뚫거나 동료를 살리는 게임을 해야 한다.",
+        "evidence": [
+          {
+            "label": "정규시즌 평균",
+            "value": "15.0득점 · 50.8% FG"
+          },
+          {
+            "label": "2차전 득점",
+            "value": "18점 (집중마크 대비 선방)"
+          },
+          {
+            "label": "하나 사키 20점↑ 경기 시즌 전적",
+            "value": "9승 2패",
+            "highlight": true
+          }
+        ]
+      },
+      {
+        "team": "하나은행",
+        "name": "진안",
+        "featured": true,
+        "position": "C",
+        "height": "185cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095499.png?ver=241016",
+        "bio": {
+          "birth_year": 1996,
+          "age": 30,
+          "career_year": 6,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "14.8득점 · 9.3리바운드",
+        "tags": [
+          "국가대표",
+          "골밑 핵심",
+          "리바운더"
+        ],
+        "description": "골밑에서 버티는 핵심 센터",
+        "watch_point": "3경기 연속 더블더블",
+        "watch_reason": "1차전 12점 11리바, 2차전 14점 9리바. 시리즈 내내 골밑을 장악하고 있다. 3차전에서도 배혜윤을 압도하면 하나가 내곽에서 우위를 점한다. 하나의 리바운드 우위 경기는 시즌 전적 압도적.",
+        "evidence": [
+          {
+            "label": "PO 평균 (2경기)",
+            "value": "13점 10리바"
+          },
+          {
+            "label": "정규시즌 리바운드",
+            "value": "9.3개 (팀 1위)",
+            "highlight": true
+          },
+          {
+            "label": "하나 리바운드 우위 경기 전적",
+            "value": "13승 1패"
+          }
+        ]
+      },
+      {
+        "team": "하나은행",
+        "name": "정예림",
+        "featured": true,
+        "position": "G",
+        "height": "168cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095715.png?ver=241016",
+        "bio": {
+          "birth_year": 2003,
+          "age": 23,
+          "career_year": 2,
+          "national_team": {
+            "is_national": false
+          }
+        },
+        "stat_summary": "3.9득점 · 4.3리바운드",
+        "tags": [
+          "식스맨",
+          "흐름 체인저"
+        ],
+        "description": "예상 밖의 폭발력을 가진 벤치 자원",
+        "watch_point": "히든카드 재점화",
+        "watch_reason": "정규시즌 평균 3.9점이지만 1차전에서 16점을 폭발시키며 하나 승리의 숨은 주역이 됐다. 삼성이 사키·진안에 집중하면 정예림이 다시 터질 공간이 생긴다.",
+        "evidence": [
+          {
+            "label": "정규시즌 평균",
+            "value": "3.9점"
+          },
+          {
+            "label": "1차전 득점",
+            "value": "16점 (하나 2위)",
+            "highlight": true
+          },
+          {
+            "label": "3점슛 성공률 (정규)",
+            "value": "28.9%"
+          }
+        ]
+      },
+      {
+        "team": "삼성생명",
+        "name": "이해란",
+        "featured": true,
+        "position": "F",
+        "height": "180cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095778.png?ver=241016",
+        "bio": {
+          "birth_year": 2001,
+          "age": 25,
+          "career_year": 4,
+          "national_team": {
+            "is_national": true,
+            "level": "A대표팀"
+          }
+        },
+        "stat_summary": "17.4득점 · 7.6리바운드",
+        "tags": [
+          "에이스",
+          "국가대표",
+          "득점원"
+        ],
+        "description": "리그 득점 상위권 에이스",
+        "watch_point": "34점 이후 연속 폭발",
+        "watch_reason": "1차전 15점으로 억눌렸다가 2차전 34점 폭발. 3점슛 없이도 3점차 이상의 결정적 기여를 해냈다. 하나의 집중마크가 강해질수록 이해란이 얼마나 폭발할지가 시리즈 승부처.",
+        "evidence": [
+          {
+            "label": "2차전 득점",
+            "value": "34점 (3점슛 0개)",
+            "highlight": true
+          },
+          {
+            "label": "정규시즌 평균",
+            "value": "17.4점 · FG 48.5%"
+          },
+          {
+            "label": "이해란 20점↑ 시 삼성 승률",
+            "value": "시즌 9승 1패"
+          }
+        ]
+      },
+      {
+        "team": "삼성생명",
+        "name": "하마니시 나나미",
+        "featured": true,
+        "position": "G",
+        "height": "168cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_096028.png?ver=241016",
+        "bio": {
+          "birth_year": 1999,
+          "age": 27,
+          "career_year": 3,
+          "national_team": {
+            "is_national": false
+          }
+        },
+        "stat_summary": "3.4득점 · 1.8어시스트",
+        "tags": [
+          "흐름 체인저",
+          "공격 전개"
+        ],
+        "description": "예상 외 폭발로 시리즈 흔든 가드",
+        "watch_point": "조커 연속 활약",
+        "watch_reason": "정규시즌 평균 3.4점의 나나미가 2차전에서 13점 4어시를 기록하며 이해란과 함께 삼성 승리를 이끌었다. 하나가 이해란에 집중마크를 걸면 나나미의 공간이 다시 열린다.",
+        "evidence": [
+          {
+            "label": "정규시즌 평균",
+            "value": "3.4점"
+          },
+          {
+            "label": "2차전 득점",
+            "value": "13점 4어시",
+            "highlight": true
+          },
+          {
+            "label": "나나미 활약 경기 삼성 전적",
+            "value": "이해란과 합산 47점"
+          }
+        ]
+      },
+      {
+        "team": "삼성생명",
+        "name": "배혜윤",
+        "featured": false,
+        "position": "C",
+        "height": "183cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095115.png?ver=241016",
+        "stat_summary": "7.3득점 · 3.8리바운드",
+        "tags": [
+          "베테랑",
+          "골밑 핵심"
+        ]
+      },
+      {
+        "team": "삼성생명",
+        "name": "윤예빈",
+        "featured": false,
+        "position": "G",
+        "height": "173cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095497.png?ver=241016",
+        "stat_summary": "5.1득점 · 1.6어시스트",
+        "tags": [
+          "핸들러",
+          "공격 전개"
+        ]
+      },
+      {
+        "team": "하나은행",
+        "name": "박진영",
+        "featured": false,
+        "position": "G",
+        "height": "170cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095832.png?ver=241016",
+        "stat_summary": "4.9득점",
+        "tags": [
+          "식스맨"
+        ]
+      }
+    ]
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-kb-g4",
+    "stage": "플레이오프 4차전 (KB·우리)",
     "date": "2026-04-14",
     "time": "19:00",
     "location": "아산이순신체육관",
-    "leftTeam": {
-      "teamId": "woori",
-      "teamName": "우리은행"
-    },
-    "rightTeam": {
-      "teamId": "kb",
-      "teamName": "KB스타즈"
-    },
+    "leftTeamId": "woori",
+    "rightTeamId": "kb",
     "leftScore": null,
     "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "cancelled": true,
+    "cancelReason": "KB 3-0 시리즈 클로즈",
+    "gameNo": null,
+    "gameRecordUrl": null,
+    "photoUrl": null,
+    "teams": [
+      {
+        "name": "우리은행",
+        "rank": 4,
+        "summary": "리그 최강 수비 조직력"
+      },
+      {
+        "name": "KB스타즈",
+        "rank": 1,
+        "summary": "재건 중인 전통 강호"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-hs-g4",
+    "stage": "플레이오프 4차전 (하나·삼성)",
     "date": "2026-04-15",
     "time": "19:00",
     "location": "용인실내체육관",
-    "leftTeam": {
-      "teamId": "samsung",
-      "teamName": "삼성생명"
-    },
-    "rightTeam": {
-      "teamId": "hana",
-      "teamName": "하나은행"
-    },
+    "leftTeamId": "samsung",
+    "rightTeamId": "hana",
     "leftScore": null,
     "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "gameNo": null,
+    "gameRecordUrl": null,
+    "photoUrl": null,
+    "teams": [
+      {
+        "name": "삼성생명",
+        "rank": 3,
+        "summary": "시리즈 생존을 위한 배수진"
+      },
+      {
+        "name": "하나은행",
+        "rank": 2,
+        "summary": "마무리 투구, 클로징 노린다"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-kb-g5",
+    "stage": "플레이오프 5차전 (KB·우리)",
     "date": "2026-04-16",
     "time": "19:00",
     "location": "청주체육관",
-    "leftTeam": {
-      "teamId": "kb",
-      "teamName": "KB스타즈"
-    },
-    "rightTeam": {
-      "teamId": "woori",
-      "teamName": "우리은행"
-    },
+    "leftTeamId": "kb",
+    "rightTeamId": "woori",
     "leftScore": null,
     "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "cancelled": true,
+    "cancelReason": "KB 3-0 시리즈 클로즈",
+    "gameNo": null,
+    "gameRecordUrl": null,
+    "photoUrl": null,
+    "teams": [
+      {
+        "name": "KB스타즈",
+        "rank": 1,
+        "summary": "재건 중인 전통 강호"
+      },
+      {
+        "name": "우리은행",
+        "rank": 4,
+        "summary": "리그 최강 수비 조직력"
+      }
+    ],
+    "coaches": [],
+    "players": []
   },
   {
-    "stage": "플레이오프 null차전",
-    "gameNo": null,
+    "id": "po-hs-g5",
+    "stage": "플레이오프 5차전 (하나·삼성)",
     "date": "2026-04-17",
     "time": "19:00",
     "location": "부천체육관",
-    "leftTeam": {
-      "teamId": "hana",
-      "teamName": "하나은행"
-    },
-    "rightTeam": {
-      "teamId": "samsung",
-      "teamName": "삼성생명"
-    },
+    "leftTeamId": "hana",
+    "rightTeamId": "samsung",
     "leftScore": null,
     "rightScore": null,
-    "leftWin": false,
-    "rightWin": true,
     "isFinished": false,
-    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
-    "photoUrl": null
+    "gameNo": null,
+    "gameRecordUrl": null,
+    "photoUrl": null,
+    "teams": [
+      {
+        "name": "하나은행",
+        "rank": 2,
+        "summary": "승자독식 최종전"
+      },
+      {
+        "name": "삼성생명",
+        "rank": 3,
+        "summary": "극적 역전 시리즈 노린다"
+      }
+    ],
+    "coaches": [],
+    "players": []
   }
 ]

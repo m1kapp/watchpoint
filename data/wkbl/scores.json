@@ -1133,10 +1133,10 @@
     "time": "16:00",
     "home": "우리은행",
     "away": "KB스타즈",
-    "homeScore": 0,
-    "awayScore": 0,
-    "winner": null,
-    "status": "upcoming",
+    "homeScore": 55,
+    "awayScore": 81,
+    "winner": "away",
+    "status": "result",
     "stadium": "아산이순신체육관"
   },
   {
@@ -1152,18 +1152,6 @@
     "stadium": "용인실내체육관"
   },
   {
-    "gameId": "20260414046037",
-    "date": "2026-04-14",
-    "time": "19:00",
-    "home": "우리은행",
-    "away": "KB스타즈",
-    "homeScore": 0,
-    "awayScore": 0,
-    "winner": null,
-    "status": "upcoming",
-    "stadium": "아산이순신체육관"
-  },
-  {
     "gameId": "20260415046038",
     "date": "2026-04-15",
     "time": "19:00",
@@ -1174,18 +1162,6 @@
     "winner": null,
     "status": "upcoming",
     "stadium": "용인실내체육관"
-  },
-  {
-    "gameId": "20260416046039",
-    "date": "2026-04-16",
-    "time": "19:00",
-    "home": "KB스타즈",
-    "away": "우리은행",
-    "homeScore": 0,
-    "awayScore": 0,
-    "winner": null,
-    "status": "upcoming",
-    "stadium": "청주체육관"
   },
   {
     "gameId": "202604170460310",

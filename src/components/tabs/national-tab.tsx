@@ -20,9 +20,9 @@ const KR_BLUE = "#003478";
 
 interface NationalPlayer {
   name: string;
-  pno: string;
-  level: "A대표팀" | "국가대표 후보";
-  wkblTeamId: string;
+  pno: string | null;
+  level?: "A대표팀" | "국가대표 후보";
+  wkblTeamId: string | null;
   captain?: boolean;
   overseas?: string;
 }
@@ -43,6 +43,8 @@ interface NationalTeamDef {
   sub: string;
   color: string;
   emoji: string;
+  current?: boolean;
+  result?: string | null;
   ranking?: string;
   recentResult?: string;
   hasData: boolean;
@@ -61,10 +63,35 @@ interface NationalTeamGroup {
   teams: NationalTeamDef[];
 }
 
-// ─── 여자 A대표팀 데이터 (data/wkbl/national-team.json, national-tournaments.json) ──
+// ─── 여자 A대표팀 — 대회별 로스터 목록 ──────────────────────────────────────
 
-const W_A_ROSTER = nationalTeamData.roster as NationalPlayer[];
 const W_A_TOURNAMENTS = tournamentsData as TournamentRecord[];
+
+const W_A_TEAMS: NationalTeamDef[] = nationalTeamData.rosters.map((r, i) => {
+  const dateLine = r.dateRange ?? r.date;
+  const sub = r.venue ? `${dateLine} · ${r.venue}` : `${dateLine} · ${r.players.length}명`;
+  return {
+  id: `w-a-${r.date}`,
+  name: r.tournament,
+  sub,
+  color: KR_RED,
+  emoji: "🏀",
+  current: r.current,
+  result: r.result ?? null,
+  ranking: r.current ? "세계 15위" : undefined,
+  hasData: true,
+  headerTitle: "대한민국 여자농구",
+  headerSub: r.tournament,
+  roster: r.players as NationalPlayer[],
+  tournaments: i === 0 ? W_A_TOURNAMENTS : undefined,
+  tournamentSources: i === 0
+    ? [
+        { label: "위키백과", url: "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%97%AC%EC%9E%90_%EB%86%8D%EA%B5%AC_%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80" },
+        { label: "FIBA", url: "https://www.fiba.basketball" },
+      ]
+    : undefined,
+  };
+});
 
 // ─── 국가대표팀 목록 ──────────────────────────────────────────────────────────
 
@@ -73,44 +100,7 @@ const NATIONAL_TEAM_GROUPS: NationalTeamGroup[] = [
     id: "w",
     label: "여자농구",
     color: KR_RED,
-    teams: [
-      {
-        id: "w-a",
-        name: "A대표팀",
-        sub: "아시안컵 · 아시안게임 · 세계선수권 · 올림픽",
-        color: KR_RED,
-        emoji: "🏀",
-        ranking: "세계 15위",
-        recentResult: "'25 아시안컵 4위",
-        hasData: true,
-        headerTitle: "대한민국 여자농구",
-        headerSub: "'25 아시안컵 4위 · 아시안컵 금메달 12회",
-        roster: W_A_ROSTER,
-        tournaments: W_A_TOURNAMENTS,
-        tournamentSources: [
-          { label: "위키백과", url: "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%97%AC%EC%9E%90_%EB%86%8D%EA%B5%AC_%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80" },
-          { label: "FIBA", url: "https://www.fiba.basketball" },
-        ],
-      },
-      { id: "w-u19",  name: "U-19",         sub: "FIBA U19 Women's World Cup",    color: KR_RED,    emoji: "🌱", hasData: false },
-      { id: "w-u18",  name: "U-18",         sub: "FIBA U18 Women's Asia Cup",     color: KR_RED,    emoji: "🌱", hasData: false },
-      { id: "w-u17",  name: "U-17",         sub: "FIBA U17 Women's World Cup",    color: KR_RED,    emoji: "🌱", hasData: false },
-      { id: "w-3x3",  name: "3x3",          sub: "FIBA 3x3 Women's World Cup",    color: "#8B5CF6", emoji: "3️⃣", hasData: false },
-      { id: "w-univ", name: "유니버시아드", sub: "World University Games",        color: "#059669", emoji: "🎓", hasData: false },
-    ],
-  },
-  {
-    id: "m",
-    label: "남자농구",
-    color: KR_BLUE,
-    teams: [
-      { id: "m-a",    name: "A대표팀",       sub: "아시안컵 · 아시안게임 · 세계선수권 · 올림픽", color: KR_BLUE,   emoji: "🏀", ranking: "세계 28위", hasData: false },
-      { id: "m-u19",  name: "U-19",          sub: "FIBA U19 World Cup",            color: KR_BLUE,   emoji: "🌱", hasData: false },
-      { id: "m-u18",  name: "U-18",          sub: "FIBA U18 Asia Cup",             color: KR_BLUE,   emoji: "🌱", hasData: false },
-      { id: "m-u17",  name: "U-17",          sub: "FIBA U17 World Cup",            color: KR_BLUE,   emoji: "🌱", hasData: false },
-      { id: "m-3x3",  name: "3x3",           sub: "FIBA 3x3 World Cup",            color: "#8B5CF6", emoji: "3️⃣", hasData: false },
-      { id: "m-univ", name: "유니버시아드",  sub: "World University Games",        color: "#059669", emoji: "🎓", hasData: false },
-    ],
+    teams: W_A_TEAMS,
   },
 ];
 
@@ -123,28 +113,15 @@ function NationalTeamListCard({ team, onClick }: { team: NationalTeamDef; onClic
       className="w-full text-left bg-white dark:bg-zinc-900 rounded-2xl active:scale-[0.98] transition-all"
       style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}
     >
-      <div className="px-4 py-4 flex items-start gap-3.5">
-        <div
-          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-xl mt-0.5"
-          style={{ backgroundColor: `${team.color}18` }}
-        >
-          {team.emoji}
-        </div>
+      <div className="px-4 py-4 flex items-center gap-3">
         <div className="flex-1 min-w-0">
           <p className="text-[15px] font-black text-zinc-900 dark:text-white leading-tight">🇰🇷 {team.name}</p>
-          <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-0.5 leading-snug">{team.sub}</p>
-          {team.hasData && (team.ranking || team.recentResult) && (
-            <div className="flex items-center gap-2 mt-2">
-              {team.ranking && (
-                <span className="text-sm font-black tabular-nums" style={{ color: team.color }}>{team.ranking}</span>
-              )}
-              {team.ranking && team.recentResult && (
-                <span className="text-zinc-300 dark:text-zinc-600 text-xs">·</span>
-              )}
-              {team.recentResult && (
-                <span className="text-sm font-black text-zinc-900 dark:text-white">{team.recentResult}</span>
-              )}
-            </div>
+          <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-0.5">{team.sub}</p>
+          {team.result && (
+            <p className="text-[13px] font-black mt-1.5" style={{ color: team.color }}>{team.result}</p>
+          )}
+          {team.current && team.ranking && (
+            <p className="text-[13px] font-black mt-1.5 text-zinc-400 dark:text-zinc-500">{team.ranking}</p>
           )}
         </div>
         <div className="shrink-0 mt-1">
@@ -183,10 +160,10 @@ function NationalTeamDetail({
   const players = roster
     .map((nat) => PLAYERS.find((p) => p.id === `${nat.wkblTeamId}-${nat.pno}`))
     .filter((p): p is Player => p !== undefined);
+  const overseasPlayers = roster.filter((nat) => nat.wkblTeamId === null);
 
-  const avgHeight = players.length
-    ? Math.round(players.reduce((s, p) => s + (parseFloat(p.height) || 0), 0) / players.length * 10) / 10
-    : 0;
+  const allHeights = [...players.map((p) => parseFloat(p.height) || 0), ...overseasPlayers.map((p) => parseFloat(p.height) || 0)].filter(Boolean);
+  const avgHeight = allHeights.length ? Math.round(allHeights.reduce((s, h) => s + h, 0) / allHeights.length * 10) / 10 : 0;
   const avgAge = players.length
     ? Math.round(players.reduce((s, p) => s + p.bio.age, 0) / players.length * 10) / 10
     : 0;
@@ -242,7 +219,7 @@ function NationalTeamDetail({
           <div className="flex border-t border-zinc-100 dark:border-zinc-800">
             <div className="flex-1 px-3 py-2.5 text-center">
               <p className="text-[10px] text-zinc-400 dark:text-zinc-500">등록선수</p>
-              <p className="text-base font-black text-zinc-900 dark:text-white tabular-nums">{players.length}명</p>
+              <p className="text-base font-black text-zinc-900 dark:text-white tabular-nums">{players.length + overseasPlayers.length}명</p>
             </div>
             <div className="w-px bg-zinc-100 dark:bg-zinc-800" />
             <div className="flex-1 px-3 py-2.5 text-center">
@@ -284,12 +261,34 @@ function NationalTeamDetail({
         </div>
       </div>
       <Section>
-        {sorted.length === 0 ? (
+        {sorted.length === 0 && overseasPlayers.length === 0 ? (
           <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center py-12">선수 정보 준비 중입니다</p>
         ) : (
           <div className="flex flex-col gap-2">
             {sorted.map((player) => (
               <PlayerCard key={player.id} player={player} onClick={() => setSelected(player)} />
+            ))}
+            {overseasPlayers.map((nat) => (
+              <div
+                key={nat.name}
+                className="w-full text-left bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 overflow-hidden"
+              >
+                <div className="flex items-stretch gap-0">
+                  <div className="w-16 self-stretch shrink-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 text-zinc-400 font-black text-lg">
+                    {nat.name[0]}
+                  </div>
+                  <div className="flex-1 min-w-0 px-3 py-2.5 flex flex-col justify-center">
+                    <div className="flex items-center gap-1.5">
+                      <p className="text-sm font-black text-zinc-900 dark:text-white leading-none">{nat.name}</p>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-violet-100 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400">해외리그</span>
+                    </div>
+                    <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1">{nat.height} · {nat.position}</p>
+                  </div>
+                  <div className="w-14 shrink-0 flex items-center justify-center border-l border-zinc-100 dark:border-zinc-800">
+                    <span className="text-2xl font-black tabular-nums leading-none text-zinc-300 dark:text-zinc-600">{nat.number}</span>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         )}

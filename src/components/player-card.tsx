@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import type { Player } from "@/lib/types";
-import { TAG_COLORS } from "@/lib/data";
+import { TAG_COLORS, TEAMS } from "@/lib/data";
 import { TEAM_LOGOS } from "@/lib/matches";
-import { positionColor } from "@/lib/utils";
+import { positionLabel } from "@/lib/utils";
 
 interface PlayerCardProps {
   player: Player;
@@ -12,10 +12,10 @@ interface PlayerCardProps {
 }
 
 export function PlayerCard({ player, onClick }: PlayerCardProps) {
-  const { name, position, height, number, team, imageUrl, bio, tags } = player;
+  const { name, position, height, number, team, teamId, imageUrl, bio, tags } = player;
   const { age, career_year, birth_year, national_team } = bio;
   const visibleTags = tags.slice(0, 3);
-  const posColor = positionColor(position);
+  const teamColor = TEAMS.find((t) => t.id === teamId)?.color ?? "#6b7280";
   const teamLogo = TEAM_LOGOS[team];
 
   return (
@@ -25,7 +25,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
     >
       <div className="flex items-stretch gap-0">
         {/* 프로필 이미지 */}
-        <div className="w-16 h-16 shrink-0 relative">
+        <div className="w-16 self-stretch shrink-0 relative">
           {imageUrl ? (
             <Image
               src={imageUrl}
@@ -38,7 +38,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
           ) : (
             <div
               className="w-full h-full flex items-center justify-center text-white font-black text-lg"
-              style={{ backgroundColor: posColor }}
+              style={{ backgroundColor: teamColor }}
             >
               {name[0]}
             </div>
@@ -46,9 +46,9 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
           {/* 포지션 뱃지 */}
           <div
             className="absolute bottom-0 left-0 right-0 text-center text-[9px] font-black text-white py-0.5"
-            style={{ backgroundColor: `${posColor}cc` }}
+            style={{ backgroundColor: `${teamColor}cc` }}
           >
-            {position}
+            {positionLabel(position)}
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
         {/* 팀 로고 + 등번호 */}
         <div
           className="w-14 shrink-0 flex flex-col items-center justify-center gap-1.5 border-l border-zinc-100 dark:border-zinc-800"
-          style={{ backgroundColor: `${posColor}0d` }}
+          style={{ backgroundColor: `${teamColor}0d` }}
         >
           {teamLogo && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -88,7 +88,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
           )}
           <span
             className="text-2xl font-black tabular-nums leading-none"
-            style={{ color: posColor }}
+            style={{ color: teamColor }}
           >
             {number}
           </span>
