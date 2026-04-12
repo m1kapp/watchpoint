@@ -11,9 +11,19 @@ const pretendard = localFont({
   weight: "45 920",
 });
 
+const BASE_URL = "https://watchpoint.m1k.app";
+
 export const metadata: Metadata = {
-  title: "Watchpoint — 선수 프로필",
-  description: "국가대표 경력과 태그로 한눈에 보는 선수 프로필",
+  title: { default: "Watchpoint", template: "%s | Watchpoint" },
+  description: "WKBL 여자농구 관전 도우미 — 경기 관전포인트·선수 프로필",
+  metadataBase: new URL(BASE_URL),
+  openGraph: {
+    siteName: "Watchpoint",
+    locale: "ko_KR",
+    type: "website",
+    images: [{ url: `/og`, width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
