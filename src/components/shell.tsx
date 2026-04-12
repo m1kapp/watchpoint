@@ -172,8 +172,8 @@ export function Shell({
           )}
           <div className="flex items-center gap-1.5">
             {headerRightProp}
-            <a href="https://m1k.app/watchpoint" target="_blank" rel="noopener noreferrer" className="flex items-center opacity-70 hover:opacity-100 transition-opacity">
-              <img alt="Hits" src="https://m1k.app/badge/watchpoint.svg" style={{ filter: isDark ? "invert(1)" : undefined }} />
+            <a href="https://m1k.app/gg" target="_blank" rel="noopener noreferrer" className="flex items-center opacity-70 hover:opacity-100 transition-opacity">
+              <img alt="Hits" src="https://m1k.app/badge/gg.svg" style={{ filter: isDark ? "invert(1)" : undefined }} />
             </a>
             <ShareButton />
             <span className="hidden">{darkBtn}</span>
