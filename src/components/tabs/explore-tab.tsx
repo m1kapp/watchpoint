@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import Image from "next/image";
 import { Section } from "@m1kapp/ui";
 import { MATCHES, TAG_COLORS, TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { TEAMS } from "@/lib/data";
 import { PlayerDetailSheet } from "@/components/player-detail-sheet";
 import type { MatchData, MatchPlayer, Evidence } from "@/lib/match-types";
 
@@ -22,59 +24,71 @@ function MatchListCard({ match, onClick }: { match: MatchWithId; onClick: () => 
   const featuredCount = players.filter((p) => p.featured).length;
   const dateObj = new Date(m.date);
   const isToday = m.date === new Date().toISOString().slice(0, 10);
-  const dateLabel = isToday ? "오늘" : `${dateObj.getMonth() + 1}월 ${dateObj.getDate()}일`;
+  const DAYS = ["일", "월", "화", "수", "목", "금", "토"];
+  const dateLabel = `${dateObj.getMonth() + 1}월 ${dateObj.getDate()}일 (${DAYS[dateObj.getDay()]})`;
 
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white dark:bg-zinc-900 rounded-2xl active:scale-[0.98] transition-all"
+      className="w-full text-left bg-white dark:bg-zinc-900 rounded-2xl active:scale-[0.98] transition-all overflow-hidden"
       style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07), 0 1px 0 rgba(0,0,0,0.03)" }}
     >
       {/* 스테이지 헤더 */}
-      <div className="px-4 pt-4 pb-2.5 flex items-center justify-between">
-        <div className="flex items-center gap-1.5">
-          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900">
-            {m.stage}
-          </span>
-        </div>
-        <span className={`text-[11px] font-semibold ${isToday ? "text-emerald-500" : "text-zinc-400 dark:text-zinc-500"}`}>
-          {dateLabel} {m.time}
+      <div className="px-4 pt-3.5 pb-3 flex items-center justify-between">
+        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900">
+          {m.stage}
         </span>
+        <span className="text-[11px] font-semibold text-zinc-500 dark:text-zinc-400">관전 포인트 {featuredCount + 2}개 →</span>
       </div>
 
-      {/* VS 구역 */}
-      <div className="flex items-stretch px-4 gap-2.5 pb-3.5">
+      {/* 날짜 — VS 구역 위 */}
+      <div className="px-4 pb-2 flex items-center gap-1.5">
+        {isToday && <span className="px-1.5 py-0.5 rounded-full bg-emerald-500 text-white text-[10px] font-black">오늘</span>}
+        <span className="text-[11px] font-semibold text-zinc-400 dark:text-zinc-500">{dateLabel} {m.time}</span>
+      </div>
+
+      {/* VS 구역 — 가로 레이아웃 */}
+      <div className="flex items-center px-3 gap-2">
         {/* 홈팀 */}
-        <div className="flex-1 rounded-xl px-3 py-3 flex flex-col gap-1" style={{ backgroundColor: `${homeColors.bg}10` }}>
-          <span className="text-[10px] font-black" style={{ color: homeColors.bg }}>{home?.rank}위</span>
+        <div className="flex-1 flex items-center gap-2.5 rounded-xl px-3 py-2.5" style={{ backgroundColor: `${homeColors.bg}0f` }}>
           {homeLogo && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={homeLogo} alt={m.home} className="w-8 h-8 object-contain my-0.5" />
+            <img src={homeLogo} alt={m.home} className="w-9 h-9 object-contain shrink-0" />
           )}
-          <p className="text-sm font-black text-zinc-900 dark:text-white leading-tight">{m.home}</p>
-          <p className="text-[10px] text-zinc-500 dark:text-zinc-400 leading-snug">{home?.summary}</p>
+          <div className="min-w-0">
+            <span className="text-[10px] font-black block" style={{ color: homeColors.bg }}>{home?.rank}위</span>
+            <p className="text-sm font-black text-zinc-900 dark:text-white leading-tight truncate">{m.home}</p>
+          </div>
         </div>
 
-        <div className="flex items-center justify-center shrink-0 px-1">
-          <span className="text-[11px] font-black text-zinc-300 dark:text-zinc-600">VS</span>
+        <div className="flex items-center gap-1 shrink-0">
+          {m.score ? (
+            <>
+              <span className="text-base font-black tabular-nums" style={{ color: m.score.home >= m.score.away ? homeColors.bg : "#a1a1aa" }}>{m.score.home}</span>
+              <span className="text-[10px] font-black text-zinc-300 dark:text-zinc-600">:</span>
+              <span className="text-base font-black tabular-nums" style={{ color: m.score.away > m.score.home ? awayColors.bg : "#a1a1aa" }}>{m.score.away}</span>
+            </>
+          ) : (
+            <span className="text-[11px] font-black text-zinc-300 dark:text-zinc-600">VS</span>
+          )}
         </div>
 
         {/* 어웨이팀 */}
-        <div className="flex-1 rounded-xl px-3 py-3 flex flex-col gap-1 items-end text-right" style={{ backgroundColor: `${awayColors.bg}10` }}>
-          <span className="text-[10px] font-black" style={{ color: awayColors.bg }}>{away?.rank}위</span>
+        <div className="flex-1 flex items-center gap-2.5 rounded-xl px-3 py-2.5 flex-row-reverse" style={{ backgroundColor: `${awayColors.bg}0f` }}>
           {awayLogo && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={awayLogo} alt={m.away} className="w-8 h-8 object-contain my-0.5" />
+            <img src={awayLogo} alt={m.away} className="w-9 h-9 object-contain shrink-0" />
           )}
-          <p className="text-sm font-black text-zinc-900 dark:text-white leading-tight">{m.away}</p>
-          <p className="text-[10px] text-zinc-500 dark:text-zinc-400 leading-snug">{away?.summary}</p>
+          <div className="min-w-0 text-right">
+            <span className="text-[10px] font-black block" style={{ color: awayColors.bg }}>{away?.rank}위</span>
+            <p className="text-sm font-black text-zinc-900 dark:text-white leading-tight truncate">{m.away}</p>
+          </div>
         </div>
       </div>
 
-      {/* 푸터 */}
-      <div className="px-4 py-3 border-t border-zinc-100 dark:border-zinc-800/60 flex items-center justify-between">
+      {/* 장소 — VS 구역 아래 */}
+      <div className="px-4 pt-2 pb-3">
         <span className="text-[11px] text-zinc-400 dark:text-zinc-500">📍 {m.location}</span>
-        <span className="text-[11px] font-semibold text-zinc-500 dark:text-zinc-400">관전 포인트 {featuredCount + 2}개 →</span>
       </div>
     </button>
   );
@@ -123,17 +137,10 @@ function buildWatchPoints(match: MatchWithId) {
   return points;
 }
 
-// 경기 팀명 → 로스터 teamId 매핑
-const TEAM_NAME_TO_ID: Record<string, string> = {
-  "하나은행": "hana",
-  "삼성생명": "samsung",
-  "고양 소노": "sono",
-  "원주 DB": "db",
-  "우리은행": "woori",
-  "BNK": "bnk",
-  "KB": "kb",
-  "신한은행": "shinhan",
-};
+// 경기 팀명(TN shortName) → teamId (TEAMS 기반)
+const TEAM_NAME_TO_ID = Object.fromEntries(
+  TEAMS.map((t) => [t.shortName, t.id])
+);
 
 function MatchDetail({ match, onBack, onViewRoster }: {
   match: MatchWithId;
@@ -340,58 +347,72 @@ function MatchDetail({ match, onBack, onViewRoster }: {
   );
 }
 
-const LEAGUE_COLORS = {
-  WKBL: "#007B5F",
-  KBL:  "#0B3D91",
-} as const;
+const WKBL_COLOR = "#007B5F";
+const SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
+
+type StageFilter = "플레이오프" | "정규시즌";
+
+function getStageType(stage: string): StageFilter {
+  if (stage.includes("플레이오프") || stage.includes("챔피언") || stage.includes("준플레이오프")) {
+    return "플레이오프";
+  }
+  return "정규시즌";
+}
 
 // ─── 탐색 탭 (진입점) ────────────────────────────────────────
 
 export function ExploreTab({ onViewRoster }: { onViewRoster?: (teamId: string) => void }) {
   const [selected, setSelected] = useState<MatchWithId | null>(null);
-  const [league, setLeague] = useState<"WKBL" | "KBL">("WKBL");
+  const [season, setSeason] = useState("2025-26");
+  const [stage, setStage] = useState<StageFilter>("플레이오프");
 
   if (selected) {
     return <MatchDetail match={selected} onBack={() => setSelected(null)} onViewRoster={onViewRoster} />;
   }
 
-  const filtered = MATCHES.filter((m) => (m.match.league ?? "WKBL") === league);
+  const filtered = MATCHES.filter((m) => getStageType(m.match.stage) === stage);
 
   return (
     <>
-      {/* 리그 탭 */}
-      <div className="px-4 pt-4 pb-0 flex gap-2">
-        {(["WKBL", "KBL"] as const).map((lg) => {
-          const active = league === lg;
+      {/* 시즌 탭 */}
+      <div className="px-4 pt-4 pb-0 flex gap-1.5 overflow-x-auto scrollbar-none">
+        {SEASONS.map((s) => {
+          const active = season === s;
+          const hasData = s === "2025-26";
           return (
-            <button
-              key={lg}
-              onClick={() => setLeague(lg)}
-              className="px-4 py-2 rounded-full text-[12px] font-black transition-all"
-              style={
-                active
-                  ? { backgroundColor: LEAGUE_COLORS[lg], color: "white" }
-                  : { backgroundColor: "#f4f4f5", color: "#71717a" }
-              }
-            >
-              {lg} {lg === "WKBL" ? "여자" : "남자"}
+            <button key={s}
+              onClick={() => { if (hasData) setSeason(s); else toast.info("준비중입니다"); }}
+              className="shrink-0 px-3 py-1 rounded-full text-[11px] font-black transition-all"
+              style={active
+                ? { backgroundColor: "#18181b", color: "white" }
+                : { backgroundColor: "#f4f4f5", color: hasData ? "#71717a" : "#d4d4d8" }}>
+              {s}
             </button>
           );
         })}
       </div>
 
-      <div className="px-4 pt-4 pb-3">
-        <h1 className="text-xl font-black text-zinc-900 dark:text-white">경기 목록</h1>
-        <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1">경기를 눌러 관전 포인트를 확인하세요</p>
+      {/* 스테이지 탭 */}
+      <div className="px-4 pt-3 pb-0 flex gap-2 overflow-x-auto scrollbar-none">
+        {(["플레이오프", "정규시즌"] as const).map((s) => {
+          const active = stage === s;
+          return (
+            <button key={s}
+              onClick={() => setStage(s)}
+              className="shrink-0 px-4 py-2 rounded-full text-[12px] font-black transition-all"
+              style={active
+                ? { backgroundColor: WKBL_COLOR, color: "white" }
+                : { backgroundColor: "#f4f4f5", color: "#71717a" }}>
+              WKBL {s}
+            </button>
+          );
+        })}
       </div>
+
       <Section>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pt-4">
           {filtered.map((match) => (
-            <MatchListCard
-              key={match.id}
-              match={match}
-              onClick={() => setSelected(match)}
-            />
+            <MatchListCard key={match.id} match={match} onClick={() => setSelected(match)} />
           ))}
           {filtered.length === 0 && (
             <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center py-12">준비 중인 경기가 없습니다</p>

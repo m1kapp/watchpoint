@@ -1,0 +1,22 @@
+{
+  "_source": "대한민국 여자농구 국가대표 명단 (KBA / FIBA)",
+  "_updated": "2025-10",
+  "_note": "pno는 WKBL 선수등록번호 (이적해도 불변, 동명이인 구분용)",
+  "roster": [
+    { "name": "강이슬",   "pno": "095263", "level": "A대표팀",       "wkblTeamId": "kb",      "captain": true },
+    { "name": "이해란",   "pno": "095778", "level": "A대표팀",       "wkblTeamId": "samsung" },
+    { "name": "김소니아", "pno": "095248", "level": "A대표팀",       "wkblTeamId": "bnk"     },
+    { "name": "안혜지",   "pno": "095484", "level": "A대표팀",       "wkblTeamId": "bnk"     },
+    { "name": "허예은",   "pno": "095710", "level": "A대표팀",       "wkblTeamId": "kb"      },
+    { "name": "진안",     "pno": "095499", "level": "A대표팀",       "wkblTeamId": "hana"    },
+    { "name": "박혜진",   "pno": "095186", "level": "A대표팀",       "wkblTeamId": "bnk"     },
+    { "name": "이소희",   "pno": "095636", "level": "A대표팀",       "wkblTeamId": "bnk"     },
+    { "name": "김단비",   "pno": "095104", "level": "A대표팀",       "wkblTeamId": "woori"   },
+    { "name": "양인영",   "pno": "095259", "level": "A대표팀",       "wkblTeamId": "hana"    },
+    { "name": "임규리",   "pno": "095779", "level": "A대표팀",       "wkblTeamId": "samsung" },
+    { "name": "박지수",   "pno": "095533", "level": "A대표팀",       "wkblTeamId": "kb"      },
+    { "name": "박소희",   "pno": "095788", "level": "국가대표 후보", "wkblTeamId": "hana"    },
+    { "name": "조수아",   "pno": "095749", "level": "국가대표 후보", "wkblTeamId": "samsung" },
+    { "name": "이채은",   "pno": "095637", "level": "국가대표 후보", "wkblTeamId": "kb"      }
+  ]
+}

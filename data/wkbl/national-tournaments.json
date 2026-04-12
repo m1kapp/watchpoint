@@ -1,0 +1,38 @@
+[
+  {
+    "name": "아시안컵",
+    "emoji": "🏆",
+    "appearances": 32,
+    "record": "160승 42패",
+    "medals": "금 12회",
+    "note": "2007 최근 우승 · '25 아시안컵 4위",
+    "color": "#CD2E3A"
+  },
+  {
+    "name": "아시안게임",
+    "emoji": "🥇",
+    "appearances": 12,
+    "record": "36승 14패",
+    "medals": "금 4회",
+    "note": "1978 · 1990 · 1994 · 2014",
+    "color": "#E67E22"
+  },
+  {
+    "name": "올림픽",
+    "emoji": "🥈",
+    "appearances": 7,
+    "record": "41승 26패",
+    "medals": "은 1회",
+    "note": "1984 LA — 구기종목 최초 올림픽 메달",
+    "color": "#7F8C8D"
+  },
+  {
+    "name": "세계선수권",
+    "emoji": "🌐",
+    "appearances": 18,
+    "record": "56승 55패",
+    "medals": "준우승 2회",
+    "note": "1967 · 1979",
+    "color": "#003478"
+  }
+]

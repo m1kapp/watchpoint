@@ -13,7 +13,7 @@ interface PlayerCardProps {
 
 export function PlayerCard({ player, onClick }: PlayerCardProps) {
   const { name, position, height, number, team, imageUrl, bio, tags } = player;
-  const { age, career_year, national_team } = bio;
+  const { age, career_year, birth_year, national_team } = bio;
   const visibleTags = tags.slice(0, 3);
   const posColor = positionColor(position);
   const teamLogo = TEAM_LOGOS[team];
@@ -21,63 +21,50 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 active:scale-[0.98] transition-transform"
+      className="w-full text-left bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 active:scale-[0.98] transition-transform overflow-hidden"
     >
-      <div className="flex items-center gap-3 px-4 py-3">
-        {/* 아바타 */}
-        <div className="relative shrink-0">
+      <div className="flex items-stretch gap-0">
+        {/* 프로필 이미지 */}
+        <div className="w-16 h-16 shrink-0 relative">
           {imageUrl ? (
-            <div className="w-10 h-10 rounded-full overflow-hidden" style={{ boxShadow: `0 0 0 2px ${posColor}` }}>
-              <Image src={imageUrl} alt={name} width={40} height={40} className="w-full h-full object-cover object-top" unoptimized />
-            </div>
+            <Image
+              src={imageUrl}
+              alt={name}
+              width={64}
+              height={64}
+              className="w-full h-full object-cover object-top"
+              unoptimized
+            />
           ) : (
             <div
-              className="w-10 h-10 rounded-full flex flex-col items-center justify-center text-white shrink-0"
+              className="w-full h-full flex items-center justify-center text-white font-black text-lg"
               style={{ backgroundColor: posColor }}
             >
-              <span className="text-sm font-black leading-none tabular-nums">{number}</span>
-              <span className="text-[9px] font-bold opacity-75">{position}</span>
+              {name[0]}
             </div>
           )}
-          {/* 팀 로고 뱃지 (이미지 없을 땐 번호 대신) */}
-          {teamLogo ? (
-            <div
-              className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full flex items-center justify-center border-[1.5px] border-white dark:border-zinc-900 bg-white dark:bg-zinc-900"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={teamLogo} alt={team} className="w-2.5 h-2.5 object-contain" />
-            </div>
-          ) : imageUrl ? (
-            <div
-              className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full flex items-center justify-center text-white text-[8px] font-black border-[1.5px] border-white dark:border-zinc-900"
-              style={{ backgroundColor: posColor }}
-            >
-              {number}
-            </div>
-          ) : null}
+          {/* 포지션 뱃지 */}
+          <div
+            className="absolute bottom-0 left-0 right-0 text-center text-[9px] font-black text-white py-0.5"
+            style={{ backgroundColor: `${posColor}cc` }}
+          >
+            {position}
+          </div>
         </div>
 
-        {/* 텍스트 */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-2">
-            <div className="min-w-0">
-              <p className="text-sm font-black text-zinc-900 dark:text-white leading-none">{name}</p>
-              <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1 tabular-nums">
-                {position} · {height} · 만 {age}세 · {career_year}년차
-              </p>
-            </div>
+        {/* 텍스트 영역 */}
+        <div className="flex-1 min-w-0 px-3 py-2.5 flex flex-col justify-center">
+          <div className="flex items-center gap-1.5">
+            <p className="text-sm font-black text-zinc-900 dark:text-white leading-none">{name}</p>
             {national_team.is_national && (
-              <div className="flex flex-col items-center gap-0.5 shrink-0">
-                <span className="text-sm leading-none">🇰🇷</span>
-                <span className="text-[9px] font-bold text-emerald-500 dark:text-emerald-400 leading-none whitespace-nowrap">
-                  {national_team.level === "A대표팀" ? "A대표" : "후보"}
-                </span>
-              </div>
+              <span className="text-xs leading-none">🇰🇷</span>
             )}
           </div>
-
+          <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1 tabular-nums">
+            {height} · 만 {age}세 ({String(birth_year).slice(-2)}년생) · {career_year}년차
+          </p>
           {visibleTags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
+            <div className="flex flex-wrap gap-1 mt-1.5">
               {visibleTags.map((tag) => (
                 <span key={tag} className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"}`}>
                   {tag}
@@ -88,6 +75,23 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
               )}
             </div>
           )}
+        </div>
+
+        {/* 팀 로고 + 등번호 */}
+        <div
+          className="w-14 shrink-0 flex flex-col items-center justify-center gap-1.5 border-l border-zinc-100 dark:border-zinc-800"
+          style={{ backgroundColor: `${posColor}0d` }}
+        >
+          {teamLogo && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={teamLogo} alt={team} className="w-7 h-7 object-contain opacity-50" />
+          )}
+          <span
+            className="text-2xl font-black tabular-nums leading-none"
+            style={{ color: posColor }}
+          >
+            {number}
+          </span>
         </div>
       </div>
     </button>

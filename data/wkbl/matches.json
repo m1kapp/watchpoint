@@ -1,0 +1,222 @@
+[
+  {
+    "stage": "플레이오프 1차전",
+    "gameNo": 1,
+    "date": "2026-04-08",
+    "time": "18:59",
+    "location": "청주체육관",
+    "leftTeam": {
+      "teamId": "kb",
+      "teamName": "KB스타즈"
+    },
+    "rightTeam": {
+      "teamId": "woori",
+      "teamName": "우리은행"
+    },
+    "leftScore": 73,
+    "rightScore": 46,
+    "leftWin": true,
+    "rightWin": false,
+    "isFinished": true,
+    "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=1&ym=202604",
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52778"
+  },
+  {
+    "stage": "플레이오프 2차전",
+    "gameNo": 2,
+    "date": "2026-04-09",
+    "time": "19:00",
+    "location": "부천체육관",
+    "leftTeam": {
+      "teamId": "hana",
+      "teamName": "하나은행"
+    },
+    "rightTeam": {
+      "teamId": "samsung",
+      "teamName": "삼성생명"
+    },
+    "leftScore": 61,
+    "rightScore": 56,
+    "leftWin": true,
+    "rightWin": false,
+    "isFinished": true,
+    "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=2&ym=202604",
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52798"
+  },
+  {
+    "stage": "플레이오프 3차전",
+    "gameNo": 3,
+    "date": "2026-04-10",
+    "time": "19:00",
+    "location": "청주체육관",
+    "leftTeam": {
+      "teamId": "kb",
+      "teamName": "KB스타즈"
+    },
+    "rightTeam": {
+      "teamId": "woori",
+      "teamName": "우리은행"
+    },
+    "leftScore": 78,
+    "rightScore": 54,
+    "leftWin": true,
+    "rightWin": false,
+    "isFinished": true,
+    "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=3&ym=202604",
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52845"
+  },
+  {
+    "stage": "플레이오프 4차전",
+    "gameNo": 4,
+    "date": "2026-04-11",
+    "time": "16:00",
+    "location": "부천체육관",
+    "leftTeam": {
+      "teamId": "hana",
+      "teamName": "하나은행"
+    },
+    "rightTeam": {
+      "teamId": "samsung",
+      "teamName": "삼성생명"
+    },
+    "leftScore": 74,
+    "rightScore": 83,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": true,
+    "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=4&ym=202604",
+    "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52858"
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-12",
+    "time": "16:00",
+    "location": "아산이순신체육관",
+    "leftTeam": {
+      "teamId": "woori",
+      "teamName": "우리은행"
+    },
+    "rightTeam": {
+      "teamId": "kb",
+      "teamName": "KB스타즈"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-13",
+    "time": "19:00",
+    "location": "용인실내체육관",
+    "leftTeam": {
+      "teamId": "samsung",
+      "teamName": "삼성생명"
+    },
+    "rightTeam": {
+      "teamId": "hana",
+      "teamName": "하나은행"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-14",
+    "time": "19:00",
+    "location": "아산이순신체육관",
+    "leftTeam": {
+      "teamId": "woori",
+      "teamName": "우리은행"
+    },
+    "rightTeam": {
+      "teamId": "kb",
+      "teamName": "KB스타즈"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-15",
+    "time": "19:00",
+    "location": "용인실내체육관",
+    "leftTeam": {
+      "teamId": "samsung",
+      "teamName": "삼성생명"
+    },
+    "rightTeam": {
+      "teamId": "hana",
+      "teamName": "하나은행"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-16",
+    "time": "19:00",
+    "location": "청주체육관",
+    "leftTeam": {
+      "teamId": "kb",
+      "teamName": "KB스타즈"
+    },
+    "rightTeam": {
+      "teamId": "woori",
+      "teamName": "우리은행"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  },
+  {
+    "stage": "플레이오프 null차전",
+    "gameNo": null,
+    "date": "2026-04-17",
+    "time": "19:00",
+    "location": "부천체육관",
+    "leftTeam": {
+      "teamId": "hana",
+      "teamName": "하나은행"
+    },
+    "rightTeam": {
+      "teamId": "samsung",
+      "teamName": "삼성생명"
+    },
+    "leftScore": null,
+    "rightScore": null,
+    "leftWin": false,
+    "rightWin": true,
+    "isFinished": false,
+    "gameRecordUrl": "https://www.wkbl.or.krjavascript:;",
+    "photoUrl": null
+  }
+]

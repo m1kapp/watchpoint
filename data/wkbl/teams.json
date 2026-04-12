@@ -1,0 +1,44 @@
+[
+  {
+    "teamId": "samsung",
+    "tcode": "03",
+    "teamName": "삼성생명",
+    "nameEn": "SAMSUNG LIFE",
+    "naverName": "삼성생명"
+  },
+  {
+    "teamId": "shinhan",
+    "tcode": "07",
+    "teamName": "신한은행",
+    "nameEn": "SHINHAN BANK",
+    "naverName": "신한은행"
+  },
+  {
+    "teamId": "woori",
+    "tcode": "05",
+    "teamName": "우리은행",
+    "nameEn": "WOORI BANK",
+    "naverName": "우리은행"
+  },
+  {
+    "teamId": "hana",
+    "tcode": "09",
+    "teamName": "하나은행",
+    "nameEn": "HANA BANK",
+    "naverName": "하나은행"
+  },
+  {
+    "teamId": "bnk",
+    "tcode": "11",
+    "teamName": "BNK 썸",
+    "nameEn": "BNK SUM",
+    "naverName": "BNK 썸"
+  },
+  {
+    "teamId": "kb",
+    "tcode": "01",
+    "teamName": "KB스타즈",
+    "nameEn": "KB STARS",
+    "naverName": "KB스타즈"
+  }
+]

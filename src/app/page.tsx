@@ -51,12 +51,14 @@ export default function Home() {
     >
       <AppShell className="m-0">
         <AppShellHeader>
+          <span className="text-base font-black tracking-tight" style={{ color: HANA_GREEN }}>
+            Watchpoint
+          </span>
           <div className="flex items-center gap-1.5">
-            <span className="text-base font-black tracking-tight" style={{ color: HANA_GREEN }}>
-              👁 Watchpoint
-            </span>
-          </div>
-          <button
+            <a href="https://m1k.app/gg" target="_blank" rel="noopener noreferrer" className="flex items-center opacity-70 hover:opacity-100 transition-opacity">
+              <img alt="Hits" src="https://m1k.app/badge/gg.svg" style={{ filter: isDark ? "invert(1)" : undefined }} />
+            </a>
+            <button
             onClick={toggleDark}
             className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-black/10 dark:hover:bg-white/10"
             aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
@@ -83,13 +85,12 @@ export default function Home() {
               </svg>
             )}
           </button>
+          </div>
         </AppShellHeader>
 
         <AppShellContent>
-          {tab === "explore"
-            ? <ExploreTab onViewRoster={viewRoster} />
-            : <RosterTab initialTeamId={rosterTeamId} />
-          }
+          {tab === "explore"  && <ExploreTab onViewRoster={viewRoster} />}
+          {tab === "players"  && <RosterTab initialTeamId={rosterTeamId} />}
         </AppShellContent>
 
         <TabBar>

@@ -1,3 +1,8 @@
+export interface MatchScore {
+  home: number;
+  away: number;
+}
+
 export interface MatchInfo {
   date: string;
   time: string;
@@ -6,6 +11,7 @@ export interface MatchInfo {
   home: string;
   away: string;
   league?: "WKBL" | "KBL";
+  score?: MatchScore;
 }
 
 export interface TeamInfo {

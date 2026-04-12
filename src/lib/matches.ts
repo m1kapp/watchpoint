@@ -1,4 +1,5 @@
 import type { MatchData } from "./match-types";
+import { TN } from "./data";
 
 const HANA_IMAGES: Record<string, string> = {
   진안: "http://www.hanafnbasketball.com/html/upload/Player/Player_202510100955464571.png",
@@ -15,29 +16,88 @@ const SAMSUNG_IMAGES: Record<string, string> = {
 };
 
 export const MATCHES: (MatchData & { id: string })[] = [
+
+  // ── KB스타즈(1위) vs 우리은행(4위) ──────────────────────────────────────────
   {
-    id: "po-g1",
+    id: "po-kb-g1",
+    match: { date: "2026-04-08", time: "19:00", location: "청주체육관", stage: "플레이오프 1차전 (KB·우리)", home: TN.KB, away: TN.WOORI, score: { home: 73, away: 46 } },
+    teams: [
+      { name: TN.KB,    rank: 1, summary: "재건 중인 전통 강호" },
+      { name: TN.WOORI, rank: 4, summary: "리그 최강 수비 조직력" },
+    ],
+    coaches: [], players: [],
+  },
+  {
+    id: "po-kb-g2",
+    match: { date: "2026-04-10", time: "19:00", location: "청주체육관", stage: "플레이오프 2차전 (KB·우리)", home: TN.KB, away: TN.WOORI, score: { home: 78, away: 54 } },
+    teams: [
+      { name: TN.KB,    rank: 1, summary: "재건 중인 전통 강호" },
+      { name: TN.WOORI, rank: 4, summary: "리그 최강 수비 조직력" },
+    ],
+    coaches: [], players: [],
+  },
+  {
+    id: "po-kb-g3",
+    match: { date: "2026-04-12", time: "16:00", location: "아산이순신체육관", stage: "플레이오프 3차전 (KB·우리)", home: TN.WOORI, away: TN.KB },
+    teams: [
+      { name: TN.WOORI, rank: 4, summary: "리그 최강 수비 조직력" },
+      { name: TN.KB,    rank: 1, summary: "재건 중인 전통 강호" },
+    ],
+    coaches: [], players: [],
+  },
+  {
+    id: "po-kb-g4",
+    match: { date: "2026-04-14", time: "19:00", location: "아산이순신체육관", stage: "플레이오프 4차전 (KB·우리)", home: TN.WOORI, away: TN.KB },
+    teams: [
+      { name: TN.WOORI, rank: 4, summary: "리그 최강 수비 조직력" },
+      { name: TN.KB,    rank: 1, summary: "재건 중인 전통 강호" },
+    ],
+    coaches: [], players: [],
+  },
+  {
+    id: "po-kb-g5",
+    match: { date: "2026-04-16", time: "19:00", location: "청주체육관", stage: "플레이오프 5차전 (KB·우리)", home: TN.KB, away: TN.WOORI },
+    teams: [
+      { name: TN.KB,    rank: 1, summary: "재건 중인 전통 강호" },
+      { name: TN.WOORI, rank: 4, summary: "리그 최강 수비 조직력" },
+    ],
+    coaches: [], players: [],
+  },
+
+  // ── 하나원큐(2위) vs 삼성생명(3위) ──────────────────────────────────────────
+  {
+    id: "po-hs-g1",
+    match: { date: "2026-04-09", time: "19:00", location: "부천체육관", stage: "플레이오프 1차전 (하나·삼성)", home: TN.HANA, away: TN.SAMSUNG, score: { home: 61, away: 56 } },
+    teams: [
+      { name: TN.HANA,   rank: 2, summary: "공격 밸런스 좋은 상승세 팀" },
+      { name: TN.SAMSUNG, rank: 3, summary: "수비 중심 조직력 팀" },
+    ],
+    coaches: [], players: [],
+  },
+  {
+    id: "po-hs-g2",
     match: {
       date: "2026-04-11",
       time: "16:00",
       location: "부천체육관",
-      stage: "플레이오프 1차전",
-      home: "하나은행",
-      away: "삼성생명",
+      stage: "플레이오프 2차전 (하나·삼성)",
+      home: TN.HANA,
+      away: TN.SAMSUNG,
+      score: { home: 74, away: 83 },
     },
     teams: [
-      { name: "하나은행", rank: 2, summary: "공격 밸런스 좋은 상승세 팀" },
-      { name: "삼성생명", rank: 3, summary: "수비 중심 조직력 팀" },
+      { name: TN.HANA, rank: 2, summary: "공격 밸런스 좋은 상승세 팀" },
+      { name: TN.SAMSUNG, rank: 3, summary: "수비 중심 조직력 팀" },
     ],
     coaches: [
       {
         name: "이상범",
-        team: "하나은행",
+        team: TN.HANA,
         career_year: 3,
         style: ["빠른 템포", "공격 밸런스"],
         story: "하위권 팀을 플레이오프 진출팀으로 끌어올린 리빌딩 성공 사례",
         watch_point: "초반 템포 싸움",
-        watch_reason: "하나은행은 1쿼터를 잡으면 이긴다. 삼성생명은 1쿼터 실점이 가장 많다.",
+        watch_reason: "하나원큐은 1쿼터를 잡으면 이긴다. 삼성생명은 1쿼터 실점이 가장 많다.",
         evidence: [
           { label: "하나 1쿼터 득점 평균", value: "22.1점", highlight: true },
           { label: "삼성 1쿼터 피실점", value: "리그 3위" },
@@ -46,7 +106,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
       },
       {
         name: "하상윤",
-        team: "삼성생명",
+        team: TN.SAMSUNG,
         career_year: 5,
         style: ["수비 중심", "조직력"],
         story: "수비 조직력을 기반으로 꾸준히 상위권 유지",
@@ -61,7 +121,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
     ],
     players: [
       {
-        team: "하나은행", name: "김정은", featured: true,
+        team: TN.HANA, name: "김정은", featured: true,
         position: "F", height: "179cm", imageUrl: HANA_IMAGES["김정은"],
         bio: { birth_year: 1987, age: 39, career_year: 20, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "9.3득점 · 6.8리바운드",
@@ -70,15 +130,15 @@ export const MATCHES: (MatchData & { id: string })[] = [
         career_highlights: [{ type: "record", label: "WKBL 통산 득점 1위" }, { type: "award", label: "MVP 수상" }],
         draft: { year: 2006, round: 1, pick: 2 },
         career_seasons: [
-          { season: "2025-26", team: "하나은행", games: 24, points: 9.3, rebounds: 6.8, assists: 2.4 },
-          { season: "2024-25", team: "하나은행", games: 28, points: 10.1, rebounds: 6.2, assists: 2.1 },
-          { season: "2023-24", team: "하나은행", games: 26, points: 11.8, rebounds: 6.5, assists: 2.3, note: "베스트5" },
-          { season: "2022-23", team: "하나은행", games: 27, points: 14.2, rebounds: 7.0, assists: 2.8 },
+          { season: "2025-26", team: TN.HANA, games: 24, points: 9.3, rebounds: 6.8, assists: 2.4 },
+          { season: "2024-25", team: TN.HANA, games: 28, points: 10.1, rebounds: 6.2, assists: 2.1 },
+          { season: "2023-24", team: TN.HANA, games: 26, points: 11.8, rebounds: 6.5, assists: 2.3, note: "베스트5" },
+          { season: "2022-23", team: TN.HANA, games: 27, points: 14.2, rebounds: 7.0, assists: 2.8 },
         ],
         tags: ["레전드", "국가대표", "클러치"],
         description: "리그를 대표하는 베테랑 포워드",
         watch_point: "출전 시 분위기 변화",
-        watch_reason: "이 선수가 10분 이상 출전하는 경기 하나은행 승률이 압도적이다.",
+        watch_reason: "이 선수가 10분 이상 출전하는 경기 하나원큐 승률이 압도적이다.",
         evidence: [
           { label: "출전 시 팀 승률", value: "75%", highlight: true },
           { label: "4Q 출전 시 팀 득점", value: "+4.0점" },
@@ -86,7 +146,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "진안", featured: true,
+        team: TN.HANA, name: "진안", featured: true,
         position: "C", height: "185cm", imageUrl: HANA_IMAGES["진안"],
         bio: { birth_year: 1996, age: 30, career_year: 6, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "14.8득점 · 8.0리바운드",
@@ -95,10 +155,10 @@ export const MATCHES: (MatchData & { id: string })[] = [
         career_highlights: [{ type: "record", label: "리바운드 팀 1위" }],
         draft: { year: 2020, round: 1, pick: 4 },
         career_seasons: [
-          { season: "2025-26", team: "하나은행", games: 24, points: 14.8, rebounds: 8.0, assists: 2.0 },
-          { season: "2024-25", team: "하나은행", games: 27, points: 12.5, rebounds: 7.1, assists: 1.6 },
-          { season: "2023-24", team: "하나은행", games: 25, points: 10.3, rebounds: 6.8, assists: 1.4 },
-          { season: "2022-23", team: "하나은행", games: 26, points: 8.7, rebounds: 6.0, assists: 1.2 },
+          { season: "2025-26", team: TN.HANA, games: 24, points: 14.8, rebounds: 8.0, assists: 2.0 },
+          { season: "2024-25", team: TN.HANA, games: 27, points: 12.5, rebounds: 7.1, assists: 1.6 },
+          { season: "2023-24", team: TN.HANA, games: 25, points: 10.3, rebounds: 6.8, assists: 1.4 },
+          { season: "2022-23", team: TN.HANA, games: 26, points: 8.7, rebounds: 6.0, assists: 1.2 },
         ],
         tags: ["국가대표", "골밑 핵심", "리바운더"],
         description: "골밑에서 버티는 핵심 센터",
@@ -111,7 +171,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "이이지마 사키", featured: true,
+        team: TN.HANA, name: "이이지마 사키", featured: true,
         position: "F", height: "178cm", imageUrl: HANA_IMAGES["이이지마 사키"],
         bio: { birth_year: 1998, age: 28, career_year: 3, national_team: { is_national: false } },
         stat_summary: "15.0득점 · 6.5리바운드",
@@ -119,14 +179,14 @@ export const MATCHES: (MatchData & { id: string })[] = [
         stat_diff: { points: 1.8, rebounds: 0.7, assists: 0.5 },
         draft: { year: 2023, round: 1, pick: 1 },
         career_seasons: [
-          { season: "2025-26", team: "하나은행", games: 24, points: 15.0, rebounds: 6.5, assists: 3.0 },
-          { season: "2024-25", team: "하나은행", games: 28, points: 13.2, rebounds: 5.8, assists: 2.5 },
-          { season: "2023-24", team: "하나은행", games: 26, points: 10.8, rebounds: 5.0, assists: 2.1, note: "1라운드 1순위 입단" },
+          { season: "2025-26", team: TN.HANA, games: 24, points: 15.0, rebounds: 6.5, assists: 3.0 },
+          { season: "2024-25", team: TN.HANA, games: 28, points: 13.2, rebounds: 5.8, assists: 2.5 },
+          { season: "2023-24", team: TN.HANA, games: 26, points: 10.8, rebounds: 5.0, assists: 2.1, note: "1라운드 1순위 입단" },
         ],
         tags: ["에이스", "득점원"],
         description: "팀 공격을 책임지는 1옵션",
         watch_point: "득점 폭발 여부",
-        watch_reason: "이 선수가 터지는 날 하나은행이 이긴다. 삼성 상대 전적도 좋다.",
+        watch_reason: "이 선수가 터지는 날 하나원큐이 이긴다. 삼성 상대 전적도 좋다.",
         evidence: [
           { label: "20점↑ 경기 팀 승률", value: "100%", highlight: true },
           { label: "삼성전 시즌 평균 득점", value: "18.5점" },
@@ -134,7 +194,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "박소희", featured: true,
+        team: TN.HANA, name: "박소희", featured: true,
         position: "G", height: "170cm", imageUrl: HANA_IMAGES["박소희"],
         bio: { birth_year: 1998, age: 28, career_year: 4, national_team: { is_national: false } },
         stat_summary: "10.1득점 · 3.5리바운드",
@@ -142,10 +202,10 @@ export const MATCHES: (MatchData & { id: string })[] = [
         stat_diff: { points: 2.1, rebounds: 0.5, assists: 0.6 },
         draft: { year: 2022, round: 2, pick: 8 },
         career_seasons: [
-          { season: "2025-26", team: "하나은행", games: 24, points: 10.1, rebounds: 3.5, assists: 2.8 },
-          { season: "2024-25", team: "하나은행", games: 28, points: 8.0, rebounds: 3.0, assists: 2.2 },
-          { season: "2023-24", team: "하나은행", games: 25, points: 5.8, rebounds: 2.4, assists: 1.8 },
-          { season: "2022-23", team: "하나은행", games: 20, points: 3.2, rebounds: 1.5, assists: 1.1, note: "루키 시즌" },
+          { season: "2025-26", team: TN.HANA, games: 24, points: 10.1, rebounds: 3.5, assists: 2.8 },
+          { season: "2024-25", team: TN.HANA, games: 28, points: 8.0, rebounds: 3.0, assists: 2.2 },
+          { season: "2023-24", team: TN.HANA, games: 25, points: 5.8, rebounds: 2.4, assists: 1.8 },
+          { season: "2022-23", team: TN.HANA, games: 20, points: 3.2, rebounds: 1.5, assists: 1.1, note: "루키 시즌" },
         ],
         tags: ["식스맨", "흐름 체인저"],
         description: "경기 흐름을 바꾸는 가드",
@@ -158,12 +218,12 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "정예림", featured: false,
+        team: TN.HANA, name: "정예림", featured: false,
         position: "G", height: "168cm", imageUrl: HANA_IMAGES["정예림"],
         stat_summary: "6.5득점", tags: ["슈터"],
       },
       {
-        team: "삼성생명", name: "이해란", featured: true,
+        team: TN.SAMSUNG, name: "이해란", featured: true,
         position: "F", height: "180cm", imageUrl: SAMSUNG_IMAGES["이해란"],
         bio: { birth_year: 2001, age: 25, career_year: 4, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "17.5득점 · 7.0리바운드",
@@ -172,10 +232,10 @@ export const MATCHES: (MatchData & { id: string })[] = [
         career_highlights: [{ type: "award", label: "신인왕" }],
         draft: { year: 2022, round: 1, pick: 1 },
         career_seasons: [
-          { season: "2025-26", team: "삼성생명", games: 24, points: 17.5, rebounds: 7.0, assists: 3.0 },
-          { season: "2024-25", team: "삼성생명", games: 28, points: 14.0, rebounds: 6.2, assists: 2.5 },
-          { season: "2023-24", team: "삼성생명", games: 27, points: 11.2, rebounds: 5.5, assists: 2.0 },
-          { season: "2022-23", team: "삼성생명", games: 28, points: 9.8, rebounds: 5.0, assists: 1.8, note: "신인왕" },
+          { season: "2025-26", team: TN.SAMSUNG, games: 24, points: 17.5, rebounds: 7.0, assists: 3.0 },
+          { season: "2024-25", team: TN.SAMSUNG, games: 28, points: 14.0, rebounds: 6.2, assists: 2.5 },
+          { season: "2023-24", team: TN.SAMSUNG, games: 27, points: 11.2, rebounds: 5.5, assists: 2.0 },
+          { season: "2022-23", team: TN.SAMSUNG, games: 28, points: 9.8, rebounds: 5.0, assists: 1.8, note: "신인왕" },
         ],
         tags: ["에이스", "국가대표", "득점원"],
         description: "리그 득점 상위권 에이스",
@@ -189,16 +249,16 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "배혜윤", featured: true,
+        team: TN.SAMSUNG, name: "배혜윤", featured: true,
         position: "C", height: "183cm", imageUrl: SAMSUNG_IMAGES["배혜윤"],
         bio: { birth_year: 1989, age: 37, career_year: 14, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "12.0득점 · 6.5리바운드",
         draft: { year: 2012, round: 1, pick: 3 },
         career_seasons: [
-          { season: "2025-26", team: "삼성생명", games: 22, points: 12.0, rebounds: 6.5, assists: 1.5 },
-          { season: "2024-25", team: "삼성생명", games: 26, points: 13.2, rebounds: 7.0, assists: 1.8 },
-          { season: "2023-24", team: "삼성생명", games: 27, points: 14.5, rebounds: 7.3, assists: 2.0 },
-          { season: "2022-23", team: "삼성생명", games: 28, points: 15.8, rebounds: 7.8, assists: 2.1, note: "베스트5" },
+          { season: "2025-26", team: TN.SAMSUNG, games: 22, points: 12.0, rebounds: 6.5, assists: 1.5 },
+          { season: "2024-25", team: TN.SAMSUNG, games: 26, points: 13.2, rebounds: 7.0, assists: 1.8 },
+          { season: "2023-24", team: TN.SAMSUNG, games: 27, points: 14.5, rebounds: 7.3, assists: 2.0 },
+          { season: "2022-23", team: TN.SAMSUNG, games: 28, points: 15.8, rebounds: 7.8, assists: 2.1, note: "베스트5" },
         ],
         tags: ["베테랑", "골밑 핵심"],
         description: "경험 많은 베테랑 센터",
@@ -211,16 +271,16 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "윤예빈", featured: true,
+        team: TN.SAMSUNG, name: "윤예빈", featured: true,
         position: "G", height: "173cm", imageUrl: SAMSUNG_IMAGES["윤예빈"],
         bio: { birth_year: 1998, age: 28, career_year: 6 },
         stat_summary: "11.2득점 · 3.5어시스트",
         draft: { year: 2020, round: 1, pick: 6 },
         career_seasons: [
-          { season: "2025-26", team: "삼성생명", games: 24, points: 11.2, rebounds: 3.2, assists: 3.5 },
-          { season: "2024-25", team: "삼성생명", games: 27, points: 9.8, rebounds: 2.9, assists: 3.0 },
-          { season: "2023-24", team: "삼성생명", games: 26, points: 8.5, rebounds: 2.5, assists: 2.7 },
-          { season: "2022-23", team: "삼성생명", games: 25, points: 6.2, rebounds: 2.1, assists: 2.2 },
+          { season: "2025-26", team: TN.SAMSUNG, games: 24, points: 11.2, rebounds: 3.2, assists: 3.5 },
+          { season: "2024-25", team: TN.SAMSUNG, games: 27, points: 9.8, rebounds: 2.9, assists: 3.0 },
+          { season: "2023-24", team: TN.SAMSUNG, games: 26, points: 8.5, rebounds: 2.5, assists: 2.7 },
+          { season: "2022-23", team: TN.SAMSUNG, games: 25, points: 6.2, rebounds: 2.1, assists: 2.2 },
         ],
         tags: ["핸들러", "공격 전개"],
         description: "공격을 풀어주는 가드",
@@ -233,30 +293,30 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "강유림", featured: false,
+        team: TN.SAMSUNG, name: "강유림", featured: false,
         position: "F", height: "175cm", imageUrl: null,
         stat_summary: "수비 역할", tags: ["수비형"],
       },
     ],
   },
   {
-    id: "po-g2",
+    id: "po-hs-g3",
     match: {
       date: "2026-04-13",
-      time: "16:00",
-      location: "부천체육관",
-      stage: "플레이오프 2차전",
-      home: "하나은행",
-      away: "삼성생명",
+      time: "19:00",
+      location: "용인실내체육관",
+      stage: "플레이오프 3차전 (하나·삼성)",
+      home: TN.SAMSUNG,
+      away: TN.HANA,
     },
     teams: [
-      { name: "하나은행", rank: 2, summary: "시리즈 주도권 유지 노린다" },
-      { name: "삼성생명", rank: 3, summary: "1차전 분석 후 반격 예고" },
+      { name: TN.HANA, rank: 2, summary: "시리즈 주도권 유지 노린다" },
+      { name: TN.SAMSUNG, rank: 3, summary: "1차전 분석 후 반격 예고" },
     ],
     coaches: [
       {
         name: "이상범",
-        team: "하나은행",
+        team: TN.HANA,
         career_year: 3,
         style: ["시리즈 운영", "로테이션"],
         story: "1차전 분위기를 이어가되, 체력 안배와 로테이션 조절이 과제",
@@ -270,7 +330,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
       },
       {
         name: "하상윤",
-        team: "삼성생명",
+        team: TN.SAMSUNG,
         career_year: 5,
         style: ["전술 수정", "집중 수비"],
         story: "1차전 데이터를 분석해 하나 핵심 선수에 집중 마크 전환 예상",
@@ -285,7 +345,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
     ],
     players: [
       {
-        team: "하나은행", name: "이이지마 사키", featured: true,
+        team: TN.HANA, name: "이이지마 사키", featured: true,
         position: "F", height: "178cm", imageUrl: HANA_IMAGES["이이지마 사키"],
         bio: { birth_year: 1998, age: 28, career_year: 3, national_team: { is_national: false } },
         stat_summary: "15.0득점 · 6.5리바운드",
@@ -302,7 +362,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "진안", featured: true,
+        team: TN.HANA, name: "진안", featured: true,
         position: "C", height: "185cm", imageUrl: HANA_IMAGES["진안"],
         bio: { birth_year: 1996, age: 30, career_year: 6, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "14.8득점 · 8.0리바운드",
@@ -320,17 +380,17 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "하나은행", name: "박소희", featured: false,
+        team: TN.HANA, name: "박소희", featured: false,
         position: "G", height: "170cm", imageUrl: HANA_IMAGES["박소희"],
         stat_summary: "10.1득점 · 3.5리바운드", tags: ["식스맨", "흐름 체인저"],
       },
       {
-        team: "하나은행", name: "정예림", featured: false,
+        team: TN.HANA, name: "정예림", featured: false,
         position: "G", height: "168cm", imageUrl: HANA_IMAGES["정예림"],
         stat_summary: "6.5득점", tags: ["슈터"],
       },
       {
-        team: "삼성생명", name: "이해란", featured: true,
+        team: TN.SAMSUNG, name: "이해란", featured: true,
         position: "F", height: "180cm", imageUrl: SAMSUNG_IMAGES["이해란"],
         bio: { birth_year: 2001, age: 25, career_year: 4, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "17.5득점 · 7.0리바운드",
@@ -348,7 +408,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "배혜윤", featured: true,
+        team: TN.SAMSUNG, name: "배혜윤", featured: true,
         position: "C", height: "183cm", imageUrl: SAMSUNG_IMAGES["배혜윤"],
         bio: { birth_year: 1989, age: 37, career_year: 14, national_team: { is_national: true, level: "A대표팀" } },
         stat_summary: "12.0득점 · 6.5리바운드",
@@ -363,7 +423,7 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "윤예빈", featured: true,
+        team: TN.SAMSUNG, name: "윤예빈", featured: true,
         position: "G", height: "173cm", imageUrl: SAMSUNG_IMAGES["윤예빈"],
         bio: { birth_year: 1998, age: 28, career_year: 6 },
         stat_summary: "11.2득점 · 3.5어시스트",
@@ -378,149 +438,31 @@ export const MATCHES: (MatchData & { id: string })[] = [
         ],
       },
       {
-        team: "삼성생명", name: "강유림", featured: false,
+        team: TN.SAMSUNG, name: "강유림", featured: false,
         position: "F", height: "175cm", imageUrl: null,
         stat_summary: "수비 역할", tags: ["수비형"],
       },
     ],
   },
-
-  // ════════════════════════════════════════════════════════
-  //  KBL 남자농구
-  // ════════════════════════════════════════════════════════
   {
-    id: "kbl-po-g1",
-    match: {
-      date: "2026-04-12",
-      time: "14:00",
-      location: "고양체육관",
-      stage: "챔피언결정전 1차전",
-      home: "고양 소노",
-      away: "원주 DB",
-      league: "KBL",
-    },
+    id: "po-hs-g4",
+    match: { date: "2026-04-15", time: "19:00", location: "용인실내체육관", stage: "플레이오프 4차전 (하나·삼성)", home: TN.SAMSUNG, away: TN.HANA },
     teams: [
-      { name: "고양 소노", rank: 1, summary: "라건아 중심 압도적 골밑 농구" },
-      { name: "원주 DB",   rank: 2, summary: "빠른 공수 전환과 팀 조직력"  },
+      { name: TN.SAMSUNG, rank: 3, summary: "시리즈 생존을 위한 배수진" },
+      { name: TN.HANA,    rank: 2, summary: "마무리 투구, 클로징 노린다" },
     ],
-    coaches: [
-      {
-        name: "추일승",
-        team: "고양 소노",
-        career_year: 8,
-        style: ["골밑 집중", "라건아 활용"],
-        story: "라건아 영입 후 팀을 우승 후보로 끌어올린 전술가",
-        watch_point: "라건아 파울 관리",
-        watch_reason: "DB는 파울 유도 전술을 구사한다. 라건아가 3파울 이전에 쌓아놓는 득점이 시리즈를 가른다.",
-        evidence: [
-          { label: "라건아 출전 시 소노 승률", value: "84%", highlight: true },
-          { label: "라건아 3파울 후 소노 실점 증가", value: "+8.5점" },
-          { label: "정규시즌 라건아 평균 파울", value: "3.2개" },
-        ],
-      },
-      {
-        name: "김동광",
-        team: "원주 DB",
-        career_year: 12,
-        style: ["빠른 전환", "팀 농구"],
-        story: "DB 특유의 집단 전술 농구를 완성한 명장",
-        watch_point: "라건아 봉쇄 더블팀",
-        watch_reason: "더블팀 시 라건아를 막아야 한다. 누가 킥아웃 패스를 막을 것인가가 핵심.",
-        evidence: [
-          { label: "더블팀 시 라건아 득점 억제", value: "↓40%", highlight: true },
-          { label: "DB 상대 소노 외곽 성공률", value: "32.1%" },
-          { label: "DB 팀 어시스트 (정규 1위)", value: "23.4개", highlight: true },
-        ],
-      },
-    ],
-    players: [
-      {
-        team: "고양 소노", name: "라건아", featured: true,
-        position: "C", height: "207cm", imageUrl: null,
-        bio: { birth_year: 1990, age: 35, career_year: 9, national_team: { is_national: true, level: "A대표팀" } },
-        stat_summary: "25.3득점 · 11.2리바운드",
-        stats: { current_season: { points: 25.3, rebounds: 11.2, assists: 2.8 }, previous_season: { points: 23.1, rebounds: 10.5, assists: 2.3 } },
-        stat_diff: { points: 2.2, rebounds: 0.7, assists: 0.5 },
-        career_highlights: [
-          { type: "award", label: "정규시즌 MVP" },
-          { type: "record", label: "리그 득점·리바운드 2관왕" },
-        ],
-        tags: ["에이스", "국가대표", "골밑 핵심", "리바운더"],
-        description: "귀화 후 한국 농구를 바꾼 압도적 센터",
-        watch_point: "라건아의 4쿼터",
-        watch_reason: "정규시즌 4Q 평균 8.5점. DB의 더블팀을 어떻게 뚫느냐, 아니면 킥아웃 패스로 동료를 살리느냐가 포인트.",
-        evidence: [
-          { label: "4Q 평균 득점", value: "8.5점", highlight: true },
-          { label: "더블팀 시 어시스트 증가", value: "+1.8개↑" },
-          { label: "챔피언결정전 경력 득점", value: "28.2점", highlight: true },
-        ],
-      },
-      {
-        team: "고양 소노", name: "최성모", featured: true,
-        position: "PG", height: "185cm", imageUrl: null,
-        bio: { birth_year: 1991, age: 34, career_year: 11, national_team: { is_national: true, level: "A대표팀" } },
-        stat_summary: "10.2득점 · 6.3어시스트",
-        stats: { current_season: { points: 10.2, rebounds: 3.5, assists: 6.3 }, previous_season: { points: 9.8, rebounds: 3.1, assists: 5.8 } },
-        stat_diff: { points: 0.4, rebounds: 0.4, assists: 0.5 },
-        tags: ["플레이메이커", "안정감", "베테랑", "국가대표"],
-        description: "라건아를 살리는 베테랑 포인트가드",
-        watch_point: "라건아 더블팀 활용",
-        watch_reason: "DB가 라건아를 더블팀하는 순간 최성모의 판단이 결과를 결정한다. 어시스트 수치가 소노 공격 다양성의 척도.",
-        evidence: [
-          { label: "어시스트 7개↑ 경기 소노 승률", value: "91%", highlight: true },
-          { label: "정규시즌 라건아 킥아웃 어시스트", value: "경기당 2.1개" },
-          { label: "챔피언결정전 경력 어시스트", value: "7.2개", highlight: true },
-        ],
-      },
-      {
-        team: "고양 소노", name: "이원준", featured: false,
-        position: "SG", height: "193cm", imageUrl: null,
-        stat_summary: "15.8득점 · 4.5리바운드", tags: ["슈터", "폭발력"],
-      },
-      {
-        team: "고양 소노", name: "이현중", featured: false,
-        position: "SF", height: "196cm", imageUrl: null,
-        stat_summary: "9.5득점", tags: ["수비형"],
-      },
-      {
-        team: "원주 DB", name: "이선재", featured: true,
-        position: "SG", height: "191cm", imageUrl: null,
-        bio: { birth_year: 1996, age: 29, career_year: 7, national_team: { is_national: true, level: "A대표팀" } },
-        stat_summary: "19.8득점 · 5.2리바운드",
-        stats: { current_season: { points: 19.8, rebounds: 5.2, assists: 3.5 }, previous_season: { points: 17.2, rebounds: 4.8, assists: 3.0 } },
-        stat_diff: { points: 2.6, rebounds: 0.4, assists: 0.5 },
-        tags: ["에이스", "슈터", "클러치", "국가대표"],
-        description: "DB의 1옵션 득점원",
-        watch_point: "외곽 폭발",
-        watch_reason: "소노가 라건아 더블팀에 집중하면 외곽이 열린다. 이선재의 3점슛 성공률이 DB 승패를 결정.",
-        evidence: [
-          { label: "3점슛 성공률", value: "39.5%", highlight: true },
-          { label: "20점↑ 경기 DB 승률", value: "78%", highlight: true },
-          { label: "소노전 시즌 평균 득점", value: "22.5점" },
-        ],
-      },
-      {
-        team: "원주 DB", name: "강상재", featured: true,
-        position: "PG", height: "187cm", imageUrl: null,
-        bio: { birth_year: 1993, age: 32, career_year: 10, national_team: { is_national: false } },
-        stat_summary: "11.0득점 · 6.8어시스트",
-        tags: ["플레이메이커", "베테랑", "안정감"],
-        description: "DB 공격의 설계사",
-        watch_point: "속공 전개",
-        watch_reason: "라건아가 파울 트러블에 빠지면 DB는 빠른 전환 공격으로 기세를 잡는다. 강상재의 속공 패스가 핵심.",
-        evidence: [
-          { label: "속공 상황 어시스트", value: "경기당 2.3개", highlight: true },
-          { label: "라건아 파울 트러블 시 DB 득점", value: "+12.0점" },
-          { label: "DB 속공 득점 (리그 1위)", value: "14.8점/경기", highlight: true },
-        ],
-      },
-      {
-        team: "원주 DB", name: "윤호영", featured: false,
-        position: "C", height: "205cm", imageUrl: null,
-        stat_summary: "10.5득점 · 7.8리바운드", tags: ["베테랑", "골밑 핵심"],
-      },
-    ],
+    coaches: [], players: [],
   },
+  {
+    id: "po-hs-g5",
+    match: { date: "2026-04-17", time: "19:00", location: "부천체육관", stage: "플레이오프 5차전 (하나·삼성)", home: TN.HANA, away: TN.SAMSUNG },
+    teams: [
+      { name: TN.HANA,    rank: 2, summary: "승자독식 최종전" },
+      { name: TN.SAMSUNG, rank: 3, summary: "극적 역전 시리즈 노린다" },
+    ],
+    coaches: [], players: [],
+  },
+
 ];
 
 export const TAG_COLORS: Record<string, string> = {
@@ -548,38 +490,37 @@ export const TAG_COLORS: Record<string, string> = {
 };
 
 export const TEAM_COLORS: Record<string, { bg: string; text: string; light: string }> = {
-  // WKBL
-  하나은행:          { bg: "#007B5F", text: "white", light: "#e6f4f0" },
-  삼성생명:          { bg: "#1428A0", text: "white", light: "#e8eaf6" },
-  "KB스타즈":        { bg: "#CB9E00", text: "white", light: "#fdf6e3" },
-  "KB 스타즈":       { bg: "#CB9E00", text: "white", light: "#fdf6e3" },
-  우리은행:          { bg: "#003DA5", text: "white", light: "#e5ecf7" },
-  "우리은행 우리WON": { bg: "#003DA5", text: "white", light: "#e5ecf7" },
+  // WKBL — TN 상수로 키 관리 (팀명 변경 시 TN만 수정하면 됨)
+  [TN.WOORI]:   { bg: "#003DA5", text: "white", light: "#e5ecf7" },
+  [TN.HANA]:    { bg: "#007B5F", text: "white", light: "#e6f4f0" },
+  [TN.SAMSUNG]: { bg: "#1428A0", text: "white", light: "#e8eaf6" },
+  [TN.BNK]:     { bg: "#E31837", text: "white", light: "#fde8eb" },
+  [TN.KB]:      { bg: "#CB9E00", text: "white", light: "#fdf6e3" },
+  [TN.SHINHAN]: { bg: "#0046FF", text: "white", light: "#e5ebff" },
   // KBL
   "고양 소노":  { bg: "#0B3D91", text: "white", light: "#e6ecf7" },
   "원주 DB":    { bg: "#FF6B00", text: "white", light: "#fff0e5" },
 };
 
 export const TEAM_LOGOS: Record<string, string> = {
-  // 하나
-  하나은행:              "https://www.wkbl.or.kr/static/images/team/teamlogo_09.png",
-  하나금융:              "https://www.wkbl.or.kr/static/images/team/teamlogo_09.png",
-  하나원큐:              "https://www.wkbl.or.kr/static/images/team/teamlogo_09.png",
-  // 삼성
-  삼성생명:              "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
-  삼성블루밍스:          "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
-  "삼성생명 블루밍스":   "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
-  // KB
-  "KB스타즈":            "https://www.wkbl.or.kr/static/images/team/teamlogo_01.png",
-  "KB 스타즈":           "https://www.wkbl.or.kr/static/images/team/teamlogo_01.png",
-  // 우리은행
-  우리은행:              "https://www.wkbl.or.kr/static/images/team/teamlogo_05.png",
-  "우리은행 우리WON":    "https://www.wkbl.or.kr/static/images/team/teamlogo_05.png",
-  // 소노
+  // WKBL — shortName(TN) + 풀네임 둘 다 등록 (조회 키가 다를 수 있어서)
+  [TN.WOORI]:        "https://www.wkbl.or.kr/static/images/team/teamlogo_05.png",
+  "우리은행 우리WON": "https://www.wkbl.or.kr/static/images/team/teamlogo_05.png",
+  [TN.HANA]:         "https://www.wkbl.or.kr/static/images/team/teamlogo_09.png",
+  하나금융:           "https://www.wkbl.or.kr/static/images/team/teamlogo_09.png",
+  [TN.SAMSUNG]:      "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
+  "삼성생명 블루밍스": "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
+  삼성블루밍스:       "https://www.wkbl.or.kr/static/images/team/teamlogo_03.png",
+  [TN.BNK]:          "https://www.wkbl.or.kr/static/images/team/teamlogo_11.png",
+  "BNK 썸":          "https://www.wkbl.or.kr/static/images/team/teamlogo_11.png",
+  [TN.KB]:           "https://www.wkbl.or.kr/static/images/team/teamlogo_01.png",
+  "KB 스타즈":        "https://www.wkbl.or.kr/static/images/team/teamlogo_01.png",
+  [TN.SHINHAN]:      "https://www.wkbl.or.kr/static/images/team/teamlogo_07.png",
+  "신한은행 에스버드": "https://www.wkbl.or.kr/static/images/team/teamlogo_07.png",
+  // KBL
   "고양 소노":           "https://www.kbl.or.kr/assets/img/ico/logo/ic-sono.svg",
   "고양 소노 스카이거너스": "https://www.kbl.or.kr/assets/img/ico/logo/ic-sono.svg",
   소노:                  "https://www.kbl.or.kr/assets/img/ico/logo/ic-sono.svg",
-  // DB
   "원주 DB":             "https://www.kbl.or.kr/assets/img/ico/logo/ic-db.svg",
   "원주 DB 프로미":      "https://www.kbl.or.kr/assets/img/ico/logo/ic-db.svg",
   DB:                    "https://www.kbl.or.kr/assets/img/ico/logo/ic-db.svg",

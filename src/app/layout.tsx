@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { fontFamily, ThemeScript } from "@m1kapp/ui";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -32,6 +33,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full" style={{ fontFamily: fontFamily.pretendard }}>
         {children}
+        <Toaster position="bottom-center" richColors />
       </body>
     </html>
   );
