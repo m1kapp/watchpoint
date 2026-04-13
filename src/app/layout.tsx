@@ -15,7 +15,7 @@ const BASE_URL = "https://watchpoint.m1k.app";
 
 export const metadata: Metadata = {
   title: { default: "Watchpoint", template: "%s | Watchpoint" },
-  description: "WKBL 여자농구 관전 도우미 — 경기 관전포인트·선수 프로필",
+  description: "한국프로농구 관전 도우미 — 경기 관전포인트·선수 프로필",
   metadataBase: new URL(BASE_URL),
   openGraph: {
     siteName: "Watchpoint",

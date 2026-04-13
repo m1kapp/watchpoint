@@ -1,11 +1,13 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PLAYERS, TEAMS } from "@/lib/data";
+import { PLAYERS, KBL_PLAYERS, TEAMS } from "@/lib/data";
+
+const ALL_PLAYERS = [...PLAYERS, ...KBL_PLAYERS];
 import PlayerClient from "./client";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  const player = PLAYERS.find((p) => p.id === id);
+  const player = ALL_PLAYERS.find((p) => p.id === id);
   if (!player) return {};
   const team = TEAMS.find((t) => t.id === player.teamId);
   const tags = player.tags.slice(0, 3).join(" · ");
@@ -25,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function PlayerPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const player = PLAYERS.find((p) => p.id === id);
+  const player = ALL_PLAYERS.find((p) => p.id === id);
   if (!player) notFound();
   return <PlayerClient id={id} />;
 }

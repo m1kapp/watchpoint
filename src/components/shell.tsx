@@ -34,7 +34,14 @@ function ShareButton() {
 
   async function handleShare() {
     setOpen(false);
-    try { await navigator.share({ url: window.location.href }); } catch {}
+    try {
+      await navigator.share({ url: window.location.href });
+    } catch (e) {
+      // AbortError = 사용자가 공유 취소 → 무시, 그 외 에러만 로깅
+      if (e instanceof Error && e.name !== "AbortError") {
+        console.warn("[공유 실패]", e.message);
+      }
+    }
   }
 
   return (
@@ -135,7 +142,9 @@ export function Shell({
     document.documentElement.classList.toggle("dark", next);
     try {
       document.cookie = `theme=${next ? "dark" : "light"};path=/;max-age=31536000;SameSite=Lax`;
-    } catch {}
+    } catch (e) {
+      console.warn("[테마 저장 실패]", e);
+    }
   }
 
   const isMatches = pathname.startsWith("/matches");
@@ -164,7 +173,7 @@ export function Shell({
   );
 
   return (
-    <Watermark color={ACCENT} speed={20} sponsor={{ name: "🏀 WKBL", url: "https://www.wkbl.or.kr/" }}>
+    <Watermark color={ACCENT} speed={20} sponsor={{ name: "🏀 한국프로농구", url: "https://www.kbl.or.kr/" }}>
       <AppShell className="m-0">
         <AppShellHeader>
           {headerLeft ?? (

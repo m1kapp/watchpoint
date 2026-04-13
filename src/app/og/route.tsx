@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   // 공통 값
   const title  = searchParams.get("title")  ?? "Watchpoint";
-  const sub    = searchParams.get("sub")    ?? "WKBL 농구 관전 도우미";
+  const sub    = searchParams.get("sub")    ?? "한국프로농구 관전 도우미";
   const color  = searchParams.get("color")  ?? "#007B5F";
   const home   = searchParams.get("home")   ?? "";
   const away   = searchParams.get("away")   ?? "";
