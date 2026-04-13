@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { type NextRequest } from "next/server";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -75,15 +75,16 @@ export async function GET(req: NextRequest) {
               </span>
             </div>
             {badge && (
-              <div style={{
-                display: "flex", marginTop: 20,
-                backgroundColor: `${color}22`, borderRadius: 20,
-                paddingLeft: 14, paddingRight: 14, paddingTop: 6, paddingBottom: 6,
-                width: "fit-content",
-              }}>
-                <span style={{ fontSize: 14, fontWeight: 700, color }}>
-                  {badge}
-                </span>
+              <div style={{ display: "flex", marginTop: 20 }}>
+                <div style={{
+                  display: "flex",
+                  backgroundColor: `${color}22`, borderRadius: 20,
+                  paddingLeft: 14, paddingRight: 14, paddingTop: 6, paddingBottom: 6,
+                }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color }}>
+                    {badge}
+                  </span>
+                </div>
               </div>
             )}
           </div>
