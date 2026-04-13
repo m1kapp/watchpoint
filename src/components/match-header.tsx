@@ -1,7 +1,8 @@
 "use client";
 
 import type { MatchData } from "@/lib/match-types";
-import { TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { getTeamColor, getTeamLogo } from "@/lib/team-styles";
+import { TeamBadge } from "@/components/ui-shared";
 
 interface MatchHeaderProps {
   data: MatchData;
@@ -55,8 +56,8 @@ function TeamSide({
   team: ReturnType<typeof Array.prototype.find> & { name: string; rank: number; summary: string };
   side: "home" | "away";
 }) {
-  const colors = TEAM_COLORS[team.name] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
-  const logo = TEAM_LOGOS[team.name];
+  const colors = getTeamColor(team.name);
+  const logo = getTeamLogo(team.name);
   const isHome = side === "home";
 
   return (
@@ -68,9 +69,7 @@ function TeamSide({
       <span
         className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white"
         style={{ backgroundColor: colors.bg }}
-      >
-        {team.rank}위
-      </span>
+      >{team.rank}위</span>
       {/* 로고 */}
       {logo && (
         // eslint-disable-next-line @next/next/no-img-element

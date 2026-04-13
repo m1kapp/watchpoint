@@ -104,7 +104,7 @@ async function main() {
   // data.ts에서 PLAYERS 블록만 교체 (TEAMS + TAG_COLORS 보존)
   const playersStart = source.indexOf("export const PLAYERS");
   if (playersStart === -1) {
-    console.error("data.ts에서 PLAYERS를 찾지 못했어요");
+    console.error("❌ data.ts에서 PLAYERS를 찾지 못했어요");
     process.exit(1);
   }
 
@@ -115,8 +115,22 @@ async function main() {
   const header = source.slice(0, playersStart);
   const newSource = header + playersBlock + "\n" + tail;
 
+  // ── 검증: 생성된 소스가 올바른 구조인지 확인 ──
+  if (!newSource.includes("export const PLAYERS") || !newSource.includes("export const TEAMS")) {
+    console.error("❌ 생성된 소스에 필수 export가 누락됨 — 파일을 덮어쓰지 않습니다");
+    process.exit(1);
+  }
+  if (newSource.length < source.length * 0.5) {
+    console.error(`❌ 생성된 소스 크기(${newSource.length})가 원본(${source.length})의 50% 미만 — 비정상 축소 감지`);
+    process.exit(1);
+  }
+
+  // ── 백업 후 덮어쓰기 ──
+  const backupPath = DATA_TS_PATH + ".bak";
+  await fs.writeFile(backupPath, source, "utf-8");
   await fs.writeFile(DATA_TS_PATH, newSource, "utf-8");
   console.log(`\n✅ data.ts PLAYERS 업데이트 완료 (${playersJson.length}명)`);
+  console.log(`   백업: ${backupPath}`);
 }
 
 main().catch(console.error);

@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
-import { MATCHES, TAG_COLORS, TEAM_COLORS } from "@/lib/matches";
-import { PLAYERS, TEAMS, getRosterId } from "@/lib/data";
+import { MATCHES } from "@/lib/matches";
+import { getTeamColor, CARD_SHADOW } from "@/lib/team-styles";
+import { TEAMS, getRosterId, findPlayer } from "@/lib/data";
+import { TagBadge, TeamBadge, AvatarCircle } from "@/components/ui-shared";
 import { MatchScoreCard } from "@/components/match-score-card";
 import type { MatchData, MatchPlayer, Evidence } from "@/lib/match-types";
 
@@ -15,10 +16,9 @@ type MatchWithId = MatchData & { id: string };
 
 const TEAM_NAME_TO_ID = Object.fromEntries(TEAMS.map((t) => [t.shortName, t.id]));
 
-/** MatchPlayer 이름으로 PLAYERS에서 id 찾기 */
-function findPlayerId(name: string): string | null {
-  const p = PLAYERS.find((p) => p.name === name);
-  return p?.id ?? null;
+/** MatchPlayer → roster ID 찾기 */
+function findPlayerId(name: string, team?: string): string | null {
+  return findPlayer(undefined, name, team)?.id ?? null;
 }
 
 const REVIEW_STYLE = {
@@ -78,8 +78,8 @@ export function MatchDetail({ match }: { match: MatchWithId }) {
   const router = useRouter();
   const [openWp, setOpenWp] = useState<number | null>(null);
   const { match: m, teams } = match;
-  const homeColors = TEAM_COLORS[m.home] ?? { bg: "#333", light: "#f4f4f5" };
-  const awayColors = TEAM_COLORS[m.away] ?? { bg: "#333", light: "#f4f4f5" };
+  const homeColors = getTeamColor(m.home);
+  const awayColors = getTeamColor(m.away);
   const watchPoints = buildWatchPoints(match);
   const home = teams.find((t) => t.name === m.home);
   const away = teams.find((t) => t.name === m.away);
@@ -137,13 +137,13 @@ export function MatchDetail({ match }: { match: MatchWithId }) {
       <div className="px-4 pb-6">
         <div
           className="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden divide-y divide-zinc-100 dark:divide-zinc-800"
-          style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}
+          style={{ boxShadow: CARD_SHADOW }}
         >
           {watchPoints.map((wp) => {
-            const colors = TEAM_COLORS[wp.team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
+            const colors = getTeamColor(wp.team);
             const isNational = wp.player?.bio?.national_team?.is_national;
             const isOpen = openWp === wp.index;
-            const playerId = wp.player ? findPlayerId(wp.player.name) : null;
+            const playerId = wp.player ? findPlayerId(wp.player.name, wp.player.team) : null;
 
             return (
               <div key={wp.index}>
@@ -174,9 +174,7 @@ export function MatchDetail({ match }: { match: MatchWithId }) {
                 {isOpen && (
                   <div className="px-4 pb-4 border-t border-zinc-100 dark:border-zinc-800">
                     <div className="flex items-center gap-1.5 mt-3 mb-2.5 flex-wrap">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ backgroundColor: colors.bg }}>
-                        {wp.team}
-                      </span>
+                      <TeamBadge team={wp.team} />
                       {wp.isCoach ? (
                         <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500">
                           감독 {wp.coachName}
@@ -189,15 +187,7 @@ export function MatchDetail({ match }: { match: MatchWithId }) {
                             if (playerId) router.push(`/players/${playerId}`);
                           }}
                         >
-                          {wp.player.imageUrl ? (
-                            <div className="w-5 h-5 rounded-full overflow-hidden bg-zinc-100 shrink-0">
-                              <Image src={wp.player.imageUrl} alt={wp.player.name} width={20} height={20} className="w-full h-full object-cover object-top" unoptimized />
-                            </div>
-                          ) : (
-                            <div className="w-5 h-5 rounded-full flex items-center justify-center text-white text-[9px] font-black shrink-0" style={{ backgroundColor: colors.bg }}>
-                              {wp.player.name[0]}
-                            </div>
-                          )}
+                          <AvatarCircle imageUrl={wp.player.imageUrl} name={wp.player.name} bgColor={colors.bg} size={20} />
                           <span className="text-[11px] font-semibold text-zinc-600 dark:text-zinc-300 underline decoration-dotted underline-offset-2">
                             {wp.player.name}{isNational && " 🇰🇷"}
                           </span>
@@ -246,9 +236,7 @@ export function MatchDetail({ match }: { match: MatchWithId }) {
                     {wp.tags.length > 0 && (
                       <div className="flex flex-wrap gap-1.5 mt-3">
                         {wp.tags.map((tag) => (
-                          <span key={tag} className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"}`}>
-                            {tag}
-                          </span>
+                          <TagBadge key={tag} tag={tag} />
                         ))}
                       </div>
                     )}

@@ -9,18 +9,104 @@
       "current": true,
       "result": "월드컵 진출 (3승 2패)",
       "players": [
-        { "number": 3,  "name": "강이슬",   "pno": "095263", "position": "F", "height": "180cm", "wkblTeamId": "kb",      "captain": true },
-        { "number": 2,  "name": "허예은",   "pno": "095710", "position": "G", "height": "167cm", "wkblTeamId": "kb"      },
-        { "number": 7,  "name": "박지수",   "pno": "095533", "position": "C", "height": "198cm", "wkblTeamId": "kb"      },
-        { "number": 12, "name": "이해란",   "pno": "095778", "position": "F", "height": "182cm", "wkblTeamId": "samsung" },
-        { "number": 10, "name": "강유림",   "pno": "095713", "position": "F", "height": "175cm", "wkblTeamId": "samsung" },
-        { "number": 5,  "name": "안혜지",   "pno": "095484", "position": "G", "height": "164cm", "wkblTeamId": "bnk"     },
-        { "number": 9,  "name": "이소희",   "pno": "095636", "position": "G", "height": "171cm", "wkblTeamId": "bnk"     },
-        { "number": 77, "name": "진안",     "pno": "095499", "position": "C", "height": "181cm", "wkblTeamId": "hana"    },
-        { "number": 11, "name": "박소희",   "pno": "095788", "position": "G", "height": "177cm", "wkblTeamId": "hana"    },
-        { "number": 6,  "name": "최이샘",   "pno": "095261", "position": "F", "height": "182cm", "wkblTeamId": "shinhan" },
-        { "number": 39, "name": "홍유순",   "pno": "095972", "position": "F", "height": "179cm", "wkblTeamId": "shinhan" },
-        { "number": 1,  "name": "박지현",   "pno": null,     "position": "G", "height": "183cm", "wkblTeamId": null      }
+        {
+          "number": 3,
+          "name": "강이슬",
+          "pno": "095263",
+          "position": "F",
+          "height": "180cm",
+          "captain": true,
+          "teamId": "kb"
+        },
+        {
+          "number": 2,
+          "name": "허예은",
+          "pno": "095710",
+          "position": "G",
+          "height": "167cm",
+          "teamId": "kb"
+        },
+        {
+          "number": 7,
+          "name": "박지수",
+          "pno": "095533",
+          "position": "C",
+          "height": "198cm",
+          "teamId": "kb"
+        },
+        {
+          "number": 12,
+          "name": "이해란",
+          "pno": "095778",
+          "position": "F",
+          "height": "182cm",
+          "teamId": "samsung"
+        },
+        {
+          "number": 10,
+          "name": "강유림",
+          "pno": "095713",
+          "position": "F",
+          "height": "175cm",
+          "teamId": "samsung"
+        },
+        {
+          "number": 5,
+          "name": "안혜지",
+          "pno": "095484",
+          "position": "G",
+          "height": "164cm",
+          "teamId": "bnk"
+        },
+        {
+          "number": 9,
+          "name": "이소희",
+          "pno": "095636",
+          "position": "G",
+          "height": "171cm",
+          "teamId": "bnk"
+        },
+        {
+          "number": 77,
+          "name": "진안",
+          "pno": "095499",
+          "position": "C",
+          "height": "181cm",
+          "teamId": "hana"
+        },
+        {
+          "number": 11,
+          "name": "박소희",
+          "pno": "095788",
+          "position": "G",
+          "height": "177cm",
+          "teamId": "hana"
+        },
+        {
+          "number": 6,
+          "name": "최이샘",
+          "pno": "095261",
+          "position": "F",
+          "height": "182cm",
+          "teamId": "shinhan"
+        },
+        {
+          "number": 39,
+          "name": "홍유순",
+          "pno": "095972",
+          "position": "F",
+          "height": "179cm",
+          "teamId": "shinhan"
+        },
+        {
+          "number": 1,
+          "name": "박지현",
+          "pno": null,
+          "position": "G",
+          "height": "183cm",
+          "overseas": "아줄 마리노 (스페인 리가 페메니나 2부)",
+          "teamId": null
+        }
       ]
     },
     {
@@ -31,18 +117,104 @@
       "current": false,
       "result": "4위 (3승 3패)",
       "players": [
-        { "number": 3,  "name": "강이슬",   "pno": "095263", "position": "F", "height": "180cm", "wkblTeamId": "kb",      "captain": true },
-        { "number": 5,  "name": "허예은",   "pno": "095710", "position": "G", "height": "167cm", "wkblTeamId": "kb"      },
-        { "number": 7,  "name": "박지수",   "pno": "095533", "position": "C", "height": "198cm", "wkblTeamId": "kb"      },
-        { "number": 12, "name": "이해란",   "pno": "095778", "position": "F", "height": "182cm", "wkblTeamId": "samsung" },
-        { "number": 8,  "name": "이주연",   "pno": "095524", "position": "G", "height": "171cm", "wkblTeamId": "samsung" },
-        { "number": 10, "name": "강유림",   "pno": "095713", "position": "F", "height": "175cm", "wkblTeamId": "samsung" },
-        { "number": 20, "name": "이명관",   "pno": "095703", "position": "F", "height": "173cm", "wkblTeamId": "woori"   },
-        { "number": 2,  "name": "안혜지",   "pno": "095484", "position": "G", "height": "164cm", "wkblTeamId": "bnk"     },
-        { "number": 1,  "name": "신지현",   "pno": "095441", "position": "G", "height": "174cm", "wkblTeamId": "shinhan" },
-        { "number": 6,  "name": "최이샘",   "pno": "095261", "position": "F", "height": "182cm", "wkblTeamId": "shinhan" },
-        { "number": 39, "name": "홍유순",   "pno": "095972", "position": "F", "height": "179cm", "wkblTeamId": "shinhan" },
-        { "number": 9,  "name": "박지현",   "pno": null,     "position": "G", "height": "183cm", "wkblTeamId": null      }
+        {
+          "number": 3,
+          "name": "강이슬",
+          "pno": "095263",
+          "position": "F",
+          "height": "180cm",
+          "captain": true,
+          "teamId": "kb"
+        },
+        {
+          "number": 5,
+          "name": "허예은",
+          "pno": "095710",
+          "position": "G",
+          "height": "167cm",
+          "teamId": "kb"
+        },
+        {
+          "number": 7,
+          "name": "박지수",
+          "pno": "095533",
+          "position": "C",
+          "height": "198cm",
+          "teamId": "kb"
+        },
+        {
+          "number": 12,
+          "name": "이해란",
+          "pno": "095778",
+          "position": "F",
+          "height": "182cm",
+          "teamId": "samsung"
+        },
+        {
+          "number": 8,
+          "name": "이주연",
+          "pno": "095524",
+          "position": "G",
+          "height": "171cm",
+          "teamId": "samsung"
+        },
+        {
+          "number": 10,
+          "name": "강유림",
+          "pno": "095713",
+          "position": "F",
+          "height": "175cm",
+          "teamId": "samsung"
+        },
+        {
+          "number": 20,
+          "name": "이명관",
+          "pno": "095703",
+          "position": "F",
+          "height": "173cm",
+          "teamId": "woori"
+        },
+        {
+          "number": 2,
+          "name": "안혜지",
+          "pno": "095484",
+          "position": "G",
+          "height": "164cm",
+          "teamId": "bnk"
+        },
+        {
+          "number": 1,
+          "name": "신지현",
+          "pno": "095441",
+          "position": "G",
+          "height": "174cm",
+          "teamId": "shinhan"
+        },
+        {
+          "number": 6,
+          "name": "최이샘",
+          "pno": "095261",
+          "position": "F",
+          "height": "182cm",
+          "teamId": "shinhan"
+        },
+        {
+          "number": 39,
+          "name": "홍유순",
+          "pno": "095972",
+          "position": "F",
+          "height": "179cm",
+          "teamId": "shinhan"
+        },
+        {
+          "number": 9,
+          "name": "박지현",
+          "pno": null,
+          "position": "G",
+          "height": "183cm",
+          "overseas": "토코마나와 퀸즈 (뉴질랜드 WNBL)",
+          "teamId": null
+        }
       ]
     }
   ]

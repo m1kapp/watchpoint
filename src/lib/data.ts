@@ -1,5 +1,7 @@
 import type { Player } from "./types";
-import rostersJson from "../../data/wkbl/rosters.json";
+import wkblRostersJson from "../../data/wkbl/rosters.json";
+import kblRostersJson from "../../data/kbl/rosters.json";
+import kblPlayersJson from "../../data/kbl/players.json";
 
 export interface RosterEntry {
   id: string;
@@ -7,7 +9,7 @@ export interface RosterEntry {
   season: string;
 }
 
-export const ROSTERS: RosterEntry[] = rostersJson;
+export const ROSTERS: RosterEntry[] = [...wkblRostersJson, ...kblRostersJson];
 
 export function getRosterById(id: string): RosterEntry | null {
   return ROSTERS.find((r) => r.id === id) ?? null;
@@ -17,7 +19,7 @@ export function getRosterId(teamId: string, season: string): string | null {
   return ROSTERS.find((r) => r.teamId === teamId && r.season === season)?.id ?? null;
 }
 
-export interface WKBLTeam {
+export interface Team {
   id: string;
   name: string;
   shortName: string;
@@ -29,15 +31,27 @@ export interface WKBLTeam {
 
 // 팀명 단축 상수 — TEAMS의 단일 진실. matches.ts 등에서 이걸 import해서 써야 함
 export const TN = {
+  // WKBL
   WOORI:   "우리은행",
   HANA:    "하나은행",
   SAMSUNG: "삼성생명",
   BNK:     "BNK 썸",
   KB:      "KB스타즈",
   SHINHAN: "신한은행",
+  // KBL
+  SONO:     "소노",
+  DB:       "DB",
+  SK:       "SK",
+  MOBIS:    "모비스",
+  KT:       "KT",
+  LG:       "LG",
+  JKJ:      "정관장",
+  KCC:      "KCC",
+  SAMSUNGM: "삼성",
+  GAS:      "가스공사",
 } as const;
 
-export const TEAMS: WKBLTeam[] = [
+export const TEAMS: Team[] = [
   // ─── WKBL 여자농구 ────────────────────────────────────────
   { id: "kb",      name: "KB스타즈",              shortName: "KB스타즈",  color: "#CB9E00", rank: 1, summary: "정규리그 우승 (21승 9패)",   league: "WKBL" },
   { id: "hana",    name: "하나은행",              shortName: "하나은행",  color: "#007B5F", rank: 2, summary: "정규 2위 (20승 10패)",        league: "WKBL" },
@@ -46,12 +60,16 @@ export const TEAMS: WKBLTeam[] = [
   { id: "bnk",     name: "BNK 썸",                shortName: "BNK 썸",    color: "#E31837", rank: 5, summary: "정규 5위 (13승 17패)",        league: "WKBL" },
   { id: "shinhan", name: "신한은행 에스버드",      shortName: "신한은행",  color: "#0046FF", rank: 6, summary: "정규 6위 (9승 21패)",         league: "WKBL" },
   // ─── KBL 남자농구 ─────────────────────────────────────────
-  { id: "sono",    name: "고양 소노 스카이거너스", shortName: "소노",      color: "#0B3D91", rank: 1, summary: "라건아 중심 압도적 골밑 농구", league: "KBL" },
-  { id: "db",      name: "원주 DB 프로미",         shortName: "DB",        color: "#FF6B00", rank: 2, summary: "빠른 공수 전환과 팀 조직력",  league: "KBL" },
-  { id: "sk",      name: "서울 SK 나이츠",         shortName: "SK",        color: "#E31837", rank: 3, summary: "허훈 중심 화려한 공격농구",   league: "KBL" },
-  { id: "mobis",   name: "울산 현대모비스 피버스",  shortName: "모비스",    color: "#003DA5", rank: 4, summary: "전통의 강호, 탄탄한 수비",   league: "KBL" },
-  { id: "kt",      name: "수원 KT 소닉붐",         shortName: "KT",        color: "#D10000", rank: 5, summary: "빠른 트랜지션 농구",         league: "KBL" },
-  { id: "lg",      name: "창원 LG 세이커스",       shortName: "LG",        color: "#A50034", rank: 6, summary: "리빌딩 중인 전통 강호",       league: "KBL" },
+  { id: "lg",       name: "창원 LG 세이커스",          shortName: "LG",       color: "#A50034", rank: 1,  summary: "정규시즌 1위 (36승 18패), 4강 직행",  league: "KBL" },
+  { id: "jkj",      name: "안양 정관장 레드부스터스",   shortName: "정관장",   color: "#C8102E", rank: 2,  summary: "정규시즌 2위 (35승 19패), 4강 직행",  league: "KBL" },
+  { id: "db",       name: "원주 DB 프로미",             shortName: "DB",       color: "#FF6B00", rank: 3,  summary: "정규시즌 3위 (33승 21패), 6강 PO",    league: "KBL" },
+  { id: "sk",       name: "서울 SK 나이츠",             shortName: "SK",       color: "#E31837", rank: 4,  summary: "정규시즌 4위 (32승 22패), 6강 PO",    league: "KBL" },
+  { id: "sono",     name: "고양 소노 스카이거너스",     shortName: "소노",     color: "#0B3D91", rank: 5,  summary: "정규시즌 5위 (28승 26패), 6강 PO",    league: "KBL" },
+  { id: "kcc",      name: "부산 KCC 이지스",            shortName: "KCC",      color: "#1D1D1B", rank: 6,  summary: "정규시즌 6위 (28승 26패), 6강 PO",    league: "KBL" },
+  { id: "kt",       name: "수원 KT 소닉붐",             shortName: "KT",       color: "#D10000", rank: 7,  summary: "정규시즌 7위 (27승 27패)",            league: "KBL" },
+  { id: "mobis",    name: "울산 현대모비스 피버스",      shortName: "모비스",   color: "#003DA5", rank: 8,  summary: "정규시즌 8위 (18승 36패)",            league: "KBL" },
+  { id: "gas",      name: "대구 한국가스공사 페가수스",  shortName: "가스공사", color: "#0072CE", rank: 9,  summary: "정규시즌 9위 (17승 37패)",            league: "KBL" },
+  { id: "samsungm", name: "서울 삼성 썬더스",           shortName: "삼성",     color: "#034EA2", rank: 10, summary: "정규시즌 10위 (16승 38패)",           league: "KBL" },
 ];
 
 export const PLAYERS: Player[] = [
@@ -1998,6 +2016,51 @@ export const PLAYERS: Player[] = [
     career_seasons: [{"season":"2025-26","team":"KB스타즈","games":30,"points":7.03,"rebounds":3.4,"assists":2.7,"spg":1.3,"bpg":0,"fgPct":34.2,"threePct":31,"ftPct":88.9,"mpg":29.1}],
   },
 ];
+
+// ─── KBL 선수 (kbl/players.json → Player 타입 변환) ─────────────────────────
+
+const KBL_TEAM_NAME = Object.fromEntries(TEAMS.filter(t => t.league === "KBL").map(t => [t.id, t.shortName]));
+const KBL_POS_MAP: Record<string, Player["position"]> = {
+  PG: "PG", SG: "SG", SF: "SF", PF: "PF", C: "C",
+  GD: "PG", FD: "PF", FC: "PF", GF: "SG",
+};
+
+export const KBL_PLAYERS: Player[] = (kblPlayersJson as any[]).map((p) => ({
+  id: `kbl-${p.teamId}-${p.pno}`,
+  name: p.name,
+  number: p.number ?? 0,
+  position: KBL_POS_MAP[p.position] ?? "SF",
+  height: p.height ?? "",
+  team: KBL_TEAM_NAME[p.teamId] ?? p.teamName,
+  teamId: p.teamId,
+  imageUrl: p.imageUrl ?? "",
+  bio: {
+    birth_year: p.birthYear ?? 0,
+    age: p.birthYear ? new Date().getFullYear() - p.birthYear + 1 : 0,
+    career_year: p.draftYear ? new Date().getFullYear() - p.draftYear + 1 : 0,
+    national_team: { is_national: false, level: "없음" as const },
+  },
+  tags: p.tags ?? [],
+  career_seasons: p.career_seasons ?? [],
+}));
+
+// ─── 선수 룩업 맵 ──────────────────────────────────────────────
+// ID 기반 O(1) 조회 + name:team 복합키 폴백
+const ALL_PLAYERS: Player[] = [...PLAYERS, ...KBL_PLAYERS];
+const PLAYER_BY_ID = new Map(ALL_PLAYERS.map((p) => [p.id, p]));
+const PLAYER_BY_NAME_TEAM = new Map(ALL_PLAYERS.map((p) => [`${p.name}:${p.team}`, p]));
+
+/** 선수 조회: id → name+team 순으로 매칭 */
+export function findPlayer(id?: string, name?: string, team?: string): Player | undefined {
+  if (id) {
+    const byId = PLAYER_BY_ID.get(id);
+    if (byId) return byId;
+  }
+  if (name && team) {
+    return PLAYER_BY_NAME_TEAM.get(`${name}:${team}`);
+  }
+  return undefined;
+}
 
 export const TAG_COLORS: Record<string, string> = {
   에이스: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",

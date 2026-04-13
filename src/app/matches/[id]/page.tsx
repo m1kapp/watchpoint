@@ -2,7 +2,8 @@ import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Shell, BackHeader } from "@/components/shell";
 import { MatchDetail } from "@/components/match-detail";
-import { getMatchById, TEAM_COLORS } from "@/lib/matches";
+import { getMatchById } from "@/lib/matches";
+import { getTeamColor } from "@/lib/team-styles";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!match) return {};
 
   const { home, away, stage, date, score } = match.match;
-  const color = TEAM_COLORS[home]?.bg ?? "#007B5F";
+  const color = getTeamColor(home).bg;
   const stageLabel = stage.replace(/\s*\([^)]*\)/, "");
   const scoreStr = score ? `${score.home}:${score.away}` : "";
   const wpCount = [

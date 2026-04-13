@@ -9,7 +9,11 @@
     "awayScore": 54,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251117046012",
@@ -21,7 +25,11 @@
     "awayScore": 45,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251119046013",
@@ -33,7 +41,11 @@
     "awayScore": 82,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251121046014",
@@ -45,7 +57,11 @@
     "awayScore": 62,
     "winner": "home",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251122046015",
@@ -57,7 +73,11 @@
     "awayScore": 63,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251122046016",
@@ -69,7 +89,11 @@
     "awayScore": 55,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251123046017",
@@ -81,7 +105,11 @@
     "awayScore": 51,
     "winner": "home",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251124046018",
@@ -93,7 +121,11 @@
     "awayScore": 76,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20251126046019",
@@ -105,7 +137,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202511280460110",
@@ -117,7 +153,11 @@
     "awayScore": 54,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202511290460111",
@@ -129,7 +169,11 @@
     "awayScore": 67,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202511290460112",
@@ -141,7 +185,11 @@
     "awayScore": 65,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202511300460113",
@@ -153,7 +201,11 @@
     "awayScore": 65,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512010460114",
@@ -165,7 +217,11 @@
     "awayScore": 49,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512030460115",
@@ -177,7 +233,11 @@
     "awayScore": 67,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512050460116",
@@ -189,7 +249,11 @@
     "awayScore": 71,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512060460117",
@@ -201,7 +265,11 @@
     "awayScore": 62,
     "winner": "home",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512060460118",
@@ -213,7 +281,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512070460119",
@@ -225,7 +297,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512080460120",
@@ -237,7 +313,11 @@
     "awayScore": 58,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512100460121",
@@ -249,7 +329,11 @@
     "awayScore": 78,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512120460122",
@@ -261,7 +345,11 @@
     "awayScore": 54,
     "winner": "home",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512130460123",
@@ -273,7 +361,11 @@
     "awayScore": 63,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512130460124",
@@ -285,7 +377,11 @@
     "awayScore": 67,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512140460125",
@@ -297,7 +393,11 @@
     "awayScore": 47,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512150460126",
@@ -309,7 +409,11 @@
     "awayScore": 55,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512170460127",
@@ -321,7 +425,11 @@
     "awayScore": 66,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512190460128",
@@ -333,7 +441,11 @@
     "awayScore": 57,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512200460129",
@@ -345,7 +457,11 @@
     "awayScore": 70,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512200460130",
@@ -357,7 +473,11 @@
     "awayScore": 74,
     "winner": "home",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512210460131",
@@ -369,7 +489,11 @@
     "awayScore": 53,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512220460132",
@@ -381,7 +505,11 @@
     "awayScore": 70,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512240460133",
@@ -393,7 +521,11 @@
     "awayScore": 51,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512260460134",
@@ -405,7 +537,11 @@
     "awayScore": 62,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512270460135",
@@ -417,7 +553,11 @@
     "awayScore": 68,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512270460136",
@@ -429,7 +569,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512280460137",
@@ -441,7 +585,11 @@
     "awayScore": 81,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512290460138",
@@ -453,7 +601,11 @@
     "awayScore": 75,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202512310460139",
@@ -465,7 +617,11 @@
     "awayScore": 61,
     "winner": "home",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601100460140",
@@ -477,7 +633,11 @@
     "awayScore": 75,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601100460141",
@@ -489,7 +649,11 @@
     "awayScore": 74,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601110460142",
@@ -501,7 +665,11 @@
     "awayScore": 89,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601120460143",
@@ -513,7 +681,11 @@
     "awayScore": 70,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601140460144",
@@ -525,7 +697,11 @@
     "awayScore": 66,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601160460145",
@@ -537,7 +713,11 @@
     "awayScore": 77,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601170460146",
@@ -549,7 +729,11 @@
     "awayScore": 50,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601170460147",
@@ -561,7 +745,11 @@
     "awayScore": 63,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601180460148",
@@ -573,7 +761,11 @@
     "awayScore": 85,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601190460149",
@@ -585,7 +777,11 @@
     "awayScore": 74,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601210460150",
@@ -597,7 +793,11 @@
     "awayScore": 63,
     "winner": "home",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601230460151",
@@ -609,7 +809,11 @@
     "awayScore": 58,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601240460152",
@@ -621,7 +825,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601240460153",
@@ -633,7 +841,11 @@
     "awayScore": 56,
     "winner": "home",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601250460154",
@@ -645,7 +857,11 @@
     "awayScore": 87,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601260460155",
@@ -657,7 +873,11 @@
     "awayScore": 58,
     "winner": "home",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601280460156",
@@ -669,7 +889,11 @@
     "awayScore": 75,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601300460157",
@@ -681,7 +905,11 @@
     "awayScore": 58,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601310460158",
@@ -693,7 +921,11 @@
     "awayScore": 76,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202601310460159",
@@ -705,7 +937,11 @@
     "awayScore": 78,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602010460160",
@@ -717,7 +953,11 @@
     "awayScore": 76,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602020460161",
@@ -729,7 +969,11 @@
     "awayScore": 65,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602040460162",
@@ -741,7 +985,11 @@
     "awayScore": 54,
     "winner": "home",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602060460163",
@@ -753,7 +1001,11 @@
     "awayScore": 71,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602070460164",
@@ -765,7 +1017,11 @@
     "awayScore": 62,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602070460165",
@@ -777,7 +1033,11 @@
     "awayScore": 69,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602080460166",
@@ -789,7 +1049,11 @@
     "awayScore": 63,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602090460167",
@@ -801,7 +1065,11 @@
     "awayScore": 68,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602110460168",
@@ -813,7 +1081,11 @@
     "awayScore": 69,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602130460169",
@@ -825,7 +1097,11 @@
     "awayScore": 56,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602140460170",
@@ -837,7 +1113,11 @@
     "awayScore": 71,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602140460171",
@@ -849,7 +1129,11 @@
     "awayScore": 78,
     "winner": "away",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602150460172",
@@ -861,7 +1145,11 @@
     "awayScore": 58,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602160460173",
@@ -873,7 +1161,11 @@
     "awayScore": 58,
     "winner": "away",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602180460174",
@@ -885,7 +1177,11 @@
     "awayScore": 74,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602200460175",
@@ -897,7 +1193,11 @@
     "awayScore": 52,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602210460176",
@@ -909,7 +1209,11 @@
     "awayScore": 76,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602210460177",
@@ -921,7 +1225,11 @@
     "awayScore": 70,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602220460178",
@@ -933,7 +1241,11 @@
     "awayScore": 71,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602230460179",
@@ -945,7 +1257,11 @@
     "awayScore": 61,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602250460180",
@@ -957,7 +1273,11 @@
     "awayScore": 66,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202602270460181",
@@ -969,7 +1289,11 @@
     "awayScore": 50,
     "winner": "home",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603230460182",
@@ -981,7 +1305,11 @@
     "awayScore": 55,
     "winner": "home",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603250460183",
@@ -993,7 +1321,11 @@
     "awayScore": 51,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603270460184",
@@ -1005,7 +1337,11 @@
     "awayScore": 52,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603280460185",
@@ -1017,7 +1353,11 @@
     "awayScore": 63,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603280460186",
@@ -1029,7 +1369,11 @@
     "awayScore": 63,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603290460187",
@@ -1041,7 +1385,11 @@
     "awayScore": 58,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202603300460188",
@@ -1053,7 +1401,11 @@
     "awayScore": 94,
     "winner": "away",
     "status": "result",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202604010460189",
@@ -1065,7 +1417,11 @@
     "awayScore": 53,
     "winner": "home",
     "status": "result",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202604030460190",
@@ -1077,7 +1433,11 @@
     "awayScore": 61,
     "winner": "away",
     "status": "result",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260408046031",
@@ -1089,7 +1449,11 @@
     "awayScore": 46,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260409046032",
@@ -1101,7 +1465,11 @@
     "awayScore": 56,
     "winner": "home",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260410046033",
@@ -1113,7 +1481,11 @@
     "awayScore": 54,
     "winner": "home",
     "status": "result",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260411046034",
@@ -1125,7 +1497,11 @@
     "awayScore": 83,
     "winner": "away",
     "status": "result",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260412046035",
@@ -1137,7 +1513,11 @@
     "awayScore": 81,
     "winner": "away",
     "status": "result",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260413046036",
@@ -1149,7 +1529,11 @@
     "awayScore": 0,
     "winner": null,
     "status": "upcoming",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "20260415046038",
@@ -1161,7 +1545,11 @@
     "awayScore": 0,
     "winner": null,
     "status": "upcoming",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   },
   {
     "gameId": "202604170460310",
@@ -1173,6 +1561,10 @@
     "awayScore": 0,
     "winner": null,
     "status": "upcoming",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "roundCode": null,
+    "roundName": null,
+    "seriesGameNo": 0,
+    "seriesOutcome": null
   }
 ]

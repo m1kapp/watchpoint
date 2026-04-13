@@ -1,6 +1,6 @@
 "use client";
 
-import { TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { getTeamColor, getTeamLogo, formatMatchDate, CARD_SHADOW } from "@/lib/team-styles";
 import type { ReactNode } from "react";
 
 interface TeamInfo {
@@ -36,8 +36,6 @@ interface MatchScoreCardProps {
   isLive?: boolean;
 }
 
-const DAYS = ["일", "월", "화", "수", "목", "금", "토"];
-
 export function MatchScoreCard({
   stage,
   date,
@@ -54,18 +52,12 @@ export function MatchScoreCard({
   headerRight,
   isLive,
 }: MatchScoreCardProps) {
-  const homeColors = TEAM_COLORS[home] ?? { bg: "#333", light: "#f4f4f5" };
-  const awayColors = TEAM_COLORS[away] ?? { bg: "#333", light: "#f4f4f5" };
-  const homeLogo = TEAM_LOGOS[home];
-  const awayLogo = TEAM_LOGOS[away];
+  const homeColors = getTeamColor(home);
+  const awayColors = getTeamColor(away);
+  const homeLogo = getTeamLogo(home);
+  const awayLogo = getTeamLogo(away);
 
-  const dateObj = new Date(date);
-  const today = new Date().toISOString().slice(0, 10);
-  const isToday = date === today;
-  const timeShort = time ? time.replace(/:00$/, "시") : "";
-  const dateLabel = isToday
-    ? `오늘 ${timeShort}`
-    : `${dateObj.getMonth() + 1}/${dateObj.getDate()}(${DAYS[dateObj.getDay()]}) ${timeShort}`;
+  const { isToday, dateLabel } = formatMatchDate(date, time);
 
   // 상태 태그
   const statusTag = isLive
@@ -87,7 +79,7 @@ export function MatchScoreCard({
       {/* VS 구역 */}
       <div className="flex items-stretch px-3 pb-3 gap-2">
         {/* 홈팀 */}
-        <div className="flex-1 flex flex-col gap-2 rounded-xl px-3 py-3"
+        <div className="flex-1 flex flex-col justify-center gap-2 rounded-xl px-3 py-3"
           style={{ backgroundColor: `${homeColors.bg}0f` }}>
           <div className="flex items-center gap-2.5">
             {homeLogo && (
@@ -143,7 +135,7 @@ export function MatchScoreCard({
         </div>
 
         {/* 어웨이팀 */}
-        <div className="flex-1 flex flex-col gap-2 rounded-xl px-3 py-3"
+        <div className="flex-1 flex flex-col justify-center gap-2 rounded-xl px-3 py-3"
           style={{ backgroundColor: `${awayColors.bg}0f` }}>
           <div className="flex items-center gap-2.5 flex-row-reverse">
             {awayLogo && (
@@ -168,7 +160,7 @@ export function MatchScoreCard({
       <button
         onClick={onClick}
         className="w-full text-left bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden active:scale-[0.98] transition-all cursor-pointer"
-        style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}
+        style={{ boxShadow: CARD_SHADOW }}
       >
         {inner}
       </button>
@@ -177,7 +169,7 @@ export function MatchScoreCard({
 
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden"
-      style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}>
+      style={{ boxShadow: CARD_SHADOW }}>
       {inner}
     </div>
   );

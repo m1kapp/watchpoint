@@ -3,9 +3,12 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { Section } from "@m1kapp/ui";
-import { PLAYERS } from "@/lib/data";
+import { PLAYERS, KBL_PLAYERS } from "@/lib/data";
+import { CARD_SHADOW } from "@/lib/team-styles";
 import nationalTeamData from "../../../data/wkbl/national-team.json";
+import kblNationalTeamData from "../../../data/kbl/national-team.json";
 import tournamentsData from "../../../data/wkbl/national-tournaments.json";
+import kblTournamentsData from "../../../data/kbl/national-tournaments.json";
 import { PlayerCard } from "@/components/player-card";
 import { PlayerDetail } from "@/components/player-detail";
 import { SourceRow } from "@/components/source-chip";
@@ -21,11 +24,10 @@ const KR_BLUE = "#003478";
 interface NationalPlayer {
   name: string;
   pno: string | null;
-  level?: "A대표팀" | "국가대표 후보";
-  wkblTeamId: string | null;
+  teamId: string | null;
   captain?: boolean;
   overseas?: string;
-  number?: number;
+  number?: number | null;
   position?: string;
   height?: string;
 }
@@ -96,6 +98,36 @@ const W_A_TEAMS: NationalTeamDef[] = nationalTeamData.rosters.map((r, i) => {
   };
 });
 
+// ─── 남자 A대표팀 — 대회별 로스터 목록 ──────────────────────────────────────
+
+const M_A_TOURNAMENTS = kblTournamentsData as TournamentRecord[];
+
+const M_A_TEAMS: NationalTeamDef[] = (kblNationalTeamData as any).rosters.map((r: any, i: number) => {
+  const dateLine = r.dateRange ?? r.date;
+  const sub = r.venue ? `${dateLine} · ${r.venue}` : `${dateLine} · ${r.players.length}명`;
+  return {
+    id: `m-a-${r.date}`,
+    name: r.tournament,
+    sub,
+    color: KR_BLUE,
+    emoji: "🏀",
+    current: r.current,
+    result: r.result ?? null,
+    ranking: r.current ? "세계 30위" : undefined,
+    hasData: true,
+    headerTitle: "대한민국 남자농구",
+    headerSub: r.tournament,
+    roster: r.players as NationalPlayer[],
+    tournaments: i === 0 ? M_A_TOURNAMENTS : undefined,
+    tournamentSources: i === 0
+      ? [
+          { label: "위키백과", url: "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EB%82%A8%EC%9E%90_%EB%86%8D%EA%B5%AC_%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80" },
+          { label: "FIBA", url: "https://www.fiba.basketball" },
+        ]
+      : undefined,
+  };
+});
+
 // ─── 국가대표팀 목록 ──────────────────────────────────────────────────────────
 
 const NATIONAL_TEAM_GROUPS: NationalTeamGroup[] = [
@@ -104,6 +136,12 @@ const NATIONAL_TEAM_GROUPS: NationalTeamGroup[] = [
     label: "여자농구",
     color: KR_RED,
     teams: W_A_TEAMS,
+  },
+  {
+    id: "m",
+    label: "남자농구",
+    color: KR_BLUE,
+    teams: M_A_TEAMS,
   },
 ];
 
@@ -114,7 +152,7 @@ function NationalTeamListCard({ team, onClick }: { team: NationalTeamDef; onClic
     <button
       onClick={team.hasData ? onClick : () => toast.info("준비중입니다")}
       className="w-full text-left bg-white dark:bg-zinc-900 rounded-2xl active:scale-[0.98] transition-all"
-      style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}
+      style={{ boxShadow: CARD_SHADOW }}
     >
       <div className="px-4 py-4 flex items-center gap-3">
         <div className="flex-1 min-w-0">
@@ -160,10 +198,16 @@ function NationalTeamDetail({
   const [sortKey, setSortKey] = useState<SortKey>("tags");
 
   const roster = team.roster ?? [];
+  const allPlayers = [...PLAYERS, ...KBL_PLAYERS];
   const players = roster
-    .map((nat) => PLAYERS.find((p) => p.id === `${nat.wkblTeamId}-${nat.pno}`))
+    .map((nat) => {
+      if (!nat.teamId) return undefined;
+      // WKBL: teamId-pno로 정확 매칭, KBL: teamId+이름 매칭
+      if (nat.pno) return allPlayers.find((p) => p.id === `${nat.teamId}-${nat.pno}` || p.id === `kbl-${nat.teamId}-${nat.pno}`);
+      return allPlayers.find((p) => p.teamId === nat.teamId && p.name === nat.name);
+    })
     .filter((p): p is Player => p !== undefined);
-  const overseasPlayers = roster.filter((nat) => nat.wkblTeamId === null);
+  const overseasPlayers = roster.filter((nat) => !nat.teamId);
 
   const allHeights = [...players.map((p) => parseFloat(p.height) || 0), ...overseasPlayers.map((p) => parseFloat(p.height ?? "") || 0)].filter(Boolean);
   const avgHeight = allHeights.length ? Math.round(allHeights.reduce((s, h) => s + h, 0) / allHeights.length * 10) / 10 : 0;

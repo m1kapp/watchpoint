@@ -3,22 +3,24 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Section } from "@m1kapp/ui";
-import { MATCHES, TEAM_COLORS } from "@/lib/matches";
+import { WKBL_MATCHES, KBL_MATCHES } from "@/lib/matches";
 import { TEAMS } from "@/lib/data";
-import scoresJson from "../../../data/wkbl/scores.json";
+import wkblScoresJson from "../../../data/wkbl/scores.json";
+import kblScoresJson from "../../../data/kbl/scores.json";
 import { BracketView } from "@/components/bracket-view";
 import { DropdownSelector } from "@/components/dropdown-selector";
 import { MatchScoreCard } from "@/components/match-score-card";
-import type { MatchData } from "@/lib/match-types";
+import { getStageType, type MatchData, type StageFilter } from "@/lib/match-types";
 
 type MatchWithId = MatchData & { id: string };
 
 // ─── 경기 목록 ───────────────────────────────────────────────
 
-function MatchListCard({ match, onClick }: { match: MatchWithId; onClick: () => void }) {
+function MatchListCard({ match, onClick, accentColor }: { match: MatchWithId; onClick: () => void; accentColor: string }) {
   const { match: m, teams, players, coaches, cancelled, cancelReason } = match;
-  const home = teams.find((t) => t.name === m.home);
-  const away = teams.find((t) => t.name === m.away);
+  // 매치 에디토리얼 데이터 → 없으면 전역 TEAMS에서 폴백
+  const home = teams.find((t) => t.name === m.home) ?? TEAMS.find((t) => t.shortName === m.home);
+  const away = teams.find((t) => t.name === m.away) ?? TEAMS.find((t) => t.shortName === m.away);
   const wpCount =
     (coaches ?? []).filter((c) => c.watch_point).length +
     players.filter((p) => p.featured && p.watch_point).length;
@@ -47,11 +49,11 @@ function MatchListCard({ match, onClick }: { match: MatchWithId; onClick: () => 
           ) : hasWatchPoints ? (
             <span
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-black cursor-pointer"
-              style={{ backgroundColor: `${WKBL_COLOR}18`, color: WKBL_COLOR }}
+              style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-60" style={{ backgroundColor: WKBL_COLOR }} />
-                <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: WKBL_COLOR }} />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-60" style={{ backgroundColor: accentColor }} />
+                <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: accentColor }} />
               </span>
               관전포인트 {wpCount}
             </span>
@@ -67,25 +69,19 @@ function MatchListCard({ match, onClick }: { match: MatchWithId; onClick: () => 
 }
 
 
-const WKBL_COLOR = "#007B5F";
+const LEAGUE_COLORS: Record<string, string> = { WKBL: "#007B5F", KBL: "#E31837" };
+const THEME_COLOR = "#007B5F";
 const SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
 
-type StageFilter = "플레이오프" | "정규시즌";
-
-function getStageType(stage: string): StageFilter {
-  if (stage.includes("플레이오프") || stage.includes("챔피언") || stage.includes("준플레이오프")) {
-    return "플레이오프";
-  }
-  return "정규시즌";
-}
+type LeagueFilter = "WKBL" | "KBL";
 
 // ─── 정규시즌 경기 카드 ──────────────────────────────────────
 
-type ScoreGame = typeof scoresJson[number];
+type ScoreGame = typeof wkblScoresJson[number];
 
-function RegularSeasonList({ games }: { games: ScoreGame[] }) {
+function RegularSeasonList({ games, league }: { games: ScoreGame[]; league: LeagueFilter }) {
   const TEAM_RANKS = Object.fromEntries(
-    TEAMS.filter((t) => t.league === "WKBL").map((t) => [t.shortName, t.rank])
+    TEAMS.filter((t) => t.league === league).map((t) => [t.shortName, t.rank])
   );
 
   // 월별 그룹
@@ -132,36 +128,52 @@ function RegularSeasonList({ games }: { games: ScoreGame[] }) {
 
 export function ExploreTab() {
   const router = useRouter();
+  const [league, setLeague] = useState<LeagueFilter>("KBL");
   const [season, setSeason] = useState("2025-26");
   const [stage, setStage] = useState<StageFilter>("플레이오프");
   const [gameFilter, setGameFilter] = useState<"all" | "upcoming">("upcoming");
   const [viewMode, setViewMode] = useState<"list" | "bracket">("list");
 
+  const accentColor = LEAGUE_COLORS[league] ?? LEAGUE_COLORS.KBL;
   const today = new Date().toISOString().slice(0, 10);
 
+  // 리그별 매치 & 스코어 데이터
+  const leagueMatches = league === "KBL" ? KBL_MATCHES : WKBL_MATCHES;
+  const leagueScores = league === "KBL" ? kblScoresJson : wkblScoresJson;
+
   // 정규시즌: scores.json 기반
-  const regularGames = scoresJson
-    .filter((g) => g.date < "2026-04") // 4월 이후는 플레이오프
+  const regularGames = (leagueScores as ScoreGame[])
+    .filter((g) => {
+      if (league === "KBL") return !(g as any).roundCode || (g as any).roundCode === "kbl_r" || (g as any).roundCode === "kbl_ir";
+      return g.date < "2026-04";
+    })
     .sort((a, b) => b.date.localeCompare(a.date));
 
   // 플레이오프: matches.json 기반
-  const filtered = MATCHES
+  const filtered = leagueMatches
     .filter((m) => getStageType(m.match.stage) === "플레이오프")
     .filter((m) => gameFilter === "upcoming" ? (m.match.date >= today && !m.cancelled) : true);
 
   return (
     <>
-      {/* 구분 | 시즌 셀렉터 */}
+      {/* 리그·구분 | 시즌 셀렉터 */}
       <div className="px-4 pt-4 pb-0 flex items-stretch gap-2">
         <DropdownSelector
-          label="구분"
-          value={`WKBL ${stage}`}
+          label="리그"
+          value={`${league === "KBL" ? "KBL" : "WKBL"} ${stage}`}
           options={[
-            { key: "플레이오프", label: "WKBL 플레이오프" },
-            { key: "정규시즌",   label: "WKBL 정규시즌" },
+            { key: "KBL:플레이오프",   label: "KBL 플레이오프" },
+            { key: "KBL:정규시즌",     label: "KBL 정규시즌" },
+            { key: "WKBL:플레이오프",  label: "WKBL 플레이오프" },
+            { key: "WKBL:정규시즌",    label: "WKBL 정규시즌" },
           ]}
-          onSelect={(k) => { setStage(k as StageFilter); setViewMode("list"); }}
-          accentColor={WKBL_COLOR}
+          onSelect={(k) => {
+            const [l, s] = k.split(":") as [LeagueFilter, StageFilter];
+            setLeague(l);
+            setStage(s);
+            setViewMode("list");
+          }}
+          accentColor={THEME_COLOR}
         />
         <DropdownSelector
           label="시즌"
@@ -172,7 +184,7 @@ export function ExploreTab() {
       </div>
 
       {stage === "정규시즌" ? (
-        <RegularSeasonList games={regularGames} />
+        <RegularSeasonList games={regularGames} league={league} />
       ) : (
         <>
           {/* 필터 바 */}
@@ -224,14 +236,15 @@ export function ExploreTab() {
 
           {viewMode === "bracket" ? (
             <BracketView
-              matches={MATCHES.filter((m) => getStageType(m.match.stage) === "플레이오프")}
+              matches={leagueMatches.filter((m) => getStageType(m.match.stage) === "플레이오프")}
+              league={league}
               onMatchClick={(m) => router.push(`/matches/${m.id}`)}
             />
           ) : (
             <Section>
               <div className="flex flex-col gap-4 pt-4">
                 {filtered.map((match) => (
-                  <MatchListCard key={match.id} match={match} onClick={() => router.push(`/matches/${match.id}`)} />
+                  <MatchListCard key={match.id} match={match} accentColor={accentColor} onClick={() => router.push(`/matches/${match.id}`)} />
                 ))}
                 {filtered.length === 0 && (
                   <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center py-12">준비 중인 경기가 없습니다</p>

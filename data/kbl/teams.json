@@ -1,0 +1,112 @@
+[
+  {
+    "teamId": "sono",
+    "tcode": "sono",
+    "naverCode": "66",
+    "teamName": "고양 소노 스카이거너스",
+    "nameEn": null,
+    "shortName": "소노",
+    "naverName": "고양 소노",
+    "stadium": "고양소노아레나",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/66.png"
+  },
+  {
+    "teamId": "db",
+    "tcode": "db",
+    "naverCode": "16",
+    "teamName": "원주 DB 프로미",
+    "nameEn": null,
+    "shortName": "DB",
+    "naverName": "원주 DB",
+    "stadium": "원주DB프로미아레나",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/16.png"
+  },
+  {
+    "teamId": "sk",
+    "tcode": "sk",
+    "naverCode": "55",
+    "teamName": "서울 SK 나이츠",
+    "nameEn": null,
+    "shortName": "SK",
+    "naverName": "서울 SK",
+    "stadium": "잠실학생체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/55.png"
+  },
+  {
+    "teamId": "mobis",
+    "tcode": "hd",
+    "naverCode": "10",
+    "teamName": "울산 현대모비스 피버스",
+    "nameEn": null,
+    "shortName": "모비스",
+    "naverName": "울산 현대모비스",
+    "stadium": "울산동천체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/10.png"
+  },
+  {
+    "teamId": "kt",
+    "tcode": "kt",
+    "naverCode": "06",
+    "teamName": "수원 KT 소닉붐",
+    "nameEn": null,
+    "shortName": "KT",
+    "naverName": "수원 KT",
+    "stadium": "수원 KT 소닉붐 아레나",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/06.png"
+  },
+  {
+    "teamId": "lg",
+    "tcode": "lg",
+    "naverCode": "50",
+    "teamName": "창원 LG 세이커스",
+    "nameEn": null,
+    "shortName": "LG",
+    "naverName": "창원 LG",
+    "stadium": "창원체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/50.png"
+  },
+  {
+    "teamId": "jkj",
+    "tcode": "kgc",
+    "naverCode": "70",
+    "teamName": "안양 정관장 레드부스터스",
+    "nameEn": null,
+    "shortName": "정관장",
+    "naverName": "안양 정관장",
+    "stadium": "안양 정관장 아레나",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/70.png"
+  },
+  {
+    "teamId": "kcc",
+    "tcode": "kcc",
+    "naverCode": "60",
+    "teamName": "부산 KCC 이지스",
+    "nameEn": null,
+    "shortName": "KCC",
+    "naverName": "부산 KCC",
+    "stadium": "부산사직체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/60.png"
+  },
+  {
+    "teamId": "samsungm",
+    "tcode": "ss",
+    "naverCode": "35",
+    "teamName": "서울 삼성 썬더스",
+    "nameEn": null,
+    "shortName": "삼성",
+    "naverName": "서울 삼성",
+    "stadium": "잠실실내체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/35.png"
+  },
+  {
+    "teamId": "gas",
+    "tcode": "pega",
+    "naverCode": "64",
+    "teamName": "대구 한국가스공사 페가수스",
+    "nameEn": null,
+    "shortName": "가스공사",
+    "naverName": "대구 한국가스공사",
+    "stadium": "대구체육관",
+    "emblemUrl": "https://sports-phinf.pstatic.net/team/kbl/default/64.png"
+  }
+]

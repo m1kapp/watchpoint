@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Section } from "@m1kapp/ui";
-import { MATCHES, TEAM_COLORS } from "@/lib/matches";
+import { MATCHES } from "@/lib/matches";
+import { getTeamColor, CARD_SHADOW } from "@/lib/team-styles";
+import { TeamBadge, AvatarCircle } from "@/components/ui-shared";
 import type { MatchData, MatchPlayer, Coach, ReviewResult } from "@/lib/match-types";
 
 type MatchWithId = MatchData & { id: string };
@@ -46,12 +47,12 @@ function WatchReviewCard({
   isCoach?: boolean;
   coachName?: string;
 }) {
-  const colors = TEAM_COLORS[team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
+  const colors = getTeamColor(team);
 
   return (
     <div
       className="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden"
-      style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07)" }}
+      style={{ boxShadow: CARD_SHADOW }}
     >
       {/* 상단 — 예측 */}
       <div className="px-4 pt-4 pb-3">
@@ -59,9 +60,7 @@ function WatchReviewCard({
           <span className="text-xl font-black tabular-nums leading-none" style={{ color: colors.bg }}>
             {String(index).padStart(2, "0")}
           </span>
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ backgroundColor: colors.bg }}>
-            {team}
-          </span>
+          <TeamBadge team={team} />
           {isCoach && (
             <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500">
               감독
@@ -72,15 +71,7 @@ function WatchReviewCard({
         {/* 선수/감독 */}
         {player && (
           <div className="flex items-center gap-2 mb-2">
-            {player.imageUrl ? (
-              <div className="w-6 h-6 rounded-full overflow-hidden bg-zinc-100 shrink-0">
-                <Image src={player.imageUrl} alt={player.name} width={24} height={24} className="w-full h-full object-cover object-top" unoptimized />
-              </div>
-            ) : (
-              <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-black shrink-0" style={{ backgroundColor: colors.bg }}>
-                {player.name[0]}
-              </div>
-            )}
+            <AvatarCircle imageUrl={player.imageUrl} name={player.name} bgColor={colors.bg} size={24} />
             <p className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
               {player.name}
               <span className="text-zinc-400 font-normal ml-1">{player.position} · {player.height}</span>
@@ -117,8 +108,8 @@ function WatchReviewCard({
 
 function MatchReviewSection({ match }: { match: MatchWithId }) {
   const { match: m, coaches, players } = match;
-  const homeColors = TEAM_COLORS[m.home] ?? { bg: "#333" };
-  const awayColors = TEAM_COLORS[m.away] ?? { bg: "#333" };
+  const homeColors = getTeamColor(m.home);
+  const awayColors = getTeamColor(m.away);
 
   const cards: React.ReactNode[] = [];
   let idx = 1;

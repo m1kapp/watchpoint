@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { Section } from "@m1kapp/ui";
-import Image from "next/image";
-import { MATCH, TAG_COLORS, TEAM_COLORS } from "@/lib/matches";
+import { MATCHES } from "@/lib/matches";
+import { getTeamColor } from "@/lib/team-styles";
+import { TagBadge, AvatarCircle } from "@/components/ui-shared";
 import { PlayerDetailSheet } from "@/components/player-detail-sheet";
 import type { MatchPlayer } from "@/lib/match-types";
 
@@ -12,7 +13,10 @@ export function PlayersTab() {
   const [teamFilter, setTeamFilter] = useState<"전체" | "하나은행" | "삼성생명">("전체");
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
 
-  const filtered = MATCH.players.filter((p) => {
+  const match = MATCHES[0];
+  if (!match) return null;
+
+  const filtered = match.players.filter((p) => {
     if (teamFilter !== "전체" && p.team !== teamFilter) return false;
     if (showFeaturedOnly && !p.featured) return false;
     return true;
@@ -24,7 +28,7 @@ export function PlayersTab() {
         {/* 팀 필터 */}
         <div className="flex gap-2 mb-2">
           {(["전체", "하나은행", "삼성생명"] as const).map((t) => {
-            const colors = t !== "전체" ? TEAM_COLORS[t] : null;
+            const colors = t !== "전체" ? getTeamColor(t) : null;
             const active = teamFilter === t;
             return (
               <button
@@ -81,7 +85,7 @@ function RosterRow({
   onClick: () => void;
 }) {
   const { name, position, height, imageUrl, bio, stat_summary, tags, featured, team } = player;
-  const colors = TEAM_COLORS[team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
+  const colors = getTeamColor(team);
   const isNational = bio?.national_team?.is_national;
   const visibleTags = tags.slice(0, 2);
 
@@ -90,26 +94,7 @@ function RosterRow({
       onClick={onClick}
       className="w-full text-left bg-white rounded-xl px-3 py-3 flex items-center gap-3 shadow-[0_1px_3px_rgba(0,0,0,0.06)] active:scale-[0.98] transition-transform"
     >
-      {/* 이미지 / 이니셜 */}
-      {imageUrl ? (
-        <div className="w-10 h-10 rounded-lg overflow-hidden bg-zinc-100 shrink-0">
-          <Image
-            src={imageUrl}
-            alt={name}
-            width={40}
-            height={40}
-            className="w-full h-full object-cover object-top"
-            unoptimized
-          />
-        </div>
-      ) : (
-        <div
-          className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm font-black shrink-0"
-          style={{ backgroundColor: colors.bg }}
-        >
-          {name[0]}
-        </div>
-      )}
+      <AvatarCircle imageUrl={imageUrl} name={name} bgColor={colors.bg} size={40} shape="rounded" />
 
       {/* 정보 */}
       <div className="flex-1 min-w-0">
@@ -128,12 +113,7 @@ function RosterRow({
         <p className="text-[10px] text-zinc-500 font-medium">{stat_summary}</p>
         <div className="flex gap-1">
           {visibleTags.map((tag) => (
-            <span
-              key={tag}
-              className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600"}`}
-            >
-              {tag}
-            </span>
+            <TagBadge key={tag} tag={tag} size="xs" />
           ))}
         </div>
       </div>

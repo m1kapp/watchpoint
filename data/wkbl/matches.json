@@ -13,6 +13,12 @@
     "gameNo": 1,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=1&ym=202604",
     "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52778",
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "KB스타즈",
@@ -42,6 +48,12 @@
     "gameNo": 2,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=2&ym=202604",
     "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52798",
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "하나은행",
@@ -71,6 +83,12 @@
     "gameNo": 3,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=3&ym=202604",
     "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52845",
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "KB스타즈",
@@ -100,6 +118,12 @@
     "gameNo": 4,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=4&ym=202604",
     "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52858",
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "하나은행",
@@ -143,7 +167,16 @@
         "review": {
           "result": "빗나감",
           "summary": "삼성이 역전승(74-83). 이상범 감독이 직접 \"제가 플랜을 잘못 짰다\"고 인정했다. 1쿼터 우위 여부와 무관하게 삼성 수비 전술에 하나 공격이 무너졌다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "name": "하상윤",
@@ -174,7 +207,16 @@
         "review": {
           "result": "적중",
           "summary": "삼성 83점 폭발하며 역전승. 하상윤 감독 \"원하는 대로 수비가 이뤄졌다\" 직접 언급. 정규시즌과 다른 집중 수비로 하나 공격을 봉쇄했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       }
     ],
     "players": [
@@ -248,7 +290,16 @@
         "review": {
           "result": "빗나감",
           "summary": "하나은행 74-83 패배. 베테랑의 경험이 이해란의 34점 폭발 앞에서 역부족이었다. 분위기 전환에 실패했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "하나은행",
@@ -270,8 +321,8 @@
         "stats": {
           "current_season": {
             "points": 14.8,
-            "rebounds": 8.0,
-            "assists": 2.0
+            "rebounds": 8,
+            "assists": 2
           },
           "previous_season": {
             "points": 12.5,
@@ -316,7 +367,16 @@
         "review": {
           "result": "적중",
           "summary": "이해란이 8리바운드를 쓸어담으며 삼성이 내선을 장악했다. 파울 누적으로 진안의 리바운드 영향력이 줄어든 것이 하나 패인 중 하나였다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "하나은행",
@@ -336,9 +396,9 @@
         "stat_summary": "15.0득점 · 6.5리바운드",
         "stats": {
           "current_season": {
-            "points": 15.0,
+            "points": 15,
             "rebounds": 6.5,
-            "assists": 3.0
+            "assists": 3
           },
           "previous_season": {
             "points": 13.2,
@@ -377,7 +437,16 @@
         "review": {
           "result": "부분적중",
           "summary": "18점-1리바운드로 분전했지만 20점 마지노선을 넘지 못했다. 삼성 집중마크에 33분을 소화했음에도 팀은 패했다. 예측의 논리(20점 임계점)는 정확했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "하나은행",
@@ -402,8 +471,8 @@
             "assists": 2.8
           },
           "previous_season": {
-            "points": 8.0,
-            "rebounds": 3.0,
+            "points": 8,
+            "rebounds": 3,
             "assists": 2.2
           }
         },
@@ -437,7 +506,16 @@
         "review": {
           "result": "빗나감",
           "summary": "삼성 집중 수비가 하나 외곽을 봉쇄했다. 3점슛 찬스가 줄며 흐름을 바꾸지 못했고, 하나는 결국 패배했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "하나은행",
@@ -471,11 +549,11 @@
         "stats": {
           "current_season": {
             "points": 17.5,
-            "rebounds": 7.0,
-            "assists": 3.0
+            "rebounds": 7,
+            "assists": 3
           },
           "previous_season": {
-            "points": 14.0,
+            "points": 14,
             "rebounds": 6.2,
             "assists": 2.5
           }
@@ -522,7 +600,16 @@
         "review": {
           "result": "적중",
           "summary": "34점-8리바운드 압도적인 퍼포먼스로 삼성 역전승을 이끌었다. 시즌 평균(17.5점)의 두 배 가까운 득점으로 basketkorea 경기 주역에 선정됐다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "삼성생명",
@@ -566,7 +653,16 @@
         "review": {
           "result": "적중",
           "summary": "이해란(8리바)과 배혜윤이 내선을 장악하며 삼성이 골밑 싸움을 지배했다. 14년 포스트시즌 경험이 6년차 진안 상대 파울 유도로 이어졌다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "삼성생명",
@@ -606,7 +702,16 @@
         "review": {
           "result": "적중",
           "summary": "삼성이 83점을 폭발하며 역전승. 이해란 집중마크를 역이용해 공격을 분산시킨 윤예빈의 조율이 삼성 공격 다양성의 핵심이었다."
-        }
+        },
+        "sources": [
+          {
+            "label": "basketkorea",
+            "url": "https://basketkorea.com/news/newsview.php?ncode=1065550104457085"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "삼성생명",
@@ -636,6 +741,12 @@
     "gameNo": 5,
     "gameRecordUrl": "https://www.wkbl.or.kr/game/result.asp?season_gu=046&gun=1&game_type=03&game_no=5&ym=202604",
     "photoUrl": "https://www.wkbl.or.kr/news/photo_view.asp?num=52895",
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "우리은행",
@@ -679,7 +790,16 @@
         "review": {
           "result": "빗나감",
           "summary": "우리은행 55점에 그치며 3차전도 대패, 0-3 스윕 당했다. 위성우 감독은 경기 후 '모든 건 내 잘못, 좋은 경험이 된 시즌'이라고 말했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "WKBL 공식",
+            "url": "https://www.wkbl.or.kr/m/news/teamstory_view.asp?num=52879"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "name": "김완수",
@@ -711,7 +831,16 @@
         "review": {
           "result": "적중",
           "summary": "KB 81-55 대승으로 3-0 스윕 완성. 2경기 연속 압도적 퍼포먼스를 이어가며 챔피언 결정전에 진출했다."
-        }
+        },
+        "sources": [
+          {
+            "label": "WKBL 공식",
+            "url": "https://www.wkbl.or.kr/m/news/teamstory_view.asp?num=52879"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       }
     ],
     "players": [
@@ -759,7 +888,16 @@
         "review": {
           "result": "적중",
           "summary": "3차전에도 골밑을 장악하며 KB가 81점을 폭발시켰다. 3경기 연속 우리은행 내선 압도, 스윕의 핵심이었다."
-        }
+        },
+        "sources": [
+          {
+            "label": "WKBL 공식",
+            "url": "https://www.wkbl.or.kr/m/news/teamstory_view.asp?num=52879"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "KB스타즈",
@@ -805,7 +943,16 @@
         "review": {
           "result": "적중",
           "summary": "박지수 내선 우위 속에 강이슬도 외곽에서 가담해 KB 81점 폭발. 우리은행 수비는 박-강 동시 견제에 완전히 무너졌다."
-        }
+        },
+        "sources": [
+          {
+            "label": "WKBL 공식",
+            "url": "https://www.wkbl.or.kr/m/news/teamstory_view.asp?num=52879"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       },
       {
         "team": "우리은행",
@@ -851,7 +998,16 @@
         "review": {
           "result": "적중",
           "summary": "김단비 부상 영향으로 우리은행 공격이 55점에 그쳤다. 에이스의 공백이 그대로 팀 득점 붕괴로 이어지며 예측이 정확히 맞았다."
-        }
+        },
+        "sources": [
+          {
+            "label": "WKBL 공식",
+            "url": "https://www.wkbl.or.kr/m/news/teamstory_view.asp?num=52879"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ]
       }
     ]
   },
@@ -863,12 +1019,18 @@
     "location": "용인실내체육관",
     "leftTeamId": "samsung",
     "rightTeamId": "hana",
-    "leftScore": null,
-    "rightScore": null,
-    "isFinished": false,
+    "leftScore": 70,
+    "rightScore": 68,
+    "isFinished": true,
     "gameNo": null,
     "gameRecordUrl": null,
     "photoUrl": null,
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "하나은행",
@@ -907,7 +1069,20 @@
             "label": "정예림 투입 타이밍",
             "value": "1차전 분수령"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "4쿼터 역전 실패. 2점 차 아쉬운 패배로 시리즈 1:2 뒤처짐. 삼성 홈에서 끝내 잡지 못했다."
+        }
       },
       {
         "name": "하상윤",
@@ -934,7 +1109,20 @@
             "label": "이해란+나나미 합산 2차전",
             "value": "47점 8어시"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "2차전 역전 기세를 홈에서 이어가며 70-68 접전 승리. 시리즈 2:1 리드로 4차전 마무리 기회."
+        }
       }
     ],
     "players": [
@@ -975,7 +1163,20 @@
             "value": "9승 2패",
             "highlight": true
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "부분적중",
+          "summary": "집중마크 속에서도 분투했으나, 2점 차 패배를 막지 못했다."
+        }
       },
       {
         "team": "하나은행",
@@ -1016,7 +1217,20 @@
             "label": "하나 리바운드 우위 경기 전적",
             "value": "13승 1패"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "부분적중",
+          "summary": "골밑에서 분투했으나 삼성의 접전 승리를 막기엔 역부족. 시리즈 1:2 위기."
+        }
       },
       {
         "team": "하나은행",
@@ -1055,7 +1269,20 @@
             "label": "3점슛 성공률 (정규)",
             "value": "28.9%"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "빗나감",
+          "summary": "히든카드 재점화는 실현되지 못했다. 삼성 수비에 막히며 임팩트 부족."
+        }
       },
       {
         "team": "삼성생명",
@@ -1096,7 +1323,20 @@
             "label": "이해란 20점↑ 시 삼성 승률",
             "value": "시즌 9승 1패"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "적중",
+          "summary": "2차전 34점에 이어 3차전에서도 팀 공격을 이끌며 홈 승리 견인. 시리즈 MVP급 연속 활약."
+        }
       },
       {
         "team": "삼성생명",
@@ -1135,7 +1375,20 @@
             "label": "나나미 활약 경기 삼성 전적",
             "value": "이해란과 합산 47점"
           }
-        ]
+        ],
+        "sources": [
+          {
+            "label": "네이트스포츠",
+            "url": "https://sports.news.nate.com/view/20260411n10561"
+          },
+          {
+            "label": "시즌 데이터"
+          }
+        ],
+        "review": {
+          "result": "부분적중",
+          "summary": "조커 역할은 했으나 결정적 장면에서의 임팩트는 이해란에 비해 제한적."
+        }
       },
       {
         "team": "삼성생명",
@@ -1188,11 +1441,15 @@
     "leftScore": null,
     "rightScore": null,
     "isFinished": false,
-    "cancelled": true,
-    "cancelReason": "KB 3-0 시리즈 클로즈",
     "gameNo": null,
     "gameRecordUrl": null,
     "photoUrl": null,
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": true,
+    "cancelReason": "KB 3-0 시리즈 클로즈",
     "teams": [
       {
         "name": "우리은행",
@@ -1222,20 +1479,233 @@
     "gameNo": null,
     "gameRecordUrl": null,
     "photoUrl": null,
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "삼성생명",
         "rank": 3,
-        "summary": "시리즈 생존을 위한 배수진"
+        "summary": "시리즈 2:1 리드, 이해란 34점 폭발+3차전 2점차 승리"
       },
       {
         "name": "하나은행",
         "rank": 2,
-        "summary": "마무리 투구, 클로징 노린다"
+        "summary": "1:2 위기, 챔피언결정전 진출 위해 반드시 잡아야"
       }
     ],
-    "coaches": [],
-    "players": []
+    "coaches": [
+      {
+        "name": "하상윤",
+        "team": "삼성생명",
+        "career_year": 8,
+        "style": [
+          "이해란 원톱",
+          "수비 농구"
+        ],
+        "story": "2차전 이해란 커리어하이 34점 대폭발, 3차전도 홈에서 70-68 2점차 승리. 시리즈 2:1 리드로 4차전에서 마무리 가능.",
+        "watch_point": "홈 마무리",
+        "watch_reason": "2연승 기세로 홈에서 시리즈 클로즈 시도. 이해란 중심 공격에 하나은행이 특별한 대책 없이는 삼성 홈에서 잡기 어렵다.",
+        "evidence": [
+          {
+            "label": "시리즈",
+            "value": "삼성 2:1 리드",
+            "highlight": true
+          },
+          {
+            "label": "이해란 2차전",
+            "value": "커리어하이 34점"
+          },
+          {
+            "label": "3차전",
+            "value": "70-68 홈 승리"
+          }
+        ],
+        "sources": [
+          {
+            "label": "머니투데이",
+            "url": "https://www.mt.co.kr/sports/2026/04/11/2026041118411219515"
+          },
+          {
+            "label": "시즌 데이터",
+            "url": null
+          }
+        ]
+      },
+      {
+        "name": "이상범",
+        "team": "하나은행",
+        "career_year": 12,
+        "style": [
+          "밸런스 농구",
+          "속공"
+        ],
+        "story": "1차전 승리 후 2연패. 정규시즌 2위의 자존심으로 탈락 위기에서 반격해야. 삼성 원정에서 반드시 이겨야 5차전 기회.",
+        "watch_point": "이해란 봉쇄",
+        "watch_reason": "2·3차전 연속 이해란에게 농락당함. 이해란(시즌 17.4점, 2차전 34점)을 효과적으로 봉쇄하지 못하면 시리즈 종료.",
+        "evidence": [
+          {
+            "label": "시리즈",
+            "value": "하나 1:2 (탈락 위기)"
+          },
+          {
+            "label": "이해란 2차전",
+            "value": "34점 커리어하이",
+            "highlight": true
+          },
+          {
+            "label": "정규시즌 순위",
+            "value": "2위 (20승 10패)"
+          }
+        ],
+        "sources": [
+          {
+            "label": "시즌 데이터",
+            "url": null
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "team": "삼성생명",
+        "name": "이해란",
+        "featured": true,
+        "position": "F",
+        "height": "182cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095778.png",
+        "stat_summary": "17.4점 7.6리바 1.5어시",
+        "stats": {
+          "current_season": {
+            "points": 17.4,
+            "rebounds": 7.6,
+            "assists": 1.5
+          }
+        },
+        "tags": [
+          "에이스",
+          "국가대표",
+          "골밑 핵심"
+        ],
+        "watch_point": "시리즈 마무리",
+        "watch_reason": "2차전 34점(커리어하이), 3차전도 팀 공격 이끌며 2연승. 시리즈 MVP급 활약으로 홈에서 챔피언결정전 티켓 확보 노린다.",
+        "evidence": [
+          {
+            "label": "2차전",
+            "value": "34점 커리어하이",
+            "highlight": true
+          },
+          {
+            "label": "시즌 평균",
+            "value": "17.4점 7.6리바"
+          },
+          {
+            "label": "시리즈",
+            "value": "삼성 2:1 리드"
+          }
+        ],
+        "sources": [
+          {
+            "label": "톱스타뉴스",
+            "url": "https://www.topstarnews.net/news/articleView.html?idxno=16032132"
+          },
+          {
+            "label": "시즌 데이터",
+            "url": null
+          }
+        ]
+      },
+      {
+        "team": "하나은행",
+        "name": "진안",
+        "featured": true,
+        "position": "C",
+        "height": "182cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095499.png",
+        "stat_summary": "14.8점 9.3리바 2.7어시",
+        "stats": {
+          "current_season": {
+            "points": 14.8,
+            "rebounds": 9.3,
+            "assists": 2.7
+          }
+        },
+        "tags": [
+          "베테랑",
+          "국가대표",
+          "골밑 핵심"
+        ],
+        "watch_point": "골밑 반격",
+        "watch_reason": "시즌 9.3리바로 팀 리바운드 핵심. 1차전에서는 맹활약했으나 2·3차전 이해란에게 밀림. 탈락 위기에서 골밑부터 장악해야 반전 가능.",
+        "evidence": [
+          {
+            "label": "시즌 리바운드",
+            "value": "9.3개",
+            "highlight": true
+          },
+          {
+            "label": "1차전",
+            "value": "맹활약으로 팀 승리 기여"
+          },
+          {
+            "label": "시리즈 위기",
+            "value": "1:2 탈락 위기"
+          }
+        ],
+        "sources": [
+          {
+            "label": "시즌 데이터",
+            "url": null
+          }
+        ]
+      },
+      {
+        "team": "하나은행",
+        "name": "이이지마 사키",
+        "featured": true,
+        "position": "G",
+        "height": "173cm",
+        "imageUrl": "https://www.wkbl.or.kr/static/images/player/pimg/np_095912.png",
+        "stat_summary": "15.0점 6.3리바 2.3어시",
+        "stats": {
+          "current_season": {
+            "points": 15,
+            "rebounds": 6.3,
+            "assists": 2.3
+          }
+        },
+        "tags": [
+          "에이스",
+          "폭발력"
+        ],
+        "watch_point": "외곽 돌파력",
+        "watch_reason": "시즌 15점으로 하나은행 득점 1위. 이해란 봉쇄에 전력을 쏟으면 이이지마의 돌파가 열려야 공격 균형이 맞는다.",
+        "evidence": [
+          {
+            "label": "시즌 득점",
+            "value": "15.0점 (팀내 1위)",
+            "highlight": true
+          },
+          {
+            "label": "시즌 리바운드",
+            "value": "6.3개"
+          },
+          {
+            "label": "역할",
+            "value": "이해란 밀릴 때 공격 대안"
+          }
+        ],
+        "sources": [
+          {
+            "label": "시즌 데이터",
+            "url": null
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "b313ad38",
@@ -1248,11 +1718,15 @@
     "leftScore": null,
     "rightScore": null,
     "isFinished": false,
-    "cancelled": true,
-    "cancelReason": "KB 3-0 시리즈 클로즈",
     "gameNo": null,
     "gameRecordUrl": null,
     "photoUrl": null,
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": true,
+    "cancelReason": "KB 3-0 시리즈 클로즈",
     "teams": [
       {
         "name": "KB스타즈",
@@ -1282,6 +1756,12 @@
     "gameNo": null,
     "gameRecordUrl": null,
     "photoUrl": null,
+    "gameId": null,
+    "roundCode": null,
+    "seriesGameNo": null,
+    "seriesOutcome": null,
+    "cancelled": false,
+    "cancelReason": null,
     "teams": [
       {
         "name": "하나은행",

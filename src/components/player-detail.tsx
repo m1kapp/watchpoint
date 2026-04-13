@@ -11,8 +11,8 @@ import type {
   CareerHighlight,
   DraftInfo,
 } from "@/lib/match-types";
-import { TAG_COLORS, PLAYERS } from "@/lib/data";
-import { TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { TAG_COLORS, findPlayer, TEAMS } from "@/lib/data";
+import { getTeamColor, getTeamLogo } from "@/lib/team-styles";
 import { positionColor } from "@/lib/utils";
 import { SourceRow } from "@/components/source-chip";
 import { Tooltip } from "@m1kapp/ui";
@@ -74,9 +74,30 @@ function fromPlayer(p: Player): NormalizedPlayer {
 }
 
 function fromMatchPlayer(p: MatchPlayer): NormalizedPlayer {
-  // 로스터 데이터에서 이름+팀으로 매칭 → career_seasons, draft, seasonStats 자동 보강
-  const roster = PLAYERS.find((r) => r.name === p.name && r.team === p.team)
-    ?? PLAYERS.find((r) => r.name === p.name);
+  // ID 우선 → name+team 폴백으로 로스터 매칭
+  const roster = findPlayer(p.id, p.name, p.team);
+
+  const bio: NormalizedPlayer["bio"] = p.bio
+    ? {
+        age: p.bio.age,
+        career_year: p.bio.career_year,
+        birth_year: p.bio.birth_year,
+        national_team: p.bio.national_team
+          ? { is_national: p.bio.national_team.is_national ?? false, level: p.bio.national_team.level }
+          : undefined,
+      }
+    : roster
+    ? {
+        age: roster.bio.age,
+        career_year: roster.bio.career_year,
+        birth_year: roster.bio.birth_year,
+        national_team: {
+          is_national: roster.bio.national_team.is_national,
+          level: roster.bio.national_team.level !== "없음" ? roster.bio.national_team.level : undefined,
+          years: roster.bio.national_team.years,
+        },
+      }
+    : undefined;
 
   return {
     name: p.name,
@@ -88,27 +109,7 @@ function fromMatchPlayer(p: MatchPlayer): NormalizedPlayer {
     description: p.description,
     watch_point: p.watch_point,
     tags: p.tags,
-    bio: p.bio
-      ? {
-          age: p.bio.age,
-          career_year: p.bio.career_year,
-          birth_year: p.bio.birth_year,
-          national_team: p.bio.national_team
-            ? { is_national: p.bio.national_team.is_national, level: p.bio.national_team.level }
-            : undefined,
-        }
-      : roster
-      ? {
-          age: roster.bio.age,
-          career_year: roster.bio.career_year,
-          birth_year: roster.bio.birth_year,
-          national_team: {
-            is_national: roster.bio.national_team.is_national,
-            level: roster.bio.national_team.level !== "없음" ? roster.bio.national_team.level : undefined,
-            years: roster.bio.national_team.years,
-          },
-        }
-      : undefined,
+    bio,
     stats: p.stats,
     stat_diff: p.stat_diff,
     career_seasons: roster?.career_seasons,
@@ -257,7 +258,11 @@ function StatsTab({ player, colors }: { player: NormalizedPlayer; colors: TeamCo
             <p className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{current.season} 시즌</p>
             <span className="text-[10px] text-zinc-400">{current.games}경기</span>
           </div>
-          <SourceRow sources={[{ label: "WKBL 공식", url: "https://www.wkbl.or.kr" }]} />
+          <SourceRow sources={[
+            TEAMS.find(t => t.shortName === player.team)?.league === "KBL"
+              ? { label: "KBL 공식", url: "https://www.kbl.or.kr" }
+              : { label: "WKBL 공식", url: "https://www.wkbl.or.kr" }
+          ]} />
           <div className="grid grid-cols-3 gap-2 mt-2.5 mb-3">
             {(["득점", "리바운드", "어시스트"] as const).map((label, i) => {
               const vals = [current.points, current.rebounds, current.assists];
@@ -365,9 +370,9 @@ function InfoTab({ player, colors }: { player: NormalizedPlayer; colors: TeamCol
         <div>
           <p className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2.5">기본 정보</p>
           <div className="grid grid-cols-2 gap-2">
-            {bio.birth_year != null && <InfoCell label="생년" value={`${bio.birth_year}년생`} />}
-            {bio.age != null && <InfoCell label="나이" value={`만 ${bio.age}세`} />}
-            {bio.career_year != null && <InfoCell label="연차" value={`${bio.career_year}년차`} />}
+            {!!bio.birth_year && <InfoCell label="생년" value={`${bio.birth_year}년생`} />}
+            {!!bio.age && <InfoCell label="나이" value={`만 ${bio.age}세`} />}
+            {!!bio.career_year && <InfoCell label="연차" value={`${bio.career_year}년차`} />}
             <InfoCell label="포지션" value={POSITION_FULL[player.position] ?? player.position} />
           </div>
         </div>
@@ -496,8 +501,8 @@ type Tab = "정보" | "스탯" | "특성";
 
 function UnifiedPlayerDetail({ player, onClose }: { player: NormalizedPlayer; onClose: () => void }) {
   const posColor = positionColor(player.position);
-  const teamColors: TeamColor = TEAM_COLORS[player.team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
-  const teamLogo = TEAM_LOGOS[player.team];
+  const teamColors: TeamColor = getTeamColor(player.team);
+  const teamLogo = getTeamLogo(player.team);
   const isNational = player.bio?.national_team?.is_national;
 
   const hasInfo = !!(player.bio || player.draft || player.career_highlights?.length);

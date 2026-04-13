@@ -1,0 +1,38 @@
+[
+  {
+    "name": "아시안컵",
+    "emoji": "🏆",
+    "appearances": 30,
+    "record": "151승 51패",
+    "medals": "금 6회",
+    "note": "2022 최근 우승 · 2025 아시아컵 8강 탈락",
+    "color": "#CD2E3A"
+  },
+  {
+    "name": "아시안게임",
+    "emoji": "🥇",
+    "appearances": 18,
+    "record": "71승 24패",
+    "medals": "금 5회",
+    "note": "1970 · 1982 · 1994 · 2002 · 2014",
+    "color": "#E67E22"
+  },
+  {
+    "name": "올림픽",
+    "emoji": "🏀",
+    "appearances": 4,
+    "record": "6승 18패",
+    "medals": "없음",
+    "note": "1948 · 1984 · 1988 · 2020 — 역대 최고 8강 (2020 도쿄)",
+    "color": "#7F8C8D"
+  },
+  {
+    "name": "세계선수권",
+    "emoji": "🌐",
+    "appearances": 8,
+    "record": "11승 32패",
+    "medals": "없음",
+    "note": "2023 월드컵 2라운드 진출 · 2027 예선 진행 중",
+    "color": "#003478"
+  }
+]

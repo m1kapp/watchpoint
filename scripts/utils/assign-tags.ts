@@ -8,19 +8,28 @@
 
 import fs from "fs/promises";
 import path from "path";
-import nationalTeamJson from "../../data/wkbl/national-team.json" with { type: "json" };
-import awardsJson from "../../data/wkbl/awards.json" with { type: "json" };
+import wkblNationalTeamJson from "../../data/wkbl/national-team.json" with { type: "json" };
+import kblNationalTeamJson from "../../data/kbl/national-team.json" with { type: "json" };
+import wkblAwardsJson from "../../data/wkbl/awards.json" with { type: "json" };
+import kblAwardsJson from "../../data/kbl/awards.json" with { type: "json" };
 
-// current: true인 가장 최근 대회 엔트리 사용
-const currentRoster = nationalTeamJson.rosters.find((r) => r.current)?.players ?? [];
-const NATIONAL_TEAM = Object.fromEntries(
-  currentRoster.map((p) => [`${p.name}:${p.pno}`, "A대표팀" as const])
-) as Record<string, "A대표팀" | "국가대표 후보">;
+function buildNationalTeamSet(...jsons: any[]) {
+  const map: Record<string, "A대표팀" | "국가대표 후보"> = {};
+  for (const json of jsons) {
+    const roster = json.rosters?.find((r: any) => r.current)?.players ?? [];
+    for (const p of roster) {
+      map[`${p.name}:${p.pno}`] = "A대표팀";
+    }
+  }
+  return map;
+}
 
-const MVP_PLAYERS  = new Set<string>(awardsJson.mvp);
-const ROOKIE_AWARD = new Set<string>(awardsJson.rookieOfTheYear);
+const NATIONAL_TEAM = buildNationalTeamSet(wkblNationalTeamJson, kblNationalTeamJson);
+const MVP_PLAYERS  = new Set<string>([...wkblAwardsJson.mvp, ...kblAwardsJson.mvp]);
+const ROOKIE_AWARD = new Set<string>([...wkblAwardsJson.rookieOfTheYear, ...kblAwardsJson.rookieOfTheYear]);
 
-const PATH = path.resolve(process.cwd(), "data/wkbl/players.json");
+const WKBL_PATH = path.resolve(process.cwd(), "data/wkbl/players.json");
+const KBL_PATH  = path.resolve(process.cwd(), "data/kbl/players.json");
 
 type PlayerTag =
   | "에이스" | "1옵션" | "식스맨" | "리더"
@@ -49,6 +58,7 @@ interface Player {
   career_seasons?: CareerSeasonEntry[];
   draftYear: number | null;
   birthYear: number | null;
+  tags?: PlayerTag[];
 }
 
 const CURRENT_YEAR = 2026;
@@ -128,8 +138,8 @@ function assignTags(player: Player, teamPlayers: Player[]): PlayerTag[] {
   return [...tags];
 }
 
-async function main() {
-  const raw = await fs.readFile(PATH, "utf-8");
+async function processFile(filePath: string, label: string) {
+  const raw = await fs.readFile(filePath, "utf-8");
   const players: Player[] = JSON.parse(raw);
 
   // 팀별 그룹
@@ -143,32 +153,37 @@ async function main() {
   let changed = 0;
   for (const p of players) {
     const team = byTeam.get(p.teamId) ?? [];
-    const tags = assignTags(p, team);
-    (p as any).tags = tags;
-    if (tags.length > 0) changed++;
+    p.tags = assignTags(p, team);
+    if (p.tags.length > 0) changed++;
   }
 
-  await fs.writeFile(PATH, JSON.stringify(players, null, 2), "utf-8");
+  await fs.writeFile(filePath, JSON.stringify(players, null, 2), "utf-8");
 
-  console.log(`✅ 태그 부여 완료: ${changed}/${players.length}명\n`);
+  console.log(`✅ ${label} 태그 부여 완료: ${changed}/${players.length}명\n`);
 
   // 결과 미리보기
   const sorted = [...players]
-    .filter(p => (p as any).tags?.length > 0)
-    .sort((a, b) => ((b as any).tags?.length ?? 0) - ((a as any).tags?.length ?? 0));
+    .filter(p => (p.tags?.length ?? 0) > 0)
+    .sort((a, b) => (b.tags?.length ?? 0) - (a.tags?.length ?? 0));
 
-  sorted.slice(0, 20).forEach(p => {
-    console.log(`  ${p.name.padEnd(12)} [${(p as any).tags.join(", ")}]`);
+  sorted.slice(0, 10).forEach(p => {
+    console.log(`  ${p.name.padEnd(12)} [${(p.tags ?? []).join(", ")}]`);
   });
 
   // 태그 집계
   const counts: Record<string, number> = {};
   for (const p of players) {
-    for (const t of ((p as any).tags ?? [])) {
+    for (const t of (p.tags ?? [])) {
       counts[t] = (counts[t] ?? 0) + 1;
     }
   }
   console.log("\n태그별 선수 수:", counts);
+}
+
+async function main() {
+  await processFile(WKBL_PATH, "WKBL");
+  console.log("\n" + "─".repeat(50) + "\n");
+  await processFile(KBL_PATH, "KBL");
 }
 
 main().catch(console.error);

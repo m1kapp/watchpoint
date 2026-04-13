@@ -2,49 +2,67 @@
   {
     "teamId": "samsung",
     "tcode": "03",
+    "naverCode": null,
     "teamName": "삼성생명 블루밍스",
     "nameEn": "SAMSUNG LIFE",
+    "shortName": "삼성생명",
     "naverName": "삼성생명",
-    "stadium": "용인실내체육관"
+    "stadium": "용인실내체육관",
+    "emblemUrl": null
   },
   {
     "teamId": "shinhan",
     "tcode": "07",
+    "naverCode": null,
     "teamName": "신한은행 에스버드",
     "nameEn": "SHINHAN BANK",
+    "shortName": "신한은행",
     "naverName": "신한은행",
-    "stadium": "인천도원체육관"
+    "stadium": "인천도원체육관",
+    "emblemUrl": null
   },
   {
     "teamId": "woori",
     "tcode": "05",
+    "naverCode": null,
     "teamName": "우리은행 우리WON",
     "nameEn": "WOORI BANK",
+    "shortName": "우리은행",
     "naverName": "우리은행",
-    "stadium": "아산이순신체육관"
+    "stadium": "아산이순신체육관",
+    "emblemUrl": null
   },
   {
     "teamId": "hana",
     "tcode": "09",
+    "naverCode": null,
     "teamName": "하나은행",
     "nameEn": "HANA BANK",
+    "shortName": "하나은행",
     "naverName": "하나은행",
-    "stadium": "부천체육관"
+    "stadium": "부천체육관",
+    "emblemUrl": null
   },
   {
     "teamId": "bnk",
     "tcode": "11",
+    "naverCode": null,
     "teamName": "BNK 썸",
     "nameEn": "BNK SUM",
+    "shortName": "BNK 썸",
     "naverName": "BNK 썸",
-    "stadium": "부산사직실내체육관"
+    "stadium": "부산사직실내체육관",
+    "emblemUrl": null
   },
   {
     "teamId": "kb",
     "tcode": "01",
+    "naverCode": null,
     "teamName": "KB스타즈",
     "nameEn": "KB STARS",
+    "shortName": "KB스타즈",
     "naverName": "KB스타즈",
-    "stadium": "청주체육관"
+    "stadium": "청주체육관",
+    "emblemUrl": null
   }
 ]

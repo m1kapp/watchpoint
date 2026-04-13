@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { MATCHES, TAG_COLORS, TEAM_COLORS } from "@/lib/matches";
+import { MATCHES } from "@/lib/matches";
+import { getTeamColor } from "@/lib/team-styles";
+import { TagBadge, TeamBadge, AvatarCircle } from "@/components/ui-shared";
 import { MatchHeader } from "@/components/match-header";
 import { PlayerDetailSheet } from "@/components/player-detail-sheet";
-import type { MatchPlayer, MatchData, Evidence } from "@/lib/match-types";
+import type { MatchPlayer, MatchData, Evidence, Source } from "@/lib/match-types";
+import { SourceRow } from "@/components/source-chip";
 
 type MatchWithId = MatchData & { id: string };
 
@@ -15,6 +17,7 @@ function buildWatchPoints(match: MatchWithId) {
     title: string;
     reason: string;
     evidence: Evidence[];
+    sources: Source[];
     team: string;
     tags: string[];
     player?: MatchPlayer;
@@ -30,6 +33,7 @@ function buildWatchPoints(match: MatchWithId) {
       title: coach.watch_point,
       reason: coach.watch_reason,
       evidence: coach.evidence ?? [],
+      sources: coach.sources ?? [],
       team: coach.team,
       tags: coach.style,
       isCoach: true,
@@ -44,6 +48,7 @@ function buildWatchPoints(match: MatchWithId) {
       title: player.watch_point,
       reason: player.watch_reason ?? "",
       evidence: player.evidence ?? [],
+      sources: player.sources ?? [],
       team: player.team,
       tags: player.tags.slice(0, 2),
       player,
@@ -84,7 +89,7 @@ export function WatchpointsTab() {
 
       <div className="px-4 flex flex-col gap-3 pb-6">
         {watchPoints.map((wp) => {
-          const colors = TEAM_COLORS[wp.team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
+          const colors = getTeamColor(wp.team);
           const isNational = wp.player?.bio?.national_team?.is_national;
 
           return (
@@ -102,9 +107,7 @@ export function WatchpointsTab() {
                     <span className="text-2xl font-black leading-none tabular-nums" style={{ color: colors.bg }}>
                       {String(wp.index).padStart(2, "0")}
                     </span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ backgroundColor: colors.bg }}>
-                      {wp.team}
-                    </span>
+                    <TeamBadge team={wp.team} />
                     {wp.isCoach && (
                       <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-500">
                         감독
@@ -120,15 +123,7 @@ export function WatchpointsTab() {
                   {/* 선수 / 감독 */}
                   {wp.player ? (
                     <div className="flex items-center gap-2 mb-3">
-                      {wp.player.imageUrl ? (
-                        <div className="w-6 h-6 rounded-full overflow-hidden bg-zinc-100 shrink-0">
-                          <Image src={wp.player.imageUrl} alt={wp.player.name} width={24} height={24} className="w-full h-full object-cover object-top" unoptimized />
-                        </div>
-                      ) : (
-                        <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-black shrink-0" style={{ backgroundColor: colors.bg }}>
-                          {wp.player.name[0]}
-                        </div>
-                      )}
+                      <AvatarCircle imageUrl={wp.player.imageUrl} name={wp.player.name} bgColor={colors.bg} size={24} />
                       <p className="text-xs font-semibold text-zinc-700">
                         {wp.player.name}{isNational && " 🇰🇷"}
                         <span className="text-zinc-400 font-normal ml-1">{wp.player.position} · {wp.player.height}</span>
@@ -165,14 +160,17 @@ export function WatchpointsTab() {
                   {/* 태그 */}
                   <div className="flex flex-wrap gap-1.5 items-center">
                     {wp.tags.map((tag) => (
-                      <span key={tag} className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600"}`}>
-                        {tag}
-                      </span>
+                      <TagBadge key={tag} tag={tag} />
                     ))}
                     {wp.player && (
                       <span className="ml-auto text-[10px] text-zinc-300 font-medium">자세히 →</span>
                     )}
                   </div>
+
+                  {/* 출처 */}
+                  {wp.sources.length > 0 && (
+                    <SourceRow sources={wp.sources} />
+                  )}
                 </div>
               </div>
             </button>

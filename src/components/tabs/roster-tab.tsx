@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Section } from "@m1kapp/ui";
-import { PLAYERS, TEAMS, TAG_COLORS, getRosterId, type WKBLTeam } from "@/lib/data";
-import { TEAM_LOGOS } from "@/lib/matches";
+import { PLAYERS, KBL_PLAYERS, TEAMS, TAG_COLORS, getRosterId, type Team } from "@/lib/data";
+import { getTeamLogo, CARD_SHADOW } from "@/lib/team-styles";
 import type { Player } from "@/lib/types";
 import { PlayerCard } from "@/components/player-card";
 import { PlayerDetail } from "@/components/player-detail";
@@ -13,11 +13,11 @@ import { DropdownSelector } from "@/components/dropdown-selector";
 
 // ─── 리그 팀 목록 ─────────────────────────────────────────────
 
-function TeamListCard({ team, onClick }: { team: WKBLTeam; onClick: () => void }) {
-  const players = PLAYERS.filter((p) => p.teamId === team.id);
+function TeamListCard({ team, onClick, allPlayers }: { team: Team; onClick: () => void; allPlayers: Player[] }) {
+  const players = allPlayers.filter((p) => p.teamId === team.id);
   const nationalCount = players.filter((p) => p.bio.national_team.is_national).length;
   const hasData = players.length > 0;
-  const logo = TEAM_LOGOS[team.shortName];
+  const logo = getTeamLogo(team.shortName);
 
   const playersWithStats = players.filter((p) => (p.career_seasons?.[0]?.games ?? 0) >= 5);
   const teamPpg = playersWithStats.length
@@ -90,9 +90,9 @@ function TeamListCard({ team, onClick }: { team: WKBLTeam; onClick: () => void }
 
 // ─── 팀 컴팩트 헤더 ───────────────────────────────────────────
 
-function TeamCompactHeader({ team }: { team: WKBLTeam }) {
-  const logo = TEAM_LOGOS[team.shortName];
-  const players = PLAYERS.filter((p) => p.teamId === team.id);
+function TeamCompactHeader({ team, allPlayers }: { team: Team; allPlayers: Player[] }) {
+  const logo = getTeamLogo(team.shortName);
+  const players = allPlayers.filter((p) => p.teamId === team.id);
   const avgHeight = players.length
     ? Math.round(players.reduce((s, p) => s + (parseFloat(p.height) || 0), 0) / players.length * 10) / 10
     : 0;
@@ -166,19 +166,23 @@ export function sortPlayers(players: Player[], key: SortKey): Player[] {
 // ─── 로스터 탭 ───────────────────────────────────────────────
 
 const LEAGUE_META = {
+  KBL:   { label: "KBL 남자",    color: "#E31837" },
   WKBL:  { label: "WKBL 여자",   color: "#007B5F" },
+  NAT_M: { label: "🇰🇷 남자대표", color: "#CD2E3A" },
   NAT_W: { label: "🇰🇷 여자대표", color: "#CD2E3A" },
 } as const;
 
 type LeagueKey = keyof typeof LEAGUE_META;
 
-const WKBL_SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
+const SEASONS = ["2025-26", "2024-25", "2023-24", "2022-23"];
 
 export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; season?: string }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [league, setLeague] = useState<LeagueKey>("WKBL");
+  // teamId가 전달되면 해당 팀의 리그 자동 감지
+  const initLeague = teamId ? (TEAMS.find(t => t.id === teamId)?.league === "KBL" ? "KBL" : "WKBL") : "KBL";
+  const [league, setLeague] = useState<LeagueKey>(initLeague as LeagueKey);
   const [season, setSeason] = useState(seasonProp ?? "2025-26");
   const [view, setView] = useState<"team" | "player">(teamId ? "team" : "team");
 
@@ -196,24 +200,26 @@ export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; sea
     router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   }
 
-  const isNat = league === "NAT_W";
+  const isNat = league === "NAT_W" || league === "NAT_M";
+  const isKbl = league === "KBL";
   const accentColor = LEAGUE_META[league].color;
 
-  const leagueTeams = TEAMS.filter((t) => t.league === "WKBL" && PLAYERS.some((p) => p.teamId === t.id));
+  const leaguePlayers = isKbl ? KBL_PLAYERS : PLAYERS;
+  const leagueTeams = TEAMS.filter((t) => t.league === (isKbl ? "KBL" : "WKBL") && leaguePlayers.some((p) => p.teamId === t.id));
   const selectedTeam = leagueTeams.find((t) => t.id === teamId) ?? null;
   const leagueOptions = (Object.keys(LEAGUE_META) as LeagueKey[]).map((k) => ({
     key: k, label: LEAGUE_META[k].label,
   }));
-  const seasonOptions = WKBL_SEASONS.map((s) => ({ key: s, label: s, disabled: s !== "2025-26" }));
+  const seasonOptions = SEASONS.map((s) => ({ key: s, label: s, disabled: s !== "2025-26" }));
 
-  const teamPlayers = selectedTeam ? PLAYERS.filter((p) => p.teamId === selectedTeam.id) : PLAYERS.filter((p) => leagueTeams.some((t) => t.id === p.teamId));
+  const teamPlayers = selectedTeam ? leaguePlayers.filter((p) => p.teamId === selectedTeam.id) : leaguePlayers.filter((p) => leagueTeams.some((t) => t.id === p.teamId));
   const sorted = sortPlayers(teamPlayers, sortKey);
 
   // 팀 상세 뷰
   if (!isNat && selectedTeam) {
     return (
       <>
-        <TeamCompactHeader team={selectedTeam} />
+        <TeamCompactHeader team={selectedTeam} allPlayers={leaguePlayers} />
 
         {/* 정렬 칩 */}
         <div className="px-4 pt-3 pb-0 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
@@ -286,7 +292,8 @@ export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; sea
       )}
 
       {/* 국가대표 */}
-      {isNat && <NationalTab gender="w" />}
+      {league === "NAT_W" && <NationalTab gender="w" />}
+      {league === "NAT_M" && <NationalTab gender="m" />}
 
       {/* 팀 뷰 — 팀 목록 */}
       {!isNat && view === "team" && (
@@ -294,7 +301,7 @@ export function RosterTab({ teamId, season: seasonProp }: { teamId?: string; sea
           <Section>
             <div className="flex flex-col gap-2.5">
               {leagueTeams.map((team) => (
-                <TeamListCard key={team.id} team={team} onClick={() => {
+                <TeamListCard key={team.id} team={team} allPlayers={leaguePlayers} onClick={() => {
                   const rid = getRosterId(team.id, season);
                   if (rid) router.push(`/roster/${rid}`);
                 }} />

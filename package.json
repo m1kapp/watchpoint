@@ -14,6 +14,12 @@
     "scrape:career": "tsx scripts/scrape/wkbl/career-seasons.ts",
     "scrape": "npm run scrape:teams && npm run scrape:matches && npm run scrape:players && npm run scrape:career && npm run scrape:scores",
     "scrape:temp": "WKBL_DATA_DIR=data/wkbl_temp npm run scrape:teams && WKBL_DATA_DIR=data/wkbl_temp npm run scrape:scores && WKBL_DATA_DIR=data/wkbl_temp npm run scrape:matches",
+    "scrape:kbl:teams": "tsx scripts/scrape/kbl/teams.ts",
+    "scrape:kbl:scores": "tsx scripts/scrape/kbl/scores.ts",
+    "scrape:kbl:matches": "tsx scripts/scrape/kbl/matches.ts",
+    "scrape:kbl:players": "tsx scripts/scrape/kbl/players.ts",
+    "scrape:kbl:bio": "tsx scripts/scrape/kbl/bio.ts",
+    "scrape:kbl": "npm run scrape:kbl:teams && npm run scrape:kbl:scores && npm run scrape:kbl:matches && npm run scrape:kbl:players",
     "generate:players": "tsx scripts/generate/apply-players.ts",
     "utils:tags": "tsx scripts/utils/assign-tags.ts",
     "generate": "npm run utils:tags && npm run generate:players"

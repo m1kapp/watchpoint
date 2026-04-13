@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import type { Player } from "@/lib/types";
-import { TAG_COLORS, TEAMS } from "@/lib/data";
-import { TEAM_LOGOS } from "@/lib/matches";
+import { TEAMS } from "@/lib/data";
+import { getTeamLogo } from "@/lib/team-styles";
 import { positionLabel } from "@/lib/utils";
+import { TagBadge } from "@/components/ui-shared";
 
 interface PlayerCardProps {
   player: Player;
@@ -16,7 +17,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
   const { age, career_year, birth_year, national_team } = bio;
   const visibleTags = tags.slice(0, 3);
   const teamColor = TEAMS.find((t) => t.id === teamId)?.color ?? "#6b7280";
-  const teamLogo = TEAM_LOGOS[team];
+  const teamLogo = getTeamLogo(team);
 
   return (
     <button
@@ -61,14 +62,12 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
             )}
           </div>
           <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1 tabular-nums">
-            {height} · 만 {age}세 ({String(birth_year).slice(-2)}년생) · {career_year}년차
+            {[height, age ? `만 ${age}세` : null, birth_year ? `${String(birth_year).slice(-2)}년생` : null, career_year ? `${career_year}년차` : null].filter(Boolean).join(" · ")}
           </p>
           {visibleTags.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-1.5">
               {visibleTags.map((tag) => (
-                <span key={tag} className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"}`}>
-                  {tag}
-                </span>
+                <TagBadge key={tag} tag={tag} size="xs" />
               ))}
               {tags.length > 3 && (
                 <span className="text-[10px] text-zinc-400 dark:text-zinc-600 py-0.5">+{tags.length - 3}</span>

@@ -1,0 +1,222 @@
+{
+  "rosters": [
+    {
+      "tournament": "2027 FIBA 월드컵 아시아예선 W1",
+      "date": "2026-02",
+      "dateRange": "2026.02.26 ~ 03.01",
+      "venue": "타이베이 / 오키나와",
+      "current": true,
+      "result": "2승 2패 (B조)",
+      "players": [
+        {
+          "number": null,
+          "name": "이승현",
+          "pno": "290787",
+          "position": null,
+          "height": null,
+          "teamId": "mobis"
+        },
+        {
+          "number": null,
+          "name": "이현중",
+          "pno": null,
+          "position": "SF",
+          "height": "196cm",
+          "teamId": null,
+          "overseas": "나가사키 벨카 (일본 B리그)"
+        },
+        {
+          "number": null,
+          "name": "유기상",
+          "pno": "291640",
+          "position": null,
+          "height": null,
+          "teamId": "lg"
+        },
+        {
+          "number": null,
+          "name": "양준석",
+          "pno": "291576",
+          "position": null,
+          "height": null,
+          "teamId": "lg"
+        },
+        {
+          "number": null,
+          "name": "하윤기",
+          "pno": "291492",
+          "position": null,
+          "height": null,
+          "teamId": "kt"
+        },
+        {
+          "number": null,
+          "name": "변준형",
+          "pno": "291220",
+          "position": null,
+          "height": null,
+          "teamId": "jkj"
+        },
+        {
+          "number": null,
+          "name": "송교창",
+          "pno": "290897",
+          "position": null,
+          "height": null,
+          "teamId": "kcc"
+        },
+        {
+          "number": null,
+          "name": "최준용",
+          "pno": "290993",
+          "position": null,
+          "height": null,
+          "teamId": "kcc"
+        },
+        {
+          "number": null,
+          "name": "김보배",
+          "pno": "291752",
+          "position": null,
+          "height": null,
+          "teamId": "db"
+        },
+        {
+          "number": null,
+          "name": "신승민",
+          "pno": "291479",
+          "position": null,
+          "height": null,
+          "teamId": "gas"
+        },
+        {
+          "number": null,
+          "name": "이원석",
+          "pno": "291478",
+          "position": null,
+          "height": null,
+          "teamId": "samsungm"
+        },
+        {
+          "number": null,
+          "name": "에디 다니엘",
+          "pno": "291846",
+          "position": null,
+          "height": null,
+          "teamId": "sk"
+        }
+      ]
+    },
+    {
+      "tournament": "2025 FIBA 아시아컵",
+      "date": "2025-08",
+      "dateRange": "2025.08.05 ~ 08.17",
+      "venue": "사우디아라비아 제다",
+      "current": false,
+      "result": "8강 탈락 (조 2위 2승 1패, 8강 중국전 71-79 패)",
+      "players": [
+        {
+          "number": null,
+          "name": "이정현",
+          "pno": "291488",
+          "position": null,
+          "height": null,
+          "teamId": "sono",
+          "captain": true
+        },
+        {
+          "number": null,
+          "name": "박지훈",
+          "pno": "291008",
+          "position": null,
+          "height": null,
+          "teamId": "jkj"
+        },
+        {
+          "number": null,
+          "name": "양준석",
+          "pno": "291576",
+          "position": null,
+          "height": null,
+          "teamId": "lg"
+        },
+        {
+          "number": null,
+          "name": "정성우",
+          "pno": "290901",
+          "position": null,
+          "height": null,
+          "teamId": "gas"
+        },
+        {
+          "number": null,
+          "name": "유기상",
+          "pno": "291640",
+          "position": null,
+          "height": null,
+          "teamId": "lg"
+        },
+        {
+          "number": null,
+          "name": "이우석",
+          "pno": null,
+          "position": "PG",
+          "height": "183cm",
+          "teamId": null,
+          "overseas": "국군체육부대 (상무)"
+        },
+        {
+          "number": null,
+          "name": "이현중",
+          "pno": null,
+          "position": "SF",
+          "height": "196cm",
+          "teamId": null,
+          "overseas": "일라와라 호크스 (호주 NBL)"
+        },
+        {
+          "number": null,
+          "name": "문정현",
+          "pno": "291667",
+          "position": null,
+          "height": null,
+          "teamId": "kt"
+        },
+        {
+          "number": null,
+          "name": "양홍석",
+          "pno": "291091",
+          "position": "C",
+          "height": "206cm",
+          "teamId": "lg",
+          "overseas": "국군체육부대 (상무, 당시)"
+        },
+        {
+          "number": null,
+          "name": "하윤기",
+          "pno": "291492",
+          "position": null,
+          "height": null,
+          "teamId": "kt"
+        },
+        {
+          "number": null,
+          "name": "여준석",
+          "pno": null,
+          "position": "PF",
+          "height": "203cm",
+          "teamId": null,
+          "overseas": "시애틀대학교 (미국 NCAA D1)"
+        },
+        {
+          "number": null,
+          "name": "김종규",
+          "pno": "290750",
+          "position": null,
+          "height": null,
+          "teamId": "jkj"
+        }
+      ]
+    }
+  ]
+}

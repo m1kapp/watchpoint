@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import type { MatchPlayer } from "@/lib/match-types";
-import { TAG_COLORS, TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { getTeamColor, getTeamLogo } from "@/lib/team-styles";
+import { TagBadge, AvatarCircle, EyeIcon } from "@/components/ui-shared";
 
 interface FeaturedPlayerCardProps {
   player: MatchPlayer;
@@ -21,8 +21,8 @@ function DiffBadge({ value, unit }: { value: number; unit: string }) {
 
 export function FeaturedPlayerCard({ player, onClick }: FeaturedPlayerCardProps) {
   const { name, position, height, imageUrl, bio, stat_summary, stats, stat_diff, career_highlights, tags, description, watch_point, team } = player;
-  const teamColors = TEAM_COLORS[team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
-  const teamLogo = TEAM_LOGOS[team];
+  const teamColors = getTeamColor(team);
+  const teamLogo = getTeamLogo(team);
   const isNational = bio?.national_team?.is_national;
   const visibleTags = tags.slice(0, 3);
 
@@ -35,19 +35,7 @@ export function FeaturedPlayerCard({ player, onClick }: FeaturedPlayerCardProps)
         {/* 상단: 아바타 + 이름 */}
         <div className="flex items-center gap-3 mb-3">
           <div className="relative shrink-0">
-            {imageUrl ? (
-              <div className="w-10 h-10 rounded-full overflow-hidden" style={{ boxShadow: `0 0 0 2px ${teamColors.bg}` }}>
-                <Image src={imageUrl} alt={name} width={40} height={40} className="w-full h-full object-cover object-top" unoptimized />
-              </div>
-            ) : (
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-base"
-                style={{ backgroundColor: teamColors.bg }}
-              >
-                {name[0]}
-              </div>
-            )}
-            {/* 팀 로고 뱃지 */}
+            <AvatarCircle imageUrl={imageUrl} name={name} bgColor={teamColors.bg} size={40} withBorder />
             {teamLogo && (
               <div
                 className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full flex items-center justify-center border-[1.5px] border-white dark:border-zinc-900"
@@ -68,7 +56,7 @@ export function FeaturedPlayerCard({ player, onClick }: FeaturedPlayerCardProps)
               </span>
             </div>
             <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1 tabular-nums">
-              {height}{bio && ` · ${bio.age}세 · ${bio.career_year}년차`}
+              {[height, bio?.age ? `${bio.age}세` : null, bio?.career_year ? `${bio.career_year}년차` : null].filter(Boolean).join(" · ")}
             </p>
           </div>
         </div>
@@ -108,15 +96,11 @@ export function FeaturedPlayerCard({ player, onClick }: FeaturedPlayerCardProps)
         {/* 태그 + 관전 포인트 */}
         <div className="flex items-center gap-1.5 flex-wrap">
           {visibleTags.map((tag) => (
-            <span key={tag} className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[tag] ?? "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"}`}>
-              {tag}
-            </span>
+            <TagBadge key={tag} tag={tag} />
           ))}
           {watch_point && (
             <span className="ml-auto text-[10px] text-zinc-400 dark:text-zinc-500 shrink-0 flex items-center gap-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-              </svg>
+              <EyeIcon />
               {watch_point}
             </span>
           )}

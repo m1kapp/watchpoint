@@ -1,7 +1,8 @@
 "use client";
 
 import type { Coach } from "@/lib/match-types";
-import { TEAM_COLORS, TEAM_LOGOS } from "@/lib/matches";
+import { getTeamColor, getTeamLogo } from "@/lib/team-styles";
+import { EyeIcon } from "@/components/ui-shared";
 
 interface CoachCardProps {
   coach: Coach;
@@ -9,8 +10,8 @@ interface CoachCardProps {
 
 export function CoachCard({ coach }: CoachCardProps) {
   const { name, team, career_year, style, story, watch_point } = coach;
-  const colors = TEAM_COLORS[team] ?? { bg: "#333", text: "white", light: "#f4f4f5" };
-  const logo = TEAM_LOGOS[team];
+  const colors = getTeamColor(team);
+  const logo = getTeamLogo(team);
 
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
@@ -53,9 +54,7 @@ export function CoachCard({ coach }: CoachCardProps) {
 
         {/* 관전 포인트 */}
         <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/60 rounded-lg px-3 py-2">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400 dark:text-zinc-500 shrink-0">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-          </svg>
+          <EyeIcon size={11} className="text-zinc-400 dark:text-zinc-500 shrink-0" />
           <p className="text-[11px] font-semibold text-zinc-700 dark:text-zinc-300">{watch_point}</p>
         </div>
       </div>
